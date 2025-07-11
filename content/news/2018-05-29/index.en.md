@@ -2,7 +2,7 @@
 title = "JAXA venture certification"
 date = 2018-05-29
 [extra]
-banner = "products_banner2.jpeg"
+image = "square_cubics.png"
 +++
 
 Space cubics has been officially certified as a 'JAXA Venture' by the Japan Aerospace Exploration Agency (JAXA).

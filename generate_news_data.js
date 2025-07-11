@@ -36,15 +36,23 @@ function generateNewsData() {
           const dateMatch = frontMatter.match(/date\s*=\s*(\d{4}-\d{2}-\d{2})/);
           const date = dateMatch ? dateMatch[1] : folder;
           
-          // Extract banner
-          const bannerMatch = frontMatter.match(/banner\s*=\s*"([^"]+)"/);
-          let banner = bannerMatch ? bannerMatch[1] : 'products_banner2.jpeg';
+          // Extract image from front matter [extra] section
+          const extraMatch = frontMatter.match(/\[extra\]([\s\S]*?)(?=\[|$)/);
+          let image = null;
           
-          // Use different images for variety based on date hash
-          const imageOptions = ['jts.png', 'brainchild.png', 'square_cubics.png', 'about.png', 'earth.png'];
-          const dateHash = date.split('-').join('').length;
-          const imageIndex = dateHash % imageOptions.length;
-          banner = imageOptions[imageIndex];
+          if (extraMatch) {
+            const extraSection = extraMatch[1];
+            const imageMatch = extraSection.match(/image\s*=\s*"([^"]+)"/);
+            image = imageMatch ? imageMatch[1] : null;
+          }
+          
+          // If no image specified, use a default based on date hash
+          if (!image) {
+            const imageOptions = ['jts.png', 'brainchild.png', 'square_cubics.png', 'about.png', 'earth.png'];
+            const dateHash = date.split('-').join('').length;
+            const imageIndex = dateHash % imageOptions.length;
+            image = imageOptions[imageIndex];
+          }
           
           // Format date for display
           const displayDate = date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1.$2.$3');
@@ -52,7 +60,7 @@ function generateNewsData() {
           newsData.push({
             date: displayDate,
             link: `/news/${folder}/`,
-            img: `/news/${banner}`,
+            img: `/news/${image}`,
             summary: title
           });
         }

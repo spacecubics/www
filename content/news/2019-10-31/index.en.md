@@ -2,7 +2,7 @@
 title = "Come on, space entrepreneurs! JAXA launches a series of startups."
 date = 2019-10-31
 [extra]
-banner = "products_banner2.jpeg"
+image = "square_cubics.png"
 +++
 
 An article on space-grade computers was featured on the front page of the Nikkei Sangyo Shimbun under the headline 'JAXA Entrepreneurs Bring Space Technology Down to Earth.
