@@ -28,9 +28,22 @@
 <script>
 // Auto-generate news carousel from dynamically generated data
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/js/news_data.json')
-    .then(response => response.json())
+  // Determine current language from URL or default to Japanese
+  const pathname = window.location.pathname;
+  const currentLang = pathname.includes('/en/') ? 'en' : 'ja';
+  const dataFile = currentLang === 'en' ? '/js/news_data_en.json' : '/js/news_data_ja.json';
+  const cacheBuster = '?v=' + Date.now();
+  
+  console.log('Current language detected:', currentLang);
+  console.log('Loading data file:', dataFile + cacheBuster);
+  
+  fetch(dataFile + cacheBuster)
+    .then(response => {
+      console.log('Response status:', response.status);
+      return response.json();
+    })
     .then(newsData => {
+      console.log('Loaded news data:', newsData);
       const container = document.getElementById('auto-news-container');
       
       newsData.forEach(news => {
@@ -50,12 +63,19 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('Error loading news data:', error);
-      // Fallback to static data if JSON loading fails
-      const fallbackData = [
+      // Fallback to default data if JSON loading fails
+      const fallbackData = currentLang === 'en' ? [
+        {
+          date: "2025.06.01",
+          link: "/en/news/2025-06-01/",
+          img: "/news/jts.png",
+          summary: "Space Cubics has changed from a limited liability company to a corporation."
+        }
+      ] : [
         {
           date: "2025.06.01",
           link: "/news/2025-06-01/",
-          img: "/news/2025-06-01/products_banner2.jpeg",
+          img: "/news/jts.png",
           summary: "Space Cubicsは合同会社から株式会社へ組織変更しました。"
         }
       ];
