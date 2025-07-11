@@ -1,0 +1,82 @@
+<div class="news-carousel-section">
+  <div class="section-title-block">
+    <div class="section-title-header">
+      <div class="section-title-content">
+        <div class="carousel-section-title">{{ title | default(value="NEWS") }}</div>
+        <div class="carousel-section-subtitle">{{ subtitle | default(value="Space Cubics") }}</div>
+        <div class="carousel-section-slogan">{{ slogan | default(value="INFORMATION") }}</div>
+        <div class="section-title-divider"></div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn left" onclick="newsCarouselScroll(this, 1)"></button>
+        <button class="carousel-btn right" onclick="newsCarouselScroll(this, -1)"></button>
+      </div>
+    </div>
+  </div>
+  <div class="featured-news-carousel">
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track" id="auto-news-container">
+        <!-- Auto-generated news items will be inserted here by JavaScript -->
+      </div>
+    </div>
+    <div class="carousel-body">
+      {{ body | safe }}
+    </div>
+  </div>
+</div>
+
+<script>
+// Auto-generate news carousel from dynamically generated data
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('/js/news_data.json')
+    .then(response => response.json())
+    .then(newsData => {
+      const container = document.getElementById('auto-news-container');
+      
+      newsData.forEach(news => {
+        const card = document.createElement('div');
+        card.className = 'carousel-card';
+        card.innerHTML = `
+          <a href="${news.link}">
+            <img src="${news.img}" alt="${news.date}" class="carousel-card-img">
+            <div class="carousel-card-content">
+              <p class="carousel-card-date">${news.date}</p>
+              <h3 class="carousel-card-summary">${news.summary}</h3>
+            </div>
+          </a>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading news data:', error);
+      // Fallback to static data if JSON loading fails
+      const fallbackData = [
+        {
+          date: "2025.06.01",
+          link: "/news/2025-06-01/",
+          img: "/news/2025-06-01/products_banner2.jpeg",
+          summary: "Space Cubicsは合同会社から株式会社へ組織変更しました。"
+        }
+      ];
+      
+      const container = document.getElementById('auto-news-container');
+      fallbackData.forEach(news => {
+        const card = document.createElement('div');
+        card.className = 'carousel-card';
+        card.innerHTML = `
+          <a href="${news.link}">
+            <img src="${news.img}" alt="${news.date}" class="carousel-card-img">
+            <div class="carousel-card-content">
+              <p class="carousel-card-date">${news.date}</p>
+              <h3 class="carousel-card-summary">${news.summary}</h3>
+            </div>
+          </a>
+        `;
+        container.appendChild(card);
+      });
+    });
+});
+</script>
+
+<script src="/js/news_carousel.js"></script> 

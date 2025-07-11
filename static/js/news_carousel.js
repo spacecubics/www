@@ -19,3 +19,66 @@ function newsCarouselScroll(btn, dir) {
 
   wrapper.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
 }
+
+// Enhanced mobile touch support
+document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.carousel-track-wrapper');
+  
+  carousels.forEach(wrapper => {
+    let isScrolling = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    // Touch events for mobile
+    wrapper.addEventListener('touchstart', function(e) {
+      isScrolling = true;
+      startX = e.touches[0].pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchmove', function(e) {
+      if (!isScrolling) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll speed multiplier
+      wrapper.scrollLeft = scrollLeft - walk;
+    }, { passive: false });
+
+    wrapper.addEventListener('touchend', function() {
+      isScrolling = false;
+    }, { passive: true });
+
+    // Mouse events for desktop
+    let isMouseDown = false;
+    let mouseStartX = 0;
+    let mouseScrollLeft = 0;
+
+    wrapper.addEventListener('mousedown', function(e) {
+      isMouseDown = true;
+      mouseStartX = e.pageX - wrapper.offsetLeft;
+      mouseScrollLeft = wrapper.scrollLeft;
+      wrapper.style.cursor = 'grabbing';
+      wrapper.style.userSelect = 'none';
+    });
+
+    wrapper.addEventListener('mousemove', function(e) {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - mouseStartX) * 2;
+      wrapper.scrollLeft = mouseScrollLeft - walk;
+    });
+
+    wrapper.addEventListener('mouseup', function() {
+      isMouseDown = false;
+      wrapper.style.cursor = 'grab';
+      wrapper.style.userSelect = 'auto';
+    });
+
+    wrapper.addEventListener('mouseleave', function() {
+      isMouseDown = false;
+      wrapper.style.cursor = 'grab';
+      wrapper.style.userSelect = 'auto';
+    });
+  });
+});
