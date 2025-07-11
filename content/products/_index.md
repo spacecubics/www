@@ -12,7 +12,7 @@
   link="",
   link_text="",
   img_link="",
-  bg="bright_white_pcb.jpg",
+  bg="white_pcb.jpg",
   subtitle="",
   slogan=""
 ) %}
@@ -46,7 +46,7 @@
 {% end %}
 
 {% prefooter(
-  left_card_image="about.png", 
+  left_card_image="sq_about_img2.jpg", 
   right_card_image="earth.png",
 
   left_title="ABOUT US",

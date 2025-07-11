@@ -6,7 +6,7 @@
 {% end %}
 
 {% twocol(
-  bg="sq_about_img.jpg",
+  bg="sq_about_img2.jpg",
   title="",
   subtitle="",
   slogan="",
@@ -81,7 +81,7 @@ Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. 
 {% end %}
 
 {% prefooter(
-  left_card_image="pcb_gray_overlay.jpg", 
+  left_card_image="white_pcb_dark.jpg", 
   right_card_image="earth.png",
 
   left_title = "PRODUCTS"

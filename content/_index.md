@@ -70,7 +70,7 @@ title = "Space Cubics Inc."
 
 {% prefooter(
   left_card_image="earth.png", 
-  right_card_image="sq_ir.png",
+  right_card_image="sq_ir_img2.jpg",
 
  left_title="RECRUIT",
   left_subtitle="採用情報",
