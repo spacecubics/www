@@ -23,7 +23,12 @@
 @use "jobs_list";
 @use "language_switcher";
 @use "nav";
+<<<<<<< HEAD
 @use "news_section";
+=======
+@use "auto_news_carousel";
+@use "auto_news_list";
+>>>>>>> 22ffcc9 (rebase: accept deletion of templates/shortcodes/news_list.html)
 @use "notfound";
 @use "post-nav";
 @use "prefooter";
