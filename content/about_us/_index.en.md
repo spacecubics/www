@@ -45,7 +45,6 @@
 ) %}
 Company Name｜Space Cubics, Inc.
 Established｜2018
-Capital｜TODO yen
 Representative｜Yasushi Shoji
 Address｜Venture Square 301, 1-2 Minami 3-jo Higashi, Chuo-ku, Sapporo, Hokkaido 060-0053, Japan
 TEL｜+81-50-7112-6213
