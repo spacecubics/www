@@ -8,7 +8,7 @@ title = "Space Cubics Inc."
 
 {% hero_element(
   title="PRODUCTS",
-  img="/sq_sc-obc_module_a1.png",
+  img="sq_sc-obc_module_a1.png",
   alt="Diagram",
   link="products",
   link_text="Details",
@@ -26,7 +26,7 @@ Space computer modules.
 {% end %}
 
 {% hero_element(
-  bg="about.png",
+  bg="sq_about_img2.jpg",
   title="ABOUT US",
   subtitle="To drink beer",
   slogan="ON THE MOON",
