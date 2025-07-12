@@ -45,9 +45,9 @@
 ) %}
 会社名｜株式会社 Space Cubics
 設立｜2018年
-資本金｜百億円  
-代表者｜荘司 靖 (Yasushi Shoji) 
-住所｜〒060-0053 北海道札幌市中央区南3条東2丁目1番地 ベンチャースクエア301 
+資本金｜百億円
+代表者｜荘司 靖 (Yasushi Shoji)
+住所｜〒060-0053 北海道札幌市中央区南3条東2丁目1番地 ベンチャースクエア301
 TEL｜050-7112-6213
 {% end %}
 
@@ -83,7 +83,7 @@ TEL｜050-7112-6213
 {% end %}
 
 {% prefooter(
-  left_card_image="white_pcb_dark.jpg", 
+  left_card_image="white_pcb_dark.jpg",
   right_card_image="earth.png",
 
   left_title = "PRODUCTS"
