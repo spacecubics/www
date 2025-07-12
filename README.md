@@ -1,6 +1,6 @@
 # Space Cubics Inc. Website
 
-A modern, multilingual corporate website built with [Zola](https://www.getzola.org/) - a fast static site generator written in Rust.
+This is a corporate website built with [Zola](https://www.getzola.org/) - a static site generator written in Rust.
 
 ## 🚀 Quick Start
 
@@ -30,52 +30,59 @@ zola serve
 zola build && wrangler pages dev public
 ```
 
-## 📁 Project Structure
+## Project Structure
 
-```
-www/
-├── config.toml              # Zola configuration
-├── build.sh                 # Build script with Zola installation
-├── content/                 # Content files (Markdown)
-│   ├── _index.md           # Homepage (Japanese)
-│   ├── _index.en.md        # Homepage (English)
-│   ├── about_us/           # About us section
-│   ├── products/           # Products section
-│   ├── news/               # News articles
-│   ├── recruit/            # Recruitment section
-│   ├── contact/            # Contact section
-│   └── ir_info/            # Investor relations
-├── templates/              # HTML templates
-│   ├── base.html           # Base template
-│   ├── index.html          # Homepage template
-│   ├── page.html           # Generic page template
-│   ├── article.html        # Article template
-│   ├── partials/           # Reusable template parts
-│   ├── shortcodes/         # Custom shortcodes
-│   └── macros/             # Template macros
-├── sass/                   # SCSS stylesheets
-│   ├── style.scss          # Main stylesheet
-│   ├── _variables.scss     # CSS variables
-│   ├── _nav.scss          # Navigation styles
-│   ├── _hero_element.scss # Hero section styles
-│   ├── _news_carousel.scss # News carousel styles
-│   └── ...                 # Other component styles
-├── static/                 # Static assets
-│   ├── js/                 # JavaScript files
-│   │   ├── nav-toggle.js   # Navigation toggle
-│   │   ├── nav-links.js    # Navigation links
-│   │   └── news_carousel.js # Carousel functionality
-│   └── ...                 # Images, fonts, etc.
-├── functions/              # Cloudflare Workers
-│   └── contact.js         # Contact form handler
-├── i18n/                  # Internationalization
-│   ├── ja.toml           # Japanese translations
-│   └── en.toml           # English translations
-└── docs/                  # Documentation
-    └── wiki/              # Wiki documentation
-```
+This repository is organized into only a few main folders...
 
-## 🏗️ Architecture
+- content -- Contains all the website pages
+   ```
+   content/
+   ├── _index.en.md     # English homepage
+   ├── _index.md        # Japanese homepage
+   ├── about_us/        # About us section
+   ├── contact/         # Contact forms
+   ├── ir_info/         # Investor relations
+   ├── news/            # News articles
+   ├── products/        # Products section
+   ├── recruit/         # Recruitment section
+   └── sc_obc/          # Details page for the SC-OBC board
+   ```
+- functions -- Contains JavaScript files used as Cloudflare Workers
+- i18n -- Config files for Japanese and English
+- sass -- Visual style files
+- templates -- Contains HTML files
+   ```
+   templates/
+   ├── base.html                    # Main layout for site
+   ├── article.html                 # News article template (not currently used)
+   ├── macros/                      # Other globally available template functions
+   ├── partials/                    # Reusable page sections
+   │   ├── footer.html              # Site footer
+   │   └── nav.html                 # Site navigation header
+   └── shortcodes/                  # Custom components
+       ├── spec_sheet.html          # Production specification component
+       └── news_carousel.html       # Rotating news display component
+   ```
+- static -- Contains site images and client-side JavaScript
+   ```
+   static/
+   ├── js/                       # JavaScript that runs in the user's web browser
+   │   ├── nav-toggle.js         # Navigation menu functionality
+   │   ├── nav-links.js          # Navigation link handling
+   │   └── news_carousel.js      # News carousel UI interactions
+   ├── logo_black.webp           # Site logos and branding
+   ├── logo_white.webp
+   └── sq_sc-obc_module_a1.png   # Product images
+
+...and some important confirguration files such as...
+
+- config.toml
+- netlify.toml
+- wrangler.toml
+- README.md
+
+
+## Architecture
 
 ### Technology Stack
 - **Static Site Generator**: [Zola](https://www.getzola.org/) (Rust-based)
@@ -84,26 +91,20 @@ www/
 - **Deployment**: Cloudflare Pages with Workers
 - **Forms**: Cloudflare Turnstile CAPTCHA + Slack integration
 
-### Key Features
-- **Multilingual**: Japanese (default) and English support
-- **Responsive Design**: Mobile-first approach
-- **Interactive Components**: News carousel, navigation, contact forms
-- **SEO Optimized**: Meta tags, structured data
-- **Performance**: Static generation, optimized assets
-
-## 🎨 Design System
+## Design System
 
 ### Color Scheme
 - **Primary**: `#ff7800` (Orange)
 - **Accent**: `#ffa348` (Light Orange)
-- **Background**: Dark theme with glass morphism effects
+- **Background**: `#353946` (Dark Purple)
 
 ### Typography
 - **Alphanumeric**: [Montserrat](https://fonts.google.com/specimen/Montserrat)
 - **Japanese**: [Zen Kaku Gothic New](https://fonts.google.com/specimen/Zen+Kaku+Gothic+New)
 
 ### Components
-The site uses custom shortcodes for reusable components:
+The site uses custom shortcodes for reusable components.
+Examples on how to use these shortcodes on a page are shown below:
 
 #### Hero Elements
 ```html
@@ -141,11 +142,12 @@ Content here
 {% end %}
 ```
 
-## 📝 Content Management
+## Content Management
 
 ### Adding New Pages
-1. Create a new `.md` file in `content/`
-2. Add front matter with metadata:
+1. Create a new folder, such as: `content/your_new_page/`
+2. Add `_index.md` and `_index.en.md` files
+2. Add front matter and content (text and shortcode elements)
 ```markdown
 +++
 title = "Page Title"
@@ -153,36 +155,27 @@ description = "Page description"
 +++
 
 Content here...
+
+
+{% prefooter(
+  left_card_image="earth.png",
+  left_title="RECRUIT",
+  left_link="/recruit"
+) %}
+{% end %}
+
 ```
 
 ### Adding News Articles
 1. Create a new folder in `content/news/YYYY-MM-DD/`
-2. Add `index.md` and `index.en.md` files
-3. Update the news carousel in `content/_index.md`
+2. Add `_index.md` and `_index.en.md` files
 
 ### Multilingual Content
 - Japanese content: `_index.md`
 - English content: `_index.en.md`
 - Use the same front matter structure
 
-## 🎯 Key Components
-
-### Navigation (`templates/partials/nav.html`)
-- Responsive navigation with mobile menu
-- Language switcher
-- Social media links
-
-### News Carousel (`templates/shortcodes/news_carousel.html`)
-- Horizontal scrolling carousel
-- Custom JavaScript for smooth scrolling
-- Responsive design with proper spacing
-
-### Contact Form (`templates/shortcodes/contact_form.html`)
-- Cloudflare Turnstile CAPTCHA integration
-- Slack webhook notifications
-- Honeypot anti-spam protection
-
-## 🔧 Development Guidelines
+## Development Guidelines
 
 ### SCSS Structure
 - `_variables.scss`: Global CSS variables
@@ -200,80 +193,49 @@ Content here...
 - Use macros for complex logic
 - Maintain consistent naming conventions
 
-## 🚀 Deployment
+## Deployment
 
 ### Cloudflare Pages
-The site is deployed on Cloudflare Pages with the following configuration:
-
-```toml
-# netlify.toml
-[build]
-publish = "public"
-command = "zola build"
-```
+The site is deployed on Cloudflare Pages using the `build.sh` script.
 
 ### Environment Variables
 Required for contact form functionality:
 - `CAPTCHA_SECRET_KEY`: Cloudflare Turnstile secret
 - `SLACK_WEBHOOK`: Slack webhook URL for notifications
 
-### Build Process
-1. Zola compiles SCSS to CSS
-2. Templates are processed with Tera
-3. Static assets are copied to `public/`
-4. Site is deployed to Cloudflare Pages
+## Troubleshooting
 
-## 🐛 Troubleshooting
+### Following Tera Rules
+Some common programming syntax is not supported by Tera.
 
-### Common Issues
+For example, ternary operators are not supported in Tera templates - instead use `if`/`else` blocks:
+  ```
+  /* ❌ Incorrect - This will not work: */
+  {{ is_active ? "active" : "inactive" }}
+  
+  /* ✅ Correct - Use if/else blocks instead: */
+  {% if is_active %}
+    active
+  {% else %}
+    inactive
+  {% endif %}
+  ```
 
+See the Tera documentation for more details.
 
-#### SCSS Compilation
+### SCSS Compilation
+- Ensure new SCSS files are prefixed with an underscore ("_")
 - Ensure all SCSS files are imported in `sass/style.scss`
-- Check for syntax errors in SCSS files
+- Check for syntax errors in SCSS files (they can break the site)
 
-#### JavaScript Issues
-- Check browser console for errors
-- Verify file paths in templates
-- Test carousel functionality manually
+## Helpful Documentation
+- [Zola](https://www.getzola.org/documentation/)
+- [Tera](https://docs.rs/tera/latest/tera/)
+- [Sass](https://sass-lang.com/documentation/)
 
-### Performance Optimization
-- Images are optimized and served via CDN
-- CSS is minified in production
-- JavaScript is kept minimal for fast loading
+## Contributing
 
-## 📚 Documentation
-
-### Zola Documentation
-- [Zola Documentation](https://www.getzola.org/documentation/)
-- [Tera Templates](https://tera.netlify.app/docs)
-- [Sass Documentation](https://sass-lang.com/documentation/)
-
-### Project-Specific
-- Check `docs/wiki/` for internal documentation
-- Review `config.toml` for configuration options
-- Examine existing shortcodes for component patterns
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test locally with `zola serve`
-5. Submit a pull request
-
-### Code Style
-- Use consistent indentation (2 spaces)
-- Follow existing naming conventions
-- Add comments for complex logic
-- Test responsive design across devices
-
-## 📞 Support
-
-For questions or issues:
-- Check existing documentation
-- Review similar implementations in the codebase
-- Contact the development team
+Please feel free to submit a pull request and/or post an issue.
 
 ---
 
