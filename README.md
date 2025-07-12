@@ -98,8 +98,8 @@ www/
 - **Background**: Dark theme with glass morphism effects
 
 ### Typography
-- **Primary Font**: 'Montserrat' (Headings)
-- **Secondary Font**: 'Zen Kaku Gothic New' (Body text)
+- **Alphanumeric**: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- **Japanese**: [Zen Kaku Gothic New](https://fonts.google.com/specimen/Zen+Kaku+Gothic+New)
 
 ### Components
 The site uses custom shortcodes for reusable components:
