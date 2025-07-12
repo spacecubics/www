@@ -87,7 +87,7 @@ This repository is organized into only a few main folders...
 ### Technology Stack
 - **Static Site Generator**: [Zola](https://www.getzola.org/) (Rust-based)
 - **Styling**: SCSS with custom CSS variables
-- **JavaScript**: Vanilla JS for interactivity
+- **JavaScript**: JS for interactivity
 - **Deployment**: Cloudflare Pages with Workers
 - **Forms**: Cloudflare Turnstile CAPTCHA + Slack integration
 
@@ -170,28 +170,10 @@ Content here...
 1. Create a new folder in `content/news/YYYY-MM-DD/`
 2. Add `_index.md` and `_index.en.md` files
 
-## Development Guidelines
-
-### SCSS Structure
-- `_variables.scss`: Global CSS variables
-- Component-specific files: `_nav.scss`, `_hero_element.scss`, etc.
-- Responsive design with mobile-first approach
-
-### JavaScript
-- Vanilla JavaScript (no frameworks)
-- Modular functions for specific features
-- Event-driven architecture
-
-### Template Best Practices
-- Use shortcodes for reusable components
-- Keep templates DRY (Don't Repeat Yourself)
-- Use macros for complex logic
-- Maintain consistent naming conventions
-
 ## Deployment
 
 ### Cloudflare Pages
-The site is deployed on Cloudflare Pages using the `build.sh` script.
+The site is deployed on Cloudflare Pages using the `zola build` command.
 
 ### Environment Variables
 Required for contact form functionality:
@@ -219,7 +201,7 @@ For example, ternary operators are not supported in Tera templates - instead use
 See the Tera documentation for more details.
 
 ### SCSS Compilation
-- Ensure new SCSS files are prefixed with an underscore ("_")
+- Ensure new SCSS files are prefixed with an underscore (`_`)
 - Ensure all SCSS files are imported in `sass/style.scss`
 - Check for syntax errors in SCSS files (they can break the site)
 
