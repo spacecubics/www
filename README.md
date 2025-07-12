@@ -170,11 +170,6 @@ Content here...
 1. Create a new folder in `content/news/YYYY-MM-DD/`
 2. Add `_index.md` and `_index.en.md` files
 
-### Multilingual Content
-- Japanese content: `_index.md`
-- English content: `_index.en.md`
-- Use the same front matter structure
-
 ## Development Guidelines
 
 ### SCSS Structure
