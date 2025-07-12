@@ -81,7 +81,7 @@ Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. 
 {% end %}
 
 {% prefooter(
-  left_card_image="white_pcb_dark.jpg", 
+  left_card_image="white_pcb_dark.jpg",
   right_card_image="earth.png",
 
   left_title = "PRODUCTS"
