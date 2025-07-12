@@ -29,10 +29,10 @@
         <div class="hero-image-container">
           {% if img_link %}
             <a href="{{ img_link }}">
-              <img src="{{ img }}" alt="{{ alt | default(value='image') }}" />
+              <img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
             </a>
           {% else %}
-            <img src="{{ img }}" alt="{{ alt | default(value='image') }}" />
+            <img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
           {% endif %}
           {% if hero_footer %}
             <div class="hero-footer">{{ hero_footer | safe }}</div>

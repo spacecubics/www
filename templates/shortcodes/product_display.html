@@ -1,12 +1,12 @@
-<div class="product-display" style="background-image: url('{{ bg }}');">
+<div class="product-display" style="background-image: url('/{{ bg }}');">
   {% if img %}
     <div class="product-image-container">
       {% if img_link %}
         <a href="{{ img_link }}">
-          <img src="{{ img }}" alt="{{ alt | default(value="image") }}" />
+          <img src="/{{ img }}" alt="{{ alt | default(value="image") }}" />
         </a>
       {% else %}
-        <img src="{{ img }}" alt="{{ alt | default(value="image") }}" />
+        <img src="/{{ img }}" alt="{{ alt | default(value="image") }}" />
       {% endif %}
     </div>
   {% endif %}
