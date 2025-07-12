@@ -17,10 +17,10 @@ cd www
 # Install Zola (if not already installed)
 # See: https://www.getzola.org/documentation/getting-started/installation/
 
-# Build the site
-./build.sh
+# Update the CAPTCHA_SITE_KEY_PLACEHOLDER value in config.toml
+# This is required when testing the contact page
 
-# Or build directly with Zola
+# Build the site
 zola build
 
 # Serve locally for development
