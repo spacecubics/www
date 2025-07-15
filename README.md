@@ -70,9 +70,9 @@ This repository is organized into only a few main folders...
    │   ├── nav-toggle.js         # Navigation menu functionality
    │   ├── nav-links.js          # Navigation link handling
    │   └── news_carousel.js      # News carousel UI interactions
-   ├── logo_black.webp           
+   ├── logo_black.webp           # Site logos and branding
    ├── logo_white.webp
-   └── sq_sc-obc_module_a1.png   
+   └── sq_sc-obc_module_a1.png   # Product images
 
 ...and some important confirguration files such as...
 
