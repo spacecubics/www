@@ -1,8 +1,5 @@
-{#- Taken from https://codeberg.org/daudix/duckquill-#}
-
 {% extends "base.html" %}
-
-{% block content %}
-<h1>{{ section.title }}</h1>
-{{ section.content | safe }}
-{% endblock content %}
+{% block content -%}
+<h1>{{- section.title -}}</h1>
+{{- section.content | safe -}}
+{%- endblock content %}

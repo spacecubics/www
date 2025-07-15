@@ -1,38 +1,14 @@
-{#- Taken from https://codeberg.org/daudix/duckquill-#}
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="description" content="{{ config.description }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
-	
-	{%- if config.extra.accent_color_dark %}
-		<meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
-	{%- endif %}
+    <meta charset="UTF-8" />
+    <meta name="description" content="{{ config.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
+    
+    {%- if config.extra.accent_color_dark %}
+        <meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
+    {%- endif %}
 
-	<title>{% include "partials/title.html" %}</title>
-
-	{%- include "partials/site_icon.html" %}
-
-	{%- if config.generate_feeds and config.feed_filenames %}
-		{% for feed in config.feed_filenames %}
-			{% if feed == "atom.xml" %}
-				<link rel="alternate" type="application/atom+xml" title="{{ config.title }} - Atom Feed" href="{{ get_url(path=feed) | safe }}">
-			{% elif feed == "rss.xml" %}
-				<link rel="alternate" type="application/rss+xml" title="{{ config.title }} - RSS Feed" href="{{ get_url(path=feed) | safe }}">
-			{% else %}
-				<link rel="alternate" href="{{ get_url(path=feed) | safe }}">
-			{% endif %}
-		{% endfor %}
-    {% endif %}
-
-	{%- include "partials/variables.html" %}
-
-	{%- set styles = [ "style.css" ] %}
-
-	{%- if not config.extra.debug.no_styles %}
-		{%- for style in styles %}
-			<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
-		{%- endfor %}
-	{%- endif %}
-</head>
+    <title>{% include "partials/title.html" %}</title>
+    {%- include "partials/site_icon.html" %}
+    {%- include "partials/variables.html" %}
+    <link type="text/css" rel="stylesheet" href="{{ get_url(path='style.css') | safe }}" /></head>
