@@ -28,7 +28,6 @@
 <script>
 // Auto-generate news carousel from dynamically generated data
 document.addEventListener('DOMContentLoaded', function() {
-<<<<<<< HEAD
   // Determine current language from URL or default to Japanese
   const pathname = window.location.pathname;
   const currentLang = pathname.includes('/en/') ? 'en' : 'ja';
@@ -45,11 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(newsData => {
       console.log('Loaded news data:', newsData);
-=======
-  fetch('/js/news_data.json')
-    .then(response => response.json())
-    .then(newsData => {
->>>>>>> 21ce8ad (rebase: resolving  conflicts)
+
       const container = document.getElementById('auto-news-container');
       
       newsData.forEach(news => {
@@ -69,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => {
       console.error('Error loading news data:', error);
-<<<<<<< HEAD
       // Fallback to default data if JSON loading fails
       const fallbackData = currentLang === 'en' ? [
         {
@@ -83,14 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
           date: "2025.06.01",
           link: "/news/2025-06-01/",
           img: "/news/jts.png",
-=======
-      // Fallback to static data if JSON loading fails
-      const fallbackData = [
-        {
-          date: "2025.06.01",
-          link: "/news/2025-06-01/",
-          img: "/news/2025-06-01/products_banner2.jpeg",
->>>>>>> 21ce8ad (rebase: resolving  conflicts)
           summary: "Space Cubicsは合同会社から株式会社へ組織変更しました。"
         }
       ];

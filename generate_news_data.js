@@ -56,7 +56,6 @@ function generateNewsData() {
           const dateMatch = frontMatter.match(/date\s*=\s*(\d{4}-\d{2}-\d{2})/);
           const date = dateMatch ? dateMatch[1] : folder;
           
-<<<<<<< HEAD
           // Extract image from front matter [extra] section
           const extraMatch = frontMatter.match(/\[extra\]([\s\S]*?)(?=\[|$)/);
           let image = null;
@@ -74,17 +73,6 @@ function generateNewsData() {
             const imageIndex = dateHash % imageOptions.length;
             image = imageOptions[imageIndex];
           }
-=======
-          // Extract banner
-          const bannerMatch = frontMatter.match(/banner\s*=\s*"([^"]+)"/);
-          let banner = bannerMatch ? bannerMatch[1] : 'products_banner2.jpeg';
-          
-          // Use different images for variety based on date hash
-          const imageOptions = ['jts.png', 'brainchild.png', 'square_cubics.png', 'about.png', 'earth.png'];
-          const dateHash = date.split('-').join('').length;
-          const imageIndex = dateHash % imageOptions.length;
-          banner = imageOptions[imageIndex];
->>>>>>> 21ce8ad (rebase: resolving  conflicts)
           
           // Format date for display
           const displayDate = date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1.$2.$3');
@@ -101,8 +89,7 @@ function generateNewsData() {
           newsData.push({
             date: displayDate,
             link: `/news/${folder}/`,
-            img: `/news/${banner}`,
->>>>>>> 21ce8ad (rebase: resolving  conflicts)
+            img: `/news/${image}`,
             summary: title
           });
         }
