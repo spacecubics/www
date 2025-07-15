@@ -1,0 +1,49 @@
+{% extends "section.html" %}
+
+{% block content %}
+  {% set bg = "" %}
+  {% set title = "NEWS" %}
+  {% set subtitle = "お知らせ" %}
+  {% set slogan = "" %}
+  {% set style_top = "お知らせ" %}
+  {% include "partials/section_title.html" %}
+  <!--display element -->
+
+  <div class="news-list-parent">
+    <div class="news-list">
+      <div class="news-list-content">
+        <div class="news-list-grid">
+          {%- set news_pages = section.pages | slice(start=0, end=10) -%}
+          {% for news in news_pages %}
+            <div class="news-card">
+              <div class="news-card-image">
+                {% if news.extra.image %}
+                  <img src="{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
+                {% endif %}
+              </div>
+              <div class="news-card-content">
+                <a href="{{ news.permalink | safe }}" class="news-card-link">
+                  <p class="news-card-date">{{ news.date | date(format="%Y.%m.%d") }}</p>
+                  <h3 class="news-card-title">{{ news.title }}</h3>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.extra.news_note %}
+          <p class="news-list__bottom-text">{{ section.extra.news_note | safe }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% set bottom_card_image = "<!--display element -->" %}
+  {% set bottom_title = "CONTACT" %}
+  {% set bottom_subtitle = "お問い合わせ" %}
+  {% set bottom_footer_1 = "事業やサービスについてご相談・ご質問承ります。" %}
+  {% set bottom_footer_2 = "お気軽にお問い合わせください。" %}
+  {% set bottom_link = "/contact" %}
+  {% set bg = "" %}
+  {% include "partials/prefooter.html" %}
+  <!--display element -->
+{% endblock content %} 
