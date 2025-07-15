@@ -3,6 +3,7 @@
 @use "application_form";
 @use "article";
 @use "article-list";
+@use "auto_news_carousel";
 @use "board_members";
 @use "buttons";
 @use "code";
@@ -14,6 +15,7 @@
 @use "footnotes-list";
 @use "footer";
 @use "general";
+@use "hero_element";
 @use "hidden";
 @use "icon";
 @use "iframe";
@@ -21,8 +23,7 @@
 @use "jobs_list";
 @use "language_switcher";
 @use "nav";
-@use "auto_news_carousel";
-@use "auto_news_list";
+@use "news_section";
 @use "notfound";
 @use "post-nav";
 @use "prefooter";
@@ -41,7 +42,6 @@
 @use "title";
 @use "twocard";
 @use "twocol";
-@use "hero_element";
 @use "typography";
 @use "variables";
 @use "visually-hidden";
