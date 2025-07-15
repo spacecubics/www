@@ -74,7 +74,7 @@ This repository is organized into only a few main folders...
    ├── logo_white.webp
    └── sq_sc-obc_module_a1.png   
 
-...and some important configuration files such as...
+...and some important confirguration files such as...
 
 - config.toml
 - netlify.toml
@@ -104,7 +104,6 @@ This repository is organized into only a few main folders...
 
 ### Components
 The site uses custom shortcodes for reusable components.
-
 Examples on how to use these shortcodes on a page are shown below:
 
 #### Hero Elements
@@ -113,7 +112,7 @@ Examples on how to use these shortcodes on a page are shown below:
   title="PRODUCTS",
   subtitle="Make the impossible",
   slogan="POSSIBLE",
-  img="image.png",
+  img="/image.png",
   link="products"
 ) %}
 Content here
