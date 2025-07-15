@@ -35,7 +35,6 @@ zola build && wrangler pages dev public
 ```
 www/
 ├── config.toml              # Zola configuration
-├── build.sh                 # Build script with Zola installation
 ├── content/                 # Content files (Markdown)
 │   ├── _index.md           # Homepage (Japanese)
 │   ├── _index.en.md        # Homepage (English)
