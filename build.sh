@@ -32,4 +32,7 @@ curl -sL "$ZOLA_ARCHIVE" | tar -xz
 
 sed -i "s/CAPTCHA_SITE_KEY_PLACEHOLDER/${CAPTCHA_SITE_KEY}/g" config.toml
 
+# Generate news data for auto carousel
+node generate_news_data.js
+
 ./zola build
