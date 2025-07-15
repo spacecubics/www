@@ -13,7 +13,7 @@
     <div class="news-list">
       <div class="news-list-content">
         <div class="news-list-grid">
-          {%- set news_pages = section.pages | slice(start=0, end=10) -%}
+          {%- set news_pages = section.pages | sort(attribute="date", order="asc") | reverse | slice(start=0, end=10) -%}
           {% for news in news_pages %}
             <div class="news-card">
               <div class="news-card-image">
