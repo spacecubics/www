@@ -5,8 +5,8 @@ This is a corporate website built with [Zola](https://www.getzola.org/) - a stat
 ## 🚀 Quick Start
 
 ### Prerequisites
-- [Zola](https://www.getzola.org/documentation/getting-started/installation/) (v0.20.0)
-- Node.js (for development tools)
+- Install [Zola](https://www.getzola.org/documentation/getting-started/installation/) 
+- We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
 
 ### Development
 ```bash
@@ -72,7 +72,7 @@ This repository is organized into only a few main folders...
    │   └── news_carousel.js      # News carousel UI interactions
    ├── logo_black.webp           
    ├── logo_white.webp
-   └── sq_sc-obc_module_a1.png   
+   └── sq_sc-obc_module_a1.jpg   
 
 ...and some important configuration files such as...
 
@@ -136,7 +136,7 @@ Content here
 #### Prefooter Cards
 ```html
 {% prefooter(
-  left_card_image="earth.png",
+  left_card_image="earth.jpg",
   left_title="RECRUIT",
   left_link="/recruit"
 ) %}
@@ -159,7 +159,7 @@ Content here...
 
 
 {% prefooter(
-  left_card_image="earth.png",
+  left_card_image="earth.jpg",
   left_title="RECRUIT",
   left_link="/recruit"
 ) %}
