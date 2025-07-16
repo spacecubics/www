@@ -26,7 +26,7 @@ title = "Space Cubics Inc."
 {% end %}
 
 {% hero_element(
-  bg="about.png",
+  bg="sq_about_img2.jpg",
   title="ABOUT US",
   subtitle="To drink beer",
   slogan="ON THE MOON",
@@ -89,7 +89,7 @@ title = "Space Cubics Inc."
 {% end %}
 
 {% prefooter(
-  left_card_image="earth.png", 
+  left_card_image="earth.jpg", 
   right_card_image="sq_ir_img2.jpg",
 
  left_title="RECRUIT",

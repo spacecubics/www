@@ -6,7 +6,7 @@
 {% end %}
 
 {% twocol(
-  bg="earth.png",
+  bg="earth.jpg",
   title="",
   subtitle="",
   slogan="",
