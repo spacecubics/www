@@ -90,7 +90,7 @@ Our mission is to support sustainable growth through partnership with teams that
 {% end %}
 
 {% prefooter(
-  left_card_image="earth.png", 
+  left_card_image="earth.jpg", 
   right_card_image="sq_ir_img2.jpg",
 
  left_title="RECRUIT",

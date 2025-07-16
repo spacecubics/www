@@ -116,7 +116,7 @@
 
   {% prefooter(
     left_card_image="sq_about_img2.jpg", 
-    right_card_image="earth.png",
+    right_card_image="earth.jpg",
 
     left_title="ABOUT US",
     left_subtitle="Company details",

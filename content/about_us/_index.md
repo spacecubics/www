@@ -83,7 +83,7 @@ TEL｜050-7112-6213
 
 {% prefooter(
   left_card_image="white_pcb_dark.jpg",
-  right_card_image="earth.png",
+  right_card_image="earth.jpg",
 
   left_title = "PRODUCTS"
   left_subtitle = "製品紹介"
