@@ -1,14 +1,14 @@
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="{{ config.description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
-    
-    {%- if config.extra.accent_color_dark %}
-        <meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
-    {%- endif %}
+	<meta charset="UTF-8" />
+	<meta name="description" content="{{ config.description }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
 
-    <title>{% include "partials/title.html" %}</title>
-    {%- include "partials/site_icon.html" %}
-    {%- include "partials/variables.html" %}
-    <link type="text/css" rel="stylesheet" href="{{ get_url(path='style.css') | safe }}" /></head>
+	{%- if config.extra.accent_color_dark %}
+		<meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
+	{%- endif %}
+
+	<title>{% include "partials/title.html" %}</title>
+	{%- include "partials/site_icon.html" %}
+	{%- include "partials/variables.html" %}
+	<link type="text/css" rel="stylesheet" href="{{ get_url(path='style.css') | safe }}" /></head>

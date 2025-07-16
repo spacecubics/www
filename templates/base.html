@@ -8,33 +8,33 @@
 {% include "partials/head.html" %}
 
 <body>
-  {% block body %}
-    {%- if config.extra.nav.links %}
-      {% include "partials/nav.html" %}
-    {%- endif %}
+	{% block body %}
+		{%- if config.extra.nav.links %}
+			{% include "partials/nav.html" %}
+		{%- endif %}
 
-    <main id="main-content">
-      {% block custom %}{% endblock custom %}
+		<main id="main-content">
+			{% block custom %}{% endblock custom %}
 
-      {%- if page.extra.go_to_top or section.extra.go_to_top %}
-        <div id="buttons-container">
-          <a id="go-to-top"
-             href="#top"
-             title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
-            <i class="icon"></i>
-          </a>
-        </div>
-      {%- endif %}
+			{%- if page.extra.go_to_top or section.extra.go_to_top %}
+				<div id="buttons-container">
+					<a id="go-to-top"
+						href="#top"
+						title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
+						<i class="icon"></i>
+					</a>
+				</div>
+			{%- endif %}
 
-      {% block content %}{% endblock content %}
-    </main>
+			{% block content %}{% endblock content %}
+		</main>
 
-    {% include "partials/footer.html" %}
-  {% endblock body %}
+		{% include "partials/footer.html" %}
+	{% endblock body %}
 
-  {% block scripts %}
-    <script src="{{ get_url(path='js/nav-toggle.js') }}"></script>
-    <script src="{{ get_url(path='js/nav-links.js') }}"></script>
-  {% endblock scripts %}
+	{% block scripts %}
+		<script src="{{ get_url(path='js/nav-toggle.js') }}"></script>
+		<script src="{{ get_url(path='js/nav-links.js') }}"></script>
+	{% endblock scripts %}
 </body>
 </html>

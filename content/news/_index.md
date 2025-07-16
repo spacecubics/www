@@ -6,8 +6,8 @@
 {% end %}
 
 {% news_list(
-  news_note = "",
-  news = "
+	news_note = "",
+	news = "
 Space Cubicsは合同会社から株式会社へ組織変更しました。 | /news/2025-06-01/ | jts.png | 2025.06.01
 組織変更のお知らせ | /news/2025-04-09/ | brainchild.png | 2025.04.09
 【ディープテックを追え】 宇宙用コンピューターの価格低減でビジネス振興 | /news/2022-03-07/ | square_cubics.png | 2022.03.07
@@ -23,13 +23,13 @@ JAXA初の共同設立ベンチャー「株式会社 Space Cubics」誕生 | /ne
 {% end %}
 
 {% prefooter(
-  bottom_card_image = "<!--display element -->",
-  bottom_title="CONTACT",
-  bottom_subtitle="お問い合わせ",
-  bottom_footer_1="事業やサービスについてご相談・ご質問承ります。",
-  bottom_footer_2="お気軽にお問い合わせください。",
-  bottom_link="/contact",
-  bg=""
+	bottom_card_image = "<!--display element -->",
+	bottom_title="CONTACT",
+	bottom_subtitle="お問い合わせ",
+	bottom_footer_1="事業やサービスについてご相談・ご質問承ります。",
+	bottom_footer_2="お気軽にお問い合わせください。",
+	bottom_link="/contact",
+	bg=""
 ) %}
 <!--display element -->
 {% end %}

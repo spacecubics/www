@@ -2,20 +2,20 @@
 {%- set separator = " - " -%}
 
 {%- if current_path and current_path == "/" -%}
-    {{- suffix -}}
+	{{- suffix -}}
 {%- else -%}
-    {%- set prefix = "" -%}
-    {%- if title -%}
-        {%- set prefix = title -%}
-    {%- elif section and section.title -%}
-        {%- set prefix = section.title -%}
-    {%- elif page and page.title -%}
-        {%- set prefix = page.title -%}
-    {%- endif -%}
-    
-    {%- if prefix -%}
-        {{- prefix ~ separator ~ suffix -}}
-    {%- else -%}
-        {{- suffix -}}
-    {%- endif -%}
+	{%- set prefix = "" -%}
+	{%- if title -%}
+		{%- set prefix = title -%}
+	{%- elif section and section.title -%}
+		{%- set prefix = section.title -%}
+	{%- elif page and page.title -%}
+		{%- set prefix = page.title -%}
+	{%- endif -%}
+
+	{%- if prefix -%}
+		{{- prefix ~ separator ~ suffix -}}
+	{%- else -%}
+		{{- suffix -}}
+	{%- endif -%}
 {%- endif -%}

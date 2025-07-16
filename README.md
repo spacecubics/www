@@ -5,7 +5,7 @@ This is a corporate website built with [Zola](https://www.getzola.org/) - a stat
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Install [Zola](https://www.getzola.org/documentation/getting-started/installation/) 
+- Install [Zola](https://www.getzola.org/documentation/getting-started/installation/)
 - We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
 
 ### Development
@@ -35,44 +35,44 @@ zola build && wrangler pages dev public
 This repository is organized into only a few main folders...
 
 - content -- Contains all the website pages
-   ```
-   content/
-   ├── _index.en.md     # English homepage
-   ├── _index.md        # Japanese homepage
-   ├── about_us/        # About us section
-   ├── contact/         # Contact forms
-   ├── ir_info/         # Investor relations
-   ├── news/            # News articles
-   ├── products/        # Products section
-   ├── recruit/         # Recruitment section
-   └── sc_obc/          # Details page for the SC-OBC board
-   ```
+	```
+	content/
+	├── _index.en.md     # English homepage
+	├── _index.md        # Japanese homepage
+	├── about_us/        # About us section
+	├── contact/         # Contact forms
+	├── ir_info/         # Investor relations
+	├── news/            # News articles
+	├── products/        # Products section
+	├── recruit/         # Recruitment section
+	└── sc_obc/          # Details page for the SC-OBC board
+	```
 - functions -- Contains JavaScript files used as Cloudflare Workers
 - i18n -- Config files for Japanese and English
 - sass -- Visual style files
 - templates -- Contains HTML files
-   ```
-   templates/
-   ├── base.html                    # Main layout for site
-   ├── article.html                 # News article template (not currently used)
-   ├── macros/                      # Other globally available template functions
-   ├── partials/                    # Reusable page sections
-   │   ├── footer.html              # Site footer
-   │   └── nav.html                 # Site navigation header
-   └── shortcodes/                  # Custom components
-       ├── spec_sheet.html          # Production specification component
-       └── news_carousel.html       # Rotating news display component
-   ```
+	```
+	templates/
+	├── base.html                    # Main layout for site
+	├── article.html                 # News article template (not currently used)
+	├── macros/                      # Other globally available template functions
+	├── partials/                    # Reusable page sections
+	│   ├── footer.html              # Site footer
+	│   └── nav.html                 # Site navigation header
+	└── shortcodes/                  # Custom components
+			├── spec_sheet.html          # Production specification component
+			└── news_carousel.html       # Rotating news display component
+	```
 - static -- Contains site images and client-side JavaScript
-   ```
-   static/
-   ├── js/                       # JavaScript that runs in the user's web browser
-   │   ├── nav-toggle.js         # Navigation menu functionality
-   │   ├── nav-links.js          # Navigation link handling
-   │   └── news_carousel.js      # News carousel UI interactions
-   ├── logo_black.webp           
-   ├── logo_white.webp
-   └── sq_sc-obc_module_a1.jpg   
+	```
+	static/
+	├── js/                       # JavaScript that runs in the user's web browser
+	│   ├── nav-toggle.js         # Navigation menu functionality
+	│   ├── nav-links.js          # Navigation link handling
+	│   └── news_carousel.js      # News carousel UI interactions
+	├── logo_black.webp
+	├── logo_white.webp
+	└── sq_sc-obc_module_a1.jpg
 
 ...and some important configuration files such as...
 
@@ -110,11 +110,11 @@ Examples on how to use these shortcodes on a page are shown below:
 #### Hero Elements
 ```html
 {% hero_element(
-  title="PRODUCTS",
-  subtitle="Make the impossible",
-  slogan="POSSIBLE",
-  img="image.png",
-  link="products"
+	title="PRODUCTS",
+	subtitle="Make the impossible",
+	slogan="POSSIBLE",
+	img="image.png",
+	link="products"
 ) %}
 Content here
 {% end %}
@@ -123,12 +123,12 @@ Content here
 #### News Carousel
 ```html
 {% news_carousel(
-  title="NEWS",
-  subtitle="Space Cubics",
-  slogan="INFORMATION",
-  items="
-    2025.6.1 | /news/2025-06-01 | image.png | News summary
-  "
+	title="NEWS",
+	subtitle="Space Cubics",
+	slogan="INFORMATION",
+	items="
+		2025.6.1 | /news/2025-06-01 | image.png | News summary
+	"
 ) %}
 {% end %}
 ```
@@ -136,9 +136,9 @@ Content here
 #### Prefooter Cards
 ```html
 {% prefooter(
-  left_card_image="earth.jpg",
-  left_title="RECRUIT",
-  left_link="/recruit"
+	left_card_image="earth.jpg",
+	left_title="RECRUIT",
+	left_link="/recruit"
 ) %}
 {% end %}
 ```
@@ -159,9 +159,9 @@ Content here...
 
 
 {% prefooter(
-  left_card_image="earth.jpg",
-  left_title="RECRUIT",
-  left_link="/recruit"
+	left_card_image="earth.jpg",
+	left_title="RECRUIT",
+	left_link="/recruit"
 ) %}
 {% end %}
 
@@ -187,17 +187,17 @@ Required for contact form functionality:
 Some common programming syntax is not supported by Tera.
 
 For example, ternary operators are not supported in Tera templates - instead use `if`/`else` blocks:
-  ```
-  /* ❌ Incorrect - This will not work: */
-  {{ is_active ? "active" : "inactive" }}
-  
-  /* ✅ Correct - Use if/else blocks instead: */
-  {% if is_active %}
-    active
-  {% else %}
-    inactive
-  {% endif %}
-  ```
+	```
+	/* ❌ Incorrect - This will not work: */
+	{{ is_active ? "active" : "inactive" }}
+
+	/* ✅ Correct - Use if/else blocks instead: */
+	{% if is_active %}
+		active
+	{% else %}
+		inactive
+	{% endif %}
+	```
 
 See the Tera documentation for more details.
 

@@ -1,32 +1,32 @@
 <div class="twocard" style="background-color: {{ bg | default(value='transparent') }}">
-  <div>
-    <h1 class="twocard-title">{{ title }}</h1>
-    <div class="twocard-subtitle">{{ subtitle | safe }}</div>
-  </div>
+	<div>
+		<h1 class="twocard-title">{{ title }}</h1>
+		<div class="twocard-subtitle">{{ subtitle | safe }}</div>
+	</div>
 
-  <div class="twocard-container">
+	<div class="twocard-container">
 
-    <!-- Left Card -->
-    <div class="twocard-column">
-      <div class="twocard-cardleft">
-        <img src="/{{ left_card_image }}" alt="{{ left_card_title }}" />
-        <div class="twocard-cardleft-content">
-          <h2>{{ left_card_title }}</h2>
-          <div>{{ left_card_subtitle | safe }}</div>
-        </div>
-      </div>
-    </div>
+		<!-- Left Card -->
+		<div class="twocard-column">
+			<div class="twocard-cardleft">
+				<img src="/{{ left_card_image }}" alt="{{ left_card_title }}" />
+				<div class="twocard-cardleft-content">
+					<h2>{{ left_card_title }}</h2>
+					<div>{{ left_card_subtitle | safe }}</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Right Card -->
-    <div class="twocard-column">
-      <div class="twocard-cardright">
-        <img src="/{{ right_card_image }}" alt="{{ right_card_title }}" />
-        <div class="twocard-cardright-content">
-          <h2>{{ right_card_title }}</h2>
-          <div>{{ right_card_subtitle | safe }}</div>
-        </div>
-      </div>
-    </div>
+		<!-- Right Card -->
+		<div class="twocard-column">
+			<div class="twocard-cardright">
+				<img src="/{{ right_card_image }}" alt="{{ right_card_title }}" />
+				<div class="twocard-cardright-content">
+					<h2>{{ right_card_title }}</h2>
+					<div>{{ right_card_subtitle | safe }}</div>
+				</div>
+			</div>
+		</div>
 
-  </div>
+	</div>
 </div>

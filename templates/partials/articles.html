@@ -1,9 +1,9 @@
 {%- if paginator.pages -%}
-    {%- set pages = paginator.pages -%}
+	{%- set pages = paginator.pages -%}
 {%- elif section.pages -%}
-    {%- set pages = section.pages -%}
+	{%- set pages = section.pages -%}
 {%- else -%}
-    {%- set pages = term.pages -%}
+	{%- set pages = term.pages -%}
 {%- endif -%}
 
 <div id="article-list">

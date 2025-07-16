@@ -6,8 +6,8 @@
 {% end %}
 
 {% news_list(
-  news_note = "",
-  news = "
+	news_note = "",
+	news = "
 Space Cubics, LLC has changed its organizational structure and is now Space Cubics, Inc. | /en/news/2025-06-01/ | jts.png | 2025.06.01
 
 Following a board decision in March, our company has been re-structured as Space Cubics, Inc., as of June 1, 2025. | /en/news/2025-04-09/ | brainchild.png | 2025.04.09
@@ -31,13 +31,13 @@ Space Cubics was certified as a JAXA Venture by the Japan Aerospace Exploration 
 {% end %}
 
 {% prefooter(
-  bottom_card_image = "<!--display element -->",
-  bottom_title="CONTACT",
-  bottom_subtitle="Reach out to us",
-  bottom_footer_1="We are happy to answer any questions or inquiries you may have about our business or services.",
-  bottom_footer_2="Please feel free to contact us.",
-  bottom_link="/en/contact",
-  bg=""
+	bottom_card_image = "<!--display element -->",
+	bottom_title="CONTACT",
+	bottom_subtitle="Reach out to us",
+	bottom_footer_1="We are happy to answer any questions or inquiries you may have about our business or services.",
+	bottom_footer_2="Please feel free to contact us.",
+	bottom_link="/en/contact",
+	bg=""
 ) %}
 <!--display element -->
 {% end %}
