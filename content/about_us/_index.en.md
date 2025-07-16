@@ -85,8 +85,8 @@ Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. 
 
   left_title = "PRODUCTS"
   left_subtitle = "Board introduction"
-  left_footer_1 = "We provide reliable products and"
-  left_footer_2 = "support space development."
+  left_footer_1 = "Even in extreme environments,"
+  left_footer_2 = "these computers function normally."
   left_link = "/en/products"
 
   right_title="RECRUIT",

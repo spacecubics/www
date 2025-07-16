@@ -68,27 +68,27 @@ Thermal Engineer |
 {% end %}
 
 {% prefooter(
-  left_card_image="sq_about_img2.jpg", 
-  right_card_image="earth.jpg",
+  left_card_image="white_pcb_dark.jpg", 
+  right_card_image="sq_about_img2.jpg",
 
-  left_title="ABOUT US",
-  left_subtitle="Company details",
-  left_footer_1="We are always looking for new members to join our team.",
-  left_footer_2="If you are interested, please contact us.",
-  left_link="/about_us",
+  left_title="PRODUCTS",
+  left_subtitle="Board introduction",
+  left_footer_1="Even in extreme environments,",
+  left_footer_2="these computers function normally.",
+  left_link="/en/products",
 
-  right_title="CONTACT",
-  right_subtitle="Send us a message",
-  right_footer_1="Please feel free to contact us.",
-  right_footer_2="A representative will respond to you.",
-  right_link="/contact",
+  right_title="ABOUT US",
+  right_subtitle="Company details",
+  right_footer_1="Aiming for an era where anyone can go to the moon,",
+  right_footer_2="we are a JAXA venture developing affordable and reliable computers for space use.",
+  right_link="/en/about_us",
 
   bottom_card_image = "<!--display element -->",
-  bottom_title="PRODUCTS",
-  bottom_subtitle="Board introduction",
-  bottom_footer_1="We provide reliable products and",
-  bottom_footer_2="support space development.",
-  bottom_link="/products",
+  bottom_title="CONTACT",
+  bottom_subtitle="Reach out to us.",
+  bottom_footer_1="We welcome inquiries about our business and services.",
+  bottom_footer_2="Please feel free to contact us.",
+  bottom_link="/en/contact",
 
   bg=""
 ) %}

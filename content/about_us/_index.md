@@ -87,8 +87,8 @@ TEL｜050-7112-6213
 
   left_title = "PRODUCTS"
   left_subtitle = "製品紹介"
-  left_footer_1 = "信頼性の高い製品を提供し、"
-  left_footer_2 = "宇宙開発をサポートします。"
+  left_footer_1 = "極限の環境でも"
+  left_footer_2 = "正常に動作するコンピューターを"
   left_link = "/products"
 
   right_title="RECRUIT",
