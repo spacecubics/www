@@ -1,3 +1,4 @@
 public/
 zola
 .wrangler/
+node_modules/
