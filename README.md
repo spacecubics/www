@@ -5,8 +5,8 @@ This is a corporate website built with [Zola](https://www.getzola.org/) - a stat
 ## 🚀 Quick Start
 
 ### Prerequisites
-- [Zola](https://www.getzola.org/documentation/getting-started/installation/) (v0.20.0)
-- Node.js (for development tools)
+- Install [Zola](https://www.getzola.org/documentation/getting-started/installation/) 
+- We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
 
 ### Development
 ```bash
