@@ -17,8 +17,8 @@ cd www
 # Install Zola (if not already installed)
 # See: https://www.getzola.org/documentation/getting-started/installation/
 
-# Update the CAPTCHA_SITE_KEY_PLACEHOLDER value in config.toml
-# This is required when testing the contact page
+# Set Captcha environment variable temporarily (for the current session)
+export CAPTCHA_SITE_KEY=your_test_key
 
 # Build the site
 zola build
