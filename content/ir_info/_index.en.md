@@ -6,41 +6,41 @@
 {% end %}
 
 {% twocol(
-  bg="sq_ir_img2.jpg",
-  title="",
-  subtitle="",
-  slogan="",
-  img="",
-  alt="",
-  link="",
-  link_text="",
-  img_link=""
+	bg="sq_ir_img2.jpg",
+	title="",
+	subtitle="",
+	slogan="",
+	img="",
+	alt="",
+	link="",
+	link_text="",
+	img_link=""
 ) %}
 <!-- no text -->
 {% end %}
 
 {% about_company (
-  title="IR NEWS",
-  subtitle="Space Cubics",
-  slogan="INVESTOR RELATIONS"
-  link="/space",
-  link_text="",
-  bg=""
+	title="IR NEWS",
+	subtitle="Space Cubics",
+	slogan="INVESTOR RELATIONS"
+	link="/space",
+	link_text="",
+	bg=""
 ) %}
 2025.12.31｜TODO Third injection of funds
 2025.11.31｜Second injection of funds
-2025.10.31｜First injection of funds 
+2025.10.31｜First injection of funds
 2025.09.31｜Initial seed funding
 {% end %}
 
 {% prefooter(
-  bottom_card_image = "<!--display element -->",
-  bottom_title="CONTACT",
-  bottom_subtitle="Reach out to us",
-  bottom_footer_1="We are happy to answer any questions or inquiries you may have about our business or services.",
-  bottom_footer_2="Please feel free to contact us.",
-  bottom_link="/en/contact",
-  bg=""
+	bottom_card_image = "<!--display element -->",
+	bottom_title="CONTACT",
+	bottom_subtitle="Reach out to us",
+	bottom_footer_1="We are happy to answer any questions or inquiries you may have about our business or services.",
+	bottom_footer_2="Please feel free to contact us.",
+	bottom_link="/en/contact",
+	bg=""
 ) %}
 <!--display element -->
 {% end %}
