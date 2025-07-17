@@ -23,11 +23,13 @@
             {% set date_str = date_candidate | replace(from=".en", to="") | replace(from=".md", to="") %}
             <div class="news-card">
               <div class="news-card-image">
-                {% if news.extra.image %}
-                  <img src="/{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
-                {% else %}
-                  <img src="/square_cubics.png" alt="default image" class="news-card-img">
-                {% endif %}
+                <a href="{{ news.permalink | safe }}">
+                  {% if news.extra.image %}
+                    <img src="/{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
+                  {% else %}
+                    <img src="/square_cubics.png" alt="default image" class="news-card-img">
+                  {% endif %}
+                </a>
               </div>
               <div class="news-card-content">
                 <a href="{{ news.permalink | safe }}" class="news-card-link">
