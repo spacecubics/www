@@ -1,55 +1,55 @@
 {% extends "section.html" %}
 
 {% block content %}
-  {% set bg = "" %}
-  {% set title = "NEWS" %}
-  {% set subtitle = "お知らせ" %}
-  {% set slogan = "" %}
-  {% set style_top = "お知らせ" %}
-  {% include "partials/section_title.html" %}
+	{% set bg = "" %}
+	{% set title = "NEWS" %}
+	{% set subtitle = "お知らせ" %}
+	{% set slogan = "" %}
+	{% set style_top = "お知らせ" %}
+	{% include "partials/section_title.html" %}
 
-  <div class="news-list-parent">
-    <div class="news-list">
-      <div class="news-list-content">
-        <div class="news-list-grid">
-          {# Get all news pages #}
-          {% set all_news = section.pages %}
-          {# Separate Japanese and English articles #}
-          {% set ja_news = all_news | sort(attribute="path") | reverse %}
-          {% for news in ja_news | slice(start=0, end=10) %}
-            {% set path_parts = news.relative_path | split(pat="/") %}
-            <div class="news-card">
-              <div class="news-card-image">
-                <a href="{{ news.permalink | safe }}">
-                  {% if news.extra.image %}
-                    <img src="/{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
-                  {% else %}
-                    <img src="/square_cubics.png" alt="default image" class="news-card-img">
-                  {% endif %}
-                </a>
-              </div>
-              <div class="news-card-content">
-                <a href="{{ news.permalink | safe }}" class="news-card-link">
-                  <p class="news-card-date">{{ path_parts[1] | truncate(length=10, end="") }}</p>
-                  <h3 class="news-card-title">{{ news.title }}</h3>
-                </a>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        {% if section.news_note %}
-          <p class="news-list__bottom-text">{{ section.news_note | safe }}</p>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+	<div class="news-list-parent">
+		<div class="news-list">
+			<div class="news-list-content">
+				<div class="news-list-grid">
+					{# Get all news pages #}
+					{% set all_news = section.pages %}
+					{# Separate Japanese and English articles #}
+					{% set ja_news = all_news | sort(attribute="path") | reverse %}
+					{% for news in ja_news | slice(start=0, end=10) %}
+						{% set path_parts = news.relative_path | split(pat="/") %}
+						<div class="news-card">
+							<div class="news-card-image">
+								<a href="{{ news.permalink | safe }}">
+									{% if news.extra.image %}
+										<img src="/{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
+									{% else %}
+										<img src="/square_cubics.png" alt="default image" class="news-card-img">
+									{% endif %}
+								</a>
+							</div>
+							<div class="news-card-content">
+								<a href="{{ news.permalink | safe }}" class="news-card-link">
+									<p class="news-card-date">{{ path_parts[1] | truncate(length=10, end="") }}</p>
+									<h3 class="news-card-title">{{ news.title }}</h3>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				{% if section.news_note %}
+					<p class="news-list__bottom-text">{{ section.news_note | safe }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
 
-  {% set bottom_card_image = "<!--display element -->" %}
-  {% set bottom_title = "CONTACT" %}
-  {% set bottom_subtitle = "お問い合わせ" %}
-  {% set bottom_footer_1 = "事業やサービスについてご相談・ご質問承ります。" %}
-  {% set bottom_footer_2 = "お気軽にお問い合わせください。" %}
-  {% set bottom_link = "/contact" %}
-  {% set bg = "" %}
-  {% include "partials/prefooter.html" %}
-{% endblock content %} 
+	{% set bottom_card_image = "<!--display element -->" %}
+	{% set bottom_title = "CONTACT" %}
+	{% set bottom_subtitle = "お問い合わせ" %}
+	{% set bottom_footer_1 = "事業やサービスについてご相談・ご質問承ります。" %}
+	{% set bottom_footer_2 = "お気軽にお問い合わせください。" %}
+	{% set bottom_link = "/contact" %}
+	{% set bg = "" %}
+	{% include "partials/prefooter.html" %}
+{% endblock content %}

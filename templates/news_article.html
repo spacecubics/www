@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <article class="news-article">
-    <header>
-      <h1 class="news-article-title">
-        {# Use the date from the path as in the list #}
-        {% set path_parts = page.path | split(pat="/") %}
-        {% set last_index = path_parts | length - 2 %}
-        {% set date_candidate = path_parts[last_index] %}
-        {% set date_str = date_candidate | replace(from=".en", to="") | replace(from=".md", to="") %}
-        {{ date_str }}
-      </h1>
-      {% if page.extra.image %}
-        <img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="news-article-img">
-      {% endif %}
-    </header>
-    <div class="news-article-content">
-      {{ page.content | safe }}
-    </div>
-    {% if page.extra.link %}
-      <div class="news-article-link">
-        <a href="{{ page.extra.link }}" target="_blank" rel="noopener">
-          {{ page.extra.link }}
-        </a>
-      </div>
-    {% endif %}
-  </article>
+	<article class="news-article">
+		<header>
+			<h1 class="news-article-title">
+				{# Use the date from the path as in the list #}
+				{% set path_parts = page.path | split(pat="/") %}
+				{% set last_index = path_parts | length - 2 %}
+				{% set date_candidate = path_parts[last_index] %}
+				{% set date_str = date_candidate | replace(from=".en", to="") | replace(from=".md", to="") %}
+				{{ date_str }}
+			</h1>
+			{% if page.extra.image %}
+				<img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="news-article-img">
+			{% endif %}
+		</header>
+		<div class="news-article-content">
+			{{ page.content | safe }}
+		</div>
+		{% if page.extra.link %}
+			<div class="news-article-link">
+				<a href="{{ page.extra.link }}" target="_blank" rel="noopener">
+					{{ page.extra.link }}
+				</a>
+			</div>
+		{% endif %}
+	</article>
 
 {% set bottom_card_image = "<!--display element -->" %}
 {% set bottom_title = "CONTACT" %}
@@ -35,4 +35,4 @@
 {% set bottom_link = "/contact" %}
 {% set bg = "" %}
 {% include "partials/prefooter.html" %}
-{% endblock content %} 
+{% endblock content %}
