@@ -17,10 +17,7 @@
           {# Separate Japanese and English articles #}
           {% set ja_news = all_news | sort(attribute="path") | reverse %}
           {% for news in ja_news | slice(start=0, end=10) %}
-            {% set path_parts = news.path | split(pat="/") %}
-            {% set last_index = path_parts | length - 2 %}
-            {% set date_candidate = path_parts[last_index] %}
-            {% set date_str = date_candidate | replace(from=".en", to="") | replace(from=".md", to="") %}
+            {% set path_parts = news.relative_path | split(pat="/") %}
             <div class="news-card">
               <div class="news-card-image">
                 <a href="{{ news.permalink | safe }}">
@@ -33,7 +30,7 @@
               </div>
               <div class="news-card-content">
                 <a href="{{ news.permalink | safe }}" class="news-card-link">
-                  <p class="news-card-date">{{ date_str }}</p>
+                  <p class="news-card-date">{{ path_parts[1] | truncate(length=10, end="") }}</p>
                   <h3 class="news-card-title">{{ news.title }}</h3>
                 </a>
               </div>
