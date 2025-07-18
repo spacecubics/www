@@ -74,7 +74,7 @@
 			<div class="z-contact-form__turnstile-wrapper">
 				<div
 					class="cf-turnstile"
-					data-sitekey="{{ config.extra.captcha_site_key }}"
+					data-sitekey="{{ get_env(name="CAPTCHA_SITE_KEY")  }}"
 					data-callback="onTurnstileSuccess"
 					data-theme="light"
 				></div>
