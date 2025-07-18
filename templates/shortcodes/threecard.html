@@ -1,77 +1,77 @@
 <div class="threecard" style="background-color: {{ bg | default(value='transparent') }}">
-  <!-- Title & Subtitle -->
-  <div>
-    <h1 class="threecard-title">{{ title }}</h1>
-    <div class="threecard-subtitle">
-      {{ subtitle | safe }}
-    </div>
-  </div>
+	<!-- Title & Subtitle -->
+	<div>
+		<h1 class="threecard-title">{{ title }}</h1>
+		<div class="threecard-subtitle">
+			{{ subtitle | safe }}
+		</div>
+	</div>
 
-  <!-- Cards Container -->
-  <div class="threecard-container">
+	<!-- Cards Container -->
+	<div class="threecard-container">
 
-    <!-- Left Card -->
-    <div class="threecard-column">
-      <div class="threecard-cardleft" style="background-image: url('{{ left_card_image }}');">
-        <div class="threecard-label">
-          <span class="label-prefix">Vision</span>
-          <span class="label-number">01</span>
-        </div>
-        <div class="threecard-cardleft-content">
-          <h2>{{ left_card_title }}</h2>
-          <div style="{{ left_card_subtitle_style | default(value='') }}">
-            {{ left_card_subtitle | safe }}
-          </div>
-        </div>
-        {% if left_card_link and left_card_link_text %}
-          <div class="threecard-leftbtn-container">
-            <a href="{{ left_card_link }}" class="threecard-leftlink-btn">{{ left_card_link_text }}</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
+		<!-- Left Card -->
+		<div class="threecard-column">
+			<div class="threecard-cardleft" style="background-image: url('{{ left_card_image }}');">
+				<div class="threecard-label">
+					<span class="label-prefix">Vision</span>
+					<span class="label-number">01</span>
+				</div>
+				<div class="threecard-cardleft-content">
+					<h2>{{ left_card_title }}</h2>
+					<div style="{{ left_card_subtitle_style | default(value='') }}">
+						{{ left_card_subtitle | safe }}
+					</div>
+				</div>
+				{% if left_card_link and left_card_link_text %}
+					<div class="threecard-leftbtn-container">
+						<a href="{{ left_card_link }}" class="threecard-leftlink-btn">{{ left_card_link_text }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
 
-    <!-- Middle Card -->
-    <div class="threecard-column">
-      <div class="threecard-cardmiddle" style="background-image: url('{{ middle_card_image }}');">
-        <div class="threecard-label">
-          <span class="label-prefix">Vision</span>
-          <span class="label-number">02</span>
-        </div>
-        <div class="threecard-cardmiddle-content">
-          <h2>{{ middle_card_title }}</h2>
-          <div style="{{ middle_card_subtitle_style | default(value='') }}">
-            {{ middle_card_subtitle | safe }}
-          </div>
-        </div>
-        {% if middle_card_link and middle_card_link_text %}
-          <div class="threecard-middlebtn-container">
-            <a href="{{ middle_card_link }}" class="threecard-middlelink-btn">{{ middle_card_link_text }}</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
+		<!-- Middle Card -->
+		<div class="threecard-column">
+			<div class="threecard-cardmiddle" style="background-image: url('{{ middle_card_image }}');">
+				<div class="threecard-label">
+					<span class="label-prefix">Vision</span>
+					<span class="label-number">02</span>
+				</div>
+				<div class="threecard-cardmiddle-content">
+					<h2>{{ middle_card_title }}</h2>
+					<div style="{{ middle_card_subtitle_style | default(value='') }}">
+						{{ middle_card_subtitle | safe }}
+					</div>
+				</div>
+				{% if middle_card_link and middle_card_link_text %}
+					<div class="threecard-middlebtn-container">
+						<a href="{{ middle_card_link }}" class="threecard-middlelink-btn">{{ middle_card_link_text }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
 
-    <!-- Right Card -->
-    <div class="threecard-column">
-      <div class="threecard-cardright" style="background-image: url('{{ right_card_image }}');">
-        <div class="threecard-label">
-          <span class="label-prefix">Vision</span>
-          <span class="label-number">03</span>
-        </div>
-        <div class="threecard-cardright-content">
-          <h2>{{ right_card_title }}</h2>
-          <div style="{{ right_card_subtitle_style | default(value='') }}">
-            {{ right_card_subtitle | safe }}
-          </div>
-        </div>
-        {% if right_card_link and right_card_link_text %}
-          <div class="threecard-rightbtn-container">
-            <a href="{{ right_card_link }}" class="threecard-rightlink-btn">{{ right_card_link_text }}</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
+		<!-- Right Card -->
+		<div class="threecard-column">
+			<div class="threecard-cardright" style="background-image: url('{{ right_card_image }}');">
+				<div class="threecard-label">
+					<span class="label-prefix">Vision</span>
+					<span class="label-number">03</span>
+				</div>
+				<div class="threecard-cardright-content">
+					<h2>{{ right_card_title }}</h2>
+					<div style="{{ right_card_subtitle_style | default(value='') }}">
+						{{ right_card_subtitle | safe }}
+					</div>
+				</div>
+				{% if right_card_link and right_card_link_text %}
+					<div class="threecard-rightbtn-container">
+						<a href="{{ right_card_link }}" class="threecard-rightlink-btn">{{ right_card_link_text }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
 
-  </div>
+	</div>
 </div>

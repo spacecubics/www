@@ -1,86 +1,86 @@
 <div class="board-members">
-  <div class="board-members-left">
-    {% if title %}
-      <h2 class="board-members__title">{{ title }}</h2>
-    {% endif %}
-    {% if subtitle %}
-      <p class="board-members__subtitle">{{ subtitle }}</p>
-    {% endif %}
-    {% if slogan %}
-      <p class="board-members__slogan">{{ slogan }}</p>
-    {% endif %}
-    <div class="board-members__divider"></div>
-  </div>
+	<div class="board-members-left">
+		{% if title %}
+			<h2 class="board-members__title">{{ title }}</h2>
+		{% endif %}
+		{% if subtitle %}
+			<p class="board-members__subtitle">{{ subtitle }}</p>
+		{% endif %}
+		{% if slogan %}
+			<p class="board-members__slogan">{{ slogan }}</p>
+		{% endif %}
+		<div class="board-members__divider"></div>
+	</div>
 
-  <div class="board-members-right">
-    <div class="board-members-grid">
-      {% set lines = body | split(pat="\n") %}
-      {% for line in lines %}
-        {% set parts = line | split(pat="｜") %}
+	<div class="board-members-right">
+		<div class="board-members-grid">
+			{% set lines = body | split(pat="\n") %}
+			{% for line in lines %}
+				{% set parts = line | split(pat="｜") %}
 
-        {% if parts | length > 0 %}
-          {% set name = parts[0] | trim %}
-        {% else %}
-          {% set name = "" %}
-        {% endif %}
+				{% if parts | length > 0 %}
+					{% set name = parts[0] | trim %}
+				{% else %}
+					{% set name = "" %}
+				{% endif %}
 
-        {% if parts | length > 1 %}
-          {% set title = parts[1] | trim %}
-        {% else %}
-          {% set title = "" %}
-        {% endif %}
+				{% if parts | length > 1 %}
+					{% set title = parts[1] | trim %}
+				{% else %}
+					{% set title = "" %}
+				{% endif %}
 
-        {% if parts | length > 2 %}
-          {% set position = parts[2] | trim %}
-        {% else %}
-          {% set position = "" %}
-        {% endif %}
+				{% if parts | length > 2 %}
+					{% set position = parts[2] | trim %}
+				{% else %}
+					{% set position = "" %}
+				{% endif %}
 
-        {% if parts | length > 3 %}
-          {% set bio = parts[3] | trim %}
-        {% else %}
-          {% set bio = "" %}
-        {% endif %}
+				{% if parts | length > 3 %}
+					{% set bio = parts[3] | trim %}
+				{% else %}
+					{% set bio = "" %}
+				{% endif %}
 
-        {% if parts | length > 4 %}
-          {% set img = parts[4] | trim %}
-        {% else %}
-          {% set img = "" %}
-        {% endif %}
+				{% if parts | length > 4 %}
+					{% set img = parts[4] | trim %}
+				{% else %}
+					{% set img = "" %}
+				{% endif %}
 
-        <div class="board-card">
-          {% if img != "" %}
-            <img src="{{ img }}" alt="{{ name }}" class="board-card__image" />
-          {% endif %}
+				<div class="board-card">
+					{% if img != "" %}
+						<img src="{{ img }}" alt="{{ name }}" class="board-card__image" />
+					{% endif %}
 
-          {% if position != "" %}
-            <div class="board-card__role">{{ position }}</div>
-          {% endif %}
+					{% if position != "" %}
+						<div class="board-card__role">{{ position }}</div>
+					{% endif %}
 
-          {% set name_parts = name | split(pat="(") %}
-          {% set jp_name = name_parts[0] | trim %}
-          {% if name_parts | length > 1 %}
-            {% set en_name = name_parts[1] | replace(from=")", to="") | trim %}
-          {% else %}
-            {% set en_name = "" %}
-          {% endif %}
+					{% set name_parts = name | split(pat="(") %}
+					{% set jp_name = name_parts[0] | trim %}
+					{% if name_parts | length > 1 %}
+						{% set en_name = name_parts[1] | replace(from=")", to="") | trim %}
+					{% else %}
+						{% set en_name = "" %}
+					{% endif %}
 
-          <div class="board-card__name-row">
-            <span class="board-card__name">{{ jp_name }}</span>
-            {% if en_name != "" %}
-              <span class="board-card__en-name">{{ en_name }}</span>
-            {% endif %}
-          </div>
+					<div class="board-card__name-row">
+						<span class="board-card__name">{{ jp_name }}</span>
+						{% if en_name != "" %}
+							<span class="board-card__en-name">{{ en_name }}</span>
+						{% endif %}
+					</div>
 
-          {% if title != "" %}
-            {# Removed: no need to display CEO, CTO, etc. #}
-          {% endif %}
+					{% if title != "" %}
+						{# Removed: no need to display CEO, CTO, etc. #}
+					{% endif %}
 
-          {% if bio != "" %}
-            <div class="board-card__bio">{{ bio }}</div>
-          {% endif %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+					{% if bio != "" %}
+						<div class="board-card__bio">{{ bio }}</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 </div>

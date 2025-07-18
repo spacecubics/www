@@ -1,223 +1,223 @@
 .about-company-block {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-  background-size: cover;
-  padding: 1rem;
-  width: 90vw;
-  max-width: 100%;
-  margin: 0 auto;
-  align-items: flex-start;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
+	background-size: cover;
+	padding: 1rem;
+	width: 90vw;
+	max-width: 100%;
+	margin: 0 auto;
+	align-items: flex-start;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    padding: 1rem 2rem;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		padding: 1rem 2rem;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    gap: 0.5rem;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		flex-direction: column;
+		padding: 1rem 1.5rem;
+		gap: 0.5rem;
+	}
 }
 
 .about-company-left {
-  flex: 0 0 35%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+	flex: 0 0 35%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    flex: 1 1 100%;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		flex: 1 1 100%;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    flex: 1 1 100%;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		flex: 1 1 100%;
+	}
 }
 
 .about-company-left__title {
-  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-  font-size: 3em;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-  -webkit-text-stroke: 2px white;
-  text-stroke: 2px white;
-  letter-spacing: 0.1em;
-  text-shadow: 
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white,
-    0 0 0 white;
+	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	font-size: 3em;
+	font-weight: 900;
+	text-align: left;
+	margin: 0;
+	-webkit-text-stroke: 2px white;
+	text-stroke: 2px white;
+	letter-spacing: 0.1em;
+	text-shadow:
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white,
+		0 0 0 white;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    font-size: 2.5em;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		font-size: 2.5em;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    font-size: 1.8em;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		font-size: 1.8em;
+	}
 }
 
 .about-company-left__subtitle {
-  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-  font-size: 0.8em;
-  opacity: 0.85;
-  text-align: left;
-  color: white;
-  margin: 0;
+	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	font-size: 0.8em;
+	opacity: 0.85;
+	text-align: left;
+	color: white;
+	margin: 0;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    font-size: 0.7em;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		font-size: 0.7em;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    font-size: 0.6em;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		font-size: 0.6em;
+	}
 }
 
 .about-company-left__slogan {
-  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-  font-size: 0.9em;
-  font-weight: 700;
-  text-align: left;
-  color: white;
-  margin: 0;
-  margin-top: 0.1rem;
+	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	font-size: 0.9em;
+	font-weight: 700;
+	text-align: left;
+	color: white;
+	margin: 0;
+	margin-top: 0.1rem;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    font-size: 0.8em;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		font-size: 0.8em;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    font-size: 0.7em;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		font-size: 0.7em;
+	}
 }
 
 .about-company-left__divider {
-  width: 25px;
-  height: 4px;
-  background-color: #f77d06;
-  margin-top: 8px;
-  border-radius: 3px;
+	width: 25px;
+	height: 4px;
+	background-color: #f77d06;
+	margin-top: 8px;
+	border-radius: 3px;
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    width: 15px;
-    height: 3px;
-    margin-top: 6px;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		width: 15px;
+		height: 3px;
+		margin-top: 6px;
+	}
 }
 
 .about-company-right {
-  flex: 1 1 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  width: 100%;
+	flex: 1 1 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: flex-start;
+	width: 100%;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    flex: 1 1 100%;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		flex: 1 1 100%;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    flex: 1 1 100%;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		flex: 1 1 100%;
+	}
 }
 
 .about-company-right-line {
-  width: 100%;
-  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-  font-size: 1.1em;
-  line-height: 1.5;
-  margin: 0;
-  color: white;
+	width: 100%;
+	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5;
+	margin: 0;
+	color: white;
 
-  /* Tablet */
-  @media (max-width: 991px) and (min-width: 768px) {
-    font-size: 0.9em;
-  }
+	/* Tablet */
+	@media (max-width: 991px) and (min-width: 768px) {
+		font-size: 0.9em;
+	}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    font-size: 0.8em;
-  }
+	/* Mobile */
+	@media (max-width: 767px) {
+		font-size: 0.8em;
+	}
 }
 
 .about-company-right-line-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .about-company-bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .about-company-gap {
-  font-weight: 400;
-  margin-left: 1rem;
+	font-weight: 400;
+	margin-left: 1rem;
 }
 
 .about-company-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #f77d06;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: #f77d06;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #d65a00;
-  }
+	&:hover {
+		background-color: #d65a00;
+	}
 }
 
 .about-company-image {
-  margin-top: 1.5rem;
-  width: 100%;
-  
-  img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
+	margin-top: 1.5rem;
+	width: 100%;
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		border-radius: 8px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
 }
 
 .about-company-divider-bar {
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right, #d65a00 80px, #666 1px);
-  margin-top: 0.25rem;
-  border-radius: 1px;
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(to right, #d65a00 80px, #666 1px);
+	margin-top: 0.25rem;
+	border-radius: 1px;
 
-  @media (max-width: 767px) {
-    height: 1.5px;
-    margin-top: 0.2rem;
-  }
+	@media (max-width: 767px) {
+		height: 1.5px;
+		margin-top: 0.2rem;
+	}
 }

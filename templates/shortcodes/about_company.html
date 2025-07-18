@@ -1,35 +1,35 @@
 <div class="about-company-block" style="background-image: url('/{{ bg }}'); background-size: cover; padding: 2rem; color: white;">
-  <div class="about-company-left">
-    {% if title %}
-      <h2 class="about-company-left__title">{{ title }}</h2>
-    {% endif %}
-    {% if subtitle %}
-      <p class="about-company-left__subtitle">{{ subtitle }}</p>
-    {% endif %}
-    {% if slogan %}
-      <p class="about-company-left__slogan">{{ slogan }}</p>
-    {% endif %}
-    <div class="about-company-left__divider"></div>
-  </div>
+	<div class="about-company-left">
+		{% if title %}
+			<h2 class="about-company-left__title">{{ title }}</h2>
+		{% endif %}
+		{% if subtitle %}
+			<p class="about-company-left__subtitle">{{ subtitle }}</p>
+		{% endif %}
+		{% if slogan %}
+			<p class="about-company-left__slogan">{{ slogan }}</p>
+		{% endif %}
+		<div class="about-company-left__divider"></div>
+	</div>
 
-  <div class="about-company-right">
-    {% set lines = body | split(pat="\n") %}
-    {% for line in lines %}
-      <div class="about-company-right-line">
-        {% set parts = line | split(pat="｜") %}
-        {% if parts | length > 1 %}
-          <p><span class="about-company-bold">{{ parts[0] }}</span><span class="about-company-gap">{{ parts[1] }}</span></p>
-        {% else %}
-          <p>{{ line }}</p>
-        {% endif %}
-        <div class="about-company-divider-bar"></div>
-      </div>
-      
-      {% if image and parts[0] == "住所" %}
-        <div class="about-company-image">
-          <img src="/{{ image }}" alt="Company image" />
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+	<div class="about-company-right">
+		{% set lines = body | split(pat="\n") %}
+		{% for line in lines %}
+			<div class="about-company-right-line">
+				{% set parts = line | split(pat="｜") %}
+				{% if parts | length > 1 %}
+					<p><span class="about-company-bold">{{ parts[0] }}</span><span class="about-company-gap">{{ parts[1] }}</span></p>
+				{% else %}
+					<p>{{ line }}</p>
+				{% endif %}
+				<div class="about-company-divider-bar"></div>
+			</div>
+
+			{% if image and parts[0] == "住所" %}
+				<div class="about-company-image">
+					<img src="/{{ image }}" alt="Company image" />
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>

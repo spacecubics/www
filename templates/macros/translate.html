@@ -1,19 +1,19 @@
 {% macro translate(key, number=-1, language_strings="", default="", replace=true) %}
-    {%- set key_prefix = "" -%}
+	{%- set key_prefix = "" -%}
 
-    {%- if number == 0 -%}
-        {%- set key_prefix = "zero_" -%}
-    {%- elif number == 1 -%}
-        {%- set key_prefix = "one_" -%}
-    {%- elif number != -1 -%}
-        {%- set key_prefix = "many_" -%}
-    {%- endif -%}
+	{%- if number == 0 -%}
+		{%- set key_prefix = "zero_" -%}
+	{%- elif number == 1 -%}
+		{%- set key_prefix = "one_" -%}
+	{%- elif number != -1 -%}
+		{%- set key_prefix = "many_" -%}
+	{%- endif -%}
 
-    {%- set translated_key = key_prefix ~ key -%}
-    {%- set translated_text = language_strings[translated_key] | default(value=default) | safe -%}
-    {%- if replace -%}
-        {{- translated_text | replace(from="$NUMBER", to=number | as_str) -}}
-    {%- else -%}
-        {{- translated_text -}}
-    {%- endif -%}
+	{%- set translated_key = key_prefix ~ key -%}
+	{%- set translated_text = language_strings[translated_key] | default(value=default) | safe -%}
+	{%- if replace -%}
+		{{- translated_text | replace(from="$NUMBER", to=number | as_str) -}}
+	{%- else -%}
+		{{- translated_text -}}
+	{%- endif -%}
 {% endmacro translate %}

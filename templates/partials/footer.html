@@ -1,107 +1,107 @@
 {%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
 
 <footer id="site-footer">
-  <div class="footer-content">
-    <!-- Company Logo + Info Section (Left) -->
-    <div class="footer-logo">
-      <img src="{{ get_url(path='logo_black.webp') }}" alt="{{ config.title }} Logo" />
-      <div class="company-info">
-        {%- if lang == "en" %}
-          <div class="company-name">Space Cubics Inc.</div>
-          <div class="company-address">
-            Venture Square #301<br>
-            1, South-3 East-2, Chuo-ku, Sapporo, Japan 060-0053
-          </div>
-        {%- else %}
-          <div class="company-name">株式会社 Space Cubics</div>
-          <div class="company-address">
-            〒060-0053 北海道札幌市中央区南3条東2丁目1番地<br>
-            ベンチャースクエア301
-          </div>
-        {%- endif %}
-      </div>
-    </div>
+	<div class="footer-content">
+		<!-- Company Logo + Info Section (Left) -->
+		<div class="footer-logo">
+			<img src="{{ get_url(path='logo_black.webp') }}" alt="{{ config.title }} Logo" />
+			<div class="company-info">
+				{%- if lang == "en" %}
+					<div class="company-name">Space Cubics Inc.</div>
+					<div class="company-address">
+						Venture Square #301<br>
+						1, South-3 East-2, Chuo-ku, Sapporo, Japan 060-0053
+					</div>
+				{%- else %}
+					<div class="company-name">株式会社 Space Cubics</div>
+					<div class="company-address">
+						〒060-0053 北海道札幌市中央区南3条東2丁目1番地<br>
+						ベンチャースクエア301
+					</div>
+				{%- endif %}
+			</div>
+		</div>
 
-    <!-- Right container: Navigation + Socials -->
-    <div class="footer-right">
-      {%- if config.extra.nav.links %}
-        <nav>
-          <ul>
-            {%- for link in config.extra.nav.links %}
-              {%- if link.menu and link.menu | length > 0 %}
-                <li>
-                  <details class="closable">
-                    <summary>{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}</summary>
-                    <ul>
-                      {%- for sublink in link.menu %}
-                        <li>
-                          {%- if sublink.url is matching('https?://') %}
-                            <a href="{{ sublink.url }}" rel="{{ rel_attributes }}" class="external">
-                              {{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
-                            </a>
-                          {%- else %}
-                            <a href="{{ get_url(path=sublink.url, lang=lang) }}">
-                              {{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
-                            </a>
-                          {%- endif %}
-                        </li>
-                      {%- endfor %}
-                    </ul>
-                  </details>
-                </li>
-              {%- else %}
-                <li>
-                  {%- if link.url is matching('https?://') %}
-                    <a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
-                      {{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
-                    </a>
-                  {%- else %}
-                    <a href="{{ get_url(path=link.url, lang=lang) }}">
-                      {{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
-                    </a>
-                  {%- endif %}
-                </li>
-              {%- endif %}
-            {%- endfor %}
-          </ul>
-        </nav>
-      {%- endif %}
+		<!-- Right container: Navigation + Socials -->
+		<div class="footer-right">
+			{%- if config.extra.nav.links %}
+				<nav>
+					<ul>
+						{%- for link in config.extra.nav.links %}
+							{%- if link.menu and link.menu | length > 0 %}
+								<li>
+									<details class="closable">
+										<summary>{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}</summary>
+										<ul>
+											{%- for sublink in link.menu %}
+												<li>
+													{%- if sublink.url is matching('https?://') %}
+														<a href="{{ sublink.url }}" rel="{{ rel_attributes }}" class="external">
+															{{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
+														</a>
+													{%- else %}
+														<a href="{{ get_url(path=sublink.url, lang=lang) }}">
+															{{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
+														</a>
+													{%- endif %}
+												</li>
+											{%- endfor %}
+										</ul>
+									</details>
+								</li>
+							{%- else %}
+								<li>
+									{%- if link.url is matching('https?://') %}
+										<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
+											{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
+										</a>
+									{%- else %}
+										<a href="{{ get_url(path=link.url, lang=lang) }}">
+											{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
+										</a>
+									{%- endif %}
+								</li>
+							{%- endif %}
+						{%- endfor %}
+					</ul>
+				</nav>
+			{%- endif %}
 
-      <!-- Social Icons Section (below nav) -->
-      {%- if config.extra.footer.socials %}
-        <ul id="socials">
-          {%- for link in config.extra.footer.socials %}
-            <li>
-              <a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
-                <i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
-                <span>{{ link.name }}</span>
-              </a>
-            </li>
-          {%- endfor %}
-        </ul>
-      {%- endif %}
-    </div> <!-- .footer-right -->
-  </div> <!-- .footer-content -->
+			<!-- Social Icons Section (below nav) -->
+			{%- if config.extra.footer.socials %}
+				<ul id="socials">
+					{%- for link in config.extra.footer.socials %}
+						<li>
+							<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
+								<i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+								<span>{{ link.name }}</span>
+							</a>
+						</li>
+					{%- endfor %}
+				</ul>
+			{%- endif %}
+		</div> <!-- .footer-right -->
+	</div> <!-- .footer-content -->
 
-  <div class="footer-divider"></div>
+	<div class="footer-divider"></div>
 
-  <p class="copyright-text">
-    &copy; {{ config.title }}, {{ now() | date(format="%Y") }}
-  </p>
+	<p class="copyright-text">
+		&copy; {{ config.title }}, {{ now() | date(format="%Y") }}
+	</p>
 
-  {%- if config.extra.footer.show_copyright %}
-    {%- if config.extra.footer.copyright %}
-      {{ config.extra.footer.copyright | markdown | safe }}
-    {%- else %}
-      <p>&copy; {{ config.title }}, {{ now() | date(format="%Y") }}</p>
-    {%- endif %}
-  {%- endif %}
+	{%- if config.extra.footer.show_copyright %}
+		{%- if config.extra.footer.copyright %}
+			{{ config.extra.footer.copyright | markdown | safe }}
+		{%- else %}
+			<p>&copy; {{ config.title }}, {{ now() | date(format="%Y") }}</p>
+		{%- endif %}
+	{%- endif %}
 
-  {%- if config.extra.source_url and config.extra.footer.show_source %}
-    <p>
-      <a class="external" href="{{ config.extra.source_url }}" rel="{{ rel_attributes }}">
-        {{ macros_translate::translate(key="source", default="Website source", language_strings=language_strings) }}
-      </a>
-    </p>
-  {%- endif %}
+	{%- if config.extra.source_url and config.extra.footer.show_source %}
+		<p>
+			<a class="external" href="{{ config.extra.source_url }}" rel="{{ rel_attributes }}">
+				{{ macros_translate::translate(key="source", default="Website source", language_strings=language_strings) }}
+			</a>
+		</p>
+	{%- endif %}
 </footer>

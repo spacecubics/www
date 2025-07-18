@@ -1,58 +1,58 @@
 <div class="news-carousel-section">
-  <div class="section-title-block">
-    <div class="section-title-header">
-      <div class="section-title-content">
-        <div class="carousel-section-title">{{ title }}</div>
-        <div class="carousel-section-subtitle">{{ subtitle }}</div>
-        <div class="carousel-section-slogan">{{ slogan }}</div>
-        <div class="section-title-divider"></div>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-btn left" onclick="newsCarouselScroll(this, 1)"></button>
-        <button class="carousel-btn right" onclick="newsCarouselScroll(this, -1)"></button>
-      </div>
-    </div>
-  </div>
-  <div class="featured-news-carousel">
-    <div class="carousel-track-wrapper">
-      <div class="carousel-track">
-        {% set lines = items | split(pat="\n") %}
-        {% for line in lines %}
-          {% set line = line | trim %}
-          {% if line != "" %}
-            {% set parts = line | split(pat="|") %}
-            {% set news_date = parts[0] | trim %}
-            {% if parts | length > 1 %}
-              {% set news_link = parts[1] | trim %}
-            {% else %}
-              {% set news_link = "" %}
-            {% endif %}
-            {% if parts | length > 2 %}
-              {% set news_img = parts[2] | trim %}
-            {% else %}
-              {% set news_img = "" %}
-            {% endif %}
-            {% if parts | length > 3 %}
-              {% set news_summary = parts[3] | trim %}
-            {% else %}
-              {% set news_summary = "" %}
-            {% endif %}
-            <div class="carousel-card">
-              <a href="{{ news_link }}">
-                <img src="/{{ news_img }}" alt="{{ news_date }}" class="carousel-card-img">
-                <div class="carousel-card-content">
-                  <p class="carousel-card-date">{{ news_date }}</p>
-                  <h3 class="carousel-card-summary">{{ news_summary }}</h3>
-                </div>
-              </a>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    <div class="carousel-body">
-      {{ body | safe }}
-    </div>
-  </div>
+	<div class="section-title-block">
+		<div class="section-title-header">
+			<div class="section-title-content">
+				<div class="carousel-section-title">{{ title }}</div>
+				<div class="carousel-section-subtitle">{{ subtitle }}</div>
+				<div class="carousel-section-slogan">{{ slogan }}</div>
+				<div class="section-title-divider"></div>
+			</div>
+			<div class="carousel-controls">
+				<button class="carousel-btn left" onclick="newsCarouselScroll(this, 1)"></button>
+				<button class="carousel-btn right" onclick="newsCarouselScroll(this, -1)"></button>
+			</div>
+		</div>
+	</div>
+	<div class="featured-news-carousel">
+		<div class="carousel-track-wrapper">
+			<div class="carousel-track">
+				{% set lines = items | split(pat="\n") %}
+				{% for line in lines %}
+					{% set line = line | trim %}
+					{% if line != "" %}
+						{% set parts = line | split(pat="|") %}
+						{% set news_date = parts[0] | trim %}
+						{% if parts | length > 1 %}
+							{% set news_link = parts[1] | trim %}
+						{% else %}
+							{% set news_link = "" %}
+						{% endif %}
+						{% if parts | length > 2 %}
+							{% set news_img = parts[2] | trim %}
+						{% else %}
+							{% set news_img = "" %}
+						{% endif %}
+						{% if parts | length > 3 %}
+							{% set news_summary = parts[3] | trim %}
+						{% else %}
+							{% set news_summary = "" %}
+						{% endif %}
+						<div class="carousel-card">
+							<a href="{{ news_link }}">
+								<img src="/{{ news_img }}" alt="{{ news_date }}" class="carousel-card-img">
+								<div class="carousel-card-content">
+									<p class="carousel-card-date">{{ news_date }}</p>
+									<h3 class="carousel-card-summary">{{ news_summary }}</h3>
+								</div>
+							</a>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="carousel-body">
+			{{ body | safe }}
+		</div>
+	</div>
 </div>
 <script src="/js/news_carousel.js"></script>
