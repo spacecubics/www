@@ -2,82 +2,82 @@
 // Simple toggle button for language switching
 
 .ls-container {
-  // Container styles for navigation list
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: auto;
-  text-align: center;
+	// Container styles for navigation list
+	position: relative;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: auto;
+	text-align: center;
 }
 
 .ls-trigger {
-  // Simple text button styles
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  background-color: transparent;
-  transition: var(--transition);
-  line-height: 1;
-  color: var(--fg-muted-3);
-  cursor: pointer;
-  font-size: 0.85rem;
-  border: 1px solid transparent;
-  display: block;
+	// Simple text button styles
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+	background-color: transparent;
+	transition: var(--transition);
+	line-height: 1;
+	color: var(--fg-muted-3);
+	cursor: pointer;
+	font-size: 0.85rem;
+	border: 1px solid transparent;
+	display: block;
 
-  @media (min-width: 3840px) {
-    font-size: 1.3rem;
-    padding: 6px 12px;
-  }
+	@media (min-width: 3840px) {
+		font-size: 1.3rem;
+		padding: 6px 12px;
+	}
 
-  &:hover {
-    color: var(--fg-muted-5);
-    background-color: var(--fg-muted-1);
-    border-color: var(--fg-muted-2);
-  }
+	&:hover {
+		color: var(--fg-muted-5);
+		background-color: var(--fg-muted-1);
+		border-color: var(--fg-muted-2);
+	}
 
-  // Current language is highlighted in white
-  &.current-lang {
-    color: white;
-    font-size: 0.85rem !important;
+	// Current language is highlighted in white
+	&.current-lang {
+		color: white;
+		font-size: 0.85rem !important;
 
-    @media (min-width: 3840px) {
-      font-size: 1.3rem !important;
-    }
-  }
+		@media (min-width: 3840px) {
+			font-size: 1.3rem !important;
+		}
+	}
 
-  &::before {
-    display: none;
-  }
+	&::before {
+		display: none;
+	}
 }
 
 // Hide any dropdown menus that might be created
 .ls-menu {
-  display: none !important;
+	display: none !important;
 }
 
 // Responsive adjustments
 @media (max-width: 720px) {
-  .ls-container {
-    position: relative;
-    top: 0;
-    right: auto;
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
+	.ls-container {
+		position: relative;
+		top: 0;
+		right: auto;
+		margin-bottom: 0.5rem;
+		text-align: center;
+	}
 
-  .ls-trigger {
-    font-size: 12px;
-  }
+	.ls-trigger {
+		font-size: 12px;
+	}
 }
 
 .active-lang {
-  color: white;
+	color: white;
 }
 
 .inactive-lang {
-  color: var(--fg-muted-5);
+	color: var(--fg-muted-5);
 }

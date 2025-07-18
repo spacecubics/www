@@ -1,220 +1,220 @@
 .twocard {
-  background-color: transparent;
-  padding: 2rem;
-  text-align: center;
-  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	background-color: transparent;
+	padding: 2rem;
+	text-align: center;
+	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 
-  &-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: inherit;
-  }
+	&-title {
+		font-size: 1.75rem;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+		color: inherit;
+	}
 
-  &-subtitle {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
-  }
+	&-subtitle {
+		font-size: 1rem;
+		color: #ccc;
+		margin-bottom: 2rem;
+	}
 
-  &-container {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-  }
+	&-container {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
 
-  &-column {
-    flex: 1 1 45%;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-  }
+	&-column {
+		flex: 1 1 45%;
+		min-width: 250px;
+		display: flex;
+		flex-direction: column;
+	}
 
-  &-cardleft,
-  &-cardright {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
-    align-items: center;
-    padding: 1.25rem;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    border: 1px solid white;
-    background-color: transparent;
-  }
+	&-cardleft,
+	&-cardright {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		height: 100%;
+		align-items: center;
+		padding: 1.25rem;
+		color: white;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		border-radius: 0.5rem;
+		border: 1px solid white;
+		background-color: transparent;
+	}
 
-  &-cardleft img,
-  &-cardright img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    object-fit: contain;
-  }
+	&-cardleft img,
+	&-cardright img {
+		width: 100%;
+		height: auto;
+		border-radius: 0.5rem;
+		margin-bottom: 1rem;
+		object-fit: contain;
+	}
 
-  &-cardleft-content,
-  &-cardright-content {
-    flex-grow: 1;
+	&-cardleft-content,
+	&-cardright-content {
+		flex-grow: 1;
 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: white;
-    }
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			color: white;
+		}
 
-    div {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.3;
-      color: white;
-    }
-  }
+		div {
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.3;
+			color: white;
+		}
+	}
 
-  // Desktop and larger
-  @media (min-width: 1025px) {
-    padding: 3rem 4rem;
+	// Desktop and larger
+	@media (min-width: 1025px) {
+		padding: 3rem 4rem;
 
-    &-title {
-      font-size: 2.25rem;
-    }
+		&-title {
+			font-size: 2.25rem;
+		}
 
-    &-subtitle {
-      font-size: 1.25rem;
-    }
+		&-subtitle {
+			font-size: 1.25rem;
+		}
 
-    &-container {
-      flex-wrap: nowrap;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: stretch;
-    }
+		&-container {
+			flex-wrap: nowrap;
+			flex-direction: row;
+			gap: 1rem;
+			align-items: stretch;
+		}
 
-    &-column {
-      flex: 1 1 45%;
-      min-width: 250px;
-    }
+		&-column {
+			flex: 1 1 45%;
+			min-width: 250px;
+		}
 
-    &-cardleft-content,
-    &-cardright-content {
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-      }
+		&-cardleft-content,
+		&-cardright-content {
+			h2 {
+				font-size: 2rem;
+				margin-bottom: 1.5rem;
+			}
 
-      div {
-        font-size: 1.25rem;
-      }
-    }
-  }
+			div {
+				font-size: 1.25rem;
+			}
+		}
+	}
 
-  // Tablet
-  @media (max-width: 1024px) {
-    padding: 2rem 3rem;
+	// Tablet
+	@media (max-width: 1024px) {
+		padding: 2rem 3rem;
 
-    &-title {
-      font-size: 2rem;
-    }
+		&-title {
+			font-size: 2rem;
+		}
 
-    &-subtitle {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
+		&-subtitle {
+			font-size: 1.1rem;
+			margin-bottom: 1.5rem;
+		}
 
-    &-container {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
+		&-container {
+			flex-direction: column;
+			gap: 1.5rem;
+		}
 
-    &-column {
-      flex: 1 1 100%;
-      min-width: unset;
-    }
+		&-column {
+			flex: 1 1 100%;
+			min-width: unset;
+		}
 
-    &-cardleft-content,
-    &-cardright-content {
-      h2 {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-      }
+		&-cardleft-content,
+		&-cardright-content {
+			h2 {
+				font-size: 1.75rem;
+				margin-bottom: 1rem;
+			}
 
-      div {
-        font-size: 1.1rem;
-      }
-    }
-  }
+			div {
+				font-size: 1.1rem;
+			}
+		}
+	}
 
-  @media (max-width: 768px) {
-    padding: 1.5rem 2rem;
+	@media (max-width: 768px) {
+		padding: 1.5rem 2rem;
 
-    &-title {
-      font-size: 1.75rem;
-    }
+		&-title {
+			font-size: 1.75rem;
+		}
 
-    &-subtitle {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
+		&-subtitle {
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
 
-    &-container {
-      flex-direction: column;
-      gap: 2rem;
-    }
+		&-container {
+			flex-direction: column;
+			gap: 2rem;
+		}
 
-    &-column {
-      flex: 1 1 100%;
-      min-width: unset;
-    }
+		&-column {
+			flex: 1 1 100%;
+			min-width: unset;
+		}
 
-    &-cardleft-content,
-    &-cardright-content {
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
+		&-cardleft-content,
+		&-cardright-content {
+			h2 {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
 
-      div {
-        font-size: 1rem;
-      }
-    }
-  }
+			div {
+				font-size: 1rem;
+			}
+		}
+	}
 
-  // Small mobile
-  @media (max-width: 479px) {
-    padding: 1rem;
+	// Small mobile
+	@media (max-width: 479px) {
+		padding: 1rem;
 
-    &-title {
-      font-size: 1.5rem;
-    }
+		&-title {
+			font-size: 1.5rem;
+		}
 
-    &-subtitle {
-      font-size: 0.9rem;
-      margin-bottom: 0.8rem;
-    }
+		&-subtitle {
+			font-size: 0.9rem;
+			margin-bottom: 0.8rem;
+		}
 
-    &-container {
-      gap: 1rem;
-    }
+		&-container {
+			gap: 1rem;
+		}
 
-    &-column {
-      flex: 1 1 100%;
-      min-width: unset;
-    }
+		&-column {
+			flex: 1 1 100%;
+			min-width: unset;
+		}
 
-    &-cardleft-content,
-    &-cardright-content {
-      h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-      }
+		&-cardleft-content,
+		&-cardright-content {
+			h2 {
+				font-size: 1.25rem;
+				margin-bottom: 0.75rem;
+			}
 
-      div {
-        font-size: 0.9rem;
-      }
-    }
-  }
+			div {
+				font-size: 0.9rem;
+			}
+		}
+	}
 }

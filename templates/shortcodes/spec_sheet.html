@@ -1,50 +1,50 @@
 <div class="section-title-block" style="background-image: url('/{{ bg }}');">
-  <div class="section-title-content">
-    <h1>{{ title }}</h1>
-    <h3>{{ subtitle }}</h3>
-    <p>{{ slogan }}</p>
-    <div class="section-title-divider"></div>
-  </div>
+	<div class="section-title-content">
+		<h1>{{ title }}</h1>
+		<h3>{{ subtitle }}</h3>
+		<p>{{ slogan }}</p>
+		<div class="section-title-divider"></div>
+	</div>
 </div>
 
 {% set all_lines = body | split(pat="\n") %}
 
 <div class="spec-sheet-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-  <div>
-    {% for line in all_lines %}
-      {% if line | trim != "" and (loop.index0 % 2) == 0 %}
-        {% set parts = line | split(pat="|") %}
-        <div class="spec-row">
-          <div class="spec-left">{{ parts[0] | trim }}</div>
-          <div class="spec-right">
-            {% if parts | length > 1 %}
-              {{ parts[1] | trim }}
-            {% else %}
-              {{ "" }}
-            {% endif %}
-          </div>
-        </div>
-        <hr class="spec-row-divider" />
-      {% endif %}
-    {% endfor %}
-  </div>
+	<div>
+		{% for line in all_lines %}
+			{% if line | trim != "" and (loop.index0 % 2) == 0 %}
+				{% set parts = line | split(pat="|") %}
+				<div class="spec-row">
+					<div class="spec-left">{{ parts[0] | trim }}</div>
+					<div class="spec-right">
+						{% if parts | length > 1 %}
+							{{ parts[1] | trim }}
+						{% else %}
+							{{ "" }}
+						{% endif %}
+					</div>
+				</div>
+				<hr class="spec-row-divider" />
+			{% endif %}
+		{% endfor %}
+	</div>
 
-  <div>
-    {% for line in all_lines %}
-      {% if line | trim != "" and (loop.index0 % 2) == 1 %}
-        {% set parts = line | split(pat="|") %}
-        <div class="spec-row">
-          <div class="spec-left">{{ parts[0] | trim }}</div>
-          <div class="spec-right">
-            {% if parts | length > 1 %}
-              {{ parts[1] | trim }}
-            {% else %}
-              {{ "" }}
-            {% endif %}
-          </div>
-        </div>
-        <hr class="spec-row-divider" />
-      {% endif %}
-    {% endfor %}
-  </div>
+	<div>
+		{% for line in all_lines %}
+			{% if line | trim != "" and (loop.index0 % 2) == 1 %}
+				{% set parts = line | split(pat="|") %}
+				<div class="spec-row">
+					<div class="spec-left">{{ parts[0] | trim }}</div>
+					<div class="spec-right">
+						{% if parts | length > 1 %}
+							{{ parts[1] | trim }}
+						{% else %}
+							{{ "" }}
+						{% endif %}
+					</div>
+				</div>
+				<hr class="spec-row-divider" />
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>

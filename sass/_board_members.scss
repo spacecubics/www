@@ -1,298 +1,298 @@
 .board-members {
-  display: flex;
-  gap: 1.5rem;
-  width: 98vw;
-  max-width: 90vw;
-  margin: 0 auto;
-  padding: 2rem 2vw;
-  box-sizing: border-box;
-  background-color: transparent;
+	display: flex;
+	gap: 1.5rem;
+	width: 98vw;
+	max-width: 90vw;
+	margin: 0 auto;
+	padding: 2rem 2vw;
+	box-sizing: border-box;
+	background-color: transparent;
 
-  &-left {
-    flex: 0 0 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+	&-left {
+		flex: 0 0 35%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
 
-  &__title {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 3em;
-    font-weight: 1000 !important;
-    margin: 0 0 0.2em;
-    color: white;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 1px white;
-    text-stroke: 1px white;
-  }
+	&__title {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 3em;
+		font-weight: 1000 !important;
+		margin: 0 0 0.2em;
+		color: white;
+		letter-spacing: 1px;
+		-webkit-text-stroke: 1px white;
+		text-stroke: 1px white;
+	}
 
-  &__subtitle {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    color: #888888;
-    font-size: 0.85em;
-    font-weight: 400;
-    margin-bottom: 0.15rem;
-    margin-top: 0.15rem;
-  }
+	&__subtitle {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		color: #888888;
+		font-size: 0.85em;
+		font-weight: 400;
+		margin-bottom: 0.15rem;
+		margin-top: 0.15rem;
+	}
 
-  &__slogan {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    color: white;
-    font-size: 1em;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    margin-top: 0;
-    opacity: 0.9;
-    letter-spacing: 0.5px;
-  }
+	&__slogan {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		color: white;
+		font-size: 1em;
+		font-weight: 700;
+		margin-bottom: 0.4rem;
+		margin-top: 0;
+		opacity: 0.9;
+		letter-spacing: 0.5px;
+	}
 
-  &__divider {
-    width: 27px;
-    height: 5px;
-    background-color: #f77d06;
-    border-radius: 3px;
-    margin-top: 0.5rem;
-  }
+	&__divider {
+		width: 27px;
+		height: 5px;
+		background-color: #f77d06;
+		border-radius: 3px;
+		margin-top: 0.5rem;
+	}
 
-  &-right {
-    flex: 1 1 65%;
-  }
+	&-right {
+		flex: 1 1 65%;
+	}
 
-  &-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem;
-  }
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.8rem;
+	}
 }
 
 .board-card {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 12px;
+	padding: 1.5rem;
+	text-align: center;
+	backdrop-filter: blur(10px);
+	color: white;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    /* No movement or shadow on hover */
-  }
+	&:hover {
+		/* No movement or shadow on hover */
+	}
 
-  &__image {
-    display: block;
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.7rem;
-  }
+	&__image {
+		display: block;
+		width: 100%;
+		max-height: 200px;
+		object-fit: cover;
+		border-radius: 8px;
+		margin-bottom: 0.7rem;
+	}
 
-  &:not(.has-image) &__image {
-    display: none;
-  }
+	&:not(.has-image) &__image {
+		display: none;
+	}
 
-  &__role {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 0.95em;
-    color: white;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    letter-spacing: 0.5px;
-  }
+	&__role {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 0.95em;
+		color: white;
+		font-weight: 700;
+		margin-bottom: 0.3em;
+		letter-spacing: 0.5px;
+	}
 
-  &__name-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.7em;
-    margin-bottom: 0.2em;
-  }
+	&__name-row {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7em;
+		margin-bottom: 0.2em;
+	}
 
-  &__name {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.5em;
-    color: white;
-    font-weight: 400;
-    line-height: 1.1;
-  }
+	&__name {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 1.5em;
+		color: white;
+		font-weight: 400;
+		line-height: 1.1;
+	}
 
-  &__en-name {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1em;
-    color: #bbbbbb;
-    font-weight: 400;
-    margin-left: 0.5em;
-    opacity: 0.85;
-    letter-spacing: 0.2px;
-  }
+	&__en-name {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 1em;
+		color: #bbbbbb;
+		font-weight: 400;
+		margin-left: 0.5em;
+		opacity: 0.85;
+		letter-spacing: 0.2px;
+	}
 
-  &__title {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 1.3em;
-    color: white;
-    font-style: italic;
-    margin-bottom: 0.4rem;
-  }
+	&__title {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 1.3em;
+		color: white;
+		font-style: italic;
+		margin-bottom: 0.4rem;
+	}
 
-  &__bio {
-    font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
-    font-size: 0.9em;
-    color: white;
-    opacity: 1;
-    line-height: 1.6;
-    margin-top: 0.8rem;
-    text-align: left;
-  }
+	&__bio {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 0.9em;
+		color: white;
+		opacity: 1;
+		line-height: 1.6;
+		margin-top: 0.8rem;
+		text-align: left;
+	}
 }
 
 /* Large screens (< 1200px) */
 @media (max-width: 1199px) {
-  .board-members {
-    padding: 3rem 4vw;
+	.board-members {
+		padding: 3rem 4vw;
 
-    &__title {
-      font-size: 4em;
-    }
+		&__title {
+			font-size: 4em;
+		}
 
-    &__subtitle {
-      font-size: 0.95em;
-    }
+		&__subtitle {
+			font-size: 0.95em;
+		}
 
-    &__slogan {
-      font-size: 1.1em;
-    }
-  }
+		&__slogan {
+			font-size: 1.1em;
+		}
+	}
 
-  .board-card {
-    &__name,
-    &__title,
-    &__role,
-    &__bio {
-      font-size: 1.3em;
-    }
-  }
+	.board-card {
+		&__name,
+		&__title,
+		&__role,
+		&__bio {
+			font-size: 1.3em;
+		}
+	}
 }
 
 /* Tablets (< 992px) */
 @media (max-width: 991px) {
-  .board-members {
-    flex-wrap: wrap;
-    padding: 2rem 3vw;
+	.board-members {
+		flex-wrap: wrap;
+		padding: 2rem 3vw;
 
-    &-left {
-      flex: 1 1 40%;
-      margin-bottom: 2rem;
-    }
+		&-left {
+			flex: 1 1 40%;
+			margin-bottom: 2rem;
+		}
 
-    &-right {
-      flex: 1 1 55%;
-    }
-  }
+		&-right {
+			flex: 1 1 55%;
+		}
+	}
 
-  .board-members-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+	.board-members-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
 
-  .board-members__title {
-    font-size: 3.5em;
-  }
+	.board-members__title {
+		font-size: 3.5em;
+	}
 
-  .board-members__subtitle {
-    font-size: 0.9em;
-  }
+	.board-members__subtitle {
+		font-size: 0.9em;
+	}
 
-  .board-members__slogan {
-    font-size: 1.05em;
-  }
+	.board-members__slogan {
+		font-size: 1.05em;
+	}
 
-  .board-card {
-    &__name,
-    &__title,
-    &__role,
-    &__bio {
-      font-size: 1.2em;
-    }
-  }
+	.board-card {
+		&__name,
+		&__title,
+		&__role,
+		&__bio {
+			font-size: 1.2em;
+		}
+	}
 }
 
 /* Mobile (< 768px) */
 @media (max-width: 767px) {
-  .board-members {
-    flex-direction: column;
-    padding: 1.5rem 2vw;
+	.board-members {
+		flex-direction: column;
+		padding: 1.5rem 2vw;
 
-    &-left,
-    &-right {
-      flex: 1 1 100%;
-      margin-bottom: 1.5rem;
-    }
-  }
+		&-left,
+		&-right {
+			flex: 1 1 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
 
-  .board-members-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
+	.board-members-grid {
+		grid-template-columns: 1fr;
+		gap: 1.2rem;
+	}
 
-  .board-members__title {
-    font-size: 2.8em;
-  }
+	.board-members__title {
+		font-size: 2.8em;
+	}
 
-  .board-members__subtitle {
-    font-size: 0.85em;
-  }
+	.board-members__subtitle {
+		font-size: 0.85em;
+	}
 
-  .board-members__slogan {
-    font-size: 1em;
-  }
+	.board-members__slogan {
+		font-size: 1em;
+	}
 
-  .board-card {
-    padding: 1.2rem;
+	.board-card {
+		padding: 1.2rem;
 
-    &__name,
-    &__title,
-    &__role,
-    &__bio {
-      font-size: 1.1em;
-    }
+		&__name,
+		&__title,
+		&__role,
+		&__bio {
+			font-size: 1.1em;
+		}
 
-    &__bio {
-      text-align: left;
-    }
-  }
+		&__bio {
+			text-align: left;
+		}
+	}
 }
 
 /* Small mobile (< 480px) */
 @media (max-width: 479px) {
-  .board-members {
-    padding: 1rem 1.5vw;
+	.board-members {
+		padding: 1rem 1.5vw;
 
-    &-left,
-    &-right {
-      margin-bottom: 1rem;
-    }
-  }
+		&-left,
+		&-right {
+			margin-bottom: 1rem;
+		}
+	}
 
-  .board-members__title {
-    font-size: 2em;
-  }
+	.board-members__title {
+		font-size: 2em;
+	}
 
-  .board-members__subtitle {
-    font-size: 0.8em;
-  }
+	.board-members__subtitle {
+		font-size: 0.8em;
+	}
 
-  .board-members__slogan {
-    font-size: 0.95em;
-  }
+	.board-members__slogan {
+		font-size: 0.95em;
+	}
 
-  .board-card {
-    padding: 1rem;
+	.board-card {
+		padding: 1rem;
 
-    &__name,
-    &__title,
-    &__role,
-    &__bio {
-      font-size: 1em;
-    }
-  }
+		&__name,
+		&__title,
+		&__role,
+		&__bio {
+			font-size: 1em;
+		}
+	}
 }

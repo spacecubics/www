@@ -1,311 +1,311 @@
 .section {
-  position: relative;
-  top: 12rem;
+	position: relative;
+	top: 12rem;
 
-  @media (max-width: 768px) {
-    top: 10rem;
-    padding: 1rem 0;
-  }
+	@media (max-width: 768px) {
+		top: 10rem;
+		padding: 1rem 0;
+	}
 
-  @media (max-width: 479px) {
-    top: 8rem;
-    padding: 0.5rem 0;
-  }
+	@media (max-width: 479px) {
+		top: 8rem;
+		padding: 0.5rem 0;
+	}
 
-  @media (max-width: 430px) {
-    top: 9rem;
-    padding: 0.5rem 0;
-  }
+	@media (max-width: 430px) {
+		top: 9rem;
+		padding: 0.5rem 0;
+	}
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  align-items: stretch;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	max-width: 1800px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	align-items: stretch;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 4rem 1.5rem;
-  }
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 40px;
+		padding: 4rem 1.5rem;
+	}
 
-  @media (max-width: 479px) {
-    padding: 4rem 1rem;
-  }
+	@media (max-width: 479px) {
+		padding: 4rem 1rem;
+	}
 
-  // When only bottom card is present
-  &:has(.bottom-card:only-child) {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+	// When only bottom card is present
+	&:has(.bottom-card:only-child) {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
 
-  // Fallback for browsers that don't support :has()
-  &.single-bottom-card {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+	// Fallback for browsers that don't support :has()
+	&.single-bottom-card {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
 }
 
 // Shared card styles
 .left-card,
 .right-card,
 .bottom-card {
-  width: 100%;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: white;
-  padding: 20px 25px 25px 25px;
-  position: relative;
+	width: 100%;
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	color: white;
+	padding: 20px 25px 25px 25px;
+	position: relative;
 
-  @media (max-width: 1024px) {
-    min-height: 250px;
-    padding: 15px 20px 20px 20px;
-    border-radius: 16px;
-  }
+	@media (max-width: 1024px) {
+		min-height: 250px;
+		padding: 15px 20px 20px 20px;
+		border-radius: 16px;
+	}
 
-  @media (max-width: 768px) {
-    min-height: auto;
-    padding: 12px 18px 25px 18px;
-    border-radius: 12px;
-    box-sizing: border-box;
-  }
+	@media (max-width: 768px) {
+		min-height: auto;
+		padding: 12px 18px 25px 18px;
+		border-radius: 12px;
+		box-sizing: border-box;
+	}
 
-  @media (max-width: 479px) {
-    padding: 10px 15px 20px 15px;
-    border-radius: 8px;
-  }
+	@media (max-width: 479px) {
+		padding: 10px 15px 20px 15px;
+		border-radius: 8px;
+	}
 
-  // Card header styles
-  .card-header {
-    font-size: 3rem !important;
-    font-weight: 950 !important;
-    margin-bottom: 0.8rem;
-    margin-top: 0;
-    line-height: 1.1;
-    letter-spacing: 0.1em;
-    -webkit-text-stroke: 3px rgb(255, 255, 255);
+	// Card header styles
+	.card-header {
+		font-size: 3rem !important;
+		font-weight: 950 !important;
+		margin-bottom: 0.8rem;
+		margin-top: 0;
+		line-height: 1.1;
+		letter-spacing: 0.1em;
+		-webkit-text-stroke: 3px rgb(255, 255, 255);
 
-    @media (max-width: 1024px) {
-      font-size: 2.6rem !important;
-    }
+		@media (max-width: 1024px) {
+			font-size: 2.6rem !important;
+		}
 
-    @media (max-width: 768px) {
-      font-size: 2.3rem !important;
-    }
+		@media (max-width: 768px) {
+			font-size: 2.3rem !important;
+		}
 
-    @media (max-width: 479px) {
-      font-size: 2rem !important;
-    }
-  }
+		@media (max-width: 479px) {
+			font-size: 2rem !important;
+		}
+	}
 
-  // Card subheader styles with more specific selector
-  .card-subheader {
-    font-size: 1.1rem !important;
-    margin-bottom: 2rem;
-    line-height: 1.4;
-    font-weight: 400;
-    position: relative;
+	// Card subheader styles with more specific selector
+	.card-subheader {
+		font-size: 1.1rem !important;
+		margin-bottom: 2rem;
+		line-height: 1.4;
+		font-weight: 400;
+		position: relative;
 
-    @media (max-width: 1024px) {
-      font-size: 1rem !important;
-    }
+		@media (max-width: 1024px) {
+			font-size: 1rem !important;
+		}
 
-    @media (max-width: 768px) {
-      font-size: 0.95rem !important;
-    }
+		@media (max-width: 768px) {
+			font-size: 0.95rem !important;
+		}
 
-    @media (max-width: 479px) {
-      font-size: 0.9rem !important;
-    }
+		@media (max-width: 479px) {
+			font-size: 0.9rem !important;
+		}
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -0.8rem;
-      left: 0;
-      width: 20px;
-      height: 3px;
-      background-color: #f97316;
-      border-radius: 2px;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -0.8rem;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #f97316;
+			border-radius: 2px;
 
-      @media (max-width: 768px) {
-        height: 2px;
-        width: 18px;
-      }
+			@media (max-width: 768px) {
+				height: 2px;
+				width: 18px;
+			}
 
-      @media (max-width: 479px) {
-        height: 2px;
-        width: 15px;
-      }
-    }
-  }
+			@media (max-width: 479px) {
+				height: 2px;
+				width: 15px;
+			}
+		}
+	}
 
-  // Card footer text styles
-  .card-footer-text {
-    font-size: 1.1rem !important;
-    line-height: 1.5;
-    font-weight: 500;
-    margin-right: 80px;
+	// Card footer text styles
+	.card-footer-text {
+		font-size: 1.1rem !important;
+		line-height: 1.5;
+		font-weight: 500;
+		margin-right: 80px;
 
-    @media (max-width: 1024px) {
-      font-size: 1rem !important;
-      margin-right: 70px;
-    }
+		@media (max-width: 1024px) {
+			font-size: 1rem !important;
+			margin-right: 70px;
+		}
 
-    @media (max-width: 768px) {
-      font-size: 0.95rem !important;
-      margin-right: 60px;
-    }
+		@media (max-width: 768px) {
+			font-size: 0.95rem !important;
+			margin-right: 60px;
+		}
 
-    @media (max-width: 479px) {
-      font-size: 0.9rem !important;
-      margin-right: 50px;
-    }
-  }
+		@media (max-width: 479px) {
+			font-size: 0.9rem !important;
+			margin-right: 50px;
+		}
+	}
 }
 
 // Bottom card specific styles
 .bottom-card {
-  grid-column: 1 / -1;
-  background-color: #353946;
-  outline: 1px solid white;
-  min-height: 200px;
+	grid-column: 1 / -1;
+	background-color: #353946;
+	outline: 1px solid white;
+	min-height: 200px;
 
-  @media (max-width: 1024px) {
-    min-height: 180px;
-  }
+	@media (max-width: 1024px) {
+		min-height: 180px;
+	}
 
-  @media (max-width: 768px) {
-    margin-bottom: -4rem;
-    position: relative;
-    z-index: 10;
-  }
+	@media (max-width: 768px) {
+		margin-bottom: -4rem;
+		position: relative;
+		z-index: 10;
+	}
 
-  @media (max-width: 479px) {
-    margin-bottom: -3rem;
-  }
+	@media (max-width: 479px) {
+		margin-bottom: -3rem;
+	}
 
-  // Ensure bottom card divider bar is also shorter
-  .card-subheader::after {
-    width: 6% !important;
-  }
+	// Ensure bottom card divider bar is also shorter
+	.card-subheader::after {
+		width: 6% !important;
+	}
 }
 
 // Button container
 .btn-container {
-  position: absolute;
-  bottom: 35px;
-  right: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+	position: absolute;
+	bottom: 35px;
+	right: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
 
-  @media (max-width: 768px) {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    margin-top: 0;
-  }
+	@media (max-width: 768px) {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		margin-top: 0;
+	}
 
-  @media (max-width: 479px) {
-    bottom: 15px;
-    right: 15px;
-  }
+	@media (max-width: 479px) {
+		bottom: 15px;
+		right: 15px;
+	}
 }
 
 // Circle button
 .circle-btn {
-  width: 50px;
-  height: 50px;
-  background-color: #f97316;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: #f97316;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s ease;
+	position: relative;
 
-  @media (max-width: 1024px) {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
-  }
+	@media (max-width: 1024px) {
+		width: 45px;
+		height: 45px;
+		font-size: 18px;
+	}
 
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
+	@media (max-width: 768px) {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
 
-  @media (max-width: 479px) {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
-  }
+	@media (max-width: 479px) {
+		width: 35px;
+		height: 35px;
+		font-size: 14px;
+	}
 
-  &:hover {
-    transform: scale(1.1);
-  }
+	&:hover {
+		transform: scale(1.1);
+	}
 
-  &::before {
-    content: '';
-    width: 16px;
-    height: 12px;
-    background-color: #666666;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    clip-path: path('M0 0 L16 6 L0 12 L4 6 Z');
+	&::before {
+		content: '';
+		width: 16px;
+		height: 12px;
+		background-color: #666666;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%, -50%);
+		clip-path: path('M0 0 L16 6 L0 12 L4 6 Z');
 
-    @media (max-width: 1024px) {
-      width: 14px;
-      height: 10px;
-      clip-path: path('M0 0 L14 5 L0 10 L3.5 5 Z');
-    }
+		@media (max-width: 1024px) {
+			width: 14px;
+			height: 10px;
+			clip-path: path('M0 0 L14 5 L0 10 L3.5 5 Z');
+		}
 
-    @media (max-width: 768px) {
-      width: 12px;
-      height: 9px;
-      clip-path: path('M0 0 L12 4.5 L0 9 L3 4.5 Z');
-    }
+		@media (max-width: 768px) {
+			width: 12px;
+			height: 9px;
+			clip-path: path('M0 0 L12 4.5 L0 9 L3 4.5 Z');
+		}
 
-    @media (max-width: 479px) {
-      width: 10px;
-      height: 8px;
-      clip-path: path('M0 0 L10 4 L0 8 L2.5 4 Z');
-    }
-  }
+		@media (max-width: 479px) {
+			width: 10px;
+			height: 8px;
+			clip-path: path('M0 0 L10 4 L0 8 L2.5 4 Z');
+		}
+	}
 }
 
 // Maximum specificity override for divider bar width
 .card-grid .left-card .card-subheader::after,
 .card-grid .right-card .card-subheader::after,
 .card-grid .bottom-card .card-subheader::after {
-  width: 20px !important;
+	width: 20px !important;
 
-  @media (max-width: 768px) {
-    width: 18px !important;
-  }
+	@media (max-width: 768px) {
+		width: 18px !important;
+	}
 
-  @media (max-width: 479px) {
-    width: 15px !important;
-  }
+	@media (max-width: 479px) {
+		width: 15px !important;
+	}
 }
