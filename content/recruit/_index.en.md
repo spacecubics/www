@@ -1,5 +1,4 @@
 +++
-sort_by = "date"
 +++
 
 {% section_title(bg="", title="RECRUIT", subtitle="Employment information", slogan="", style_top="Job Details") %}
@@ -38,7 +37,7 @@ Space Cubics is young and still growing. If you are interested in the astrocompu
 	slogan = "POSITIONS",
 	jobs_note = "Special notes: For positions other than those currently being recruited, please inquire via the inquiry form.",
 	jobs = "
-System Engineer | system-engineer/ | active
+Software Engineer | software-engineer/ | active
 Communications Engineer |
 Fundraising Manager |
 FPGA Engineer |
@@ -47,6 +46,7 @@ Promotion Engineer |
 Sales |
 Structural Engineer |
 Thermal Engineer |
+Systems Engineer |
 ") %}
 <!-- no text -->
 {% end %}

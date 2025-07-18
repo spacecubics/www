@@ -1,5 +1,4 @@
 +++
-sort_by = "date"
 +++
 
 {% section_title(bg="", title="RECRUIT", subtitle="採用情報", slogan="", style_top="採用情報") %}
@@ -38,7 +37,7 @@ sort_by = "date"
 	slogan = "POSITIONS",
 	jobs_note = "特記事項：募集中以外の職種に関しては、お問合せフォームよりお問合せ願います。",
 	jobs = "
-システムエンジニア | system-engineer/ | active
+ソフトウェアエンジニア | software-engineer/ | active
 通信エンジニア |
 資金調達担当 |
 FPGAエンジニア |
@@ -47,6 +46,7 @@ FPGAエンジニア |
 営業 |
 構造系エンジニア |
 熱流体系エンジニア |
+システムエンジニア |
 ") %}
 <!-- no text -->
 {% end %}
