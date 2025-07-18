@@ -66,7 +66,7 @@ Our mission is to support sustainable growth through partnership with teams that
   slogan="INFORMATION",
   items=
   "
-2025.06.01 | /en/news/2025-06-01 | jts.png | Space Cubics, LLC has changed its organizational structure and is now Space Cubics, Inc. 
+2025.06.01 | /en/news/2025-06-01 | jts.png | Space Cubics, LLC has changed its organizational structure and is now Space Cubics, Inc.
 
 2025.04.09 | /en/news/2025-04-09 | brainchild.png | Following a board decision in March, our company has been re-structured as Space Cubics, Inc., as of June 1, 2025.
 
@@ -77,8 +77,8 @@ Our mission is to support sustainable growth through partnership with teams that
 2020.01.14 | /en/news/2020-01-14 | brainchild.png | Space Cubics was selected for the J-TECH STARTUP 2019 program.
 
 2019.10.31 | /en/news/2019-10-31 | logo_solid.png | Space Cubics was featured in the Nikkei Industrial Newspaper as JAXA Entrepreneurs Bringing Space Technology to Earth.
-    
-2018.09.25 | /en/news/2018-09-25 | jts.png | Mr. Goto, a founding member, presented at the 26th NEDO Pitch Meeting.  
+
+2018.09.25 | /en/news/2018-09-25 | jts.png | Mr. Goto, a founding member, presented at the 26th NEDO Pitch Meeting.
 
 2018.06.01 | /en/news/2018-06-01 | brainchild.png | Space Cubics, LLC was established as a JAXA venture company.
 
@@ -90,7 +90,7 @@ Our mission is to support sustainable growth through partnership with teams that
 {% end %}
 
 {% prefooter(
-  left_card_image="earth.jpg", 
+  left_card_image="earth.jpg",
   right_card_image="ir.jpg",
 
  left_title="RECRUIT",
@@ -110,10 +110,9 @@ Our mission is to support sustainable growth through partnership with teams that
   bottom_subtitle = "Reach out to us.",
   bottom_footer_1 = "We welcome inquiries about our business and services.",
   bottom_footer_2 = "Please feel free to contact us.",
-  bottom_link = "/en/contact", 
+  bottom_link = "/en/contact",
 
   bg=""
 ) %}
 <!--display element -->
 {% end %}
-

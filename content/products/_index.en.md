@@ -46,7 +46,7 @@
 {% end %}
 
 {% prefooter(
-  left_card_image="about.jpg", 
+  left_card_image="about.jpg",
   right_card_image="earth.jpg",
 
   left_title="ABOUT US",
@@ -72,4 +72,3 @@
 ) %}
 <!--display element -->
 {% end %}
-

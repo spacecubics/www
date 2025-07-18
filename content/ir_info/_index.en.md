@@ -29,7 +29,7 @@
 ) %}
 2025.12.31｜TODO Third injection of funds
 2025.11.31｜Second injection of funds
-2025.10.31｜First injection of funds 
+2025.10.31｜First injection of funds
 2025.09.31｜Initial seed funding
 {% end %}
 
