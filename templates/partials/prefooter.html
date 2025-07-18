@@ -1,6 +1,6 @@
 <div class="section" style="background: {{ bg | default(value="transparent") }};">
     <div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">
-      
+
       {% if left_card_image and left_title %}
       <!-- Top Left Card -->
       <div class="two-card left-card" style="background-image: url('{{ left_card_image }}');">
@@ -18,7 +18,7 @@
         </div>
       </div>
       {% endif %}
-  
+
       {% if right_card_image and right_title %}
       <!-- Top Right Card -->
       <div class="two-card right-card" style="background-image: url('{{ right_card_image }}');">
@@ -36,7 +36,7 @@
         </div>
       </div>
       {% endif %}
-  
+
       {% if bottom_card_image %}
       <!-- Bottom Full-Width Card -->
       <div class="bottom-card" style="background-image: url('{{ bottom_card_image }}');">
@@ -54,6 +54,6 @@
         </div>
       </div>
       {% endif %}
-  
+
     </div>
-  </div> 
+  </div>

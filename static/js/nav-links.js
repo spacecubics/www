@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = href;
       }
     });
-    
+
     // Handle Enter key for accessibility
     link.addEventListener('keydown', function(e) {
       if (e.key === 'Enter') {
@@ -18,4 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-}); 
+});

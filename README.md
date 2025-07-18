@@ -72,7 +72,7 @@ This repository is organized into only a few main folders...
    │   └── news_carousel.js      # News carousel UI interactions
    ├── logo_black.webp           
    ├── logo_white.webp
-   └── sq_sc-obc_module_a1.jpg   
+   └── sc-obc_module_a1.jpg   
 
 ...and some important configuration files such as...
 

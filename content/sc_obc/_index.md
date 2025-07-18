@@ -18,7 +18,7 @@
 <section id="section-summary">
   {% hero_element(
     title="PRODUCT",
-    img="sq_sc-obc_module_a1.png",
+    img="sc-obc_module_a1.png",
     alt="",
     link="",
     link_text="",
@@ -115,7 +115,7 @@
   {% end %}
 
   {% prefooter(
-    left_card_image="sq_about_img2.jpg", 
+    left_card_image="about.jpg", 
     right_card_image="earth.jpg",
 
     left_title="ABOUT US",
