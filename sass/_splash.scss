@@ -255,13 +255,17 @@
 }
 
 .scroll-hint {
+	position: fixed;
+	left: 50%;
+	bottom: 2rem;
+	transform: translateX(-50%);
+	z-index: 100;
 	color: white;
 	font-family: Arial, sans-serif;
 	text-align: center;
-	z-index: 10;
 	animation: floatDown 2s ease-in-out infinite;
 	padding: 0.5rem;
-	order: 1;
+	transition: opacity 0.4s;
 
 	@media only screen and (max-width: 768px) {
 		font-size: 0.9rem;
@@ -276,7 +280,6 @@
 	@media only screen and (max-width: 430px) {
 		font-size: 0.75rem;
 		padding: 0.25rem;
-		order: 2;
 	}
 }
 
