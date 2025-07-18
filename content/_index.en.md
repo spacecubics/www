@@ -8,7 +8,7 @@ title = "Space Cubics Inc."
 
 {% hero_element(
   title="PRODUCTS",
-  img="sq_sc-obc_module_a1.png",
+  img="sc-obc_module_a1.png",
   alt="Diagram",
   link="products",
   link_text="Details",
@@ -26,7 +26,7 @@ Space computer modules.
 {% end %}
 
 {% hero_element(
-  bg="sq_about_img2.jpg",
+  bg="about.jpg",
   title="ABOUT US",
   subtitle="To drink beer",
   slogan="ON THE MOON",
@@ -70,19 +70,19 @@ Our mission is to support sustainable growth through partnership with teams that
 
 2025.04.09 | /en/news/2025-04-09 | brainchild.png | Following a board decision in March, our company has been re-structured as Space Cubics, Inc., as of June 1, 2025.
 
-2022.03.07 | /en/news/2022-03-07 | square_cubics.png | Space Cubics was featured in a special edition of the Nikkan Kogyo Shimbun.
+2022.03.07 | /en/news/2022-03-07 | logo_solid.png | Space Cubics was featured in a special edition of the Nikkan Kogyo Shimbun.
 
 2020.08.18 | /en/news/2020-08-18 | jts.png | Space Cubics was awarded the 2020 Industrial Technology Practical Development Grant by the Ministry of Economy, Trade and Industry.
 
 2020.01.14 | /en/news/2020-01-14 | brainchild.png | Space Cubics was selected for the J-TECH STARTUP 2019 program.
 
-2019.10.31 | /en/news/2019-10-31 | square_cubics.png | Space Cubics was featured in the Nikkei Industrial Newspaper as JAXA Entrepreneurs Bringing Space Technology to Earth.
+2019.10.31 | /en/news/2019-10-31 | logo_solid.png | Space Cubics was featured in the Nikkei Industrial Newspaper as JAXA Entrepreneurs Bringing Space Technology to Earth.
     
 2018.09.25 | /en/news/2018-09-25 | jts.png | Mr. Goto, a founding member, presented at the 26th NEDO Pitch Meeting.  
 
 2018.06.01 | /en/news/2018-06-01 | brainchild.png | Space Cubics, LLC was established as a JAXA venture company.
 
-2018.05.29 | /en/news/2018-05-29 | square_cubics.png | Space Cubics was certified as a JAXA Venture by the Japan Aerospace Exploration Agency (JAXA).
+2018.05.29 | /en/news/2018-05-29 | logo_solid.png | Space Cubics was certified as a JAXA Venture by the Japan Aerospace Exploration Agency (JAXA).
 
   "
 ) %}
@@ -91,7 +91,7 @@ Our mission is to support sustainable growth through partnership with teams that
 
 {% prefooter(
   left_card_image="earth.jpg", 
-  right_card_image="sq_ir_img2.jpg",
+  right_card_image="ir.jpg",
 
  left_title="RECRUIT",
   left_subtitle="Job openings",

@@ -69,7 +69,7 @@ Thermal Engineer |
 
 {% prefooter(
   left_card_image="white_pcb_dark.jpg", 
-  right_card_image="sq_about_img2.jpg",
+  right_card_image="about.jpg",
 
   left_title="PRODUCTS",
   left_subtitle="Board introduction",

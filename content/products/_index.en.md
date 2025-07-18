@@ -22,7 +22,7 @@
 {% product_display(
   product_id_label="Product 01",
   bg="",
-  img="sq_sc-obc_module_a1.png",
+  img="sc-obc_module_a1.png",
   img_link="",
   alt="",
   pre_title="Ultra-small space computer module for satellites.",
@@ -46,7 +46,7 @@
 {% end %}
 
 {% prefooter(
-  left_card_image="sq_about_img2.jpg", 
+  left_card_image="about.jpg", 
   right_card_image="earth.jpg",
 
   left_title="ABOUT US",
