@@ -116,4 +116,3 @@ Our mission is to support sustainable growth through partnership with teams that
 ) %}
 <!--display element -->
 {% end %}
-

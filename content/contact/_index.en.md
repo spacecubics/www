@@ -31,5 +31,3 @@
 ) %}
 <!--display element -->
 {% end %}
-
-

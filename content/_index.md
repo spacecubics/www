@@ -115,4 +115,3 @@ title = "Space Cubics Inc."
 ) %}
 <!--display element -->
 {% end %}
-
