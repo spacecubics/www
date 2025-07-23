@@ -2,7 +2,7 @@
 	position: sticky;
 	top: 1rem;
 	grid-area: nav;
-	margin: 2rem auto 0 2rem;
+	margin: 30px;
 	border-radius: 1.625rem;
 	inset-inline: 0;
 	overflow: visible;
@@ -136,7 +136,7 @@
 			justify-content: flex-end;
 			align-items: flex-end;
 			gap: 3rem;
-			margin: 0;
+			margin-bottom: 50px;
 			padding: 0;
 			list-style: none;
 			flex: 1 1 auto;
@@ -417,38 +417,7 @@
 }
 
 .company-logo {
-	all: unset;
-	display: block;
-	width: clamp(120px, 25vw, 250px);
-	height: auto;
-	pointer-events: auto;
-	box-shadow: none;
-	border: none;
-	filter: none;
-	opacity: 1;
-	background: transparent;
-	transition: none;
-	mix-blend-mode: normal;
-
-	@media (min-width: 3840px) {
-		width: clamp(200px, 30vw, 400px);
-	}
-
-	@media (max-width: 3000px) {
-		padding-right: 20vw;
-	}
-
-	@media (max-width: 1500px) {
-		width: clamp(120px, 20vw, 250px);
-		padding-right: 1rem;
-	}
-	@media (max-width: 900px) {
-		width: clamp(130px, 28vw, 160px);
-		padding-right: 0;
-	}
-	@media (max-width: 720px) {
-		width: clamp(120px, 12vw, 120px);
-	}
+	width: 150px;
 }
 
 #home .company-logo:hover {
