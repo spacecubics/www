@@ -13,7 +13,7 @@
 		}
 		.carousel-track {
 			display: flex;
-			margin-left: 8rem;
+			margin-left: 4rem;
 
 			&::after {
 				content: '';
@@ -152,37 +152,7 @@
 			display: none;
 		}
 	}
-	.featured-news-carousel {
-		.carousel-track-wrapper {
-			width: 100%;
-			max-width: 100vw;
-			overflow-x: auto;
-		}
-		.carousel-card {
-			min-width: 65vw;
-			max-width: 75vw;
-			flex: 0 0 65vw;
-			display: flex;
-			flex-direction: column;
-			height: auto;
-			img {
-				max-height: 140px;
-				min-height: 80px;
-				aspect-ratio: 16/9;
-				width: 100%;
-				object-fit: cover;
-				display: block;
-			}
-			.carousel-card-content {
-				h3 {
-					font-size: 0.9em;
-				}
-				p {
-					font-size: 0.85em;
-				}
-			}
-		}
-	}
+
 	.carousel-section-title {
 		font-size: 2rem !important;
 		font-weight: 950 !important;
