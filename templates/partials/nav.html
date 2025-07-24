@@ -33,14 +33,13 @@
 									<div class="dropdown-menu">
 										{%- for sublink in link.menu -%}
 											<div class="dropdown-item">
-												<div class="main-navbar-link"
-													data-href="{% if sublink.url is matching('https?://') %}{{ sublink.url }}{% else %}{{ get_url(path=sublink.url, lang=lang) }}{% endif %}"
-													data-rel="{% if sublink.url is matching('https?://') %}{{ rel_attributes }}{% endif %}"
-													role="button"
+												<a class="main-navbar-link"
+													href="{% if sublink.url is matching('https?://') %}{{ sublink.url }}{% else %}{{ get_url(path=sublink.url, lang=lang) }}{% endif %}"
+													{% if sublink.url is matching('https?://') %}rel="{{ rel_attributes }}"{% endif %}
 													tabindex="0"
 												>
 													{{- macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) -}}
-												</div>
+												</a>
 											</div>
 										{%- endfor -%}
 									</div>
@@ -48,33 +47,33 @@
 							</div>
 						{%- elif link.url is matching('https?://') %}
 							<div class="main-navbar-item">
-								<div class="main-navbar-link" data-href="{{ link.url }}" data-rel="{{ rel_attributes }}" role="button" tabindex="0">
+								<a class="main-navbar-link" href="{{ link.url }}" rel="{{ rel_attributes }}" tabindex="0">
 									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
-								</div>
+								</a>
 							</div>
 						{%- elif link.name == "Recruit" and config.languages | length > 0 %}
 							<div class="main-navbar-item recruit-with-switcher">
 								<div class="ls-nav-item-desktop">
 									{%- include "partials/language_switcher.html" %}
 								</div>
-								<div class="main-navbar-link" data-href="{{ get_url(path=link.url, lang=lang) }}" role="button" tabindex="0">
+								<a class="main-navbar-link" href="{{ get_url(path=link.url, lang=lang) }}" tabindex="0">
 									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
-								</div>
+								</a>
 							</div>
 						{%- else %}
 							<div class="main-navbar-item">
-								<div class="main-navbar-link" data-href="{{ get_url(path=link.url, lang=lang) }}" role="button" tabindex="0">
+								<a class="main-navbar-link" href="{{ get_url(path=link.url, lang=lang) }}" tabindex="0">
 									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
-								</div>
+								</a>
 							</div>
 						{%- endif %}
 					{%- endfor %}
 
 					{%- if config.extra.default_theme or config.extra.nav.show_theme_switcher %}
 						<div id="contact" class="main-navbar-item">
-							<div class="main-navbar-link" data-href="{{ get_url(path='contact', lang=lang) }}" role="button" tabindex="0">
+							<a class="main-navbar-link" href="{{ get_url(path='contact', lang=lang) }}" tabindex="0">
 								{{ macros_translate::translate(key="contact", default="Contact", language_strings=language_strings) }}
-							</div>
+							</a>
 						</div>
 					{%- endif %}
 
