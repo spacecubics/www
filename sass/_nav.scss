@@ -192,7 +192,7 @@
 			min-height: 44px;
 
 			&:hover {
-				background-color: darkorange;
+				background-color: rgb(255, 192, 17);
 				color: #444444;
 				box-shadow: none;
 			}
@@ -291,15 +291,37 @@
 	top: -1.5rem;
 }
 
-.company-logo {
-	width: 150px;
+.company-logo-wrapper {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
 }
 
-#home .company-logo:hover {
-	box-shadow: none;
-	transform: none;
-	transition: none;
-	filter: none;
+.company-logo-wrapper::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 180px;
+	height: 56px;
+	background: rgba(255,255,255,0.13);
+	border-radius: 999px;
+	opacity: 0;
+	transition: opacity 0.2s;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.company-logo-wrapper:hover::after {
+	opacity: 1;
+}
+
+.company-logo {
+	width: 150px;
+	transition: box-shadow 0.2s, background 0.2s;
+	position: relative;
+	z-index: 1;
 }
 
 .main-navbar-item.recruit-with-switcher {
