@@ -2,10 +2,12 @@
 title = "Software Engineer"
 description = "Now Hiring"
 date = 2025-07-18
+template = "job_post.html"
 +++
-## Now Hiring
-**Software Engineer**
-**Location:** Head Office (Remote work available within Japan only)
+# Now Hiring
+## **Software Engineer**
+## **Location:**
+Head Office (Remote work within Japan only)
 ---
 ### Employment Type
 - Full-time employee

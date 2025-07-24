@@ -1,0 +1,18 @@
+.job-post {
+	background: rgba(30, 30, 40, 0.98);
+	border-radius: 1.2rem;
+	margin-left: 20px;
+	margin-right:20px;
+	margin-bottom: 55px;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+	padding: 2.5rem 2.5rem 2rem 2.5rem;
+
+	&__header {
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	&__date {
+		color: #f77d06;
+	}
+}
