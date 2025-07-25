@@ -1,15 +1,11 @@
 +++
 +++
 
-{% section_title(bg="", title="ABOUT US", subtitle="Company information", slogan="", style_top="About Us") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="ABOUT US", subtitle="Company information", slogan="", style_top="About Us") }}
 
-{% twocol(bg="about.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="about.jpg") }}
 
-{% threecard(
+{{ threecard(
 	title="To drink beer on the moon.",
 	subtitle="Space Cubics is a JAXA venture developing affordable and reliable space computers so everyone can go to the moon.",
 	left_card_image="",
@@ -22,9 +18,7 @@
 	right_card_title="To Space",
 	right_card_subtitle="Space Cubics, Inc. provides affordable astrocomputing boards along with comprehensive support. This supports the private space industry in Japan and abroad.<br><br>Our boards enable large organizations, small companies, and even individuals to participate in the growing space industry. This is our core mission.<br><br> Maybe one day we will even take vacations on the moon.",
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
 
 {% about_company(
 	title="COMPANY",
@@ -69,7 +63,7 @@ Space Cubics and Space One were both selected for an industrial development gran
 Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. Every launch provides valuable telemetry data that drives refinement.
 {% end %}
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="white_pcb_dark.jpg",
 	right_card_image="earth.jpg",
 
@@ -93,6 +87,4 @@ Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. 
 	bottom_link="/en/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}

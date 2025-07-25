@@ -1,15 +1,11 @@
 +++
 +++
 
-{% section_title(bg="", title="ABOUT US", subtitle="私たちについて", slogan="", style_top="私たちについて") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="ABOUT US", subtitle="私たちについて", slogan="", style_top="私たちについて") }}
 
-{% twocol(bg="about.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="about.jpg") }}
 
-{% threecard(
+{{ threecard(
 	title="To drink beer on the moon.",
 	subtitle="私たち株式会社 Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。",
 	left_card_image="",
@@ -22,9 +18,7 @@
 	right_card_title="誰でも宇宙へ",
 	right_card_subtitle="株式会社 Space Cubicsは低価格な宇宙用の機器と<br>トータルサポートを提供することで、<br>宇宙開発への参入を手軽にし、<br>日本はもとよりアジアを中心とした<br>民間の宇宙産業発展に貢献します。<br><br>多くの企業や団体そして個人までも<br>が宇宙開発に参入することにより、<br>宇宙に対するニーズが飛躍的に拡大して<br>新たな産業が生まれ育っていくこと、<br>それが株式会社 Space Cubicsの設立目的です。<br><br> そしていつの日か、月にホテルが建ち、<br>誰でも宇宙に行ける時代の実現を目指します。",
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
 
 {% about_company(
 	title="COMPANY",
@@ -71,7 +65,7 @@ TEL｜050-7112-6213
 <br>ならびにSpace Cubics社製宇宙用コンピュータを搭載した衛星の宇宙実証を目指します。
 {% end %}
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="white_pcb_dark.jpg",
 	right_card_image="earth.jpg",
 
@@ -95,6 +89,4 @@ TEL｜050-7112-6213
 	bottom_link="/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
