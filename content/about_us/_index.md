@@ -8,13 +8,9 @@
 {{ threecard(
 	title="To drink beer on the moon.",
 	subtitle="私たち株式会社 Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。",
-	left_card_image="",
-	middle_card_image="",
-	right_card_image="",
 	left_card="blocks/affordable.toml",
 	middle_card="blocks/easy.toml",
-	right_card="blocks/to_space.toml",
-	bg=""
+	right_card="blocks/to_space.toml"
 ) }}
 
 {% about_company(

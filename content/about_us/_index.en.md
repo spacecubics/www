@@ -8,13 +8,9 @@
 {{ threecard(
 	title="To drink beer on the moon.",
 	subtitle="Space Cubics is a JAXA venture developing affordable and reliable space computers so everyone can go to the moon.",
-	left_card_image="",
-	middle_card_image="",
-	right_card_image="",
 	left_card="blocks/affordable.en.toml",
 	middle_card="blocks/easy.en.toml",
-	right_card="blocks/to_space.en.toml",
-	bg=""
+	right_card="blocks/to_space.en.toml"
 ) }}
 
 {% about_company(
