@@ -2,9 +2,7 @@
 title = "Space Cubics Inc."
 +++
 
-{% splash() %}
-<!--display element -->
-{% end %}
+{{ splash() }}
 
 {% hero_element(
 	title="PRODUCTS",
@@ -59,7 +57,7 @@ title = "Space Cubics Inc."
 革新的な技術や最先端のアイデアを持つ企業と協力し、<br>持続可能な成長を支援することが 私たちの使命です。
 {% end %}
 
-{% news_carousel(
+{{ news_carousel(
 	bg="bw_pcb.jpg",
 	title="NEWS",
 	subtitle="Space Cubics",
@@ -84,11 +82,9 @@ title = "Space Cubics Inc."
 		2018.5.29 | /news/2018-05-29 | logo_solid.png | 国立研究開発法人 宇宙航空研究開発機構(JAXA) より「JAXAベンチャー」の認定を受けました。
 
 	"
-) %}
-<!--display element -->
-{% end %}
+) }}
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="earth.jpg",
 	right_card_image="ir.jpg",
 
@@ -112,6 +108,4 @@ title = "Space Cubics Inc."
 	bottom_link = "/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}

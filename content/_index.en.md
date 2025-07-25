@@ -2,9 +2,7 @@
 title = "Space Cubics Inc."
 +++
 
-{% splash() %}
-<!--display element -->
-{% end %}
+{{ splash() }}
 
 {% hero_element(
 	title="PRODUCTS",
@@ -59,7 +57,7 @@ We work alongside pioneering venture companies in the growing space industry.
 Our mission is to support sustainable growth through partnership with teams that possess innovative technology and ideas.
 {% end %}
 
-{% news_carousel(
+{{ news_carousel(
 	bg="bw_pcb.jpg",
 	title="NEWS",
 	subtitle="Space Cubics",
@@ -85,11 +83,9 @@ Our mission is to support sustainable growth through partnership with teams that
 2018.05.29 | /en/news/2018-05-29 | logo_solid.png | Space Cubics was certified as a JAXA Venture by the Japan Aerospace Exploration Agency (JAXA).
 
 	"
-) %}
-<!--display element -->
-{% end %}
+) }}
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="earth.jpg",
 	right_card_image="ir.jpg",
 
@@ -113,6 +109,4 @@ Our mission is to support sustainable growth through partnership with teams that
 	bottom_link = "/en/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
