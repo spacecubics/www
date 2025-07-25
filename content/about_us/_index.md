@@ -11,12 +11,9 @@
 	left_card_image="",
 	middle_card_image="",
 	right_card_image="",
-	left_card_title="もっと安く",
-	left_card="blocks/affordable.md",
-	middle_card_title="もっと手軽に",
-	middle_card="blocks/easy.md",
-	right_card_title="誰でも宇宙へ",
-	right_card="blocks/to_space.md",
+	left_card="blocks/affordable.toml",
+	middle_card="blocks/easy.toml",
+	right_card="blocks/to_space.toml",
 	bg=""
 ) }}
 

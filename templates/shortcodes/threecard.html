@@ -1,6 +1,6 @@
-{% set left_content = load_data(path=left_card) %}
-{% set middle_content = load_data(path=middle_card) %}
-{% set right_content = load_data(path=right_card) %}
+{% set left_card = load_data(path=left_card) %}
+{% set middle_card = load_data(path=middle_card) %}
+{% set right_card = load_data(path=right_card) %}
 
 <div class="threecard" style="background-color: {{ bg | default(value='transparent') }}">
 	<!-- Title & Subtitle -->
@@ -22,9 +22,9 @@
 					<span class="label-number">01</span>
 				</div>
 				<div class="threecard-cardleft-content">
-					<h2>{{ left_card_title }}</h2>
+					<h2>{{ left_card.title }}</h2>
 					<div style="{{ left_card_subtitle_style | default(value='') }}">
-						{{ left_content | safe }}
+						{{ left_card.body | safe }}
 					</div>
 				</div>
 				{% if left_card_link and left_card_link_text %}
@@ -43,9 +43,9 @@
 					<span class="label-number">02</span>
 				</div>
 				<div class="threecard-cardmiddle-content">
-					<h2>{{ middle_card_title }}</h2>
+					<h2>{{ middle_card.title }}</h2>
 					<div style="{{ middle_card_subtitle_style | default(value='') }}">
-						{{ middle_content | safe }}
+						{{ middle_card.body | safe }}
 					</div>
 				</div>
 				{% if middle_card_link and middle_card_link_text %}
@@ -64,9 +64,9 @@
 					<span class="label-number">03</span>
 				</div>
 				<div class="threecard-cardright-content">
-					<h2>{{ right_card_title }}</h2>
+					<h2>{{ right_card.title }}</h2>
 					<div style="{{ right_card_subtitle_style | default(value='') }}">
-						{{ right_content | safe }}
+						{{ right_card.body | safe }}
 					</div>
 				</div>
 				{% if right_card_link and right_card_link_text %}

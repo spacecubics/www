@@ -1,3 +1,5 @@
+title = "To Space"
+body = '''
 <p>Space Cubics, Inc. provides affordable astrocomputing boards along
 with comprehensive support. This supports the private space industry
 in Japan and abroad.</p>
@@ -7,3 +9,4 @@ individuals to participate in the growing space industry. This is our
 core mission.</p>
 
 <p>Maybe one day we will even take vacations on the moon.</p>
+'''
