@@ -1,6 +1,6 @@
 +++
 title = "IR INFO"
-description = "Investment details"
+description = "Investor Relations"
 +++
 
 {{ twocol(bg="ir.jpg") }}
