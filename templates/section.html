@@ -1,5 +1,15 @@
 {% extends "base.html" %}
+
 {% block content -%}
-<h1>{{- section.title -}}</h1>
+<div class="section-title-block">
+	<div class="section-title-content">
+		<h1>{{ section.title }}</h1>
+		<h3>{{ section.description }}</h3>
+		<div class="section-title-divider"></div>
+		{% if style_top %}
+		<div class="section-title-style-top">TOP/{{ style_top }}</div>
+		{% endif %}
+	</div>
+</div>
 {{- section.content | safe -}}
 {%- endblock content %}

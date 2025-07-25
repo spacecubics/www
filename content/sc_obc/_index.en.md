@@ -1,7 +1,7 @@
 +++
+title = "SC-OBC MODULE A1"
+description = "On-board Computer for Cubesat"
 +++
-
-{{ section_title(bg="", title="SC-OBC MODULE A1", subtitle="", slogan="", style_top="product details/SC-OBC Module A1") }}
 
 {{ quick_jump(
 	title1="Product overview", id1="section-summary",

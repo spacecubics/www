@@ -1,7 +1,7 @@
 +++
+title = "IR INFO"
+description = "投資家情報"
 +++
-
-{{ section_title(bg="", title="IR INFO", subtitle="投資家情報", slogan="", style_top="投資家情報") }}
 
 {{ twocol(bg="ir.jpg") }}
 

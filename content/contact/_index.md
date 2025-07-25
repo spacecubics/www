@@ -1,7 +1,7 @@
 +++
+title = "CONTACT"
+description = "Be part of something bigger"
 +++
-
-{{ section_title(bg="", title="CONTACT", subtitle="Be part of something bigger", slogan="") }}
 
 {{ twocol(bg="earth.jpg") }}
 

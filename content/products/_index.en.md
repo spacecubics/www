@@ -1,7 +1,7 @@
 +++
+title = "PRODUCTS"
+description = "Product details"
 +++
-
-{{ section_title(bg="", title="PRODUCTS", subtitle="Product details", slogan="", style_top="Product Information") }}
 
 {{ twocol(bg="white_pcb.jpg") }}
 

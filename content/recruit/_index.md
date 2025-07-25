@@ -1,7 +1,7 @@
 +++
+title = "RECRUIT"
+description = "採用情報"
 +++
-
-{{ section_title(bg="", title="RECRUIT", subtitle="採用情報", slogan="", style_top="採用情報") }}
 
 {{ twocol(bg="earth.jpg") }}
 

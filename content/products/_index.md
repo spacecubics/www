@@ -1,7 +1,7 @@
 +++
+title = "PRODUCTS"
+description = "製品情報"
 +++
-
-{{ section_title(bg="", title="PRODUCTS", subtitle="製品情報", slogan="", style_top="製品情報") }}
 
 {{ twocol(bg="white_pcb.jpg") }}
 

@@ -1,10 +1,11 @@
 +++
+title = "IR INFO"
+description = "Investment details"
 +++
-
-{{ section_title(bg="", title="IR INFO", subtitle="Investment details", slogan="", style_top="Investor Relations") }}
 
 {{ twocol(bg="ir.jpg") }}
 
+{# TODO: this must be generated from news #}
 {{ kv_list(line1="IR NEWS", line2="Space Cubics", line3="INVESTOR RELATIONS", data="blocks/ir_news.json") }}
 
 {{ prefooter(

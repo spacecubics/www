@@ -1,7 +1,7 @@
 +++
+title = "ABOUT US"
+description = "私たちについて"
 +++
-
-{{ section_title(bg="", title="ABOUT US", subtitle="私たちについて", slogan="", style_top="私たちについて") }}
 
 {{ twocol(bg="about.jpg") }}
 
