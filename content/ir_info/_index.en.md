@@ -5,17 +5,7 @@
 <!--display element -->
 {% end %}
 
-{% twocol(
-	bg="ir.jpg",
-	title="",
-	subtitle="",
-	slogan="",
-	img="",
-	alt="",
-	link="",
-	link_text="",
-	img_link=""
-) %}
+{% twocol(bg="ir.jpg") %}
 <!-- no text -->
 {% end %}
 

@@ -5,17 +5,7 @@
 <!--display element -->
 {% end %}
 
-{% twocol(
-	title="",
-	img="",
-	alt="",
-	link="",
-	link_text="",
-	img_link="",
-	bg="white_pcb.jpg",
-	subtitle="",
-	slogan=""
-) %}
+{% twocol(bg="white_pcb.jpg") %}
 <!-- no text -->
 {% end %}
 
