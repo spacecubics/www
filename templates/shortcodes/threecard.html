@@ -24,7 +24,7 @@
 				<div class="threecard-cardleft-content">
 					<h2>{{ left_card.title }}</h2>
 					<div style="{{ left_card_subtitle_style | default(value='') }}">
-						{{ left_card.body | safe }}
+						{{ left_card.body | markdown | safe }}
 					</div>
 				</div>
 				{% if left_card_link and left_card_link_text %}
@@ -45,7 +45,7 @@
 				<div class="threecard-cardmiddle-content">
 					<h2>{{ middle_card.title }}</h2>
 					<div style="{{ middle_card_subtitle_style | default(value='') }}">
-						{{ middle_card.body | safe }}
+						{{ middle_card.body | markdown | safe }}
 					</div>
 				</div>
 				{% if middle_card_link and middle_card_link_text %}
@@ -66,7 +66,7 @@
 				<div class="threecard-cardright-content">
 					<h2>{{ right_card.title }}</h2>
 					<div style="{{ right_card_subtitle_style | default(value='') }}">
-						{{ right_card.body | safe }}
+						{{ right_card.body | markdown | safe }}
 					</div>
 				</div>
 				{% if right_card_link and right_card_link_text %}
