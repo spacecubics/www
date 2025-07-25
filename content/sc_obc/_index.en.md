@@ -1,19 +1,15 @@
 +++
 +++
 
-{% section_title(bg="", title="SC-OBC MODULE A1", subtitle="", slogan="", style_top="product details/SC-OBC Module A1") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="SC-OBC MODULE A1", subtitle="", slogan="", style_top="product details/SC-OBC Module A1") }}
 
-{% quick_jump(
+{{ quick_jump(
 	title1="Product overview", id1="section-summary",
 	title2="Use cases", id2="section-usage",
 	title3="Dev kit", id3="section-devkit",
 	title4="Specifications", id4="section-specs",
 	title5="Docs / resources", id5="section-docs"
-) %}
-<!--display element -->
-{% end %}
+) }}
 
 <section id="section-summary">
 	{% hero_element(
@@ -31,12 +27,10 @@
 {% end %}
 
 <section id="section-usage">
-	{% section_title(bg="", title="USES", subtitle="", slogan="") %}
-	<!--display element -->
-	{% end %}
+	{{ section_title(bg="", title="USES", subtitle="", slogan="") }}
 </section>
 
-{% twocard(
+{{ twocard(
 	title="",
 	subtitle="",
 
@@ -50,17 +44,13 @@
 	right_card_subtitle="A satellite equipped with the SC-OBC Module A1 installed on an interface board. <br> <br> (Photo shows a prototype under development)",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
 
 <section id="section-devkit">
-	{% section_title(bg="", title="DEV KIT", subtitle="", slogan="") %}
-	<!--display element -->
-	{% end %}
+	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
 </section>
 
-{% twocard(
+{{ twocard(
 	title="",
 	subtitle="",
 	left_card_image="under_construction.jpeg",
@@ -70,9 +60,7 @@
 	right_card_title="optional items",
 	right_card_subtitle="coming soon",
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
 
 <section id="section-specs">
 	{% spec_sheet(
@@ -115,7 +103,7 @@
 	{% end %}
 </section>
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="about.jpg",
 	right_card_image="earth.jpg",
 
@@ -139,6 +127,4 @@
 	bottom_link="/en/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
