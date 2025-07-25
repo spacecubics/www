@@ -1,1 +1,9 @@
-Engineering space-ready devices is a challenge, even for teams with experience in the field.<br><br>Sometimes a great idea is not enough, and a project will stall at the planning stage.<br><br>Space Cubics, Inc. provides comprehensive support for space engineers, empowering teams to confidently enter the space industry.
+<p>Engineering space-ready devices is a challenge, even for teams with
+experience in the field.</p>
+
+<p>Sometimes a great idea is not enough, and a project will stall at
+the planning stage.</p>
+
+<p>Space Cubics, Inc. provides comprehensive support for space
+engineers, empowering teams to confidently enter the space
+industry.</p>
