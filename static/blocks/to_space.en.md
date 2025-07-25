@@ -1,0 +1,1 @@
+Space Cubics, Inc. provides affordable astrocomputing boards along with comprehensive support. This supports the private space industry in Japan and abroad.<br><br>Our boards enable large organizations, small companies, and even individuals to participate in the growing space industry. This is our core mission.<br><br> Maybe one day we will even take vacations on the moon.

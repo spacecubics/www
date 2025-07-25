@@ -12,11 +12,11 @@
 	middle_card_image="",
 	right_card_image="",
 	left_card_title="もっと安く",
-	left_card_subtitle="宇宙用の機器は地上用に比べて、性能に加えて安全性や<br>信頼性検証などの要求事項が多く、<br>適合させるための開発コストが非常に高くなります。<br><br>Space Cubicsは、<br>これまで多くの宇宙での使用実績のある<br>民生コンピューターの設計者と、<br>宇宙開発の経験から培った<br>多くの設計検証ノウハウを持つ<br>JAXAエンジニアがタッグを組み、<br>「JAXAベンチャー」として信頼性の高い<br>宇宙用コンピューターを安価に提供します。",
+	left_card_subtitle="blocks/affordable.md",
 	middle_card_title="もっと手軽に",
-	middle_card_subtitle="たとえ優れた技術があったとしても、<br>宇宙開発の経験がない企業・団体にとって<br>宇宙開発は簡単なものではありません。<br><br>宇宙開発に興味はあっても、<br>どこから手を付けて良いのか分からず、<br>企画段階で頓挫してしまうケースが<br>多く見受けられます。<br><br>株式会社 Space Cubicsは、<br>宇宙に興味のある企業・団体が<br>手軽に宇宙開発に参入できるように<br>宇宙開発のトータルサポートを提供します。",
+	middle_card_subtitle="blocks/easy.md",
 	right_card_title="誰でも宇宙へ",
-	right_card_subtitle="株式会社 Space Cubicsは低価格な宇宙用の機器と<br>トータルサポートを提供することで、<br>宇宙開発への参入を手軽にし、<br>日本はもとよりアジアを中心とした<br>民間の宇宙産業発展に貢献します。<br><br>多くの企業や団体そして個人までも<br>が宇宙開発に参入することにより、<br>宇宙に対するニーズが飛躍的に拡大して<br>新たな産業が生まれ育っていくこと、<br>それが株式会社 Space Cubicsの設立目的です。<br><br> そしていつの日か、月にホテルが建ち、<br>誰でも宇宙に行ける時代の実現を目指します。",
+	right_card_subtitle="blocks/to_space.md",
 	bg=""
 ) }}
 

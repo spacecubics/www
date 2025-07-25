@@ -12,11 +12,11 @@
 	middle_card_image="",
 	right_card_image="",
 	left_card_title="Affordable",
-	left_card_subtitle="Space poses a unique set of challenges not commonly faced on Earth. Increased demand for performance and reliability lead to higher development costs.<br><br>Space Cubics, Inc. is a join effort between<br>private sector engineers with extensive astrocomputing experience <br>and JAXA experts with a keen interest in robust testing.<br><br>As a JAXA-backed venture, we strive to provide reliable space computers at an accessible price.",
+	left_card_subtitle="blocks/affordable.en.md",
 	middle_card_title="Easy",
-	middle_card_subtitle="Engineering space-ready devices is a challenge, even for teams with experience in the field.<br><br>Sometimes a great idea is not enough, and a project will stall at the planning stage.<br><br>Space Cubics, Inc. provides comprehensive support for space engineers, empowering teams to confidently enter the space industry.",
+	middle_card_subtitle="blocks/easy.en.md",
 	right_card_title="To Space",
-	right_card_subtitle="Space Cubics, Inc. provides affordable astrocomputing boards along with comprehensive support. This supports the private space industry in Japan and abroad.<br><br>Our boards enable large organizations, small companies, and even individuals to participate in the growing space industry. This is our core mission.<br><br> Maybe one day we will even take vacations on the moon.",
+	right_card_subtitle="blocks/to_space.en.md",
 	bg=""
 ) }}
 
