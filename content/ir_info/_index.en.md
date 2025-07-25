@@ -1,13 +1,9 @@
 +++
 +++
 
-{% section_title(bg="", title="IR INFO", subtitle="Investment details", slogan="", style_top="Investor Relations") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="IR INFO", subtitle="Investment details", slogan="", style_top="Investor Relations") }}
 
-{% twocol(bg="ir.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="ir.jpg") }}
 
 {% about_company (
 	title="IR NEWS",
@@ -23,7 +19,7 @@
 2025.09.31｜Initial seed funding
 {% end %}
 
-{% prefooter(
+{{ prefooter(
 	bottom_card_image = "",
 	bottom_title="CONTACT",
 	bottom_subtitle="Reach out to us",
@@ -31,6 +27,4 @@
 	bottom_footer_2="Please feel free to contact us.",
 	bottom_link="/en/contact",
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}

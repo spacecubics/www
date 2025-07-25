@@ -1,13 +1,9 @@
 +++
 +++
 
-{% section_title(bg="", title="IR INFO", subtitle="投資家情報", slogan="", style_top="投資家情報") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="IR INFO", subtitle="投資家情報", slogan="", style_top="投資家情報") }}
 
-{% twocol(bg="ir.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="ir.jpg") }}
 
 {% about_company (
 	title="IR NEWS",
@@ -23,7 +19,7 @@
 2025.09.31｜Initial seed funding
 {% end %}
 
-{% prefooter(
+{{ prefooter(
 	bottom_card_image = "",
 	bottom_title="CONTACT",
 	bottom_subtitle="お問い合わせ",
@@ -31,6 +27,4 @@
 	bottom_footer_2="お気軽にお問い合わせください。",
 	bottom_link="/contact",
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
