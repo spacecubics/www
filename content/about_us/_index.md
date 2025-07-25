@@ -13,19 +13,7 @@
 	right_card="blocks/to_space.toml"
 ) }}
 
-{% about_company(
-	title="COMPANY",
-	subtitle="Space Cubics",
-	slogan="OVERVIEW",
-	bg="",
-	image="map.png"
-) %}
-会社名｜株式会社 Space Cubics
-設立｜2018年
-代表者｜荘司 靖 (Yasushi Shoji)
-住所｜〒060-0053 北海道札幌市中央区南3条東2丁目1番地 ベンチャースクエア301
-TEL｜050-7112-6213
-{% end %}
+{{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.json") }}
 
 {{ board_members(members="blocks/board-members.json", lang="ja") }}
 

@@ -1,0 +1,23 @@
+{% set kv_list = load_data(path=data, format="json") %}
+
+<div class="about-company-block">
+	<div class="about-company-left">
+		<h2 class="about-company-left__title">{{ line1 }}</h2>
+		<p class="about-company-left__subtitle">{{ line2 }}</p>
+		<p class="about-company-left__slogan">{{ line3 }}</p>
+		<div class="about-company-left__divider"></div>
+	</div>
+
+	<div class="about-company-right">
+		{% for key, value in kv_list %}
+		<div class="about-company-right-line">
+			<p>
+				<span class="about-company-bold">{{ key }}</span>
+				<span class="about-company-gap">{{ value | safe}}</span>
+			</p>
+			<p></p>
+			<div class="about-company-divider-bar"></div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
