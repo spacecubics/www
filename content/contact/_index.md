@@ -1,16 +1,11 @@
 +++
 +++
 
-{% section_title(bg="", title="CONTACT", subtitle="Be part of something bigger", slogan="") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="CONTACT", subtitle="Be part of something bigger", slogan="") }}
 
-{% twocol(bg="earth.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="earth.jpg") }}
 
-
-{% contact_form(
+{{ contact_form(
 	title="お問い合わせ",
 	subtitle="一緒に働くメンバーを常に募集しています。",
 	name_field="お名前"
@@ -18,6 +13,4 @@
 	role_field="希望する求人"
 	message_field="メッセージを入力してください"
 	button_label="送信"
-) %}
-<!--display element -->
-{% end %}
+) }}
