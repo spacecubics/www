@@ -1,0 +1,50 @@
+[
+		{
+				"name_ja": "荘司 靖",
+				"name_en": "Yasushi Shoji",
+				"title": "CEO",
+				"expertise": "Software Engineer",
+				"bio_ja": "2000年にSalem State Univ., MA, USA 卒業。2002年より組み込みCPUボード開発に従事。幅広い知識と経験を生かし、2016年に宇宙用ドローン(Int-Ball)の統括ソフトウェア開発を担当。",
+				"bio_en": "Graduating from Salem State University, MA, USA in 2000, Mr. Shoji has been engaged in embedded CPU board development since 2002. Leveraging extensive knowledge and experience, he previously led software development for a space drone (Int-Ball) project in 2016."
+		},
+		{
+				"name_ja": "佐々木 大輔",
+				"name_en": "Daisuke Sasaki",
+				"title": "CTO",
+				"expertise": "LSI Logic Engineer",
+				"bio_ja": "2001年より11年間 国内半導体企業にてLSIの開発における幅広い設計工程を経験。2013年から自ら設計したLSIを搭載した組み込みCPUボードの開発を経験しソフトウェアまで知識領域を持つ。",
+				"bio_en": "Since 2001, Mr. Sasaki has gained extensive experience in various LSI design processes over his 11 years of experience in the semiconductor industry. Since 2013, he has worked to develop embedded CPU boards equipped with LSIs. Mr. Sasaki is also a skilled software developer."
+		},
+		{
+				"name_ja": "森島 史仁",
+				"name_en": "Fumito Morishima",
+				"title": "CFO",
+				"expertise": "Sales, Finance Control",
+				"bio_ja": "2000年より16年間、組み込みCPUボードメーカーにて開発・営業・マーケティング・経営に携わり、幅広いビジネススキルを習得。また東南アジアで事業を興しており、アジアにコネクションを持つ。",
+				"bio_en": "For 16 years, Mr. Morishima was involved in the development, sales, marketing, and management of embedded CPU boards. He also started a business in Southeast Asia and possesses a broad network of industry connections."
+		},
+		{
+				"name_ja": "佐々木 拓也",
+				"name_en": "Takuya Sasaki",
+				"title": "CAO",
+				"expertise": "Software Engineer, Sales",
+				"bio_ja": "1998年より国内電機メーカーのソフトウェアエンジニアとして主に官公庁向けのネットワーク管理システムの開発に従事。2013年から組み込みCPUボードメーカーのFAEとして、数多くの顧客の開発、量産をサポートしてきた。",
+				"bio_en": "Starting in 1998, Mr. Sasaki has been working as a software engineer for a Japanese electronics manufacturer, mainly developing network management systems for government agencies. In 2013, he worked as a field application engineer (FAE) for an embedded CPU board manufacturer, supporting both development and mass production."
+		},
+		{
+				"name_ja": "波塚 朋広",
+				"name_en": "Tomohiro Namitsuka",
+				"title": "CPO",
+				"expertise": "Electronics Engineer",
+				"bio_ja": "2002年より組み込みCPUボードメーカーのハードウェアエンジニアとして、多くの基板開発を担当。耐環境性・信頼性が要求される産業用途向け製品の回路設計から量産製造までの幅広い知識と経験を活かし、安価で安心して使える宇宙機の提供を目指す。",
+				"bio_en": "Starting in 2002, Mr. Namitsuka worked as a hardware engineer for an embedded CPU board manufacturer where he was responsible for the development of numerous circuit boards. Leveraging extensive knowledge and experience in circuit designs that require special environmental resistance, he now works to provide affordable and reliable spacecraft computers."
+		},
+		{
+				"name_ja": "後藤 雅享",
+				"name_en": "Masayuki Goto",
+				"title": "Founding Member",
+				"expertise": "Space System Engineer",
+				"bio_ja": "2002年よりJAXAにて有人宇宙開発に従事。国際宇宙ステーションに搭載する数々の機器開発プロジェクトを担当し、広い分野での開発・打上げ・運用経験を持つ。JAXAと民間の両面から宇宙開発の発展を目指す。",
+				"bio_en": "Mr. Goto worked on manned space development at JAXA. He has been responsible for numerous development projects for the International Space Station, and has extensive experience in how computers function during launch and space operation. More broadly, Mr. Goto's aim is to advance space development in both the public and private sectors."
+		}
+]

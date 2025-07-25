@@ -27,18 +27,7 @@ Address｜Venture Square 301, 1, South-3 East-2, Chuo-ku, Sapporo, Japan 060-005
 TEL｜+81-50-7112-6213
 {% end %}
 
-{% board_members (
-	title="BOARD MEMBERS",
-	subtitle="Executive",
-	slogan="PROFILES"
-) %}
-Yasushi Shoji (荘司 靖)｜CEO｜Software Engineer｜Graduating from Salem State University, MA, USA in 2000, Mr. Shoji has been engaged in embedded CPU board development since 2002. Leveraging extensive knowledge and experience, he previously led software development for a space drone (Int-Ball) project in 2016.
-Daisuke Sasaki (佐々木 大輔)｜CTO｜LSI Logic Engineer｜Since 2001, Mr. Sasaki has gained extensive experience in various LSI design processes over his 11 years of experience in the semiconductor industry. Since 2013, he has worked to develop embedded CPU boards equipped with LSIs. Mr. Sasaki is also a skilled software developer.
-Fumito Morishima (森島 史仁)｜CFO｜Sales, Finance Control｜For 16 years, Mr. Morishima was involved in the development, sales, marketing, and management of embedded CPU boards. He also started a business in Southeast Asia and possesses a broad network of industry connections.
-Takuya Sasaki (佐々木 拓也)｜CAO｜Software Engineer, Sales｜Starting in 1998, Mr. Sasaki has been working as a software engineer for a Japanese electronics manufacturer, mainly developing network management systems for government agencies. In 2013, he worked as a field application engineer (FAE) for an embedded CPU board manufacturer, supporting both development and mass production.
-Tomohiro Namitsuka (波塚 朋広)｜CPO｜Electronics Engineer｜Starting in 2002, Mr. Namitsuka worked as a hardware engineer for an embedded CPU board manufacturer where he was responsible for the development of numerous circuit boards. Leveraging extensive knowledge and experience in circuit designs that require special environmental resistance, he now works to provide affordable and reliable spacecraft computers.
-Masayuki Goto (後藤 雅享)｜Founding Member｜Space System Engineer｜ Mr. Goto worked on manned space development at JAXA. He has been responsible for numerous development projects for the International Space Station, and has extensive experience in how computers function during launch and space operation. More broadly, Mr. Goto's aim is to advance space development in both the public and private sectors.
-{% end %}
+{{ board_members(members="blocks/board-members.json", lang="en") }}
 
 {% hero_element(
 	title="PARTNERS",

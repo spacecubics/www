@@ -27,18 +27,7 @@
 TEL｜050-7112-6213
 {% end %}
 
-{% board_members (
-	title="BOARD MEMBERS",
-	subtitle="Executive",
-	slogan="PROFILES"
-) %}
-荘司 靖 (Yasushi Shoji)｜CEO｜Software Engineer｜2000年にSalem State Univ., MA, USA 卒業。2002年より組み込みCPUボード開発に従事。幅広い知識と経験を生かし、2016年に宇宙用ドローン(Int-Ball)の統括ソフトウェア開発を担当。
-佐々木 大輔 (Daisuke Sasaki)｜CTO｜LSI Logic Engineer｜2001年より11年間 国内半導体企業にてLSIの開発における幅広い設計工程を経験。2013年から自ら設計したLSIを搭載した組み込みCPUボードの開発を経験しソフトウェアまで知識領域を持つ。
-森島 史仁 (Fumito Morishima)｜CFO｜Sales, Finance Control｜2000年より16年間、組み込みCPUボードメーカーにて開発・営業・マーケティング・経営に携わり、幅広いビジネススキルを習得。また東南アジアで事業を興しており、アジアにコネクションを持つ。
-佐々木 拓也 (Takuya Sasaki)｜CAO｜Software Engineer, Sales｜1998年より国内電機メーカーのソフトウェアエンジニアとして主に官公庁向けのネットワーク管理システムの開発に従事。2013年から組み込みCPUボードメーカーのFAEとして、数多くの顧客の開発、量産をサポートしてきた。
-波塚 朋広 (Tomohiro Namitsuka)｜CPO｜Electronics Engineer｜2002年より組み込みCPUボードメーカーのハードウェアエンジニアとして、多くの基板開発を担当。耐環境性・信頼性が要求される産業用途向け製品の回路設計から量産製造までの幅広い知識と経験を活かし、安価で安心して使える宇宙機の提供を目指す。
-後藤 雅享 (Masayuki Goto)｜Founding Member｜Space System Engineer｜2002年よりJAXAにて有人宇宙開発に従事。国際宇宙ステーションに搭載する数々の機器開発プロジェクトを担当し、広い分野での開発・打上げ・運用経験を持つ。JAXAと民間の両面から宇宙開発の発展を目指す。
-{% end %}
+{{ board_members(members="blocks/board-members.json", lang="ja") }}
 
 {% hero_element(
 	title="PARTNERS",
