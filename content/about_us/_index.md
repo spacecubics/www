@@ -12,11 +12,11 @@
 	middle_card_image="",
 	right_card_image="",
 	left_card_title="もっと安く",
-	left_card_subtitle="blocks/affordable.md",
+	left_card="blocks/affordable.md",
 	middle_card_title="もっと手軽に",
-	middle_card_subtitle="blocks/easy.md",
+	middle_card="blocks/easy.md",
 	right_card_title="誰でも宇宙へ",
-	right_card_subtitle="blocks/to_space.md",
+	right_card="blocks/to_space.md",
 	bg=""
 ) }}
 

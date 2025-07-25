@@ -12,11 +12,11 @@
 	middle_card_image="",
 	right_card_image="",
 	left_card_title="Affordable",
-	left_card_subtitle="blocks/affordable.en.md",
+	left_card="blocks/affordable.en.md",
 	middle_card_title="Easy",
-	middle_card_subtitle="blocks/easy.en.md",
+	middle_card="blocks/easy.en.md",
 	right_card_title="To Space",
-	right_card_subtitle="blocks/to_space.en.md",
+	right_card="blocks/to_space.en.md",
 	bg=""
 ) }}
 
