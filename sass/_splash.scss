@@ -85,32 +85,6 @@
 	line-height: 1.4;
 }
 
-.scroll-hint {
-	position: relative;
-	margin-right: 100px;
-	animation: floatDown 2s ease-in-out infinite;
-}
-
-.scroll-hint span {
-	display: block;
-	font-size: 1rem;
-	margin-bottom: 0.5rem;
-	font-weight: normal;
-}
-
-.scroll-hint .arrow {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 0.5rem;
-}
-
-.scroll-hint .arrow svg {
-	width: 1.2rem;
-	height: 1.2rem;
-	animation: floatDown 2s ease-in-out infinite;
-}
-
 .social-icons {
 	display: flex;
 	justify-content: center;
@@ -190,16 +164,6 @@
 	}
 	.social-label {
 		font-size: 3rem;
-	}
-	.scroll-hint {
-		font-size: 2.4rem;
-	}
-	.scroll-hint span {
-		font-size: 3rem;
-	}
-	.scroll-hint .arrow svg {
-		width: 3.6rem;
-		height: 3.6rem;
 	}
 	.banner-image {
 		width: 100vw;

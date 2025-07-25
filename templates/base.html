@@ -35,6 +35,21 @@
 	{% block scripts %}
 		<script src="{{ get_url(path='js/nav-toggle.js') }}"></script>
 		<script src="{{ get_url(path='js/nav-links.js') }}"></script>
+		<script src="{{ get_url(path='js/scroll-hint.js') }}"></script>
 	{% endblock scripts %}
+
+{% if current_path == "/" or current_path == "/en/" %}
+	<div class="scroll-hint">
+		<div class="scroll-hint-inner">
+			<span>SCROLL DOWN</span>
+			<div class="arrow">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M7 6l5 10 5-10z"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
 </body>
 </html>

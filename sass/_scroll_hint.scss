@@ -1,0 +1,51 @@
+.scroll-hint {
+	position: fixed;
+	left: 50%;
+	bottom: 50px;
+	transform: translateX(-50%);
+	z-index: 1000;
+	pointer-events: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 1;
+}
+
+.scroll-hint--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.scroll-hint--bounce {
+	animation: js-bounce 3s ease-in-out infinite;
+}
+
+@keyframes js-bounce {
+	0%, 100% {
+		transform: translateX(-50%) translateY(0);
+	}
+	50% {
+		transform: translateX(-50%) translateY(8px);
+	}
+}
+
+.scroll-hint-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.scroll-hint span {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin-bottom: 0.2em;
+}
+
+.arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
