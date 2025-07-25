@@ -1,15 +1,11 @@
 +++
 +++
 
-{% section_title(bg="", title="PRODUCTS", subtitle="Product details", slogan="", style_top="Product Information") %}
-<!--display element -->
-{% end %}
+{{ section_title(bg="", title="PRODUCTS", subtitle="Product details", slogan="", style_top="Product Information") }}
 
-{% twocol(bg="white_pcb.jpg") %}
-<!-- no text -->
-{% end %}
+{{ twocol(bg="white_pcb.jpg") }}
 
-{% product_display(
+{{ product_display(
 	product_id_label="Product 01",
 	bg="",
 	img="sc-obc_module_a1.png",
@@ -33,11 +29,9 @@
 	download_4_link="https://github.com/zephyrproject-rtos/zephyr",
 	download_4_label="Zephyr RTOS GitHub Repository",
 	details_link="/en/sc_obc"
-) %}
-<!-- no text -->
-{% end %}
+) }}
 
-{% prefooter(
+{{ prefooter(
 	left_card_image="about.jpg",
 	right_card_image="earth.jpg",
 
@@ -61,6 +55,4 @@
 	bottom_link="/en/contact",
 
 	bg=""
-) %}
-<!--display element -->
-{% end %}
+) }}
