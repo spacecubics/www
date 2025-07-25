@@ -1,7 +1,8 @@
 .hero-section {
-	min-height: 100px;
-	background-size: 3000px;
+	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 
 	.hero-content-wrapper {
 		max-width: 100%;
@@ -61,7 +62,6 @@
 				font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 				letter-spacing: 0.1em;
 				-webkit-text-stroke: 3px rgb(255, 255, 255);
-				text-stroke: 3px rgb(255, 255, 255);
 				white-space: nowrap;
 			}
 

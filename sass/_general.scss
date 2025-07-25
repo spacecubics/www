@@ -42,6 +42,12 @@ body {
 	margin-right: calc(-50vw + 50%);
 }
 
+// Twocol section exception - allow full width background
+.twocol-section {
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+}
+
 // Footer exception - allow full width background
 #site-footer {
 	margin-left: calc(-50vw + 50%);
@@ -73,8 +79,6 @@ body {
 		outline-offset: 0.25rem;
 	}
 }
-
-
 
 @media (prefers-reduced-motion) {
 	*,

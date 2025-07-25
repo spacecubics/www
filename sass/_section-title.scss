@@ -1,26 +1,11 @@
 .section-title-block {
 	background-size: cover;
 	background-position: center;
-	padding-bottom: 1em;
 	position: relative;
 	z-index: 1;
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	font-size: 1.5em;
-
-	@media (max-width: 1024px) { /* Tablet */
-		padding: 2em 1rem;
-		font-size: 1.3em;
-	}
-
-	@media (max-width: 768px) { /* Mobile */
-		padding: 2em 1rem;
-		font-size: 1.1em;
-	}
-
-	@media (max-width: 479px) { /* Small Mobile */
-		padding: 2em 1rem;
-		font-size: 1em;
-	}
+	margin-bottom: 1em;
 }
 
 .section-title-content {
@@ -28,17 +13,6 @@
 	max-width: 600px;
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	margin-left: 3rem;
-
-	@media (max-width: 1024px) {
-		margin-left: 2rem;
-	}
-	@media (max-width: 768px) {
-		margin-left: 1.2rem;
-	}
-	@media (max-width: 479px) {
-		margin-left: 0.5rem;
-		max-width: 100%;
-	}
 }
 
 .section-title-content h1 {
@@ -48,17 +22,6 @@
 	font-weight: 950 !important;
 	letter-spacing: 0.1em;
 	-webkit-text-stroke: 3px rgb(255, 255, 255);
-	text-stroke: 3px rgb(255, 255, 255);
-
-	@media (max-width: 1024px) {
-		font-size: 2.6rem !important;
-	}
-	@media (max-width: 768px) {
-		font-size: 2.3rem !important;
-	}
-	@media (max-width: 479px) {
-		font-size: 2rem !important;
-	}
 }
 
 .section-title-content h3 {
@@ -66,16 +29,6 @@
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	font-size: 0.8em;
 	margin: 0.5em 0;
-
-	@media (max-width: 1024px) {
-		font-size: 0.75em;
-	}
-	@media (max-width: 768px) {
-		font-size: 0.7em;
-	}
-	@media (max-width: 479px) {
-		font-size: 0.65em;
-	}
 }
 
 .section-title-content p {
@@ -95,14 +48,6 @@
 	height: 4px;
 	width: 5%;
 	margin-top: 1em;
-
-	@media (max-width: 768px) {
-		width: 5%;
-	}
-
-	@media (max-width: 479px) {
-		width: 7%;
-	}
 }
 
 .section-title-style-top {
