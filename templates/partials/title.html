@@ -4,15 +4,15 @@
 
 {%- set prefix = "" -%}
 {%- if section is defined and section.title is defined %}
-  {%- set prefix = section.title | as_str %}
+	{%- set prefix = section.title | as_str %}
 {%- elif page is defined and page.title is defined %}
-  {%- set prefix = page.title | as_str %}
+	{%- set prefix = page.title | as_str %}
 {%- endif %}
 
 {%- if is_home -%}
-  {{- suffix -}}
+	{{- suffix -}}
 {%- elif prefix != "" -%}
-  {{- prefix ~ separator ~ suffix -}}
+	{{- prefix ~ separator ~ suffix -}}
 {%- else -%}
-  {{- suffix -}}
+	{{- suffix -}}
 {%- endif -%}

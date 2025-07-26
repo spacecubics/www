@@ -1,23 +1,23 @@
-.twocol-section {
+.banner {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
-.twocol-image-container {
+.banner-image-container {
 	height: 650px;
 }
 
 // Breakpoint for mobile
 @media (max-width: 768px) {
-	.twocol-section {
+	.banner {
 		background-size: cover;
 		background-attachment: scroll;
 		background-position: top;
 	}
 
-	.twocol-image-container {
+	.banner-image-container {
 		height: 200px !important;
 	}
 }
