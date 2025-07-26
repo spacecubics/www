@@ -18,8 +18,8 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 
 {{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.json") }}
 
-{{ board_members(line1="BOARD MEMBERS", line2="Executive", line3="PROFILES", members="blocks/board-members.json", lang="ja") }}
-{{ board_members(line1="FOUNDING ALUMNI", line2="", line3="", members="blocks/founding-alumni.json", lang="en") }}
+{{ board_members(line1="BOARD MEMBERS", line2="Executive", line3="PROFILES", members="blocks/board-members.json") }}
+{{ board_members(line1="FOUNDING ALUMNI", line2="", line3="", members="blocks/founding-alumni.json") }}
 
 {% hero_element(
 	title="PARTNERS",
