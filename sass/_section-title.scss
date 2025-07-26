@@ -1,4 +1,4 @@
-.section-title-block {
+.title-block {
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -8,14 +8,14 @@
 	margin-bottom: 1em;
 }
 
-.section-title-content {
+.title-content {
 	text-align: left;
 	max-width: 600px;
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	margin-left: 3rem;
 }
 
-.section-title-content h1 {
+.title-content h1 {
 	color: white;
 	margin: 0;
 	font-size: 3rem !important;
@@ -24,14 +24,14 @@
 	-webkit-text-stroke: 3px rgb(255, 255, 255);
 }
 
-.section-title-content h3 {
+.title-content h3 {
 	color: white;
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	font-size: 0.8em;
 	margin: 0.5em 0;
 }
 
-.section-title-content p {
+.title-content p {
 	color: rgb(190, 190, 190);
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	font-size: 1em;
@@ -42,7 +42,7 @@
 	}
 }
 
-.section-title-divider {
+.title-divider {
 	background-color: #f77d06;
 	border: none;
 	height: 4px;
@@ -50,7 +50,7 @@
 	margin-top: 1em;
 }
 
-.section-title-style-top {
+.title-style-top {
 	color: white;
 	font-size: 0.5em;
 	font-weight: 500;
