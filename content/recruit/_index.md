@@ -4,7 +4,7 @@ description = "採用情報"
 
 [extra]
 background_image = "earth.jpg"
-prefooter_cards = ["products/_index.md", "about_us/_index.md", "contact/_index.md"]
+prefooter_cards = ["products/_index.md", "about_us.md", "contact/_index.md"]
 card_body = """一緒に働くメンバーを常に募集しています。
 
 ご興味のある方はご連絡ください
