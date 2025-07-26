@@ -1,0 +1,15 @@
+{% set page = get_section(path=page_name, metadata_only=true) %}
+
+<div class="two-card right-card{% if bottom_card %} bottom-card"{% else %}" style="background-image:url(/{{ page.extra.background_image }});"{% endif %}>
+	<div class="card-content">
+		<h2 class="card-header">{{ page.title }}</h2>
+		<p class="card-subheader">{{ page.description }}</p>
+		<div class="divider-bar"></div>
+	</div>
+	<div class="card-footer-text">
+		{{ page.extra.card_body | markdown | safe }}
+	</div>
+	<div class="btn-container">
+		<a href="{{ page.permalink }}" class="circle-btn" aria-label="{{ page.title }} link"></a>
+	</div>
+</div>

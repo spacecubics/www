@@ -4,6 +4,8 @@ description = "私たちについて"
 
 [extra]
 background_image = "about.jpg"
+prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md"]
+card_body = "「誰もが月に行ける時代」を目指し、安価で信頼性の高い宇宙用コンピュータを開発するJAXAベンチャーです。"
 +++
 
 {{ threecard(

@@ -4,6 +4,8 @@ description = "Company information"
 
 [extra]
 background_image = "about.jpg"
+prefooter_cards = ["products/_index.en.md", "recruit/_index.en.md", "contact/_index.en.md"]
+card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA venture developing affordable and reliable computers for space use."
 +++
 
 {{ threecard(

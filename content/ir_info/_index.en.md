@@ -4,6 +4,12 @@ description = "Investor Relations"
 
 [extra]
 background_image = "ir.jpg"
+prefooter_cards = ["contact/_index.en.md"]
+card_body = """
+ステークホルダーの皆様に向けて
+
+決算や適時開示情報などをご紹介しています。
+"""
 +++
 
 {# TODO: this must be generated from news #}

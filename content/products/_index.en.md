@@ -4,6 +4,10 @@ description = "Product details"
 
 [extra]
 background_image = "white_pcb.jpg"
+prefooter_cards = ["about_us/_index.en.md", "recruit/_index.en.md", "contact/_index.en.md"]
+card_body = """Even in extreme environments,
+these computers function normally.
+"""
 +++
 
 {{ product_display(

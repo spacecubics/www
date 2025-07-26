@@ -4,6 +4,9 @@ description = "採用情報"
 
 [extra]
 background_image = "earth.jpg"
+card_body = """一緒に働くメンバーを常に募集しています。
+ご興味のある方はご連絡ください
+"""
 +++
 
 {{ recruit_intro(

@@ -19,4 +19,21 @@
 </div>
 {% endif %}
 {{- section.content | safe -}}
+
+{%- if section.extra.prefooter_cards -%}
+<div class="section">
+	<div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">
+		{% set cards = section.extra.prefooter_cards %}
+		{% set total = cards | length %}
+		{%- for card in section.extra.prefooter_cards -%}
+		{%- set page_name = card -%}
+		{%- if loop.last and (total % 2) != 0 %}
+		{% set bottom_card = True %}
+		{%- endif -%}
+		{% include "partials/prefooter_card.html" %}
+		{%- endfor -%}
+	</div>
+</div>
+{%- endif -%}
+
 {%- endblock content %}

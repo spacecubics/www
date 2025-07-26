@@ -4,6 +4,9 @@ description = "Be part of something bigger"
 
 [extra]
 background_image = "earth.jpg"
+card_body = """We welcome inquiries about our business and services.
+Please feel free to contact us.
+"""
 +++
 
 {{ contact_form(
