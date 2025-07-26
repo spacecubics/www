@@ -18,7 +18,8 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 
 {{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.json") }}
 
-{{ board_members(members="blocks/board-members.en.json", lang="en") }}
+{{ board_members(line1="BOARD MEMBER", line2="Executive", line3="PROFILES", members="blocks/board-members.en.json", lang="en") }}
+{{ board_members(line1="FOUNDING ALUMNI", line2="", line3="", members="blocks/founding-alumni.en.json", lang="en") }}
 
 {% hero_element(
 	title="PARTNERS",
