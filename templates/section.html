@@ -11,5 +11,12 @@
 		{% endif %}
 	</div>
 </div>
+{% if section.extra.background_image %}
+<div class="twocol-1-section" style="background-image: url('/{{ section.extra.background_image }}');">
+	<div class="twocol-image-container">
+		<div>1</div>
+	</div>
+</div>
+{% endif %}
 {{- section.content | safe -}}
 {%- endblock content %}

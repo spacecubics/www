@@ -1,9 +1,10 @@
 +++
 title = "RECRUIT"
 description = "Employment information"
-+++
 
-{{ twocol(bg="earth.jpg") }}
+[extra]
+background_image = "earth.jpg"
++++
 
 {{ recruit_intro(
 	title = "We are always looking for new members to join our team. <br><br> If you are interested, please contact us using the application form.",

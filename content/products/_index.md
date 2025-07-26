@@ -1,9 +1,10 @@
 +++
 title = "PRODUCTS"
 description = "製品情報"
-+++
 
-{{ twocol(bg="white_pcb.jpg") }}
+[extra]
+background_image = "white_pcb.jpg"
++++
 
 {{ product_display(
 	product_id_label="Product 01",

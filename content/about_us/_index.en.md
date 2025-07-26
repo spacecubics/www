@@ -1,9 +1,10 @@
 +++
 title = "ABOUT US"
 description = "Company information"
-+++
 
-{{ twocol(bg="about.jpg") }}
+[extra]
+background_image = "about.jpg"
++++
 
 {{ threecard(
 	title="To drink beer on the moon.",

@@ -1,9 +1,10 @@
 +++
 title = "CONTACT"
 description = "Be part of something bigger"
-+++
 
-{{ twocol(bg="earth.jpg") }}
+[extra]
+background_image = "earth.jpg"
++++
 
 {{ contact_form(
 	title="お問い合わせ",
