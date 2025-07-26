@@ -13,6 +13,8 @@
 			</h1>
 			{% if page.extra.image %}
 				<img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="news-article-img">
+			{% else %}
+				<img src="/logo_solid.png" alt="{{ page.title }}" class="news-article-img">
 			{% endif %}
 		</header>
 		<div class="news-article-content">
@@ -29,16 +31,10 @@
 
 {%- if page.extra.prefooter_cards -%}
 <div class="section">
-	<div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">
-		{% set cards = page.extra.prefooter_cards %}
-		{% set total = cards | length %}
-		{%- for card in page.extra.prefooter_cards -%}
-		{%- set page_name = card -%}
-		{%- if loop.last and (total % 2) != 0 %}
+	<div class="card-grid single-bottom-card">
+		{% set page_name = "contact/_index.en.md" %}
 		{% set bottom_card = True %}
-		{%- endif -%}
 		{% include "partials/prefooter_card.html" %}
-		{%- endfor -%}
 	</div>
 </div>
 {%- endif -%}
