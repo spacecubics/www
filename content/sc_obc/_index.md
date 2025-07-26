@@ -56,7 +56,7 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 {{ twocard(
 	title="",
 	subtitle="",
-	left_card_image="under_construction.jpeg",
+	left_card_image="dev-board.webp",
 	right_card_image="under_construction.jpeg",
 	left_card_title="開発セット",
 	left_card_subtitle="coming soon",
