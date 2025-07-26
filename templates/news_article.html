@@ -13,6 +13,8 @@
 			</h1>
 			{% if page.extra.image %}
 				<img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="news-article-img">
+			{% else %}
+				<img src="/logo_solid.png" alt="{{ page.title }}" class="news-article-img">
 			{% endif %}
 		</header>
 		<div class="news-article-content">
