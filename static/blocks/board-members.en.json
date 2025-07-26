@@ -1,0 +1,44 @@
+[
+		{
+				"name_sub": "荘司 靖",
+				"name_main": "Yasushi Shoji",
+				"title": "CEO",
+				"expertise": "Software Engineer",
+				"bio": "Graduating from Salem State University, MA, USA in 2000, Mr. Shoji has been engaged in embedded CPU board development since 2002. Leveraging extensive knowledge and experience, he previously led software development for a space drone (Int-Ball) project in 2016."
+		},
+		{
+				"name_sub": "佐々木 大輔",
+				"name_main": "Daisuke Sasaki",
+				"title": "CTO",
+				"expertise": "LSI Logic Engineer",
+				"bio": "Since 2001, Mr. Sasaki has gained extensive experience in various LSI design processes over his 11 years of experience in the semiconductor industry. Since 2013, he has worked to develop embedded CPU boards equipped with LSIs. Mr. Sasaki is also a skilled software developer."
+		},
+		{
+				"name_sub": "森島 史仁",
+				"name_main": "Fumito Morishima",
+				"title": "CFO",
+				"expertise": "Sales, Finance Control",
+				"bio": "For 16 years, Mr. Morishima was involved in the development, sales, marketing, and management of embedded CPU boards. He also started a business in Southeast Asia and possesses a broad network of industry connections."
+		},
+		{
+				"name_sub": "佐々木 拓也",
+				"name_main": "Takuya Sasaki",
+				"title": "CAO",
+				"expertise": "Software Engineer, Sales",
+				"bio": "Starting in 1998, Mr. Sasaki has been working as a software engineer for a Japanese electronics manufacturer, mainly developing network management systems for government agencies. In 2013, he worked as a field application engineer (FAE) for an embedded CPU board manufacturer, supporting both development and mass production."
+		},
+		{
+				"name_sub": "波塚 朋広",
+				"name_main": "Tomohiro Namitsuka",
+				"title": "CPO",
+				"expertise": "Electronics Engineer",
+				"bio": "Starting in 2002, Mr. Namitsuka worked as a hardware engineer for an embedded CPU board manufacturer where he was responsible for the development of numerous circuit boards. Leveraging extensive knowledge and experience in circuit designs that require special environmental resistance, he now works to provide affordable and reliable spacecraft computers."
+		},
+		{
+				"name_sub": "後藤 雅享",
+				"name_main": "Masayuki Goto",
+				"title": "Founding Member",
+				"expertise": "Space System Engineer",
+				"bio": "Mr. Goto worked on manned space development at JAXA. He has been responsible for numerous development projects for the International Space Station, and has extensive experience in how computers function during launch and space operation. More broadly, Mr. Goto's aim is to advance space development in both the public and private sectors."
+		}
+]

@@ -15,19 +15,10 @@
 			<div class="board-card">
 				<div class="board-card__role">{{ member.expertise }}</div>
 				<div class="board-card__name-row">
-					{% if lang == "ja" %}
-					<span class="board-card__name-main">{{ member.name_ja }}</span>
-					<span class="board-card__name-sub">{{ member.name_en }}</span>
-					{% else %}
-					<span class="board-card__name-main">{{ member.name_en }}</span>
-					<span class="board-card__name-sub">{{ member.name_ja }}</span>
-					{% endif %}
+					<span class="board-card__name-main">{{ member.name_main }}</span>
+					<span class="board-card__name-sub">{{ member.name_sub }}</span>
 				</div>
-				{% if lang == "ja" %}
-				<div class="board-card__bio">{{ member.bio_ja }}</div>
-				{% else %}
-				<div class="board-card__bio">{{ member.bio_en }}</div>
-				{% endif %}
+				<div class="board-card__bio">{{ member.bio }}</div>
 			</div>
 			{% endfor %}
 	  </div>

@@ -16,7 +16,7 @@ background_image = "about.jpg"
 
 {{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.json") }}
 
-{{ board_members(members="blocks/board-members.json", lang="en") }}
+{{ board_members(members="blocks/board-members.en.json", lang="en") }}
 
 {% hero_element(
 	title="PARTNERS",
