@@ -37,29 +37,3 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 <br>スペースワン社製小型ロケット「カイロス（KAIROS）」による超小型衛星の放出実証、
 <br>ならびにSpace Cubics社製宇宙用コンピュータを搭載した衛星の宇宙実証を目指します。
 {% end %}
-
-{{ prefooter(
-	left_card_image="white_pcb_dark.jpg",
-	right_card_image="earth.jpg",
-
-	left_title = "PRODUCTS"
-	left_subtitle = "製品紹介"
-	left_footer_1 = "極限の環境でも"
-	left_footer_2 = "正常に動作するコンピューターを"
-	left_link = "/products"
-
-	right_title="RECRUIT",
-	right_subtitle="採用情報",
-	right_footer_1="一緒に働く仲間を常に募集しています。",
-	right_footer_2="ご興味のある方はご連絡ください。",
-	right_link="/recruit",
-
-	bottom_card_image = "",
-	bottom_title="CONTACT",
-	bottom_subtitle="お問い合わせ",
-	bottom_footer_1="事業やサービスについてご相談・ご質問承ります。",
-	bottom_footer_2="お気軽にお問い合わせください。",
-	bottom_link="/contact",
-
-	bg=""
-) }}

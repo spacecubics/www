@@ -3,7 +3,7 @@ title = "SC-OBC MODULE A1"
 description = "On-board Computer for Cubesat"
 
 [extra]
-prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"]
+prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_index.en.md"]
 +++
 
 {{ quick_jump(
@@ -105,29 +105,3 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	GitHub | For other technical information, please refer to the following. | https://github.com/spacecubics
 	{% end %}
 </section>
-
-{{ prefooter(
-	left_card_image="about.jpg",
-	right_card_image="earth.jpg",
-
-	left_title="ABOUT US",
-	left_subtitle="Company details",
-	left_footer_1="Aiming for an era where anyone can go to the moon,",
-	left_footer_2="we are a JAXA venture developing affordable and reliable computers for space use.",
-	left_link="/en/about_us",
-
-	right_title="RECRUIT",
-	right_subtitle="Employment information",
-	right_footer_1="We are always looking for new members to join our team.",
-	right_footer_2="If you are interested, please contact us.",
-	right_link="/en/recruit",
-
-	bottom_card_image = "",
-	bottom_title="CONTACT",
-	bottom_subtitle="Send a message",
-	bottom_footer_1="We welcome inquiries about our business and services.",
-	bottom_footer_2="Please feel free to contact us.",
-	bottom_link="/en/contact",
-
-	bg=""
-) }}

@@ -4,7 +4,9 @@ description = "採用情報"
 
 [extra]
 background_image = "earth.jpg"
+prefooter_cards = ["products/_index.md", "about_us/_index.md", "contact/_index.md"]
 card_body = """一緒に働くメンバーを常に募集しています。
+
 ご興味のある方はご連絡ください
 """
 +++
@@ -47,30 +49,4 @@ FPGAエンジニア |
 	message_field="メッセージを入力してください"
 	button_label="送信"
 	description = ""
-) }}
-
-{{ prefooter(
-	left_card_image="white_pcb_dark.jpg",
-	right_card_image="about.jpg",
-
-	left_title="PRODUCTS",
-	left_subtitle="製品紹介",
-	left_footer_1="極限の環境でも",
-	left_footer_2="正常に動作するコンピューターを",
-	left_link="/products",
-
-	right_title="ABOUT US",
-	right_subtitle="私たちについて",
-	right_footer_1="「誰もが月に行ける時代」を目指し、",
-	right_footer_2="安価で信頼性の高い宇宙用コンピュータを開発するJAXAベンチャーです。",
-	right_link="/about_us",
-
-	bottom_card_image = "",
-	bottom_title="CONTACT",
-	bottom_subtitle="お問い合わせ",
-	bottom_footer_1="事業やサービスについてご相談・ご質問承ります。",
-	bottom_footer_2="お気軽にお問い合わせください。",
-	bottom_link="/contact",
-
-	bg=""
 ) }}

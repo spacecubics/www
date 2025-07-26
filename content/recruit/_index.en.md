@@ -4,6 +4,7 @@ description = "Employment information"
 
 [extra]
 background_image = "earth.jpg"
+prefooter_cards = ["products/_index.en.md", "about_us/_index.en.md", "contact/_index.en.md"]
 card_body = """We are always looking for new people to join our team.
 
 If you are interested, please contact us.
@@ -48,30 +49,4 @@ Systems Engineer |
 	message_field="Please enter your message here"
 	button_label="Send"
 	description = ""
-) }}
-
-{{ prefooter(
-	left_card_image="white_pcb_dark.jpg",
-	right_card_image="about.jpg",
-
-	left_title="PRODUCTS",
-	left_subtitle="Board introduction",
-	left_footer_1="Even in extreme environments,",
-	left_footer_2="these computers function normally.",
-	left_link="/en/products",
-
-	right_title="ABOUT US",
-	right_subtitle="Company details",
-	right_footer_1="Aiming for an era where anyone can go to the moon,",
-	right_footer_2="we are a JAXA venture developing affordable and reliable computers for space use.",
-	right_link="/en/about_us",
-
-	bottom_card_image = "",
-	bottom_title="CONTACT",
-	bottom_subtitle="Reach out to us.",
-	bottom_footer_1="We welcome inquiries about our business and services.",
-	bottom_footer_2="Please feel free to contact us.",
-	bottom_link="/en/contact",
-
-	bg=""
 ) }}

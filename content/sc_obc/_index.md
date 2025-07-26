@@ -105,29 +105,3 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	GitHub | その他、様々な技術情報はこちらを参照ください。 | https://github.com/spacecubics
 	{% end %}
 </section>
-
-{{ prefooter(
-	left_card_image="earth.jpg",
-	right_card_image="ir.jpg",
-
- left_title="RECRUIT",
-	left_subtitle="採用情報",
-	left_footer_1="一緒に働く仲間を常に募集しています。",
-	left_footer_2="ご興味のある方はご連絡ください。",
-	left_link="/recruit",
-
-	right_title="IR INFO",
-	right_subtitle="投資家情報",
-	right_footer_1="ステークホルダーの皆様に向けて",
-	right_footer_2="決算や適時開示情報などをご紹介しています。",
-	right_link="/ir_info",
-
-	bottom_card_image = "",
-	bottom_title = "CONTACT",
-	bottom_subtitle = "お問い合わせ",
-	bottom_footer_1 = "事業やサービスについてご相談・ご質問承ります。",
-	bottom_footer_2 = "お気軽にお問い合わせください。",
-	bottom_link = "/contact",
-
-	bg=""
-) }}

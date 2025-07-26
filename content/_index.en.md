@@ -1,5 +1,8 @@
 +++
 title = "Space Cubics Inc."
+
+[extra]
+prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_index.en.md"]
 +++
 
 {{ splash() }}
@@ -83,30 +86,4 @@ Our mission is to support sustainable growth through partnership with teams that
 2018.05.29 | /en/news/2018-05-29 | logo_solid.png | Space Cubics was certified as a JAXA Venture by the Japan Aerospace Exploration Agency (JAXA).
 
 	"
-) }}
-
-{{ prefooter(
-	left_card_image="earth.jpg",
-	right_card_image="ir.jpg",
-
- left_title="RECRUIT",
-	left_subtitle="Job openings",
-	left_footer_1="We are always looking for new people to join our team.",
-	left_footer_2="If you are interested, please contact us.",
-	left_link="/en/recruit",
-
-	right_title="IR INFO",
-	right_subtitle="Investor details",
-	right_footer_1="For our stakeholders,",
-	right_footer_2="we gladly provide financial data in a timely manner.",
-	right_link="/en/ir_info",
-
-	bottom_card_image = "",
-	bottom_title = "CONTACT",
-	bottom_subtitle = "Reach out to us.",
-	bottom_footer_1 = "We welcome inquiries about our business and services.",
-	bottom_footer_2 = "Please feel free to contact us.",
-	bottom_link = "/en/contact",
-
-	bg=""
 ) }}

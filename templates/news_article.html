@@ -27,12 +27,20 @@
 		{% endif %}
 	</article>
 
-{% set bottom_card_image = "" %}
-{% set bottom_title = "CONTACT" %}
-{% set bottom_subtitle = "お問い合わせ" %}
-{% set bottom_footer_1 = "事業やサービスについてご相談・ご質問承ります。" %}
-{% set bottom_footer_2 = "お気軽にお問い合わせください。" %}
-{% set bottom_link = "/contact" %}
-{% set bg = "" %}
-{% include "partials/prefooter.html" %}
+{%- if page.extra.prefooter_cards -%}
+<div class="section">
+	<div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">
+		{% set cards = page.extra.prefooter_cards %}
+		{% set total = cards | length %}
+		{%- for card in page.extra.prefooter_cards -%}
+		{%- set page_name = card -%}
+		{%- if loop.last and (total % 2) != 0 %}
+		{% set bottom_card = True %}
+		{%- endif -%}
+		{% include "partials/prefooter_card.html" %}
+		{%- endfor -%}
+	</div>
+</div>
+{%- endif -%}
+
 {% endblock content %}
