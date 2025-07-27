@@ -3,7 +3,7 @@ title = "PRODUCTS"
 description = "製品情報"
 
 [extra]
-background_image = "white_pcb_dark.jpg"
+background_image = "white_pcb.jpg"
 prefooter_cards = ["about_us.md", "recruit/_index.md", "contact/_index.md"]
 card_body = """極限の環境でも
 正常に動作するコンピューターを

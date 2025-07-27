@@ -9,7 +9,7 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 +++
 
 {{ tagline(title="To drink beer on the moon.",
-           statement="Space Cubics, a JAXA venture, develops affordable, reliable space computers to make lunar access possible for all.")
+	statement="Space Cubics, a JAXA venture, develops affordable, reliable space computers to make lunar access possible for all.")
 }}
 
 {{ threecard(

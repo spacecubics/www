@@ -9,12 +9,12 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 +++
 
 {{ tagline(title="To drink beer on the moon.",
-           statement="私たち Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。")
+	statement="私たち Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。")
 }}
 
 {{ threecard(left_card="blocks/affordable.toml",
-	           middle_card="blocks/easy.toml",
-	           right_card="blocks/to_space.toml"
+		middle_card="blocks/easy.toml",
+		right_card="blocks/to_space.toml"
 ) }}
 
 {{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.json") }}

@@ -63,9 +63,26 @@
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	color: white;
 	padding: 20px 25px 25px 25px;
 	position: relative;
+
+	// Darken all prefooter card background images
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: inherit;
+	}
+
+	.card-content,
+	.card-footer-text {
+		position: relative;
+		z-index: 2;
+	}
 
 	@media (max-width: 1024px) {
 		min-height: 250px;
@@ -177,7 +194,7 @@
 // Bottom card specific styles
 .bottom-card {
 	grid-column: 1 / -1;
-	background-color: #353946;
+	background-color: #4f5466;
 	outline: 1px solid white;
 	min-height: 200px;
 
