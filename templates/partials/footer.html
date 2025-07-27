@@ -97,11 +97,4 @@
 		{%- endif %}
 	{%- endif %}
 
-	{%- if config.extra.source_url and config.extra.footer.show_source %}
-		<p>
-			<a class="external" href="{{ config.extra.source_url }}" rel="{{ rel_attributes }}">
-				{{ macros_translate::translate(key="source", default="Website source", language_strings=language_strings) }}
-			</a>
-		</p>
-	{%- endif %}
 </footer>
