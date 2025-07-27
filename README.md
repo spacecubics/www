@@ -136,13 +136,15 @@ Content here
 ```
 
 #### Prefooter Cards
-```html
-{% prefooter(
-	left_card_image="earth.jpg",
-	left_title="RECRUIT",
-	left_link="/recruit"
-) %}
-{% end %}
+
+Prefooter cards appear near the bottom of the page and allow users to
+navigate between sections. Most pages or sections can specify which
+cards to display using the prefooter_cards field in the TOML front
+matter.
+
+```toml
+[extra]
+prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md"]
 ```
 
 ## Content Management
