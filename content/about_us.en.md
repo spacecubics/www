@@ -8,6 +8,10 @@ prefooter_cards = ["products/_index.en.md", "recruit/_index.en.md", "contact/_in
 card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA venture developing affordable and reliable computers for space use."
 +++
 
+{{ tagline(title="To drink beer on the moon.",
+           statement="Space Cubics, a JAXA venture, develops affordable, reliable space computers to make lunar access possible for all.")
+}}
+
 {{ threecard(
 	title="To drink beer on the moon.",
 	subtitle="Space Cubics is a JAXA venture developing affordable and reliable space computers so everyone can go to the moon.",
