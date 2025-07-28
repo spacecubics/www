@@ -4,7 +4,7 @@
 {% set page = get_page(path=page_name, metadata_only=true) %}
 {% endif %}
 
-<div class="two-card right-card{% if bottom_card %} bottom-card"{% else %}" style="background-image:url(/{{ page.extra.background_image }});"{% endif %}>
+<div class="two-card right-card{% if bottom_card %} bottom-card"{% else %}" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/{{ page.extra.background_image }});"{% endif %}>
 	<div class="card-content">
 		<h2 class="card-header">{{ page.title }}</h2>
 		<p class="card-subheader">{{ page.description }}</p>

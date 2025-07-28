@@ -1,4 +1,9 @@
-<div class="hero-section{% if not img or img | length == 0 %} no-image{% endif %}" style="background-image: url('/{{ bg }}');">
+<div class="hero-section{% if not img or img | length == 0 %} no-image{% endif %}"
+	style="background-image:
+		{% if bg == 'about.jpg' %}
+			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		{% endif %}
+		url('/{{ bg }}');">
 	<div id="main-content">
 		<div class="title-block section-title-block">
 			<div class="title-content section-title-content">
