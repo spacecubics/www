@@ -1,4 +1,7 @@
-<div class="hero-section{% if not img or img | length == 0 %} no-image{% endif %}" style="background-image: url('/{{ bg }}');">
+<div class="hero-section
+    {% if not img or img | length == 0 %} no-image{% endif %}
+    {% if bg == "about.jpg" %} darken-bg{% endif %}"
+    style="background-image: url('/{{ bg }}');">
 	<div id="main-content">
 		<div class="title-block section-title-block">
 			<div class="title-content section-title-content">
