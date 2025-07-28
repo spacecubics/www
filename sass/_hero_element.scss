@@ -1,3 +1,4 @@
+// Base style
 .hero-section {
 	background-size: cover;
 	background-attachment: fixed;
@@ -40,6 +41,11 @@
 				}
 			}
 		}
+	}
+
+	&.darken-bg {
+		background-color: rgba(0, 0, 0, 0.3);
+		background-blend-mode: darken;
 	}
 
 	.section-title-block {
@@ -214,7 +220,7 @@
 		}
 
 		img {
-			width: 700px;
+			width: 400px;
 		}
 	}
 
@@ -233,7 +239,7 @@
 	}
 }
 
-// Responsive: Only one breakpoint for mobile at 1000px
+// Breakpoint at 1000px
 @media (max-width: 1000px) {
 	.hero-section .hero-content {
 		flex-direction: column;
@@ -253,7 +259,6 @@
 		margin-left: 0;
 	}
 	.hero-section .hero-image-container img {
-		width: 700px;
 		max-width: 100%;
 		height: auto;
 		padding-left: 1rem;

@@ -1,46 +1,59 @@
-<div class="hero-section{% if not img or img | length == 0 %} no-image{% endif %}" style="background-image: url('/{{ bg }}');">
-	<div id="main-content">
-		<div class="title-block section-title-block">
-			<div class="title-content section-title-content">
-				<h1>{{ title }}</h1>
-				<h3>{{ subtitle }}</h3>
-				<p>{{ slogan }}</p>
-				<div class="title-divider section-title-divider"></div>
-			</div>
-		</div>
-	</div>
+{% set hero_classes = "hero-section" %}
+{% if not img or img | length == 0 %}
+  {% set hero_classes = hero_classes ~ " no-image" %}
+{% endif %}
+{% if bg == "about.jpg" %}
+  {% set hero_classes = hero_classes ~ " darken-bg" %}
+{% endif %}
 
-	<div class="hero-content-wrapper">
-		<div class="hero-content">
-			<div class="hero-text">
-				<p>{{ body | safe }}</p>
-				{% if bottom_title %}
-					<div class="hero-bottom-title">
-						<h2>{{ bottom_title }}</h2>
-					</div>
-				{% endif %}
-				{% if link and link_text %}
-					<div class="link-wrapper">
-						<span class="link-text">{{ link_text }}</span>
-						<a href="{{ link }}" class="hero-link"></a>
-					</div>
-				{% endif %}
-			</div>
+<div class="{{ hero_classes }}"
+     {% if bg and bg | length > 0 %}style="background-image: url('/{{ bg }}');"{% endif %}>
 
-			{% if img and img | length > 0 %}
-				<div class="hero-image-container">
-					{% if img_link %}
-						<a href="{{ img_link }}">
-							<img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
-						</a>
-					{% else %}
-						<img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
-					{% endif %}
-					{% if hero_footer %}
-						<div class="hero-footer">{{ hero_footer | safe }}</div>
-					{% endif %}
-				</div>
-			{% endif %}
-		</div>
-	</div>
+  <div id="main-content">
+    <div class="title-block section-title-block">
+      <div class="title-content section-title-content">
+        <h1>{{ title }}</h1>
+        <h3>{{ subtitle }}</h3>
+        <p>{{ slogan }}</p>
+        <div class="title-divider section-title-divider"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-content-wrapper">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p>{{ body | safe }}</p>
+
+        {% if bottom_title %}
+          <div class="hero-bottom-title">
+            <h2>{{ bottom_title }}</h2>
+          </div>
+        {% endif %}
+
+        {% if link and link_text %}
+          <div class="link-wrapper">
+            <span class="link-text">{{ link_text }}</span>
+            <a href="{{ link }}" class="hero-link"></a>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if img and img | length > 0 %}
+        <div class="hero-image-container">
+          {% if img_link %}
+            <a href="{{ img_link }}">
+              <img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
+            </a>
+          {% else %}
+            <img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
+          {% endif %}
+
+          {% if hero_footer %}
+            <div class="hero-footer">{{ hero_footer | safe }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
