@@ -18,6 +18,9 @@ bottom_footnotes = true
 title = "Space Cubics, Inc."
 description = "English site"
 
+[slugify]
+paths = "off"
+
 [extra]
 default_theme = "dark"
 accent_color = "#ff7800"
