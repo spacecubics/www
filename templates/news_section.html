@@ -11,34 +11,36 @@
 	<div class="news-list-parent">
 		<div class="news-list">
 			<div class="news-list-content">
-				<div class="news-list-grid">
-					{# Get all news pages #}
-					{% set all_news = section.pages %}
-					{# Separate Japanese and English articles #}
-					{% set ja_news = all_news | sort(attribute="path") | reverse %}
-					{% for news in ja_news | slice(start=0, end=10) %}
-						{% set path_parts = news.relative_path | split(pat="/") %}
-						<div class="news-card">
-							<div class="news-card-image">
-								<a href="{{ news.permalink | safe }}">
-									{% if news.extra.image %}
-										<img src="/{{ news.extra.image }}" alt="{{ news.title }}" class="news-card-img">
-									{% else %}
-										<img src="/logo_solid.png" alt="default image" class="news-card-img">
-									{% endif %}
-								</a>
-							</div>
-							<div class="news-card-content">
-								<a href="{{ news.permalink | safe }}" class="news-card-link">
-									<p class="news-card-date">{{ path_parts[1] | truncate(length=10, end="") }}</p>
-									<h3 class="news-card-title">{{ news.title }}</h3>
-								</a>
-							</div>
+				{% set all_news = paginator.pages %}
+
+				<div class="news-list-block">
+					{% for news in all_news %}
+						<div class="news-list-line">
+							<p>
+								<span class="news-date">{{ news.date }}</span>
+								<span class="news-gap">
+									<a href="{{ news.permalink }}" class="news-title-link">
+										{{ news.title }}
+									</a>
+								</span>
+							</p>
+							<div class="news-divider-bar"></div>
 						</div>
 					{% endfor %}
 				</div>
-				{% if section.news_note %}
-					<p class="news-list__bottom-text">{{ section.news_note | safe }}</p>
+
+				{% if paginator.number_pagers > 1 %}
+				<div class="pagination">
+					{% if paginator.previous %}
+						<a href="{{ paginator.previous }}">&laquo; Previous</a>
+					{% endif %}
+
+					<span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+
+					{% if paginator.next %}
+						<a href="{{ paginator.next }}">Next &raquo;</a>
+					{% endif %}
+				</div>
 				{% endif %}
 			</div>
 		</div>
