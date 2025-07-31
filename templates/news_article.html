@@ -1,42 +1,45 @@
-{% extends "base.html" %}
+{% extends "section.html" %}
 
 {% block content %}
+	{% set bg = "" %}
+	{% set title = "NEWS" %}
+	{% set subtitle = "お知らせ" %}
+	{% set slogan = "" %}
+	{% set style_top = "お知らせ/" ~ page.title %}
+	{% include "partials/section_title.html" %}
+
 	<article class="news-article">
-		<header>
-			<h1 class="news-article-title">
-				{# Use the date from the path as in the list #}
-				{% set path_parts = page.path | split(pat="/") %}
-				{% set last_index = path_parts | length - 2 %}
-				{% set date_candidate = path_parts[last_index] %}
-				{% set date_str = date_candidate | replace(from=".en", to="") | replace(from=".md", to="") %}
-				{{ date_str }}
-			</h1>
-			{% if page.extra.image %}
-				<img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="news-article-img">
-			{% else %}
-				<img src="/logo_solid.png" alt="{{ page.title }}" class="news-article-img">
-			{% endif %}
-		</header>
+		<div class="news-article-date">
+			{{ page.date }}
+		</div>
+		<div class="news-article-title">
+			{{ page.title }}
+		</div>
 		<div class="news-article-content">
 			{{ page.content | safe }}
 		</div>
 		{% if page.extra.link %}
-			<div class="news-article-link">
-				<a href="{{ page.extra.link }}" target="_blank" rel="noopener">
-					{{ page.extra.link }}
-				</a>
-			</div>
+			<a href="{{ page.extra.link }}" target="_blank" rel="noopener" class="news-article-link">
+				{{ page.extra.link }}
+			</a>
 		{% endif %}
+		<div class="news-article-back">
+			<span class="back-text">Back to List</span>
+			<a href="{{ get_url(path='news/', lang=lang) }}" class="circle-btn back-btn">
+			</a>
+		</div>
 	</article>
 
-{%- if page.extra.prefooter_cards -%}
-<div class="section">
-	<div class="card-grid single-bottom-card">
-		{% set page_name = "contact/_index.en.md" %}
-		{% set bottom_card = True %}
-		{% include "partials/prefooter_card.html" %}
+	<div class="section">
+		<div class="card-grid single-bottom-card">
+			{% if lang == "en" %}
+				{% set page_name = "contact/_index.en.md" %}
+			{% else %}
+				{% set page_name = "contact/_index.md" %}
+			{% endif %}
+			{% set bottom_card = True %}
+			{% include "partials/prefooter_card.html" %}
+		</div>
 	</div>
-</div>
-{%- endif -%}
 
 {% endblock content %}
