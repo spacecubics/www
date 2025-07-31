@@ -33,5 +33,5 @@ card_body = """極限の環境でも
 	download_3_label="Space Cubics GitHub",
 	download_4_link="https://github.com/zephyrproject-rtos/zephyr",
 	download_4_label="Zephyr RTOS GitHub Repository",
-	details_link="/sc_obc"
+	details_link="scobc_a1"
 ) }}

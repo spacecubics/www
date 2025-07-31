@@ -45,8 +45,7 @@ This repository is organized into only a few main folders...
 	├── ir_info/         # Investor relations
 	├── news/            # News articles
 	├── products/        # Products section
-	├── recruit/         # Recruitment section
-	└── sc_obc/          # Details page for the SC-OBC board
+	└── recruit/         # Recruitment section
 	```
 - functions -- Contains JavaScript files used as Cloudflare Workers
 - i18n -- Config files for Japanese and English
