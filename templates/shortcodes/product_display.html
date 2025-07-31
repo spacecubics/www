@@ -40,21 +40,17 @@
 			{% endif %}
 		</div>
 
-		<div class="product-downloads">
-			{% set download_labels = [download_1_label, download_2_label, download_3_label, download_4_label] %}
-			{% set download_links = [download_1_link, download_2_link, download_3_link, download_4_link] %}
-			{% for i in range(start=0, end=download_labels | length) %}
-				{% if download_labels[i] and download_links[i] %}
-					<span class="download-pair">
-						<span class="download-label">{{ download_labels[i] }}</span>
-						<a href="{{ download_links[i] }}" class="download-link" aria-label="{{ download_labels[i] }}">
-							<svg class="download-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-								<path class="cls-1"
-									d="M3.45,19.4c-1.9,0-3.45-1.55-3.45-3.45v-2.5c0-.52.43-.95.95-.95s.95.43.95.95v2.5c0,.85.7,1.55,1.55,1.55h10c.85,0,1.55-.7,1.55-1.55v-2.5c0-.52.43-.95.95-.95s.95.43.95.95v2.5c0,1.9-1.55,3.45-3.45,3.45H3.45ZM8.45,13.15c-.25,0-.49-.1-.67-.28L2.78,7.87c-.37-.37-.37-.97,0-1.35.18-.18.42-.28.67-.28s.49.1.67.28l2.87,2.87c.06.06.13.09.21.09.04,0,.08,0,.11-.02.11-.05.19-.16.19-.28V.95c0-.52.43-.95.95-.95s.95.43.95.95v8.23c0,.12.07.23.19.28.04.02.08.02.11.02.08,0,.15-.03.21-.09l2.87-2.87c.18-.18.42-.28.67-.28s.49.1.67.28c.37.37.37.97,0,1.35,0,0-4.99,4.99-5,5-.18.18-.42.28-.67.28Z" />
-							</svg>
-						</a>
-					</span>
+		<div class="product-external">
+			{% set external_labels = [external_1_label, external_2_label, external_3_label, external_4_label] %}
+			{% set external_links = [external_1_link, external_2_link, external_3_link, external_4_link] %}
+			{% for i in range(start=0, end=external_labels | length) %}
+				{% if external_labels[i] and external_links[i] %}
+					<a href="{{ external_links[i] }}" class="external-link" aria-label="{{ external_labels[i] }}">
+						<span class="external-pair">
+							<span class="external-label">{{ external_labels[i] }}</span>
+							<img src="/cil-external-link.svg" alt="External link" class="external-icon" width="16" height="16" />
+						</span>
+					</a>
 				{% endif %}
 			{% endfor %}
 		</div>

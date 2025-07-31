@@ -146,7 +146,7 @@
 			}
 		}
 
-		.product-downloads {
+		.product-external {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -156,7 +156,7 @@
 			margin-top: 1rem;
 			width: 100%;
 
-			.download-pair, .download-item {
+			.external-pair, .external-item {
 				width: auto;
 				display: flex;
 				align-items: center;
@@ -169,22 +169,21 @@
 				flex-direction: column;
 				gap: 1.25rem;
 				align-items: stretch;
-				.download-pair, .download-item {
+				.external-pair, .external-item {
 					width: 100%;
 					gap: 0.3rem;
 				}
 			}
 			@media (max-width: 480px) {
 				gap: 0.7rem;
-				.download-pair, .download-item {
+				.external-pair, .external-item {
 					gap: 0.2rem;
 				}
 			}
 
-			.download-label {
+			.external-label {
 				font-size: 0.9rem;
 				font-weight: 700;
-				color: #f77d06;
 				white-space: nowrap;
 				letter-spacing: 0.08em;
 
@@ -193,28 +192,37 @@
 				}
 			}
 
-			.download-link {
+			.external-link {
 				display: inline-flex;
 				align-items: center;
-				color: #f77d06;
 				text-decoration: none;
 				cursor: pointer;
 				letter-spacing: 0.08em;
 
 				&:hover {
-					color: darkorange;
-
-					svg {
-						fill: darkorange;
-					}
+					color: #ffa348;
+					text-decoration: underline;
 				}
 
-				svg {
+				.external-icon {
 					width: 28px;
 					height: 28px;
 					margin-left: 0.5rem;
-					fill: #f77d06;
-					transition: fill 0.3s ease;
+					transition: transform 0.2s ease, filter 0.3s ease;
+
+					@media (max-width: 768px) {
+						width: 24px;
+						height: 24px;
+					}
+
+					@media (max-width: 480px) {
+						width: 20px;
+						height: 20px;
+					}
+				}
+
+				&:hover .external-icon {
+					transform: scale(1.1);
 				}
 			}
 		}
@@ -227,7 +235,7 @@
 			gap: 1.25rem;
 			font-size: 1rem;
 			font-weight: 700;
-			color: #f77d06;
+			color: #ff7800;
 			margin-top: 2rem;
 
 			@media (max-width: 768px) {
@@ -244,7 +252,7 @@
 				width: 48px;
 				height: 48px;
 				border-radius: 50%;
-				background-color: #f77d06;
+				background-color: #ff7800;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -259,7 +267,6 @@
 				svg {
 					width: 20px;
 					height: 20px;
-					stroke: white;
 					fill: none;
 					stroke-width: 2;
 					stroke-linecap: round;
