@@ -61,15 +61,14 @@ This repository is organized into only a few main folders...
 	│   └── nav.html                 # Site navigation header
 	└── shortcodes/                  # Custom components
 		├── spec_sheet.html          # Production specification component
-		└── news_carousel.html       # Rotating news display component
+		└── kv_list.html			 # Displays key-value set of text
 	```
 - static -- Contains site images and client-side JavaScript
 	```
 	static/
 	├── js/                       # JavaScript that runs in the user's web browser
 	│   ├── nav-toggle.js         # Navigation menu functionality
-	│   ├── nav-links.js          # Navigation link handling
-	│   └── news_carousel.js      # News carousel UI interactions
+	│   └── nav-links.js          # Navigation link handling
 	├── logo_black.webp
 	├── logo_white.webp
 	└── sc-obc_module_a1.jpg
@@ -118,19 +117,6 @@ Examples on how to use these shortcodes on a page are shown below:
 	link="products"
 ) %}
 Content here
-{% end %}
-```
-
-#### News Carousel
-```html
-{% news_carousel(
-	title="NEWS",
-	subtitle="Space Cubics",
-	slogan="INFORMATION",
-	items="
-	2025.6.1 | /news/2025-06-01 | image.png | News summary
-	"
-) %}
 {% end %}
 ```
 

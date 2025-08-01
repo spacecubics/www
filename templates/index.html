@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}{{- section.content | safe -}}
+{% include "partials/news_section.html" %}
 {%- if section.extra.prefooter_cards -%}
 <div class="section">
 	<div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">

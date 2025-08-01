@@ -1,0 +1,46 @@
+{% set bg = "" %}
+{% set title = "NEWS" %}
+{% set subtitle = "お知らせ" %}
+{% set slogan = "" %}
+{% set style_top = "" %}
+{% include "partials/section_title.html" %}
+
+<div class="news-list-parent">
+	<div class="news-list">
+		<div class="news-list-content">
+			{% if lang == "en" %}
+				{% set news_section = get_section(path="news/_index.en.md") %}
+			{% else %}
+				{% set news_section = get_section(path="news/_index.md") %}
+			{% endif %}
+			{% set all_news = news_section.pages | sort(attribute="date") | reverse %}
+			{% set limit = limit | default(value=5) %}
+
+			<div class="news-list-block">
+				{% for news in all_news | slice(end=limit) %}
+					<div class="news-list-line">
+						<p>
+							<span class="news-date">{{ news.date }}</span>
+							<span class="news-gap">
+								<a href="{{ news.permalink }}" class="news-title-link">
+									{{ news.title }}
+								</a>
+							</span>
+						</p>
+						<div class="news-divider-bar"></div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="news-btn-container">
+			{% if lang == "en" %}
+				<span class="news-btn-text">News</span>
+				<a href="/en/news/" class="circle-btn" aria-label="News link"></a>
+			{% else %}
+				<span class="news-btn-text">News</span>
+				<a href="/news/" class="circle-btn" aria-label="お知らせリンク"></a>
+			{% endif %}
+		</div>
+	</div>
+</div>
