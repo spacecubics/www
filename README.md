@@ -163,14 +163,19 @@ prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md
 
 ### Adding New News Articles
 1. Create a new file in `content/news/`
-2. Name it with date. ex) `2025-06-01.md` and `2025-06-01.en.md`
-3. Add front matter and content (text and shortcode elements)
-4. If you want to show an image other than SC log, add it to the front matter
+2. Name it by date. ex) `2025-06-01.md` and `2025-06-01.en.md`
+3. Add title (string) and date (YYYY-MM-DD) variables to front matter.
+4. Add link variable under [extra] if article has external link.
+5. Example:
    ```toml
-   [extra]
-   image = "brainchild.png"
+	+++
+	title = "「JAXAベンチャー」の認定"
+	date = 2018-05-29
+
+	[extra]
+	link = "http://aerospacebiz.jaxa.jp/venture/"
+	+++
    ```
-   If not specified, SC logo is used.
 
 ## Deployment
 
