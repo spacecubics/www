@@ -10,7 +10,7 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 {% hero_element(
 	title="PRODUCTS",
 	img="sc-obc_module_a1.png",
-	alt="Diagram",
+	alt="",
 	link="products",
 	link_text="Details",
 	img_link="",
