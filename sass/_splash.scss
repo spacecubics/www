@@ -36,7 +36,7 @@
 	}
 
 .splash-footer {
-	position: relative; /* for absolute positioning context */
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: right;
@@ -108,10 +108,19 @@
 	height: 1.8rem;
 	color: white;
 	transition: opacity 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .social-icons a:hover {
 	opacity: 0.3;
+}
+
+.social-icons .icon {
+	mask-image: var(--icon);
+	width: 100%;
+	height: 100%;
 }
 
 @keyframes floatDown {
@@ -143,9 +152,17 @@
 		display: none;
 	}
 
+	.splash-footer {
+		justify-content: center;
+		margin-left: 20px;
+		margin-right: 20px;
+		gap: 1rem;
+		margin-bottom: 20px;
+	}
+
 	.social-icons a {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 1.5em;
+		height: 1.5em;
 	}
 }
 
@@ -161,6 +178,11 @@
 	.social-icons a {
 		width: 5.4rem;
 		height: 5.4rem;
+	}
+
+	.social-icons .icon {
+		width: 100%;
+		height: 100%;
 	}
 	.social-label {
 		font-size: 3rem;
