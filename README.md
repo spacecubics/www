@@ -123,16 +123,9 @@ Content here
 
 #### News Carousel
 ```html
-{% news_carousel(
-	title="NEWS",
-	subtitle="Space Cubics",
-	slogan="INFORMATION",
-	items="
-	2025.6.1 | /news/2025-06-01 | image.png | News summary
-	"
-) %}
-{% end %}
+{% include "partials/news_carousel.html" %}
 ```
+The news carousel automatically displays the 10 most recent news articles from the news section.
 
 #### Prefooter Cards
 

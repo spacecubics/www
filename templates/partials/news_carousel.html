@@ -1,0 +1,42 @@
+<div class="news-carousel-section">
+	<div class="title-block section-title-block">
+		<div class="section-title-header">
+			<div class="title-content section-title-content">
+				<div class="carousel-section-title">{{ title | default(value="NEWS") }}</div>
+				<div class="carousel-section-subtitle">{{ subtitle | default(value="Space Cubics") }}</div>
+				<div class="carousel-section-slogan">{{ slogan | default(value="INFORMATION") }}</div>
+				<div class="title-divider section-title-divider"></div>
+			</div>
+			<div class="carousel-controls">
+				<button class="carousel-btn left" onclick="newsCarouselScroll(this, 1)"></button>
+				<button class="carousel-btn right" onclick="newsCarouselScroll(this, -1)"></button>
+			</div>
+		</div>
+	</div>
+	<div class="featured-news-carousel">
+		<div class="carousel-track-wrapper">
+			<div class="carousel-track">
+				{% if lang == "en" %}
+					{% set news_section = get_section(path="news/_index.en.md") %}
+				{% else %}
+					{% set news_section = get_section(path="news/_index.md") %}
+				{% endif %}
+				{% set all_news = news_section.pages | sort(attribute="date") | reverse %}
+				{% for news in all_news | slice(end=10) %}
+					{% set news_date = news.date %}
+					{% set news_link = news.permalink %}
+					{% set news_summary = news.title %}
+					<div class="carousel-card">
+						<a href="{{ news_link }}">
+							<div class="carousel-card-content">
+								<p class="carousel-card-date">{{ news_date }}</p>
+								<h3 class="carousel-card-summary">{{ news_summary }}</h3>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/news_carousel.js"></script>
