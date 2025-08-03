@@ -9,11 +9,11 @@
 	<div class="news-list">
 		<div class="news-list-content">
 			{% set news_section = get_section(path="news/_index.md", lang=lang) %}
-			{% set all_news = news_section.pages %}
 			{% set limit = limit | default(value=5) %}
+			{% set all_news = news_section.pages | slice(end=limit) %}
 
 			<div class="news-list-block">
-				{% for news in all_news | slice(end=limit) %}
+				{% for news in all_news %}
 					<div class="news-list-line">
 						<p>
 							<span class="news-date">{{ news.date }}</span>
