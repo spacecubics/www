@@ -11,22 +11,7 @@
 			{% set news_section = get_section(path="news/_index.md", lang=lang) %}
 			{% set limit = limit | default(value=5) %}
 			{% set all_news = news_section.pages | slice(end=limit) %}
-
-			<div class="news-list-block">
-				{% for news in all_news %}
-					<div class="news-list-line">
-						<p>
-							<span class="news-date">{{ news.date }}</span>
-							<span class="news-gap">
-								<a href="{{ news.permalink }}" class="news-title-link">
-									{{ news.title }}
-								</a>
-							</span>
-						</p>
-						<div class="news-divider-bar"></div>
-					</div>
-				{% endfor %}
-			</div>
+			{% include "partials/news_list_block.html" %}
 		</div>
 
 		<div class="news-btn-container">

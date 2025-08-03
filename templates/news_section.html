@@ -12,22 +12,7 @@
 		<div class="news-list">
 			<div class="news-list-content">
 				{% set all_news = paginator.pages %}
-
-				<div class="news-list-block">
-					{% for news in all_news %}
-						<div class="news-list-line">
-							<p>
-								<span class="news-date">{{ news.date }}</span>
-								<span class="news-gap">
-									<a href="{{ news.permalink }}" class="news-title-link">
-										{{ news.title }}
-									</a>
-								</span>
-							</p>
-							<div class="news-divider-bar"></div>
-						</div>
-					{% endfor %}
-				</div>
+				{% include "partials/news_list_block.html" %}
 
 				{% if paginator.number_pagers > 1 %}
 				<div class="pagination">
