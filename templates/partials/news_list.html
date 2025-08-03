@@ -9,7 +9,7 @@
 	<div class="news-list">
 		<div class="news-list-content">
 			{% set news_section = get_section(path="news/_index.md", lang=lang) %}
-			{% set all_news = news_section.pages | sort(attribute="date") | reverse %}
+			{% set all_news = news_section.pages %}
 			{% set limit = limit | default(value=5) %}
 
 			<div class="news-list-block">
