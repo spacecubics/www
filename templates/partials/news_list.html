@@ -8,11 +8,7 @@
 <div class="news-list-parent">
 	<div class="news-list">
 		<div class="news-list-content">
-			{% if lang == "en" %}
-				{% set news_section = get_section(path="news/_index.en.md") %}
-			{% else %}
-				{% set news_section = get_section(path="news/_index.md") %}
-			{% endif %}
+			{% set news_section = get_section(path="news/_index.md", lang=lang) %}
 			{% set all_news = news_section.pages | sort(attribute="date") | reverse %}
 			{% set limit = limit | default(value=5) %}
 
@@ -34,13 +30,8 @@
 		</div>
 
 		<div class="news-btn-container">
-			{% if lang == "en" %}
-				<span class="news-btn-text">News</span>
-				<a href="/en/news/" class="circle-btn" aria-label="News link"></a>
-			{% else %}
-				<span class="news-btn-text">News</span>
-				<a href="/news/" class="circle-btn" aria-label="お知らせリンク"></a>
-			{% endif %}
+			<span class="news-btn-text">News</span>
+			<a href="{{ get_url(path="@/news/_index.md", lang=lang) }}" class="circle-btn" aria-label="News link"></a>
 		</div>
 	</div>
 </div>
