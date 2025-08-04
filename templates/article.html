@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
 	{%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
 
@@ -23,13 +22,13 @@
 					<small>
 						<time datetime="{{ page.date | date(format='%+') }}">
 							{{ macros_translate::translate(key="published", default="Published on", language_strings=language_strings) }}
-							{{ page.date | date(format=date_format, locale=date_locale) }}
+							{{ page.date | date(locale=date_locale) }}
 						</time>
 						{%- if page.updated %}
 							<span> {{ config.extra.separator | default(value="•") }} </span>
 							<time datetime="{{ page.updated | date(format='%+') }}">
 								{{ macros_translate::translate(key="updated", default="Updated on", language_strings=language_strings) }}
-								{{ page.updated | date(format=date_format, locale=date_locale) }}
+								{{ page.updated | date(locale=date_locale) }}
 							</time>
 						{%- endif %}
 					</small>
