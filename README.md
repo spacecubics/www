@@ -4,27 +4,47 @@ This is a corporate website built with [Zola](https://www.getzola.org/) - a stat
 
 ## 🚀 Quick Start
 
-### Development
-```bash
-# Clone the repository
-git clone https://github.com/spacecubics/www.git
-cd www
 
-# Install Zola (if not already installed)
-# See: https://www.getzola.org/documentation/getting-started/installation/
+### Install Zola
 
-# Update the CAPTCHA_SITE_KEY_PLACEHOLDER value in config.toml
-# This is required when testing the contact page
+See: https://www.getzola.org/documentation/getting-started/installation/
 
-# Build the site
-zola build
-
-# Serve locally for development
-zola serve
+### Clone
 
 ```
+git clone https://github.com/spacecubics/www
+cd www
+```
 
-## Project Structure
+### Build
+
+```
+zola build
+```
+
+### Check
+
+```
+zola serve
+```
+
+## 📰 Add a News Article
+1. Create a new file in `content/news/`
+2. Name it by date. ex) `2025-06-01.md` and `2025-06-01.en.md`
+3. Add title (string) and date (YYYY-MM-DD) variables to front matter.
+4. Add link variable under [extra] if article has external link.
+5. Example:
+   ```toml
+	+++
+	title = "「JAXAベンチャー」の認定"
+	date = 2018-05-29
+
+	[extra]
+	link = "http://aerospacebiz.jaxa.jp/venture/"
+	+++
+   ```
+
+## 🏗️ Project Structure
 
 This repository is organized into only a few main folders...
 
@@ -75,12 +95,16 @@ This repository is organized into only a few main folders...
 - wrangler.toml
 - README.md
 
-## Helpful Documentation
+## 🔧 Development
+
+See `doc/develop.md`.
+
+## 🆘 Helpful Documentation
 - [Zola](https://www.getzola.org/documentation/)
 - [Tera](https://docs.rs/tera/latest/tera/)
 - [Sass](https://sass-lang.com/documentation/)
 
-## Contributing
+## 🙌 Contributing
 
 Please feel free to submit a pull request and/or post an issue.
 
