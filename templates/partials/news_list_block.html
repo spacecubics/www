@@ -1,8 +1,12 @@
+{%- set date_format = macros_translate::translate(key="date_format", language_strings=language_strings) -%}
+
 <div class="news-list-block">
 	{% for news in all_news %}
 	<div class="news-list-line">
 		<p>
-			<span class="news-date">{{ news.date }}</span>
+			<span class="news-date">
+				<time datetime>{{ news.date | date(format=date_format) }}</time>
+			</span>
 			<span class="news-gap">
 				<a href="{{ news.permalink }}" class="news-title-link">
 					{{ news.title }}

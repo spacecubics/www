@@ -1,6 +1,7 @@
 {% extends "section.html" %}
 
 {% block content %}
+	{%- set date_format = macros_translate::translate(key="date_format", language_strings=language_strings) -%}
 	{% set bg = "" %}
 	{% set title = "NEWS" %}
 	{% set subtitle = "お知らせ" %}
@@ -10,7 +11,7 @@
 
 	<article class="news-article">
 		<div class="news-article-date">
-			{{ page.date }}
+			<time datetime>{{ page.date | date(format=date_format) }}</time>
 		</div>
 		<div class="news-article-title">
 			{{ page.title }}
