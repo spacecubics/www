@@ -2,11 +2,9 @@
 
 ## Prerequisites
 - Install [Zola](https://www.getzola.org/documentation/getting-started/installation/)
-- We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
+  - We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
 
-## Architecture
-
-### Technology Stack
+## Technology Stack
 - **Static Site Generator**: [Zola](https://www.getzola.org/) (Rust-based)
 - **Styling**: SCSS with custom CSS variables
 - **JavaScript**: JS for interactivity
@@ -14,7 +12,6 @@
 - **Forms**: Cloudflare Turnstile CAPTCHA + Slack integration
 
 ## Design System
-
 ### Color Scheme
 - **Primary**: `#ff7800` (Orange)
 - **Accent**: `#ffa348` (Light Orange)
@@ -55,7 +52,6 @@ prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md
 ```
 
 ## Content Management
-
 ### Adding New Section
 1. Create a new folder, such as: `content/your_new_section/`
 2. Add `_index.md` and `_index.en.md` files
@@ -100,7 +96,6 @@ prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md
    ```
 
 ## Deployment
-
 ### Cloudflare Pages
 The site is deployed on Cloudflare Pages using the `zola build` command.
 
@@ -116,7 +111,6 @@ Required for contact form functionality:
 - `SLACK_WEBHOOK`: Slack webhook URL for notifications
 
 ## Troubleshooting
-
 ### Following Tera Rules
 Some common programming syntax is not supported by Tera.
 
