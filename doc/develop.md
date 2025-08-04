@@ -3,6 +3,7 @@
 ## Prerequisites
 - Install [Zola](https://www.getzola.org/documentation/getting-started/installation/)
   - We use Version [0.19.2](https://github.com/getzola/zola/releases/tag/v0.19.2) (builds easily with Cloudflare).
+  - We are currently using Cloudflare Build Image v1, which has Zola 0.19.2 pre-installed.
 
 ## Technology Stack
 - **Static Site Generator**: [Zola](https://www.getzola.org/) (Rust-based)
