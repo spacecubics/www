@@ -44,6 +44,11 @@ zola serve
 	+++
    ```
 
+As shown above, there are two date values: one in the file name and
+one in the `date` variable. We haven’t been able to remove the
+redundant `date` field due to a limitation in Zola. See issue #114 for
+details.
+
 ## 🏗️ Project Structure
 
 This repository is organized into only a few main folders...
