@@ -27,7 +27,7 @@ Space Cubics is young and still growing. If you are interested in the astrocompu
 	slogan = "POSITIONS",
 	jobs_note = "Special notes: For positions other than those currently being recruited, please inquire via the inquiry form.",
 	jobs = "
-Software Engineer | software-engineer/ | active
+Software Engineer | software_engineer | active
 Communications Engineer |
 Fundraising Manager |
 FPGA Engineer |

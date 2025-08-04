@@ -27,7 +27,7 @@ card_body = """一緒に働くメンバーを常に募集しています。
 	slogan = "POSITIONS",
 	jobs_note = "特記事項：募集中以外の職種に関しては、お問合せフォームよりお問合せ願います。",
 	jobs = "
-ソフトウェアエンジニア | software-engineer/ | active
+ソフトウェアエンジニア | software_engineer | active
 通信エンジニア |
 資金調達担当 |
 FPGAエンジニア |
