@@ -14,9 +14,10 @@
 
 ## Design System
 ### Color Scheme
-- **Primary**: `#ff7800` (Orange)
-- **Accent**: `#ffa348` (Light Orange)
-- **Background**: `#353946` (Dark Purple)
+This site is designed with white text on a navy blue (primary color) background.
+Orange is used as an accent color (hover highlight, dividers, scroll bar, etc.)
+- **Primary**: `#353946` (navy blue)
+- **Accent**: `#ff7800` (orange)
 
 ### Typography
 - **Alphanumeric**: [Montserrat](https://fonts.google.com/specimen/Montserrat)
