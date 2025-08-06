@@ -1,6 +1,5 @@
 #banner-container {
 	--mask: linear-gradient(black, transparent);
-	-webkit-user-select: none;
 	position: absolute;
 	z-index: -1;
 	mask-image: var(--mask);
@@ -34,7 +33,6 @@
 	text-align: center;
 
 	h1 {
-		-webkit-background-clip: text;
 		margin: 0;
 		background-image: linear-gradient(
 			to right,
