@@ -1,17 +1,13 @@
-<div class="news-list-block">
-	{% for news in all_news %}
-	<div class="news-list-line">
-		<p>
-			<span class="news-date">
-				<time datetime>{{ news.date | date(format=date_format) }}</time>
-			</span>
-			<span class="news-gap">
-				<a href="{{ news.permalink }}" class="news-title-link">
-					{{ news.title }}
-				</a>
-			</span>
-		</p>
-		<div class="news-divider-bar"></div>
-	</div>
-	{% endfor %}
+{% for news in all_news %}
+<div class="sc-list__item">
+	<span class="sc-list__label">
+		<time datetime>{{ news.date | date(format=date_format) }}</time>
+	</span>
+	<span class="sc-list__value">
+		<a href="{{ news.permalink }}" class="sc-list__link">
+			{{ news.title }}
+		</a>
+	</span>
 </div>
+<div class="sc-list__divider"></div>
+{% endfor %}
