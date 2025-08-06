@@ -65,7 +65,6 @@
 			font-family: var(--font-system-ui);
 
 			&::after {
-				-webkit-mask-image: var(--icon-right);
 				display: inline-block;
 				position: relative;
 				transform: translateX(-0.25rem);
@@ -133,7 +132,6 @@
 			--bg-overlay: var(--fg-muted-1);
 
 			&::before {
-				-webkit-mask-image: var(--icon-pencil);
 				mask-image: var(--icon-pencil);
 				background-color: var(--fg-muted-1);
 			}
@@ -147,7 +145,6 @@
 				color: var(--fg-muted-5);
 
 				.icon {
-					-webkit-mask-image: var(--icon-pencil);
 					mask-image: var(--icon-pencil);
 				}
 			}
@@ -167,7 +164,6 @@
 			--bg-overlay: var(--purple-bg);
 
 			&::before {
-				-webkit-mask-image: var(--icon-archive);
 				mask-image: var(--icon-archive);
 				background-color: var(--purple-bg);
 			}
@@ -181,7 +177,6 @@
 				color: var(--purple-fg);
 
 				.icon {
-					-webkit-mask-image: var(--icon-archive);
 					mask-image: var(--icon-archive);
 				}
 			}
@@ -201,7 +196,6 @@
 			--bg-overlay: var(--yellow-bg);
 
 			&::before {
-				-webkit-mask-image: var(--icon-star);
 				mask-image: var(--icon-star);
 				background-color: var(--yellow-bg);
 			}
@@ -225,7 +219,6 @@
 				color: var(--yellow-fg);
 
 				.icon {
-					-webkit-mask-image: var(--icon-star);
 					mask-image: var(--icon-star);
 				}
 			}
@@ -245,7 +238,6 @@
 			--bg-overlay: var(--red-bg);
 
 			&::before {
-				-webkit-mask-image: var(--icon-fire);
 				mask-image: var(--icon-fire);
 				background-color: var(--red-bg);
 			}
@@ -259,7 +251,6 @@
 				color: var(--red-fg);
 
 				.icon {
-					-webkit-mask-image: var(--icon-fire);
 					mask-image: var(--icon-fire);
 				}
 			}
@@ -279,7 +270,6 @@
 			--bg-overlay: var(--brown-bg);
 
 			&::before {
-				-webkit-mask-image: var(--icon-poop);
 				mask-image: var(--icon-poop);
 				background-color: var(--brown-bg);
 			}
@@ -293,7 +283,6 @@
 				color: var(--brown-fg);
 
 				.icon {
-					-webkit-mask-image: var(--icon-poop);
 					mask-image: var(--icon-poop);
 				}
 			}
@@ -401,22 +390,18 @@
 	}
 
 	#paginator-first .icon {
-		-webkit-mask-image: var(--icon-first);
 		mask-image: var(--icon-first);
 	}
 
 	#paginator-previous .icon {
-		-webkit-mask-image: var(--icon-previous);
 		mask-image: var(--icon-previous);
 	}
 
 	#paginator-next .icon {
-		-webkit-mask-image: var(--icon-next);
 		mask-image: var(--icon-next);
 	}
 
 	#paginator-last .icon {
-		-webkit-mask-image: var(--icon-last);
 		mask-image: var(--icon-last);
 	}
 

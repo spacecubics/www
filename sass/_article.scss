@@ -1,7 +1,6 @@
 #banner-container {
 	--mask: linear-gradient(black, transparent);
 	-webkit-user-select: none;
-	-webkit-mask-image: var(--mask);
 	position: absolute;
 	z-index: -1;
 	mask-image: var(--mask);
