@@ -1,0 +1,170 @@
+.price {
+	margin-bottom: 55px;
+	&__container {
+		display: flex;
+		gap: 100px;
+		justify-content: space-between;
+		margin-right: 25px;
+		margin-left: 25px;
+
+	}
+
+	&__left {
+		flex: 1 1 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__title-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 2em;
+		gap: 1em;
+		width: 100%;
+		flex-wrap: nowrap;
+	}
+
+	&__title {
+		font-size: 1.7em;
+		font-weight: 700;
+		text-align: left;
+		flex-shrink: 0;
+		line-height: 1.2;
+		overflow: hidden;
+		word-wrap: break-word;
+		white-space: nowrap;
+	}
+
+	&__amount {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: flex-end;
+		gap: 0.5em;
+		line-height: 1;
+		margin-bottom: 0.25em;
+		flex-wrap: wrap;
+		margin-left: auto;
+		text-align: right;
+		flex-shrink: 1;
+		overflow: hidden;
+	}
+
+	&__amount-number {
+		font-size: 2.5em;
+		font-weight: 700;
+		line-height: 1;
+		white-space: nowrap;
+		flex-shrink: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__amount-unit {
+		font-size: 1.2em;
+		font-weight: 400;
+		line-height: 1;
+		white-space: nowrap;
+		flex-shrink: 1;
+		flex-basis: auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__note-section {
+		width: 100%;
+		margin-bottom: 1.5em;
+		overflow: hidden;
+	}
+
+	&__note {
+		font-size: 0.9em;
+		color: #ccc;
+		text-align: right;
+		line-height: 1.4;
+		overflow: hidden;
+		word-wrap: break-word;
+		max-width: 100%;
+	}
+
+	&__right {
+		flex: 1 1 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__description {
+		font-size: 0.9em;
+		line-height: 1.5;
+		margin-bottom: 1em;
+		text-align: left;
+	}
+
+	&__features {
+		padding-left: 1.2em;
+
+		li {
+			font-size: 0.85em;
+			line-height: 1.5;
+			text-align: left;
+			margin-bottom: 10px;
+		}
+
+		li::marker {
+			color: white;
+		}
+	}
+
+	@media (max-width: 900px) {
+		&__container {
+			flex-direction: column;
+			gap: 2em;
+		}
+
+		&__left,
+		&__right {
+			flex: 1 1 100%;
+		}
+	}
+
+	@media (max-width: 690px) {
+		&__title {
+			white-space: nowrap;
+			flex-shrink: 0;
+		}
+
+		&__title-row {
+			flex-wrap: wrap;
+		}
+
+		&__amount {
+			justify-content: flex-end;
+		}
+
+		&__left,
+		&__right {
+			flex: 1 1 100%;
+		}
+
+		&__title {
+			white-space: nowrap;
+			flex-shrink: 0;
+			font-size: 1.3em;
+		}
+
+		&__title-row {
+			flex-wrap: wrap;
+		}
+
+		&__amount-unit {
+			font-size: 0.9em;
+		}
+
+		&__amount-number {
+			font-size: 2em;
+		}
+	}
+}

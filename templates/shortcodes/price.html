@@ -1,0 +1,23 @@
+<div class="price">
+	<div class="price__container">
+		<div class="price__left">
+			<div class="price__title-row">
+				<div class="price__title">SC-OBC Module A1</div>
+				<div class="price__amount">
+					<span class="price__amount-number">{{ price_number }}</span>
+					<span class="price__amount-unit">{{ price_unit }}</span>
+				</div>
+			</div>
+			<div class="price__note-section">
+				<div class="price__note">{{ price_note }}</div>
+			</div>
+			<div class="sc-list__divider"></div>
+		</div>
+		<div class="price__right">
+			<div class="price__description">{{ top_text }}</div>
+			<ul class="price__features">
+				{{ bullet_text | safe }}
+			</ul>
+		</div>
+	</div>
+</div>
