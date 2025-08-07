@@ -14,10 +14,7 @@
 			<div class="sc-list__divider"></div>
 		</div>
 		<div class="price__right">
-			<div class="price__description">{{ top_text }}</div>
-			<ul class="price__features">
-				{{ bullet_text | safe }}
-			</ul>
+			{{ body | markdown | safe }}
 		</div>
 	</div>
 </div>
