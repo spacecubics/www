@@ -93,6 +93,31 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 	{% end %}
 </section>
 
+{{ section_title(bg="", title="PRICE", subtitle="", slogan="") }}
+{{ price(
+	price_number="300,000",
+	price_unit="JPY (tax included)",
+	price_note="*This price is a limited-time offer.",
+	top_text="The SC-OBC Module A1 is scheduled to undergo space-readiness testing using a satellite we developed in-house. This price is only available until space-readiness has been approved. Conditions for the limited-time price are as follows.",
+	bullet_text=
+	"	
+		<li>You grant permission for the publication of information regarding your purchase on our website, social media, and/or other public platforms.</li>
+		<li>You give us permission to publish the results of any launches that used equipment (whether space-based or ground-based) containing this product on our website and social media.</li>
+		<li>We ask you to share operational data obtained through the use of this product in space. This data will remain confidential and will not be made public. The purpose is to help improve future product specifications, so please provide only data related to the functionality and performance of this product.</li>
+		<li>We may ask you to complete a short questionnaire about your experience using the product as well as your thoughts on its design and performance.</li>
+	"
+) }}
+{{ price_supp(
+	title="Commissioning an interface board",
+	top="We also provide custom circuit board design services to connect the SC-OBC Module A1 to your satellite.",
+	bottom='Please use our <a href="/en/contact">contact form</a> to request more information.'
+) }}
+{{ price_supp(
+	title="Information regarding prices",
+	top="This product is still in development, so specifications may change without notice.",
+	bottom="We're always looking to improve, so feel free to reach out with any requests or suggestions."
+) }}
+
 <section id="section-docs">
 	{% docs_resources(
 		bg="",
