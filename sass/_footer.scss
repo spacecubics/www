@@ -68,7 +68,7 @@
 
 		.company-name {
 			font-size: 1.25rem;
-			font-weight: bold;
+			font-weight: 550;
 			color: black;
 
 			@media (min-width: 3840px) {
@@ -146,6 +146,7 @@
 
 		a {
 			flex: 1;
+			font-weight: 550;
 			transition: var(--transition);
 			border-radius: 999px;
 			padding: 0.375rem 0.75rem;

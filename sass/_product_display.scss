@@ -87,6 +87,7 @@
 
 			.product-title {
 				font-size: 1.5rem;
+				font-weight: 400;
 				color: #fff;
 				letter-spacing: 0.08em;
 
@@ -183,7 +184,7 @@
 
 			.external-label {
 				font-size: 0.9rem;
-				font-weight: 700;
+				font-weight: 600;
 				white-space: nowrap;
 				letter-spacing: 0.08em;
 
@@ -234,7 +235,7 @@
 			flex-wrap: wrap;
 			gap: 1.25rem;
 			font-size: 1rem;
-			font-weight: 700;
+			font-weight: 600;
 			color: #ff7800;
 			margin-top: 2rem;
 
@@ -278,7 +279,7 @@
 }
 
 .meta-a {
-	font-weight: 700;
+	font-weight: 600;
 	color: #fff;
 	margin-right: 0;
 	min-width: 16em;

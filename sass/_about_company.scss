@@ -47,20 +47,8 @@
 	font-weight: 900;
 	text-align: left;
 	margin: 0;
-	-webkit-text-stroke: 2px white;
 	text-stroke: 2px white;
 	letter-spacing: 0.1em;
-	text-shadow:
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white,
-		0 0 0 white;
 
 	/* Tablet */
 	@media (max-width: 991px) and (min-width: 768px) {
@@ -95,7 +83,7 @@
 .about-company-left__slogan {
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
 	font-size: 0.9em;
-	font-weight: 700;
+	font-weight: 600;
 	text-align: left;
 	color: white;
 	margin: 0;
@@ -172,7 +160,7 @@
 }
 
 .about-company-bold {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .about-company-gap {

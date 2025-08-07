@@ -7,7 +7,7 @@
 	}
 
 	&__label {
-		font-weight: 700;
+		font-weight: 600;
 		color: white;
 		white-space: nowrap;
 		font-size: 0.9em;
@@ -19,6 +19,7 @@
 
 	&__link {
 		color: inherit;
+		font-weight: 500;
 		text-decoration: none;
 		transition: color 0.3s ease;
 		display: block;

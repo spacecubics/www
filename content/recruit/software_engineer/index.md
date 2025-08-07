@@ -5,8 +5,8 @@ date = 2025-07-18
 template = "job_post.html"
 +++
 # 募集中
-## **ソフトウェアエンジニア (Software Engineer)**
-## **勤務地：**
+## ソフトウェアエンジニア (Software Engineer)
+## 勤務地：
 本社（日本国内のみリモート勤務可）
 ---
 ### 雇用形態

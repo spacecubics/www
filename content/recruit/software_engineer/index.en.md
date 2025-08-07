@@ -5,8 +5,8 @@ date = 2025-07-18
 template = "job_post.html"
 +++
 # Now Hiring
-## **Software Engineer**
-## **Location:**
+## Software Engineer
+## Location:
 Head Office (Remote work within Japan only)
 ---
 ### Employment Type
