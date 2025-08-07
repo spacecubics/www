@@ -115,16 +115,25 @@ limited-time price are as follows.
   functionality and performance of this product.
 {% end %}
 
-{{ price_supp(
-	title="Commissioning an interface board",
-	top="We also provide custom circuit board design services to connect the SC-OBC Module A1 to your satellite.",
-	bottom='Please use our <a href="/en/contact">contact form</a> to request more information.'
-) }}
-{{ price_supp(
-	title="Information regarding prices",
-	top="This product is still in development, so specifications may change without notice.",
-	bottom="We're always looking to improve, so feel free to reach out with any requests or suggestions."
-) }}
+{% price_supp(title="Commissioning an interface board") %}
+
+We also provide custom circuit board design services to connect the
+SC-OBC Module A1 to your satellite.
+
+Please use our [contact form](/en/contact) to request more
+information.
+{% end %}
+
+
+{% price_supp(title="Information regarding prices") %}
+
+This product is still in development, so specifications may change
+without notice.
+
+We're always looking to improve, so feel free to reach out with any
+requests or suggestions.
+{% end %}
+
 
 <section id="section-docs">
 	{% docs_resources(

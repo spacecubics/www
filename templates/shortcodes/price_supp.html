@@ -4,8 +4,7 @@
 			<div class="price-supp__title">{{ title }}</div>
 		</div>
 		<div class="price-supp__right">
-			<div class="price-supp__top">{{ top }}</div>
-			<div class="price-supp__bottom">{{ bottom | safe }}</div>
+			{{ body | markdown | safe }}
 		</div>
 	</div>
 	<div class="sc-list__divider"></div>
