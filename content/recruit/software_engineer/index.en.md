@@ -55,5 +55,3 @@ Head Office (Remote work within Japan only)
 - Various social insurance (health insurance, welfare pension, employment insurance, workers' compensation insurance)
 - Commuting allowance
 ---
-### Contact
-If you are interested in applying for other positions, please feel free to contact us via the inquiry form.
