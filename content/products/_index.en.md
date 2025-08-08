@@ -33,5 +33,5 @@ these computers function normally.
 	external_3_label="Space Cubics GitHub",
 	external_4_link="https://github.com/zephyrproject-rtos/zephyr",
 	external_4_label="Zephyr RTOS GitHub Repository",
-	details_link="scobc_a1"
+	details_link="@/products/scobc_a1.md"
 ) }}

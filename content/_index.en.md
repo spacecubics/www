@@ -11,7 +11,7 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 	title="PRODUCTS",
 	img="sc-obc_module_a1.png",
 	alt="",
-	link="products",
+	link="@/products/_index.md",
 	link_text="Details",
 	img_link="",
 	bg="",
@@ -33,7 +33,7 @@ Space computer modules.
 	slogan="ON THE MOON",
 	img="empty_image.png",
 	alt="",
-	link="about_us",
+	link="@/about_us.md",
 	link_text="About us",
 	bottom_title=""
 	img_link=""
