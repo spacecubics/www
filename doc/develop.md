@@ -135,3 +135,13 @@ See the Tera documentation for more details.
 - Ensure new SCSS files are prefixed with an underscore (`_`)
 - Ensure all SCSS files are imported in `sass/style.scss`
 - Check for syntax errors in SCSS files (they can break the site)
+
+### Server Behavior Differences
+
+- Zola uses https://github.com/hyperium/hyper
+- Cloudflare uses https://github.com/cloudflare/workerd
+
+When accessing a directory, say `foo`, these two servers behave
+differently. Zola returns a 404 if there is no `foo.md`, even if
+`foo/_index.md` exists. Cloudflare, on the other hand, redirects
+`/foo` to `/foo/` with a 308 status code.
