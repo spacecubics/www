@@ -143,6 +143,7 @@ requests or suggestions.
 		slogan=""
 	) %}
 	Product Manual | This is the specification docuement of SC-OBC Module A1. It describes communication systems, circuit configurations, and more. | https://spacecubics.github.io/sc-docs/scobc-a1-product-manual/latest/product_manual_en.html
+	FPGA Technical Reference Manual | This is the specification document for the FPGA implemented on the SC-OBC Module A1. It describes the FPGA functions and register specifications required for FPGA development and software development. | https://spacecubics.github.io/sc-docs/scobc-a1-fpga-technical-reference-manual/latest/index.html
 	Zephyr Info Page | This is the dedicated SC-OBC Module A1 page on the Zephyr Project site. | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
 	GitHub | For other technical information, please refer to the following. | https://github.com/spacecubics
 	{% end %}
