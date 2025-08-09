@@ -79,6 +79,25 @@ prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md
    Content here...
    ```
 
+### Linking to Other Content Pages
+
+Use `get_url()` with the `@/` prefix and the current page's `lang` variable to generate permalinks to content pages within the site.
+
+#### Example usage in markdown:
+```
+{% hero_element(
+    title = "PRODUCTS",
+    link = "@/products/_index.md",
+    link_text = "Details"
+) %}
+```
+
+#### Example usage in shortcode template:
+```html
+<a href="{{ get_url(path=link, lang=lang) }}">{{ link_text }}</a>
+```
+See [this PR](https://github.com/spacecubics/www/pull/158) for more details.
+
 ### Adding New News Articles
 1. Create a new file in `content/news/`
 2. Name it by date. ex) `2025-06-01.md` and `2025-06-01.en.md`
