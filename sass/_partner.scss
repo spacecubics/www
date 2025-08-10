@@ -1,0 +1,58 @@
+.partner {
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+	padding: 24px 0;
+	align-items: center;
+
+	&__logo {
+  flex: 0 0 220px;
+	}
+
+	&__logo img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		width:100%;
+		height:auto;
+		border-radius: 12px;
+		background: #fff;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+
+  &__name {
+		font-size: clamp(18px, 2vw, 28px);
+		margin: 0 0 12px;
+	}
+
+  &__desc {
+		line-height: 1.8;
+	}
+
+  &__btn {
+		display:inline-flex;
+		align-items:center;
+		gap:.5em;
+		padding:.6em 1.1em;
+		border-radius:999px;
+		text-decoration:none;
+		border:1px solid currentColor;
+	}
+}
+
+@media (max-width: 768px) {
+  .partner {
+    flex-direction: column;
+    align-items: center; /* center logo + text */
+    text-align: center;  /* optional: center text */
+  }
+
+  .partner__logo {
+    flex-basis: auto;    /* no fixed width */
+    margin-bottom: 1rem; /* space below logo */
+  }
+}

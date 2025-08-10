@@ -25,18 +25,13 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 {{ board_members(line1="BOARD MEMBER", line2="Executive", line3="PROFILES", members="blocks/board-members.en.json") }}
 {{ board_members(line1="FOUNDING ALUMNI", line2="", line3="", members="blocks/founding-alumni.en.json") }}
 
-{% hero_element(
-	title="PARTNERS",
-	img="spaceone.png",
-	alt="",
-	link="https://www.space-one.co.jp/",
-	link_text="Read More",
-	img_link="",
-	bg="",
-	subtitle="Other teams who",
-	slogan="WORK WITH US"
-) %}
-Space Cubics and Space One were both selected for an industrial development grant by Japan's Ministry of Economy, Trade and Industry.
-<br><br>
-Now, we deploy our space computers in CubeSats using Space One's KAIROS rocket. Every launch provides valuable telemetry data that drives refinement.
+{% twocols(line1="PARTNERS", line2="Other teams who", line3="WORK WITH US") %}
+{% partner(name="SPACE ONE CO., LTD.", logo="spaceone.png", link="https://www.space-one.co.jp/") %}
+
+Space Cubics and Space One were both selected for an industrial
+development grant by Japan's Ministry of Economy, Trade and Industry.
+Now, we deploy our space computers in CubeSats using Space One's
+KAIROS rocket. Every launch provides valuable telemetry data that
+drives refinement.
+{% end %}
 {% end %}

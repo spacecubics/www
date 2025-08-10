@@ -1,0 +1,162 @@
+.twocols {
+	display: flex;
+	gap: 1.5rem;
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1rem;
+	box-sizing: border-box;
+	background-color: transparent;
+
+	&-left {
+		flex: 0 0 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	&__title {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		font-size: 3em;
+		font-weight: 1000 !important;
+		margin: 0 0 0.2em;
+		color: white;
+		letter-spacing: 1px;
+		text-stroke: 1px white;
+	}
+
+	&__subtitle {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		color: #888888;
+		font-size: 0.85em;
+		font-weight: 400;
+		margin-bottom: 0.15rem;
+		margin-top: 0.15rem;
+	}
+
+	&__slogan {
+		font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+		color: white;
+		font-size: 1em;
+		font-weight: 600;
+		margin-bottom: 0.4rem;
+		margin-top: 0;
+		opacity: 0.9;
+		letter-spacing: 0.5px;
+	}
+
+	&__divider {
+		width: 27px;
+		height: 5px;
+		background-color: #f77d06;
+		border-radius: 3px;
+		margin-top: 0.5rem;
+	}
+
+	&-right {
+		flex: 1 1 65%;
+	}
+}
+
+/* Large screens (< 1200px) */
+@media (max-width: 1199px) {
+	.twocols {
+		padding: 3rem 4vw;
+
+		&__title {
+			font-size: 4em;
+		}
+
+		&__subtitle {
+			font-size: 0.95em;
+		}
+
+		&__slogan {
+			font-size: 1.1em;
+		}
+	}
+}
+
+/* Tablets (< 992px) */
+@media (max-width: 991px) {
+	.twocols {
+		flex-wrap: wrap;
+		padding: 2rem 3vw;
+
+		&-left {
+			flex: 1 1 40%;
+			margin-bottom: 2rem;
+		}
+
+		&-right {
+			flex: 1 1 55%;
+		}
+	}
+
+	.twocols__title {
+		font-size: 3.5em;
+	}
+
+	.twocols__subtitle {
+		font-size: 0.9em;
+	}
+
+	.twocols__slogan {
+		font-size: 1.05em;
+	}
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+	.twocols {
+		flex-direction: column;
+		padding: 1.5rem 2vw;
+
+		&-left,
+		&-right {
+			flex: 1 1 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.twocols-grid {
+		grid-template-columns: 1fr;
+		gap: 1.2rem;
+	}
+
+	.twocols__title {
+		font-size: 2.8em;
+	}
+
+	.twocols__subtitle {
+		font-size: 0.85em;
+	}
+
+	.twocols__slogan {
+		font-size: 1em;
+	}
+}
+
+/* Small mobile (< 480px) */
+@media (max-width: 479px) {
+	.twocols {
+		padding: 1rem 1.5vw;
+
+		&-left,
+		&-right {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.twocols__title {
+		font-size: 2em;
+	}
+
+	.twocols__subtitle {
+		font-size: 0.8em;
+	}
+
+	.twocols__slogan {
+		font-size: 0.95em;
+	}
+}

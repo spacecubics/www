@@ -1,0 +1,10 @@
+<div class="partner">
+  <div class="partner__logo">
+    <img src="{{ get_url(path=logo) }}" alt="{{ alt | default(value=name) }}">
+  </div>
+
+  <div class="partner__content">
+    <h3 class="partner__name">{{ name }}</h3>
+    <div class="partner__desc">{{ body | markdown | safe }}</div>
+  </div>
+</div>
