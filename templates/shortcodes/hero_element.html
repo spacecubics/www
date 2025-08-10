@@ -27,7 +27,7 @@
 				{% if link and link_text %}
 					<div class="link-wrapper">
 						<span class="link-text">{{ link_text }}</span>
-						<a href="{{ get_url(path=link) }}" class="hero-link"></a>
+						<a href="{{ get_url(path=link, lang=lang) }}" class="hero-link"></a>
 					</div>
 				{% endif %}
 			</div>
