@@ -95,7 +95,7 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 
 {{ section_title(bg="", title="PRICE", subtitle="", slogan="") }}
 
-{% price(price_number="300,000", price_unit="JPY (tax included)", price_note="*This price is a limited-time offer.") %}
+{% price(price_number="300,000", price_unit="JPY (excluding tax)", price_note="*This price is a limited-time offer.") %}
 
 The SC-OBC Module A1 is scheduled to undergo space-readiness testing
 using a satellite we developed in-house. This price is only available
