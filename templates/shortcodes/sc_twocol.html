@@ -1,0 +1,10 @@
+<div class="twocol-block">
+    <div class="twocol-block__left">
+        <div>{{ body | markdown | safe }}</div>
+    </div>
+    <div class="twocol-block__right">
+        {% if image %}
+            <img src="{{ image }}" alt="{{ alt | default(value='') }}" />
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.twocol-block {
+	display: flex;
+	gap: 25px;
+	margin-left: 55px;
+	margin-right: 55px;
+
+	&__left {
+		flex: 1;
+		min-width: 0;
+	}
+
+	&__right {
+		flex: 1;
+		min-width: 0;
+		
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 0.5rem;
+			object-fit: cover;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 25px;
+		margin-left: 25px;
+		margin-right: 25px;
+
+		&__left,
+		&__right {
+			flex: none;
+			width: 100%;
+		}
+	}
+}
