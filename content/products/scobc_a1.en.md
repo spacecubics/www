@@ -7,11 +7,11 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 +++
 
 {{ quick_jump(
-	title1="Product overview", id1="section-summary",
-	title2="Use cases", id2="section-usage",
+	title1="Product Overview", id1="section-summary",
+	title2="Use Cases", id2="section-usage",
 	title3="Specifications", id3="section-specs",
-	title4="Dev kit", id4="section-devkit",
-	title5="Docs / resources", id5="section-docs"
+	title4="Dev Kit", id4="section-devkit",
+	title5="Docs / Resources", id5="section-docs"
 ) }}
 
 <section id="section-summary">
