@@ -52,6 +52,29 @@ one in the `date` variable. We haven’t been able to remove the
 redundant `date` field due to a limitation in Zola. See issue #114 for
 details.
 
+### Linking to Local Pages
+
+A link to a local page must include the `@/` prefix.
+
+In your `.md` file, create a link like this:
+
+```
+[here](@/products/scobc_a1.md)
+```
+
+Or, if you are calling one of our shortcodes:
+
+```
+{% hero_element(
+    title = "PRODUCTS",
+    link = "@/products/_index.md",
+    link_text = "Details"
+) %}
+```
+
+This ensures the correct link is generated for the page, based on its
+language.
+
 ## 🏗️ Project Structure
 
 This repository is organized into only a few main folders...
