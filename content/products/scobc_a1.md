@@ -105,7 +105,7 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 	right_card_image="under_construction.jpeg",
 	left_card_title="開発キット",
 	left_card_subtitle="coming soon",
-	right_card_title="オプション製品",
+	right_card_title="オプション品",
 	right_card_subtitle="coming soon",
 	bg=""
 ) }}
