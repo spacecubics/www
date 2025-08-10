@@ -94,12 +94,6 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 詳しくは [お問い合わせフォーム](/contact">) よりお問い合わせください。
 {% end %}
 
-{% price_supp(title="価格に関する注意事項") %}
-現在開発中のため仕様は予告なく変更となる可能性があります。
-
-ユーザーのご要望を多く取り入れたいためリクエストがある方は是非お問合せ下さい。
-{% end %}
-
 <section id="section-devkit">
 	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
 </section>

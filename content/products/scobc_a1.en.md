@@ -109,15 +109,6 @@ information.
 {% end %}
 
 
-{% price_supp(title="Information regarding prices") %}
-
-This product is still in development, so specifications may change
-without notice.
-
-We're always looking to improve, so feel free to reach out with any
-requests or suggestions.
-{% end %}
-
 <section id="section-devkit">
 	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
 </section>
