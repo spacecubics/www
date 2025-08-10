@@ -9,8 +9,8 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 {{ quick_jump(
 	title1="Product overview", id1="section-summary",
 	title2="Use cases", id2="section-usage",
-	title3="Dev kit", id3="section-devkit",
-	title4="Specifications", id4="section-specs",
+	title3="Specifications", id3="section-specs",
+	title4="Dev kit", id4="section-devkit",
 	title5="Docs / resources", id5="section-docs"
 ) }}
 
@@ -46,22 +46,6 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	right_card_title="",
 	right_card_subtitle="インタフェースボードに 搭載したSC-OBC Module A1が 組み込まれた人工衛星<br> <br> （写真は開発中のもの）",
 
-	bg=""
-) }}
-
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
-
-{{ twocard(
-	title="",
-	subtitle="",
-	left_card_image="dev-board.webp",
-	right_card_image="under_construction.jpeg",
-	left_card_title="開発キット",
-	left_card_subtitle="coming soon",
-	right_card_title="オプション製品",
-	right_card_subtitle="coming soon",
 	bg=""
 ) }}
 
@@ -115,6 +99,22 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 
 ユーザーのご要望を多く取り入れたいためリクエストがある方は是非お問合せ下さい。
 {% end %}
+
+<section id="section-devkit">
+	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
+</section>
+
+{{ twocard(
+	title="",
+	subtitle="",
+	left_card_image="dev-board.webp",
+	right_card_image="under_construction.jpeg",
+	left_card_title="開発キット",
+	left_card_subtitle="coming soon",
+	right_card_title="オプション製品",
+	right_card_subtitle="coming soon",
+	bg=""
+) }}
 
 <section id="section-docs">
 	{% docs_resources(

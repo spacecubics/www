@@ -9,8 +9,8 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 {{ quick_jump(
 	title1="Product overview", id1="section-summary",
 	title2="Use cases", id2="section-usage",
-	title3="Dev kit", id3="section-devkit",
-	title4="Specifications", id4="section-specs",
+	title3="Specifications", id3="section-specs",
+	title4="Dev kit", id4="section-devkit",
 	title5="Docs / resources", id5="section-docs"
 ) }}
 
@@ -46,22 +46,6 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 	right_card_title="",
 	right_card_subtitle="A satellite equipped with the SC-OBC Module A1 installed on an interface board. <br> <br> (Photo shows a prototype under development)",
 
-	bg=""
-) }}
-
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
-
-{{ twocard(
-	title="",
-	subtitle="",
-	left_card_image="dev-board.webp",
-	right_card_image="under_construction.jpeg",
-	left_card_title="Development Kit",
-	left_card_subtitle="coming soon",
-	right_card_title="optional items",
-	right_card_subtitle="coming soon",
 	bg=""
 ) }}
 
@@ -134,6 +118,21 @@ We're always looking to improve, so feel free to reach out with any
 requests or suggestions.
 {% end %}
 
+<section id="section-devkit">
+	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
+</section>
+
+{{ twocard(
+	title="",
+	subtitle="",
+	left_card_image="dev-board.webp",
+	right_card_image="under_construction.jpeg",
+	left_card_title="Development Kit",
+	left_card_subtitle="coming soon",
+	right_card_title="optional items",
+	right_card_subtitle="coming soon",
+	bg=""
+) }}
 
 <section id="section-docs">
 	{% docs_resources(
