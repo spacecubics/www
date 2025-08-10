@@ -30,7 +30,7 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	{% end %}
 
 <section id="section-usage">
-	{{ section_title(bg="", title="USES", subtitle="", slogan="") }}
+	{{ section_title(bg="", title="USE CASES", subtitle="", slogan="") }}
 </section>
 
 {{ twocard(
