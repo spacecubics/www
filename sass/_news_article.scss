@@ -33,45 +33,6 @@
 		}
 	}
 
-	.news-article-link {
-		text-decoration: none;
-
-		&:hover {
-			color: #ffa348;
-			text-decoration: underline;
-		}
-
-		.news-external-pair {
-			display: flex;
-			align-items: center;
-			gap: 1em;
-		}
-
-		.news-external-label {
-			letter-spacing: 0.08em;
-		}
-
-		.external-icon {
-			width: 28px;
-			height: 28px;
-			transition: transform 0.2s ease, filter 0.3s ease;
-
-			@media (max-width: 768px) {
-				width: 24px;
-				height: 24px;
-			}
-
-			@media (max-width: 480px) {
-				width: 20px;
-				height: 20px;
-			}
-		}
-
-		&:hover .external-icon {
-			transform: scale(1.1);
-		}
-	}
-
 	.news-article-back {
 		display: flex;
 		align-items: center;

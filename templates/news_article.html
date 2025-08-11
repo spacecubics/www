@@ -17,10 +17,10 @@
 			{{ page.content | safe }}
 		</div>
 		{% if page.extra.link %}
-			<a href="{{ page.extra.link }}" target="_blank" rel="noopener noreferrer" class="news-article-link">
-				<span class="news-external-pair">
-					<span class="news-external-label">Link</span>
-					<img src="/cil-external-link.svg" alt="External link" class="external-icon" width="16" height="16" />
+			<a href="{{ page.extra.link }}" target="_blank" rel="noopener noreferrer" class="external-link">
+				<span class="external-link__pair">
+					<span class="external-link__label">Link</span>
+					<img src="/cil-external-link.svg" alt="External link" class="external-link__icon" width="16" height="16" />
 				</span>
 			</a>
 		{% endif %}
