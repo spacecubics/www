@@ -17,10 +17,8 @@
 				<div class="docs-resource-header">
 					<div class="docs-resource-title">{{ parts[0] | trim }}</div>
 					{% if parts | length > 2 %}
-						<a href="{{ parts[2] | trim }}" class="docs-external-link" target="_blank" rel="noopener noreferrer">
-							<span class="docs-external-icon">
-								<img src="/cil-external-link.svg" alt="External link" class="external-icon" width="16" height="16" />
-							</span>
+						<a href="{{ parts[2] | trim }}" target="_blank" rel="noopener noreferrer">
+								<img src="/cil-external-link.svg" class="external-link__icon" alt="External link" width="16" height="16" />
 						</a>
 					{% endif %}
 				</div>
