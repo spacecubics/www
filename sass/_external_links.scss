@@ -1,0 +1,46 @@
+.external-link {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	cursor: pointer;
+	letter-spacing: 0.08em;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: #ffa348;
+		text-decoration: underline;
+	}
+
+	&__icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 28px;
+		height: 28px;
+		transition: transform 0.2s ease, filter 0.3s ease;
+
+		@media (max-width: 768px) {
+			width: 24px;
+			height: 24px;
+		}
+
+		@media (max-width: 480px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__pair {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+
+	&__label {
+		letter-spacing: 0.08em;
+	}
+
+	&:hover &__icon {
+		transform: scale(1.1);
+	}
+}
