@@ -30,7 +30,7 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 {% end %}
 
 <section id="section-usage">
-	{{ section_title(bg="", title="USE CASES", subtitle="", slogan="") }}
+	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
 </section>
 
 {{ twocard(
@@ -77,7 +77,7 @@ prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_ind
 	{% end %}
 </section>
 
-{{ section_title(bg="", title="PRICE", subtitle="", slogan="") }}
+{{ section_title(title="PRICE", subtitle="", slogan="") }}
 
 {% price(price_number="300,000", price_unit="JPY (excluding tax)", price_note="*This price is a limited-time offer.") %}
 

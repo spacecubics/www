@@ -30,7 +30,7 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	{% end %}
 
 <section id="section-usage">
-	{{ section_title(bg="", title="USE CASES", subtitle="", slogan="") }}
+	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
 </section>
 
 {{ twocard(
@@ -77,7 +77,7 @@ prefooter_cards = ["recruit/_index.md", "ir_info/_index.md", "contact/_index.md"
 	{% end %}
 </section>
 
-{{ section_title(bg="", title="PRICE", subtitle="", slogan="") }}
+{{ section_title(title="PRICE", subtitle="", slogan="") }}
 
 {% price(price_number="30", price_unit="万円(税別)", price_note="※本価格は期間限定の特別価格となります。") %}
 SC-OBC Module A1（以下、「本製品」と表記します）は自社開発衛星による宇宙実証を予定しております。本価格は宇宙実証までの期間限定の特別価格となります。特別価格が適用される条件は以下のとおりです。
