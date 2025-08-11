@@ -80,6 +80,11 @@ matter.
 prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md"]
 ```
 
+#### HTML heade line
+
+It seems H1 headline tag should be used for once in a page. All
+segment titles should be converted to H2.
+
 ## Content Management
 ### Adding New Section
 1. Create a new folder, such as: `content/your_new_section/`
