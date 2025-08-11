@@ -1,0 +1,31 @@
+.segment {
+  &__title {
+    color: white;
+    font-size: 51px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+
+  &__subtitle {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 400;
+		margin-top: 0px;
+		margin-bottom: 0px;
+  }
+
+  &__slogan {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+		margin-top: 0px;
+		margin-bottom: 0px;
+  }
+
+  &__divider {
+    background-color: #f77d06;
+    width: 24px;
+    height: 2px;
+		margin-top: 10px;
+  }
+}
