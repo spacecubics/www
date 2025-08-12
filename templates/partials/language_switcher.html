@@ -1,3 +1,7 @@
+{%- if current_path is not defined -%}
+{%- set current_path = "" -%}
+{%- endif -%}
+
 <li id="language-switcher" class="ls-container">
 	{%- set current_lang = lang -%}
 	{%- if current_lang == "ja" -%}
