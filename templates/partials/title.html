@@ -1,6 +1,10 @@
 {%- set suffix = config.title | safe -%}
 {%- set separator = " - " -%}
+{%- if current_path is defined -%}
 {%- set is_home = current_path == "/" or current_path == "/en/" -%}
+{%- else -%}
+{%- set is_home = false -%}
+{%- endif -%}
 
 {%- set prefix = "" -%}
 {%- if section is defined and section.title is defined %}
