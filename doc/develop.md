@@ -12,6 +12,11 @@
 - **Deployment**: Cloudflare Pages with Workers
 - **Forms**: Cloudflare Turnstile CAPTCHA + Slack integration
 
+## Indentation
+- **Use spaces, not tabs** for indentation
+- **2 spaces** per indentation level
+- This is configured in `.editorconfig` and should be followed by all contributors
+
 ## Design System
 ### Color Scheme
 This site is designed with white text on a navy blue (primary color) background.
