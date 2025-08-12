@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<head>
-    <title>404 - Page Not Found</title>
-    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
-</head>
-<body>
-    <div class="sc-404">
-        <div class="sc-404__logo">
-            <img src="{{ get_url(path='logo_black.webp') }}" alt="Space Cubics Logo">
-        </div>
-        <h1>404</h1>
-        <div class="sc-404__message">Page Not Found</div>
-        <a href="{{ get_url(path='/') }}" class="sc-404__button">Back to Home</a>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content -%}
+<div class="title-block section-title-block">
+	<div class="title-content section-title-content">
+		<h1>404</h1>
+		<h3>Not Found</h3>
+		<div class="title-divider section-title-divider"></div>
+	</div>
+</div>
+{%- endblock content %}
