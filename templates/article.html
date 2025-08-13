@@ -21,13 +21,13 @@
 					<small>
 						<time datetime="{{ page.date | date(format='%+') }}">
 							{{ macros_translate::translate(key="published", default="Published on", language_strings=language_strings) }}
-							{{ page.date | date(locale=date_locale) }}
+							{{ page.date }}
 						</time>
 						{%- if page.updated %}
 							<span> {{ config.extra.separator | default(value="•") }} </span>
 							<time datetime="{{ page.updated | date(format='%+') }}">
 								{{ macros_translate::translate(key="updated", default="Updated on", language_strings=language_strings) }}
-								{{ page.updated | date(locale=date_locale) }}
+								{{ page.updated }}
 							</time>
 						{%- endif %}
 					</small>
