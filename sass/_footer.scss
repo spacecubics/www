@@ -228,19 +228,6 @@
 				transform: var(--active);
 			}
 
-			.icon {
-				-webkit-mask-image: var(--icon);
-				mask-image: var(--icon);
-				transition: var(--transition);
-				width: 2.5rem;
-				height: 2.5rem;
-
-				@media (min-width: 3840px) {
-					width: 4rem;
-					height: 4rem;
-				}
-			}
-
 			span {
 				display: none;
 			}

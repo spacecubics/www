@@ -73,7 +73,11 @@
 					{%- for link in config.extra.footer.socials %}
 						<li>
 							<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
-								<i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+								{% if link.name == "YouTube" %}
+									<i class="svg-icon svg-icon--footer svg-icon--youtube" style='--icon: url("data:image/svg+xml,{{ link.icon }}"); --icon-width: 40px; --icon-height: 40px'></i>
+								{% else %}
+									<i class="svg-icon svg-icon--footer" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+								{% endif %}
 								<span>{{ link.name }}</span>
 							</a>
 						</li>

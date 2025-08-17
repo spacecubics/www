@@ -1,0 +1,29 @@
+.svg-icon {
+	mask-image: var(--icon);
+	transition: var(--transition);
+	background-color: currentColor;
+	display: inline-block;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	flex-shrink: 0;
+
+	&--splash {
+		color: white;
+		--icon-size: 29px;
+	}
+
+	&--footer {
+		color: rgb(58, 55, 90);
+		--icon-size: 40px;
+
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+
+	&--youtube {
+		width: var(--icon-width, var(--icon-size));
+		height: var(--icon-height, var(--icon-size));
+		vertical-align: middle;
+	}
+}
