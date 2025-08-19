@@ -132,10 +132,10 @@ information.
 		subtitle="",
 		slogan=""
 	) %}
-	Product Manual | This is the specification docuement of SC-OBC Module A1. It describes communication systems, circuit configurations, and more. | https://spacecubics.github.io/sc-docs/scobc-a1-product-manual/latest/product_manual_en.html
-  Software Manual | This document is a step-by-step guide for setting up the development environment, flashing, and running Zephyr-based applications on the SC-OBC Module A1. | https://spacecubics.github.io/sc-docs/scobc-a1-software-manual/latest/index.html
-	FPGA Technical Reference Manual | This is the specification document for the FPGA implemented on the SC-OBC Module A1. It describes the FPGA functions and register specifications required for FPGA development and software development. | https://spacecubics.github.io/sc-docs/scobc-a1-fpga-technical-reference-manual/latest/index.html
+	Product Manual | This is our specification document for SC-OBC Module A1. It describes communication systems, circuit configurations, and more. | https://spacecubics.github.io/sc-docs/scobc-a1-product-manual/latest/product_manual_en.html
+  Software Manual | This document is a step-by-step guide for setting up the development environment, flashing, and running Zephyr-based applications on SC-OBC Module A1. | https://spacecubics.github.io/sc-docs/scobc-a1-software-manual/latest/index.html
+	FPGA Technical Reference Manual | This is the specification document for the FPGA used in SC-OBC Module A1. It describes the FPGA functions and register specifications required for FPGA and software development. | https://spacecubics.github.io/sc-docs/scobc-a1-fpga-technical-reference-manual/latest/index.html
 	Zephyr Info Page | This is the dedicated SC-OBC Module A1 page on the Zephyr Project site. | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
-	GitHub | For other technical information, please refer to the following. | https://github.com/spacecubics
+	GitHub | For other technical information, please refer to our GitHub account. | https://github.com/spacecubics
 	{% end %}
 </section>
