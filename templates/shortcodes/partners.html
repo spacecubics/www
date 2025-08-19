@@ -15,6 +15,14 @@
 			<div class="partner__content">
 				<h3 class="partner__name">{{ name }}</h3>
 				<div class="partner__desc">{{ body | markdown | safe }}</div>
+				{% if link %}
+          <a href="{{ link }}" class="external-link">
+            <span class="external-link__pair">
+              <span class="external-link__label">More</span>
+              <img src="/cil-external-link.svg" class="external-link__icon"/>
+            </span>
+          </a>
+				{% endif %}
 			</div>
 		</div>
 	</div>
