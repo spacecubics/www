@@ -21,10 +21,8 @@ If you are interested, please contact us.
 Space Cubics is young and still growing. If you are interested in the astrocomputer industry, please reach out to us. But if you don't work well in a positive, collaborate environment, then this may not be the best place for you."
 ) }}
 
+{% twocols(line1="WANTED", line2="Currently available", line3="POSITIONS") %}
 {{ jobs_list(
-	title = "WANTED",
-	subtitle = "Currently available",
-	slogan = "POSITIONS",
 	jobs = "
 Software Engineer | software_engineer | active
 Communications Engineer |
@@ -37,6 +35,7 @@ Structural Engineer |
 Thermal Engineer |
 Systems Engineer |
 ") }}
+{% end %}
 
 {% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
 {{ application_form(

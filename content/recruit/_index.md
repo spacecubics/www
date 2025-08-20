@@ -21,10 +21,8 @@ card_body = """一緒に働くメンバーを常に募集しています。
 今の Space Cubicsはまだまだ小さくて、大きな仕事を自分達だけで完結できる力がありません。コンピューター、通信、推進、構造、熱流体、システムエンジニアリングなど、宇宙機を設計、製造、販売する事に興味がある人、地上で動くコンピューターなど普通すぎてツマラナク感じている人や、色々な理由で思い通りのモノが作ることが出来ていない人は、ご連絡ください。他人の仕事にケチばかり付けて代替案を提案できない人、他人を貶める人は、たとえ優秀でもご遠慮ください。 "
 ) }}
 
+{% twocols(line1="WANTED", line2="Current available", line3="POSITIONS") %}
 {{ jobs_list(
-	title = "WANTED",
-	subtitle = "Current available",
-	slogan = "POSITIONS",
 	jobs = "
 ソフトウェアエンジニア | software_engineer | active
 通信エンジニア |
@@ -37,6 +35,7 @@ FPGAエンジニア |
 熱流体系エンジニア |
 システムエンジニア |
 ") }}
+{% end %}
 
 {% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
 {{ application_form(

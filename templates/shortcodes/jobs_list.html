@@ -1,60 +1,45 @@
-<div class="jobs-list">
-	<div class="jobs-list-left">
-		{% if title %}
-			<h2 class="jobs-list__title">{{ title }}</h2>
-		{% endif %}
-		{% if subtitle %}
-			<p class="jobs-list__subtitle">{{ subtitle }}</p>
-		{% endif %}
-		{% if slogan %}
-			<p class="jobs-list__slogan">{{ slogan }}</p>
-		{% endif %}
-		<div class="jobs-list__divider"></div>
-	</div>
+<div class="jobs-list-right">
+	<div class="jobs-list-right-content">
+		<div class="jobs-list-grid">
+			{% set lines = jobs | split(pat="\n") %}
+			{% for line in lines %}
+			{% set line = line | trim %}
+			{% if line != "" %}
+			{% set parts = line | split(pat="|") %}
+			{% set job_title = parts[0] | trim %}
 
-	<div class="jobs-list-right">
-		<div class="jobs-list-right-content">
-			<div class="jobs-list-grid">
-				{% set lines = jobs | split(pat="\n") %}
-				{% for line in lines %}
-					{% set line = line | trim %}
-					{% if line != "" %}
-						{% set parts = line | split(pat="|") %}
-						{% set job_title = parts[0] | trim %}
+			{% if parts | length > 1 %}
+			{% set job_link = parts[1] | trim %}
+			{% else %}
+			{% set job_link = "" %}
+			{% endif %}
 
-						{% if parts | length > 1 %}
-							{% set job_link = parts[1] | trim %}
-						{% else %}
-							{% set job_link = "" %}
-						{% endif %}
+			{% if parts | length > 2 %}
+			{% set third_part_trimmed = parts[2] | trim %}
+			{% else %}
+			{% set third_part_trimmed = "" %}
+			{% endif %}
 
-						{% if parts | length > 2 %}
-							{% set third_part_trimmed = parts[2] | trim %}
-						{% else %}
-							{% set third_part_trimmed = "" %}
-						{% endif %}
+			{% if third_part_trimmed == "active" %}
+			{% set is_active = true %}
+			{% else %}
+			{% set is_active = false %}
+			{% endif %}
 
-						{% if third_part_trimmed == "active" %}
-							{% set is_active = true %}
-						{% else %}
-							{% set is_active = false %}
-						{% endif %}
-
-						<div class="job-card{% if is_active %} job-card--active{% else %} job-card--inactive{% endif %}">
-							{% if is_active and job_link != "" %}
-								<a href="{{ job_link }}" class="job-card__link">
-									<h3 class="job-card__title">{{ job_title }}</h3>
-									<div class="job-card__recruiting-label">actively recruiting</div>
-								</a>
-							{% else %}
-								<h3 class="job-card__title">{{ job_title }}</h3>
-							{% endif %}
-						</div>
-					{% endif %}
-				{% endfor %}
+			<div class="job-card{% if is_active %} job-card--active{% else %} job-card--inactive{% endif %}">
+				{% if is_active and job_link != "" %}
+				<a href="{{ job_link }}" class="job-card__link">
+					<h3 class="job-card__title">{{ job_title }}</h3>
+					<div class="job-card__recruiting-label">actively recruiting</div>
+				</a>
+				{% else %}
+				<h3 class="job-card__title">{{ job_title }}</h3>
+				{% endif %}
 			</div>
-
-			<div class="jobs-list__bottom-divider"></div>
+			{% endif %}
+			{% endfor %}
 		</div>
+
+		<div class="jobs-list__bottom-divider"></div>
 	</div>
 </div>

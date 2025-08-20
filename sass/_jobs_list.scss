@@ -7,66 +7,6 @@
 	flex-wrap: wrap;
 	padding-top: 5rem;
 
-	&-left {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		gap: 0.25rem;
-
-		h2.jobs-list__title {
-			color: #fff;
-			font-size: 2.75rem;
-			margin-bottom: 0.1rem;
-			line-height: 1.1;
-			font-weight: 600;
-		}
-
-		p.jobs-list__subtitle {
-			margin: 0;
-			font-size: 1rem;
-			color: gray;
-		}
-
-		p.jobs-list__slogan {
-			margin: 0;
-			font-size: 1rem;
-			color: #fff;
-			font-weight: 600;
-		}
-
-		.jobs-list__divider {
-			position: relative;
-			height: 2.5px;
-			width: 40px;
-			background-color: transparent;
-			margin-top: 0.5rem;
-			border-radius: 2px;
-			align-self: flex-start;
-			overflow: hidden;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				background-color: #f77d06;
-				border-radius: 2px;
-			}
-		}
-
-		.jobs-list__description {
-			margin-top: 1rem;
-			font-size: 1rem;
-			line-height: 1.4;
-			color: #ddd;
-			text-align: left;
-			white-space: pre-wrap;
-		}
-	}
-
 	&-right {
 		flex: 2;
 		display: flex;
@@ -168,27 +108,6 @@
 		flex-direction: column;
 		width: 90vw;
 
-		&-left {
-			margin-bottom: 1rem;
-
-			h2.jobs-list__title {
-				font-size: 2.25rem;
-			}
-
-			p.jobs-list__subtitle {
-				font-size: 0.95rem;
-			}
-
-			p.jobs-list__slogan {
-				font-size: 0.95rem;
-			}
-
-			.jobs-list__divider {
-				width: 40px;
-				height: 2.5px;
-			}
-		}
-
 		&-right {
 			.jobs-list-grid {
 				grid-template-columns: 1fr;
@@ -203,25 +122,6 @@
 
 	@media (max-width: 480px) {
 		width: 95vw;
-
-		&-left {
-			h2.jobs-list__title {
-				font-size: 2rem;
-			}
-
-			p.jobs-list__subtitle {
-				font-size: 0.9rem;
-			}
-
-			p.jobs-list__slogan {
-				font-size: 0.9rem;
-			}
-
-			.jobs-list__divider {
-				width: 35px;
-				height: 2px;
-			}
-		}
 
 		&-right {
 			.jobs-list-grid {
