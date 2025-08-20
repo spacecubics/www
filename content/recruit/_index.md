@@ -38,10 +38,8 @@ FPGAエンジニア |
 システムエンジニア |
 ") }}
 
+{% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
 {{ application_form(
-	title = "APPLICATION FORM",
-	subtitle = "Join us",
-	slogan = "SPACE CUBICS",
 	name_field="お名前"
 	email_field="メールアドレス"
 	role_field="希望する求人"
@@ -49,3 +47,4 @@ FPGAエンジニア |
 	button_label="送信"
 	description = ""
 ) }}
+{% end %}

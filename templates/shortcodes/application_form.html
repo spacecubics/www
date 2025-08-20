@@ -1,86 +1,68 @@
-<div class="application-form">
-	<div class="application-form-left">
-		{% if title %}
-			<h2 class="application-form__title">{{ title }}</h2>
-		{% endif %}
-		{% if subtitle %}
-			<p class="application-form__subtitle">{{ subtitle }}</p>
-		{% endif %}
-		{% if slogan %}
-			<p class="application-form__slogan">{{ slogan }}</p>
-		{% endif %}
-		<div class="application-form__divider"></div>
-		{% if description %}
-			<p class="application-form__description">{{ description | safe }}</p>
-		{% endif %}
-	</div>
+<div class="application-form-right">
+	<section class="z-contact-form">
+		<div class="z-contact-form__header">
+			{% if form_title %}
+			<h2 class="z-contact-form__title">{{ form_title }}</h2>
+			{% endif %}
+			{% if form_subtitle %}
+			<p class="z-contact-form__subtitle">{{ form_subtitle }}</p>
+			{% endif %}
+		</div>
 
-	<div class="application-form-right">
-		<section class="z-contact-form">
-			<div class="z-contact-form__header">
-				{% if form_title %}
-					<h2 class="z-contact-form__title">{{ form_title }}</h2>
-				{% endif %}
-				{% if form_subtitle %}
-					<p class="z-contact-form__subtitle">{{ form_subtitle }}</p>
-				{% endif %}
-			</div>
+		<!-- Form with white border -->
+		<form id="contactForm" class="z-contact-form__form">
+			<p class="z-contact-form__field">
+				<label class="z-contact-form__label">
+					{{ name_field | default(value="Your Name") }}:
+					<input type="text" name="name" required class="z-contact-form__input" />
+				</label>
+			</p>
 
-			<!-- Form with white border -->
-			<form id="contactForm" class="z-contact-form__form">
-				<p class="z-contact-form__field">
-					<label class="z-contact-form__label">
-						{{ name_field | default(value="Your Name") }}:
-						<input type="text" name="name" required class="z-contact-form__input" />
-					</label>
-				</p>
+			<p class="z-contact-form__field">
+				<label class="z-contact-form__label">
+					{{ email_field | default(value="Your Email") }}:
+					<input type="email" name="email" required class="z-contact-form__input" />
+				</label>
+			</p>
 
-				<p class="z-contact-form__field">
-					<label class="z-contact-form__label">
-						{{ email_field | default(value="Your Email") }}:
-						<input type="email" name="email" required class="z-contact-form__input" />
-					</label>
-				</p>
+			<p class="z-contact-form__field" style="display: none;">
+				<label class="z-contact-form__label">
+					Leave this field empty:
+					<input type="text" name="website" tabindex="-1" autocomplete="off" />
+				</label>
+			</p>
 
-				<p class="z-contact-form__field" style="display: none;">
-					<label class="z-contact-form__label">
-						Leave this field empty:
-						<input type="text" name="website" tabindex="-1" autocomplete="off" />
-					</label>
-				</p>
+			<p class="z-contact-form__field">
+				<label class="z-contact-form__label">
+					{{ role_field | default(value="Desired Role") }}:
+					<textarea name="role" required class="z-contact-form__textarea"></textarea>
+				</label>
+			</p>
 
-				<p class="z-contact-form__field">
-					<label class="z-contact-form__label">
-						{{ role_field | default(value="Desired Role") }}:
-						<textarea name="role" required class="z-contact-form__textarea"></textarea>
-					</label>
-				</p>
+			<p class="z-contact-form__field">
+				<label class="z-contact-form__label">
+					{{ message_field | default(value="Message") }}:
+					<textarea name="message" required class="z-contact-form__textarea"></textarea>
+				</label>
+			</p>
 
-				<p class="z-contact-form__field">
-					<label class="z-contact-form__label">
-						{{ message_field | default(value="Message") }}:
-						<textarea name="message" required class="z-contact-form__textarea"></textarea>
-					</label>
-				</p>
+			<p class="z-contact-form__field">
+				<button type="submit" class="z-contact-form__button" disabled id="submitBtn">
+					{{ button_label | default(value="Send") }}
+				</button>
+			</p>
+		</form>
 
-				<p class="z-contact-form__field">
-					<button type="submit" class="z-contact-form__button" disabled id="submitBtn">
-						{{ button_label | default(value="Send") }}
-					</button>
-				</p>
-			</form>
-
-			<!-- Turnstile box outside the border -->
-			<div class="z-contact-form__turnstile-wrapper">
-				<div
-					class="cf-turnstile"
-					data-sitekey="{{ get_env(name="CAPTCHA_SITE_KEY", default="")  }}"
-					data-callback="onTurnstileSuccess"
-					data-theme="light"
+		<!-- Turnstile box outside the border -->
+		<div class="z-contact-form__turnstile-wrapper">
+			<div
+				class="cf-turnstile"
+				data-sitekey="{{ get_env(name="CAPTCHA_SITE_KEY", default="")  }}"
+				data-callback="onTurnstileSuccess"
+				data-theme="light"
 				></div>
-			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </div>
 
 <!-- Scripts -->
