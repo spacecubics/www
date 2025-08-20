@@ -5,6 +5,4 @@ ZOLA_ARCHIVE="https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}
 
 curl -sL "$ZOLA_ARCHIVE" | tar -xz
 
-sed -i "s/CAPTCHA_SITE_KEY_PLACEHOLDER/${CAPTCHA_SITE_KEY}/g" config.toml
-
 ./zola build
