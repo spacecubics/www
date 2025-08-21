@@ -1,6 +1,6 @@
 base_url = "https://spacecubics.com"
 title = "Space Cubics Inc."
-description = "To drink beer on the moon."
+description = "Space Cubicsは、過酷な宇宙環境で使用される宇宙機や人工衛星向けに、高信頼のコンピュータとアビオニクスを設計・開発しています。"
 default_language = "ja"
 
 compile_sass = true
@@ -16,7 +16,7 @@ bottom_footnotes = true
 
 [languages.en]
 title = "Space Cubics, Inc."
-description = "English site"
+description = "Space Cubics designs and develops high-reliability computers and avionics for spacecraft and satellites in the harsh environment of space."
 
 [slugify]
 paths = "off"
