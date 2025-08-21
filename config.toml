@@ -36,7 +36,7 @@ show_feed = true
 show_repo = true
 auto_hide = false
 links = [
-	{ url = "@/about_us.md", name = "About us" },
+	{ url = "@/about-us.md", name = "About us" },
 	{ url = "@/products/_index.md", name = "Products" },
 	{ url = "@/news/_index.md", name = "News" },
 	{ url = "@/investor-relations/_index.md", name = "IR info" },

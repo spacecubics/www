@@ -33,7 +33,7 @@ Space computer modules.
 	slogan="ON THE MOON",
 	img="empty_image.png",
 	alt="",
-	link="@/about_us.md",
+	link="@/about-us.md",
 	link_text="About us",
 	bottom_title=""
 	img_link=""
