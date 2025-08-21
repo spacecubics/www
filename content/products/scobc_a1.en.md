@@ -15,18 +15,18 @@ prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "c
 ) }}
 
 <section id="section-summary">
-	{% hero_element(
-		title="PRODUCT",
-		img="sc-obc_module_a1.png",
-		alt="",
-		link="",
-		link_text="",
-		img_link="",
-		bg="",
-		subtitle="",
-		slogan=""
-	) %}
-	The SC-OBC MODULE A1 board is optimized for use in CubeSats. We use technology cultivated by JAXA for reliable, safe use on the International Space Station. These boards use a Xilinx Artix-7 FPGA, allowing flexible configuration and multiple interface options. Not limited to CubeSats, our boards can also benefit other spacecraft and even terrestrial applications here on Earth.
+
+{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+
+{% product_overview(img="sc-obc_module_a1.png", alt="", title="SC-OBC Module A1", subtitle="Space computer module for ultra-small satellites") %}
+
+The SC-OBC MODULE A1 board is optimized for use in CubeSats. We use
+technology cultivated by JAXA for reliable, safe use on the
+International Space Station. These boards use a Xilinx Artix-7 FPGA,
+allowing flexible configuration and multiple interface options. Not
+limited to CubeSats, our boards can also benefit other spacecraft and
+even terrestrial applications here on Earth.
+
 {% end %}
 
 <section id="section-usage">

@@ -15,19 +15,16 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 ) }}
 
 <section id="section-summary">
-	{% hero_element(
-		title="PRODUCT",
-		img="sc-obc_module_a1.png",
-		alt="",
-		link="",
-		link_text="",
-		img_link="",
-		bg="",
-		subtitle="",
-		slogan=""
-	) %}
-	JAXAが国際宇宙ステーションで培った信頼性設計技術を基にキューブサット用に最適設計した宇宙用コンピュータです。Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数をユーザ毎に柔軟に対応することができます。キューブサット以外の宇宙機や地上の産業用途にも使用可能です。
-	{% end %}
+
+{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+
+{% product_overview(img="sc-obc_module_a1.png", alt="", title="SC-OBC Module A1", subtitle="超小型衛星向け宇宙用コンピュータモジュール") %}
+
+JAXAが国際宇宙ステーションで培った信頼性設計技術を基にキューブサット用に最適設計した宇宙用コンピュータです。
+Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数をユーザ毎に柔軟に対応することができます。
+キューブサット以外の宇宙機や地上の産業用途にも使用可能です。
+
+{% end %}
 
 <section id="section-usage">
 	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
