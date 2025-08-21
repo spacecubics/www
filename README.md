@@ -122,7 +122,6 @@ This repository is organized into only a few main folders...
 ...and some important configuration files such as...
 
 - config.toml
-- netlify.toml
 - wrangler.toml
 - README.md
 
