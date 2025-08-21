@@ -91,7 +91,7 @@ SC-OBC Module A1（以下、「本製品」と表記します）は自社開発�
 {% price_supp(title="インタフェースボード受託開発") %}
 SC-OBC Module A1と衛星を接続するための基板開発を受託します。
 
-詳しくは [お問い合わせフォーム](/contact">) よりお問い合わせください。
+詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
 {% end %}
 
 <section id="section-devkit">
