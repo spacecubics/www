@@ -2,7 +2,7 @@
 title = "Space Cubics Inc."
 
 [extra]
-prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_index.en.md"]
+prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "contact/_index.en.md"]
 +++
 
 {{ splash() }}

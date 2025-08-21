@@ -82,15 +82,15 @@ This repository is organized into only a few main folders...
 - content -- Contains all the website pages
 	```
 	content/
-	├── _index.en.md     # English homepage
-	├── _index.md        # Japanese homepage
-	├── about_us.md      # About us page
-	├── about_us.en.md   # About us English page
-	├── contact/         # Contact forms
-	├── ir_info/         # Investor relations
-	├── news/            # News articles
-	├── products/        # Products section
-	└── recruit/         # Recruitment section
+	├── _index.en.md        # English homepage
+	├── _index.md           # Japanese homepage
+	├── about_us.md         # About us page
+	├── about_us.en.md      # About us English page
+	├── contact/            # Contact forms
+	├── investor-relations/ # Investor relations
+	├── news/               # News articles
+	├── products/           # Products section
+	└── recruit/            # Recruitment section
 	```
 - functions -- Contains JavaScript files used as Cloudflare Workers
 - i18n -- Config files for Japanese and English

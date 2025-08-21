@@ -3,7 +3,7 @@ title = "SC-OBC MODULE A1"
 description = "On-board Computer for Cubesat"
 
 [extra]
-prefooter_cards = ["recruit/_index.en.md", "ir_info/_index.en.md", "contact/_index.en.md"]
+prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "contact/_index.en.md"]
 +++
 
 {{ quick_jump(
