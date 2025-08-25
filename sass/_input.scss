@@ -69,7 +69,6 @@ input[type="checkbox"] {
 	border-radius: calc(var(--rounded-corner-small) / 2);
 
 	&::before {
-		-webkit-mask-image: var(--icon-checkmark);
 		transform-origin: bottom left;
 		mask-image: var(--icon-checkmark);
 		mask-size: cover;

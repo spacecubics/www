@@ -235,7 +235,6 @@ details summary::-webkit-details-marker {
 
 details summary::before {
 	mask-image: var(--icon-down);
-	-webkit-mask-image: var(--icon-down);
 	display: inline-block;
 	vertical-align: -0.125em;
 	transition: var(--transition);
