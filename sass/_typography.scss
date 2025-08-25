@@ -126,16 +126,7 @@ progress:indeterminate::-moz-progress-bar {
 	background-color: transparent;
 }
 
-progress::-webkit-progress-bar {
-	background-color: transparent;
-}
-
 progress::-moz-progress-bar {
-	border-radius: 999px;
-	background-color: var(--accent-color);
-}
-
-progress::-webkit-progress-value {
 	border-radius: 999px;
 	background-color: var(--accent-color);
 }
@@ -226,11 +217,6 @@ details summary {
 	font-weight: bold;
 	line-height: 1;
 	list-style: none;
-}
-
-details summary::marker,
-details summary::-webkit-details-marker {
-	display: none;
 }
 
 details summary::before {
