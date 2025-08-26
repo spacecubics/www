@@ -2,3 +2,7 @@ public/
 zola
 .wrangler/
 node_modules/
+
+# Playwright
+/test-results/
+/playwright-report/
