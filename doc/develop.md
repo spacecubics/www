@@ -147,6 +147,30 @@ Required for contact form functionality:
 - `CAPTCHA_SECRET_KEY`: Cloudflare Turnstile secret
 - `SLACK_WEBHOOK`: Slack webhook URL for notifications
 
+## Playwright Integration
+We use [Playwright](https://playwright.dev/) for CI testing.
+
+#### Configuration
+Playwright is configured via `playwright.config.ts`.
+This file can be expanded to define test variables (URLs), and web server details.
+
+#### How to Use
+- `npx playwright test` - Run all tests in `tests/` directory
+- `npx playwright test --update-snapshots` - Update reference screenshots
+- `npx playwright show-report /path/to/playwright-report/` - View test results
+
+#### Use with CI
+We use GitHub workflows to automate tests.
+Test results are uploaded as `GitHub Artifacts` for download and analysis.
+- First, download and unzip the artifact.
+- Second, confirm both `playwright-report/` and `test-results/` are present.
+- Third, view test results by `npx playwright show-report /path/to/playwright-report/`.
+
+#### Writing Tests
+Tests are located in the `tests/` directory and use Playwright's testing framework:
+- Use `.spec.ts` extension when creating new test files
+- Workflow file `visual-regression-test.yml` currently triggers `tests/visual-regression-test.spec.ts`
+
 ## Troubleshooting
 ### Following Tera Rules
 Some common programming syntax is not supported by Tera.
