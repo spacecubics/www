@@ -1,0 +1,96 @@
+name: Visual Regression Test
+
+on:
+  pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ZOLA_VERSION: "0.21.0"
+      ZOLA_BIN: ${{ github.workspace }}/zola
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install Node.js packages
+        run: npm install
+
+      - name: Install Zola ${{ env.ZOLA_VERSION }}
+        run: |
+          curl -sL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz
+          $ZOLA_BIN --version
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Checkout base commit
+        run: git checkout ${{ github.event.pull_request.base.sha }}
+
+      - name: Copy test files to base branch
+        run: |
+          git checkout ${{ github.event.pull_request.head.sha }} -- tests/ playwright.config.ts
+
+      - name: Update base_url for testing
+        run: |
+          sed -i 's|base_url = "https://spacecubics\.com"|base_url = "http://127.0.0.1:1111"|' config.toml
+
+      - name: Build base site
+        run: |
+          "$ZOLA_BIN" build
+
+      - name: Start base server
+        run: |
+          python3 -m http.server 1111 --bind 127.0.0.1 --directory public &
+
+      - name: Generate base snapshots
+        run: |
+          npx @playwright/test test tests/visual-regression-test.spec.ts --update-snapshots
+
+      - name: Stop base server
+        run: pkill -f "python3 -m http.server"
+
+      - name: Stash snapshots
+        run: git stash push -u tests/visual-regression-test.spec.ts-snapshots/
+
+      - name: Checkout PR head
+        run: git checkout ${{ github.event.pull_request.head.sha }}
+
+      - name: Restore base snapshots
+        run: git stash pop
+
+      - name: Update base_url for testing
+        run: |
+          sed -i 's|base_url = "https://spacecubics\.com"|base_url = "http://127.0.0.1:1111"|' config.toml
+
+      - name: Build PR site
+        run: |
+          "$ZOLA_BIN" build
+
+      - name: Start PR server
+        run: |
+          python3 -m http.server 1111 --bind 127.0.0.1 --directory public &
+
+      - name: Run visual regression test
+        run: npx @playwright/test test tests/visual-regression-test.spec.ts
+        continue-on-error: true
+
+      - name: Stop PR server
+        run: pkill -f "python3 -m http.server"
+
+      - name: Upload PR run results
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-run-results
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 30
