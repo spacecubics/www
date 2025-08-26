@@ -122,15 +122,6 @@ progress:indeterminate {
 	background-color: var(--fg-muted-1);
 }
 
-progress:indeterminate::-moz-progress-bar {
-	background-color: transparent;
-}
-
-progress::-moz-progress-bar {
-	border-radius: 999px;
-	background-color: var(--accent-color);
-}
-
 kbd {
 	display: inline-block;
 	transition: var(--transition);

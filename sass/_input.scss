@@ -141,11 +141,6 @@ input[type="color"] {
 	padding: 0.25rem;
 	width: 3rem;
 	height: 2rem;
-
-	&::-moz-color-swatch {
-		border: none;
-		border-radius: calc(var(--rounded-corner-small) - 0.25rem);
-	}
 }
 
 input[type="range"] {
@@ -157,21 +152,4 @@ input[type="range"] {
 	background: var(--accent-color);
 	width: 100%;
 	height: 0.5rem;
-
-	&::-moz-range-thumb {
-		appearance: none;
-		transition: var(--transition);
-		cursor: grab;
-		box-shadow: var(--shadow);
-		border: none;
-		border-radius: 999px;
-		background-color: white;
-		width: 1.5rem;
-		height: 1.5rem;
-
-		&:active {
-			transform: var(--active);
-			cursor: grabbing;
-		}
-	}
 }

@@ -142,47 +142,6 @@
 	margin: 0;
 }
 
-//
-// Remove the inner border and padding of focus outlines in Firefox.
-//
-
-:where(
-		button,
-		input:is(
-				[type="button" i],
-				[type="color" i],
-				[type="reset" i],
-				[type="submit" i]
-			)
-	)::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-//
-// Restore the focus outline styles unset by the previous rule in Firefox.
-//
-
-:where(
-		button,
-		input:is(
-				[type="button" i],
-				[type="color" i],
-				[type="reset" i],
-				[type="submit" i]
-			)
-	)::-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-//
-// Remove the additional :invalid styles in Firefox.
-//
-
-:where(:-moz-ui-invalid) {
-	box-shadow: none;
-}
-
 // Interactive
 // ==========================================================================
 
@@ -198,9 +157,7 @@
 	border: solid;
 	background-color: white;
 	padding: 1em;
-	width: -moz-fit-content;
 	width: fit-content;
-	height: -moz-fit-content;
 	height: fit-content;
 	color: black;
 }
