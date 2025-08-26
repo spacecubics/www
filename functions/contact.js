@@ -2,7 +2,7 @@ export const onRequestPost = async ({ request, env }) => {
 	try {
 		// Read and parse incoming JSON request
 		const body = await request.json();
-		const { name, email, role, message, website, captcha } = body;
+		const { name, email, role, message, website, captcha, form_id } = body;
 
 		// Honeypot anti-spam check
 		if (website && website.trim() !== "") {
