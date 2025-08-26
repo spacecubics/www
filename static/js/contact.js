@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const form = document.getElementById("contactForm");
+	const form = document.getElementById("contactForm") || document.getElementById("recruitForm");
 	const submitBtn = document.getElementById("submitBtn");
+
+		// Check if form exists
+	if (!form) {
+		console.warn("Contact form not found on this page");
+		return;
+	}
 
 	let captchaToken = null;
 
