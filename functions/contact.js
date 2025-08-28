@@ -44,9 +44,13 @@ export const onRequestPost = async ({ request, env }) => {
 			};
 		}
 
-		const slackWebhook = env.SLACK_WEBHOOK_CONTACT;
+		// Choose webhook based on form type
+		const slackWebhook = form_id === "recruitForm"
+			? env.SLACK_WEBHOOK_RECRUIT
+			: env.SLACK_WEBHOOK_CONTACT;
+
 		if (!slackWebhook) {
-			return new Response("Missing Slack webhook", { status: 500 });
+			return new Response(`Missing Slack webhook for ${form_id}`, { status: 500 });
 		}
 
 		const slackRes = await fetch(slackWebhook, {
