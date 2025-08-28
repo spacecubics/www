@@ -44,7 +44,7 @@ export const onRequestPost = async ({ request, env }) => {
 			};
 		}
 
-		const slackWebhook = env.SLACK_WEBHOOK;
+		const slackWebhook = env.SLACK_WEBHOOK_CONTACT;
 		if (!slackWebhook) {
 			return new Response("Missing Slack webhook", { status: 500 });
 		}

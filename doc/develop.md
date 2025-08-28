@@ -145,7 +145,7 @@ zola build && wrangler pages dev public
 ### Environment Variables
 Required for contact form functionality:
 - `CAPTCHA_SECRET_KEY`: Cloudflare Turnstile secret
-- `SLACK_WEBHOOK`: Slack webhook URL for notifications
+- `SLACK_WEBHOOK_CONTACT`: Slack webhook URL for notifications
 
 ## Troubleshooting
 ### Following Tera Rules
