@@ -48,7 +48,7 @@ Systems Engineer |
 {% end %}
 
 {% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
-{{ application_form(
+{{ recruit_form(
 	name_field="Name"
 	email_field="Email adress"
 	role_field="Desired position"

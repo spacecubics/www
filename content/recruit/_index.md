@@ -39,7 +39,7 @@ FPGAエンジニア |
 {% end %}
 
 {% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
-{{ application_form(
+{{ recruit_form(
 	name_field="お名前"
 	email_field="メールアドレス"
 	role_field="希望する求人"
