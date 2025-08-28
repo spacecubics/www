@@ -2,7 +2,7 @@ export const onRequestPost = async ({ request, env }) => {
 	try {
 		// Read and parse incoming JSON request
 		const body = await request.json();
-		const { name, email, role, message, website, captcha } = body;
+		const { form_id, name, email, role, message, website, captcha } = body;
 
 		// Honeypot anti-spam check
 		if (website && website.trim() !== "") {
@@ -33,11 +33,16 @@ export const onRequestPost = async ({ request, env }) => {
 
 		const verifyJson = await verifyRes.json();
 
-
-		// Prepare Slack message
-		const slackMessage = {
-			text: `📬 *New Contact Form Submission:*\n*Name:* ${name}\n*Email:* ${email}\n*Role:* ${Array.isArray(role) ? role.join(", ") : role}\n*Message:* ${message}`,
-		};
+		let slackMessage;
+		if (form_id === "recruitForm") {
+			slackMessage = {
+				text: `*New Application:*\n*Name:* ${name}\n*Email:* ${email}\n*Desired Role:* ${role}\n*Message:* ${message}`,
+			};
+		} else {
+			slackMessage = {
+				text: `*New Contact:*\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`,
+			};
+		}
 
 		const slackWebhook = env.SLACK_WEBHOOK;
 		if (!slackWebhook) {

@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const form = document.getElementById("contactForm");
+	const form = document.getElementById("contactForm") || document.getElementById("recruitForm");
 	const submitBtn = document.getElementById("submitBtn");
+
+	if (!form) {
+		console.error("No form found with ID 'contactForm' or 'recruitForm'");
+		return;
+	}
 
 	let captchaToken = null;
 
@@ -25,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const formData = new FormData(form);
 
 		const payload = {
+			form_id: form.id,
 			name: formData.get("name"),
 			email: formData.get("email"),
 			role: formData.get("role"),
