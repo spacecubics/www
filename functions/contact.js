@@ -15,11 +15,18 @@ export const onRequestPost = async ({ request, env }) => {
 		}
 
 		// Validate Turnstile CAPTCHA
-		const secretKey = env.CAPTCHA_SECRET_KEY;
+		const captchaSecretKey = form_id === "recruitForm"
+			? env.CAPTCHA_SECRET_KEY_RECRUIT
+			: env.CAPTCHA_SECRET_KEY_CONTACT;
+
+		if (!captchaSecretKey) {
+			return new Response(`Missing CAPTCHA secret key for ${form_id}`, { status: 500 });
+		}
+
 		const remoteIp = request.headers.get("CF-Connecting-IP") || "";
 
 		const formData = new FormData();
-		formData.append("secret", secretKey);
+		formData.append("secret", captchaSecretKey);
 		formData.append("response", captcha);
 		formData.append("remoteip", remoteIp);
 
