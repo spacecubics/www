@@ -52,6 +52,16 @@ one in the `date` variable. We haven’t been able to remove the
 redundant `date` field due to a limitation in Zola. See issue #114 for
 details.
 
+If you need a line break, do not use two trailing spaces at the end of
+a line, because they are very hard to notice and, as programmers, we
+are not used to writing any trailing whitespace. Please use an
+explicit `<br>` tag for line breaks.
+
+    ```
+    These lines<br>
+    should be two lines.
+    ```
+
 ### Linking to Local Pages
 
 A link to a local page must include the `@/` prefix.
