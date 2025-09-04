@@ -50,7 +50,7 @@ jobs:
 
       - name: Generate base snapshots
         run: |
-          npx @playwright/test test tests/visual-regression-test.spec.ts --update-snapshots
+          npx playwright test tests/visual-regression-test.spec.ts --update-snapshots
 
       - name: Stop base server
         run: pkill -f "python3 -m http.server"
@@ -73,7 +73,7 @@ jobs:
           python3 -m http.server 1111 --bind 127.0.0.1 --directory public &
 
       - name: Run visual regression test
-        run: npx @playwright/test test tests/visual-regression-test.spec.ts
+        run: npx playwright test tests/visual-regression-test.spec.ts
         continue-on-error: true
 
       - name: Stop PR server
