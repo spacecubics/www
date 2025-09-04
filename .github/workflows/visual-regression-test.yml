@@ -25,12 +25,12 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install Node.js packages
+      - name: Install Playwright test runner
         run: |
           npm install
           npm ls
 
-      - name: Install Playwright
+      - name: Install Playwright browser modules and dependecies
         run: npx playwright install --with-deps
 
       - name: Checkout base commit
