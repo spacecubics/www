@@ -39,13 +39,9 @@ jobs:
         run: |
           git checkout ${{ github.event.pull_request.head.sha }} -- tests/ playwright.config.ts
 
-      - name: Update base_url for testing
-        run: |
-          sed -i 's|base_url = "https://spacecubics\.com"|base_url = "http://127.0.0.1:1111"|' config.toml
-
       - name: Build base site
         run: |
-          "$ZOLA_BIN" build
+          "$ZOLA_BIN" build --base-url "http://127.0.0.1:1111"
 
       - name: Start base server
         run: |
@@ -67,13 +63,9 @@ jobs:
       - name: Restore base snapshots
         run: git stash pop
 
-      - name: Update base_url for testing
-        run: |
-          sed -i 's|base_url = "https://spacecubics\.com"|base_url = "http://127.0.0.1:1111"|' config.toml
-
       - name: Build PR site
         run: |
-          "$ZOLA_BIN" build
+          "$ZOLA_BIN" build --base-url "http://127.0.0.1:1111"
 
       - name: Start PR server
         run: |
