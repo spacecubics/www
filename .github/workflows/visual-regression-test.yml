@@ -36,7 +36,7 @@ jobs:
       - name: Checkout base commit
         run: git checkout ${{ github.event.pull_request.base.sha }}
 
-      - name: Copy test files to base branch
+      - name: Get copies of test files from the PR to base branch
         run: |
           git checkout ${{ github.event.pull_request.head.sha }} -- tests/ playwright.config.ts
 
