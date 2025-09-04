@@ -16,18 +16,20 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
+      - name: Install Zola ${{ env.ZOLA_VERSION }}
+        run: |
+          curl -sL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz
+          $ZOLA_BIN --version
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
       - name: Install Node.js packages
-        run: npm install
-
-      - name: Install Zola ${{ env.ZOLA_VERSION }}
         run: |
-          curl -sL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz
-          $ZOLA_BIN --version
+          npm install
+          npm ls
 
       - name: Install Playwright
         run: npx playwright install --with-deps
