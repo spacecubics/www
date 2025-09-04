@@ -10,10 +10,9 @@ jobs:
       ZOLA_VERSION: "0.21.0"
       ZOLA_BIN: ${{ github.workspace }}/zola
     steps:
-      - name: Checkout PR branch
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Install Zola ${{ env.ZOLA_VERSION }}
