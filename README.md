@@ -143,7 +143,7 @@ This repository is organized into only a few main folders...
 
 ## 🔧 Development
 
-See `doc/develop.md`.
+See [develop.md](doc/develop.md).
 
 ## 🆘 Helpful Documentation
 - [Zola](https://www.getzola.org/documentation/)
