@@ -91,44 +91,44 @@ language.
 This repository is organized into only a few main folders...
 
 - content -- Contains all the website pages
-	```
-	content/
-	├── _index.en.md        # English homepage
-	├── _index.md           # Japanese homepage
-	├── about-us.md         # About us page
-	├── about-us.en.md      # About us English page
-	├── contact/            # Contact forms
-	├── investor-relations/ # Investor relations
-	├── news/               # News articles
-	├── products/           # Products section
-	└── recruit/            # Recruitment section
-	```
+  ```
+  content/
+  |-- _index.en.md           # English homepage
+  |-- _index.md              # Japanese homepage
+  |-- about-us.md            # About us page
+  |-- about-us.en.md         # About us English page
+  |-- contact/               # Contact forms
+  |-- investor-relations/    # Investor relations
+  |-- news/                  # News articles
+  |-- products/              # Products section
+  `-- recruit/               # Recruitment section
+  ```
 - functions -- Contains JavaScript files used as Cloudflare Workers
 - i18n -- Config files for Japanese and English
 - sass -- Visual style files
 - templates -- Contains HTML files
-	```
-	templates/
-	├── base.html                    # Main layout for site
-	├── article.html                 # News article template (not currently used)
-	├── macros/                      # Other globally available template functions
-	├── partials/                    # Reusable page sections
-	│   ├── footer.html              # Site footer
-	│   └── nav.html                 # Site navigation header
-	└── shortcodes/                  # Custom components
-		├── spec_sheet.html          # Production specification component
-		└── kv_list.html			 # Displays key-value set of text
-	```
+  ```
+  templates/
+  |-- base.html              # Main layout for site
+  |-- article.html           # News article template (not currently used)
+  |-- macros/                # Other globally available template functions
+  |-- partials/              # Reusable page sections
+  |   |-- footer.html        # Site footer
+  |   `-- nav.html           # Site navigation header
+  `-- shortcodes/            # Custom components
+    |-- spec_sheet.html      # Production specification component
+    `-- kv_list.html         # Displays key-value set of text
+  ```
 - static -- Contains site images and client-side JavaScript
-	```
-	static/
-	├── js/                       # JavaScript that runs in the user's web browser
-	│   ├── nav-toggle.js         # Navigation menu functionality
-	│   └── nav-links.js          # Navigation link handling
-	├── logo_black.webp
-	├── logo_white.webp
-	└── sc-obc_module_a1.jpg
-	```
+  ```
+  static/
+  |-- js/                    # JavaScript that runs in the user's web browser
+  |   |-- nav-toggle.js      # Navigation menu functionality
+  |   `-- nav-links.js       # Navigation link handling
+  |-- logo_black.webp
+  |-- logo_white.webp
+  `-- sc-obc_module_a1.jpg
+  ```
 
 ...and some important configuration files such as...
 
