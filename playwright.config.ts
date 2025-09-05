@@ -7,6 +7,11 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
   },
+  webServer: {
+    command: 'http-server -p 1111 ./public',
+    url: 'http://localhost:1111',
+    reuseExistingServer: !process.env.CI,
+  },
   projects: [
     {
       name: 'chromium',
