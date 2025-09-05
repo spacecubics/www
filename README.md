@@ -63,6 +63,11 @@ explicit `<br>` tag for line breaks.
     should be two lines.
     ```
 
+On news pages, we use an `<h1>` tag outside the article, so the news
+title itself is an `<h2>`. This means you should only use level-3 or
+lower headers within the article. In other words, start from `###` or
+deeper for your section headings.
+
 ### Linking to Local Pages
 
 A link to a local page must include the `@/` prefix.
