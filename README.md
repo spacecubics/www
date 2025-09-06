@@ -50,7 +50,9 @@ zola serve
 
 As shown above, there are two date values: one in the file name and
 one in the `date` variable. We haven’t been able to remove the
-redundant `date` field due to a limitation in Zola. See issue #114 for
+redundant `date` field due to a limitation in Zola. A fix is already
+in Zola, but we need to wait for the next release, v0.22.0.  See
+[issue #114](https://github.com/spacecubics/www/issues/114) for
 details.
 
 If you need a line break, do not use two trailing spaces at the end of
