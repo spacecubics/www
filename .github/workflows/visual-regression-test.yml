@@ -3,6 +3,10 @@ name: Visual Regression Test
 on:
   pull_request
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
