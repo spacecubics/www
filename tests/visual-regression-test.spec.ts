@@ -4,61 +4,61 @@ test.describe('Visual Regression Tests', () => {
   test('homepage comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('homepage.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('about page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/about-us/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('about-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('products page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/products/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('products-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('news page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/news/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('news-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('investor relations page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/investor-relations/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('investor-relations-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('recruit page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/recruit/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('recruit-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('contact page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/contact/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('contact-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('software engineer job page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/recruit/software_engineer/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('software-engineer-job-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('scobc a1 product page comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/products/scobc_a1/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('scobc-a1-product-page.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('individual news article comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/news/2025-08-08/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('news-article-page.png');
+    await expect(page).toHaveScreenshot();
   });
 });
 
@@ -68,19 +68,19 @@ test.describe('Mobile Visual Comparison Tests', () => {
   test('homepage mobile comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('homepage-mobile.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('about page mobile comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/about-us/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('about-page-mobile.png');
+    await expect(page).toHaveScreenshot();
   });
 
   test('products page mobile comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/products/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot('products-page-mobile.png');
+    await expect(page).toHaveScreenshot();
   });
 });
 
@@ -89,14 +89,14 @@ test.describe('Component Visual Tests', () => {
     await page.goto('http://127.0.0.1:1111/');
     await page.waitForLoadState('load');
     const header = page.locator('nav, header, .nav, .header').first();
-    await expect(header).toHaveScreenshot('navigation-header.png');
+    await expect(header).toHaveScreenshot();
   });
 
   test('footer comparison', async ({ page }) => {
     await page.goto('http://127.0.0.1:1111/');
     await page.waitForLoadState('load');
     const footer = page.locator('footer, .footer').first();
-    await expect(footer).toHaveScreenshot('footer.png');
+    await expect(footer).toHaveScreenshot();
   });
 
   test('mobile navigation comparison', async ({ page }) => {
@@ -104,7 +104,7 @@ test.describe('Component Visual Tests', () => {
     await page.goto('http://127.0.0.1:1111/');
     await page.waitForLoadState('load');
     const mobileNav = page.locator('nav, header, .nav, .header').first();
-    await expect(mobileNav).toHaveScreenshot('mobile-navigation.png');
+    await expect(mobileNav).toHaveScreenshot();
   });
 
   test('mobile navigation expanded', async ({ page }) => {
@@ -116,7 +116,7 @@ test.describe('Component Visual Tests', () => {
     if (await menuToggle.isVisible()) {
       await menuToggle.click();
       const expandedNav = page.locator('nav, header, .nav, .header').first();
-      await expect(expandedNav).toHaveScreenshot('mobile-navigation-expanded.png');
+      await expect(expandedNav).toHaveScreenshot();
     }
   });
 });
