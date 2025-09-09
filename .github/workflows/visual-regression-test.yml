@@ -6,6 +6,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      vrt_failed: ${{ steps.vrt-test.outcome == 'failure' }}
     env:
       ZOLA_VERSION: "0.21.0"
       ZOLA_BIN: ${{ github.workspace }}/zola
@@ -88,14 +92,23 @@ jobs:
             playwright-report/
           retention-days: 30
 
-      - name: Comment on PR if test failed
-        if: steps.vrt-test.outcome == 'failure'
+  comment:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.event.pull_request.head.repo.fork == false
+    steps:
+      - name: Comment VRT result
         uses: actions/github-script@v7
         with:
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            const status = "${{ needs.test.outputs.vrt_failed }}" === "true"
+              ? "⚠️ **VRT detected visual changes**"
+              : "✅ **VRT passed with no visual differences**"
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '⚠️ **VRT Failure**\n\nDownload the CI artifact to view details.'
+              issue_number: context.issue.number,
+              body: `${status}\n\nDownload the CI artifact to view details.`
             })
