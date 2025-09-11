@@ -148,7 +148,8 @@ Required for contact form functionality:
 - `SLACK_WEBHOOK`: Slack webhook URL for notifications
 
 ## Playwright Integration
-We use [Playwright](https://playwright.dev/) for CI testing.
+We use [Playwright](https://playwright.dev/) for Visual Regression
+Test (VRT).
 
 #### Configuration
 Playwright is configured via `playwright.config.ts`.
@@ -158,6 +159,9 @@ This file can be expanded to define test variables (URLs), and web server detail
 - `npx playwright test` - Run all tests in `tests/` directory
 - `npx playwright test --update-snapshots` - Update reference screenshots
 - `npx playwright show-report /path/to/playwright-report/` - View test results
+
+We do not keep reference screenshots in the repository. Therefore, you
+need to generate them first before running the actual tests.
 
 #### Use with CI
 We use GitHub workflows to automate tests.
