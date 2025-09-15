@@ -1,6 +1,8 @@
 +++
 title = "RECRUIT"
 description = "採用情報"
+template = "recruit_section.html"
+page_template = "job_post.html"
 
 [extra]
 background_image = "earth.jpg"
@@ -19,28 +21,4 @@ Space Cubicsは、宇宙とコンピューターの仕事を通じて出会っ�
 
 今の Space Cubicsはまだまだ小さくて、大きな仕事を自分達だけで完結できる力がありません。コンピューター、通信、推進、構造、熱流体、システムエンジニアリングなど、宇宙機を設計、製造、販売する事に興味がある人、地上で動くコンピューターなど普通すぎてツマラナク感じている人や、色々な理由で思い通りのモノが作ることが出来ていない人は、ご連絡ください。他人の仕事にケチばかり付けて代替案を提案できない人、他人を貶める人は、たとえ優秀でもご遠慮ください。
 
-{% end %}
-
-
-{% twocols(line1="WANTED", line2="Current available", line3="POSITIONS") %}
-{{ jobs_list(
-	jobs = "
-ソフトウェアエンジニア | software_engineer | active
-通信エンジニア |
-FPGAエンジニア |
-ハードウェアエンジニア |
-営業 |
-システムエンジニア |
-") }}
-{% end %}
-
-{% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
-{{ application_form(
-	name_field="お名前"
-	email_field="メールアドレス"
-	role_field="希望する求人"
-	message_field="メッセージを入力してください"
-	button_label="送信"
-	description = ""
-) }}
 {% end %}

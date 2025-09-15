@@ -1,6 +1,8 @@
 +++
 title = "RECRUIT"
 description = "Employment information"
+template = "recruit_section.html"
+page_template = "job_post.html"
 
 [extra]
 background_image = "earth.jpg"
@@ -29,27 +31,4 @@ astrocomputer industry, please reach out to us. But if you don't work
 well in a positive, collaborate environment, then this may not be the
 best place for you.
 
-{% end %}
-
-{% twocols(line1="WANTED", line2="Currently available", line3="POSITIONS") %}
-{{ jobs_list(
-	jobs = "
-Software Engineer | software_engineer | active
-Communications Engineer |
-FPGA Engineer |
-Hardware Engineer |
-Sales |
-Systems Engineer |
-") }}
-{% end %}
-
-{% twocols(line1="APPLICATION FORM", line2="Join us", line3="SPACE CUBICS") %}
-{{ application_form(
-	name_field="Name"
-	email_field="Email adress"
-	role_field="Desired position"
-	message_field="Please enter your message here"
-	button_label="Send"
-	description = ""
-) }}
 {% end %}

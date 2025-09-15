@@ -3,6 +3,9 @@ title = "ソフトウェアエンジニア"
 description = "募集中"
 date = 2025-07-18
 template = "job_post.html"
+
+[extra]
+active = true
 +++
 # 募集中
 ## ソフトウェアエンジニア (Software Engineer)

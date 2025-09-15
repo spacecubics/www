@@ -1,0 +1,24 @@
+<div class="jobs-list-right">
+  <div class="jobs-list-right-content">
+    <div class="jobs-list-grid">
+      {% set active_jobs = section.pages | filter(attribute="extra.active", value=true) %}
+      {% set inactive_jobs  = section.pages | filter(attribute="extra.active", value=false) %}
+      {% set all_jobs = active_jobs | concat(with=inactive_jobs) %}
+      {% for job in all_jobs %}
+      {% set is_active = job.extra.active %}
+      <div class="job-card{% if is_active %} job-card--active{% else %} job-card--inactive{% endif %}">
+        {% if is_active %}
+        <a href="{{ job.permalink }}" class="job-card__link">
+          <h3 class="job-card__title">{{ job.title }}</h3>
+          <div class="job-card__recruiting-label">actively recruiting</div>
+        </a>
+        {% else %}
+        <h3 class="job-card__title">{{ job.title }}</h3>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="jobs-list__bottom-divider"></div>
+  </div>
+</div>

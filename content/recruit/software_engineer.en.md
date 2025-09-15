@@ -3,6 +3,9 @@ title = "Software Engineer"
 description = "Now Hiring"
 date = 2025-07-18
 template = "job_post.html"
+
+[extra]
+active = true
 +++
 # Now Hiring
 ## Software Engineer
