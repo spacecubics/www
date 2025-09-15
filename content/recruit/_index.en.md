@@ -36,13 +36,9 @@ best place for you.
 	jobs = "
 Software Engineer | software_engineer | active
 Communications Engineer |
-Fundraising Manager |
 FPGA Engineer |
 Hardware Engineer |
-Promotion Engineer |
 Sales |
-Structural Engineer |
-Thermal Engineer |
 Systems Engineer |
 ") }}
 {% end %}
