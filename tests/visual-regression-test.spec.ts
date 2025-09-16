@@ -62,7 +62,6 @@ test.describe('Visual Regression Tests', () => {
   });
 
   test('individual news article comparison (complex)', async ({ page }) => {
-    await page.setViewportSize({ width: 1280, height: 2200 });
     await page.goto('/news/2025-09-04/');
     await page.waitForLoadState('load');
     await expect(page).toHaveScreenshot({ fullPage: true });
