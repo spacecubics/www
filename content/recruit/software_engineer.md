@@ -1,6 +1,5 @@
 +++
 title = "ソフトウェアエンジニア"
-description = "募集中"
 date = 2025-07-18
 
 [extra]
