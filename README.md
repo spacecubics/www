@@ -113,6 +113,10 @@ language.
    Content here...
    ```
 
+Note that since the job page uses "RECRUIT" as the H1 and the job
+title as H2, job description files should only use H3:(`###`) or
+smaller for section headings.
+
 ## 🏗️ Project Structure
 
 This repository is organized into only a few main folders...
