@@ -4,68 +4,68 @@ test.describe('Visual Regression Tests', () => {
   test('homepage comparison', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('about page comparison', async ({ page }) => {
     await page.goto('/about-us/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('products page comparison', async ({ page }) => {
     await page.goto('/products/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('news page comparison', async ({ page }) => {
     await page.goto('/news/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('investor relations page comparison', async ({ page }) => {
     await page.goto('/investor-relations/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('recruit page comparison', async ({ page }) => {
     await page.goto('/recruit/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('contact page comparison', async ({ page }) => {
     await page.goto('/contact/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('software engineer job page comparison', async ({ page }) => {
     await page.goto('/recruit/software_engineer/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('scobc a1 product page comparison', async ({ page }) => {
     await page.goto('/products/scobc_a1/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('individual news article comparison (simple)', async ({ page }) => {
     await page.goto('/news/2025-08-08/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('individual news article comparison (complex)', async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 2200 });
     await page.goto('/news/2025-09-04/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot();
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
 
