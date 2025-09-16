@@ -93,7 +93,7 @@ Or, if you are calling one of our shortcodes:
 This ensures the correct link is generated for the page, based on its
 language.
 
-## Add a New Job Position
+## 💻 Add a New Job Position
 1. Create a new file in `content/recruit/`.
    - If you are posting in Japanese, end the file name with `.md`.
    - If you are posting in English, end the file name with `.en.md`.
