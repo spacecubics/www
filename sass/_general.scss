@@ -34,24 +34,28 @@ body {
 .hero-section {
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 // Splash section exception - allow full width background
 .splash {
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 // Banner section exception - allow full width background
 .banner {
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 // Footer exception - allow full width background
 #site-footer {
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
+  overflow-x: hidden;
 }
 
 ::selection {
