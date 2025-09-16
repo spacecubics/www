@@ -93,6 +93,26 @@ Or, if you are calling one of our shortcodes:
 This ensures the correct link is generated for the page, based on its
 language.
 
+## Add a New Job Position
+1. Create a new file in `content/recruit/`.
+   - If you are posting in Japanese, end the file name with `.md`.
+   - If you are posting in English, end the file name with `.en.md`.
+2. The file name can be anything, unlike news articles.
+3. Add a title in the front matter. The title will appear on the job card.
+4. Add `active = true` under the `[extra]` section.
+5. Add the job description.
+
+   ```
+   +++
+   title = "Software Engineer"
+
+   [extra]
+   active = true
+   +++
+
+   Content here...
+   ```
+
 ## 🏗️ Project Structure
 
 This repository is organized into only a few main folders...
