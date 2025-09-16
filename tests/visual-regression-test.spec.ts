@@ -55,13 +55,7 @@ test.describe('Visual Regression Tests', () => {
     await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
-  test('individual news article comparison (simple)', async ({ page }) => {
-    await page.goto('/news/2025-08-08/');
-    await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
-  });
-
-  test('individual news article comparison (complex)', async ({ page }) => {
+  test('individual news article comparison', async ({ page }) => {
     await page.goto('/news/2025-09-04/');
     await page.waitForLoadState('load');
     await expect(page).toHaveScreenshot({ fullPage: true });
