@@ -30,11 +30,13 @@ jobs:
           node-version: lts/*
 
       - name: Install Playwright test runner
+        working-directory: test
         run: |
           npm install
           npm ls
 
       - name: Install Playwright browser modules and dependecies
+        working-directory: test
         run: npx playwright install --with-deps
 
       - name: Checkout base commit
@@ -42,13 +44,14 @@ jobs:
 
       - name: Get copies of test files from the PR to base branch
         run: |
-          git checkout ${{ github.event.pull_request.head.sha }} -- tests/ playwright.config.ts
+          git checkout ${{ github.event.pull_request.head.sha }} -- test/
 
       - name: Build base site
         run: |
           "$ZOLA_BIN" build --base-url "http://127.0.0.1:1111"
 
       - name: Generate base snapshots
+        working-directory: test
         run: |
           npx playwright test tests/visual-regression-test.spec.ts --update-snapshots
 
@@ -60,6 +63,7 @@ jobs:
           "$ZOLA_BIN" build --base-url "http://127.0.0.1:1111"
 
       - name: Run visual regression test
+        working-directory: test
         run: npx playwright test tests/visual-regression-test.spec.ts
         continue-on-error: true
         id: vrt-test
@@ -68,8 +72,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: |
-            test-results/
-            playwright-report/
+            test/test-results/
+            test/playwright-report/
           retention-days: 30
 
   comment:

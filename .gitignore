@@ -1,9 +1,9 @@
 public/
 zola
 .wrangler/
-node_modules/
-package-lock.json
 
 # Playwright
-/test-results/
-/playwright-report/
+test/node_modules/
+test/package-lock.json
+test/test-results/
+test/playwright-report/

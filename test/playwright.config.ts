@@ -14,7 +14,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: `http-server -p ${PORT} ./public`,
+    command: `http-server -p ${PORT} ../public`,
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
   },

@@ -152,11 +152,14 @@ We use [Playwright](https://playwright.dev/) for Visual Regression
 Test (VRT).
 
 #### Configuration
-Playwright is configured via `playwright.config.ts`.
+Playwright is configured via `test/playwright.config.ts`.
 This file can be expanded to define test variables (URLs), and web server details.
 
+All Playwright related files are under `test/` directory. `cd test` to
+run the following commands.
+
 #### How to Use
-- `npx playwright test` - Run all tests in `tests/` directory
+- `npx playwright test` - Run all tests in `test/tests/` directory
 - `npx playwright test --update-snapshots` - Update reference screenshots
 - `npx playwright show-report /path/to/playwright-report/` - View test results
 
