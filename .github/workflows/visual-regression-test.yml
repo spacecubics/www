@@ -52,14 +52,8 @@ jobs:
         run: |
           npx playwright test tests/visual-regression-test.spec.ts --update-snapshots
 
-      - name: Stash snapshots
-        run: git stash push -u tests/visual-regression-test.spec.ts-snapshots/
-
       - name: Checkout PR head
         run: git checkout ${{ github.event.pull_request.head.sha }}
-
-      - name: Restore base snapshots
-        run: git stash pop
 
       - name: Build PR site
         run: |
