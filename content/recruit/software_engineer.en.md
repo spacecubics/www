@@ -5,6 +5,29 @@ date = 2025-07-18
 [extra]
 active = true
 +++
+
+### Overview
+
+Space Cubics develops space-grade on-board computers and provides
+reliable software foundations for spacecraft.  As a Software Engineer,
+you will mainly focus on low-level software development such as OS
+layers and device drivers, working on embedded systems with Zephyr
+RTOS and Linux. Your responsibilities will include device driver
+development, setting up development environments (Yocto, Ubuntu,
+Zephyr), and integrating or extending middlewares such as NASA cFS and
+libcsp.
+
+In addition to in-house product development, you will also participate
+in our customers’ spacecraft projects through contract development and
+technical support. Covering the spectrum from low-level layers to
+middleware, this position plays a key role in meeting the diverse
+needs of the space industry.
+
+You will collaborate closely with engineers across and outside the
+team to help build the next generation of space systems.
+
+---
+
 ### Location:
 
 - Head Office (Remote work within Japan only)
