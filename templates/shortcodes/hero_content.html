@@ -1,0 +1,33 @@
+<div class="hero-inner{% if not img or img | length == 0 %} no-image{% endif %}">
+	<div class="hero-content">
+		<div class="hero-text">
+			<p>{{ body | safe }}</p>
+			{% if bottom_title %}
+				<div class="hero-bottom-title">
+					<h2>{{ bottom_title }}</h2>
+				</div>
+			{% endif %}
+			{% if link and link_text %}
+				<div class="link-wrapper">
+					<span class="link-text">{{ link_text }}</span>
+					<a href="{{ get_url(path=link, lang=lang) }}" class="hero-link"></a>
+				</div>
+			{% endif %}
+		</div>
+
+		{% if img and img | length > 0 %}
+			<div class="hero-image-container">
+				{% if img_link %}
+					<a href="{{ img_link }}">
+						<img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
+					</a>
+				{% else %}
+					<img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
+				{% endif %}
+				{% if hero_footer %}
+					<div class="hero-footer">{{ hero_footer | safe }}</div>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</div>
