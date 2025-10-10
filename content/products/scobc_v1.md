@@ -1,0 +1,135 @@
++++
+title = "SC-OBC MODULE V1"
+description = "High-End Space Grade On-board Computer (2026年春発売予定) "
+
+[extra]
+prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact/_index.md"]
++++
+
+{{ quick_jump(
+	title1="Product Overview", id1="section-summary",
+	title2="Use Cases", id2="section-usage",
+	title3="Specifications", id3="section-specs",
+	title4="Dev Kit", id4="section-devkit",
+	title5="Docs / Resources", id5="section-docs"
+) }}
+
+<section id="section-summary">
+
+{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+
+{% product_overview(img="sc-obc_module_v1.png", alt="", title="SC-OBC Module V1", subtitle="New Space向けハイエンドコンピュータモジュール") %}
+
+CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォームコンピューティング (Adaptive SoC)を採用した AMD Versalを搭載する高性能オンボードコンピュータです。光学センサーや SAR・LiDARなどから入力される大容量のセンサーデータに対し、入力処理・ハードウェアアクセサレーションやベクトル演算を伴うエッジ処理、大容量ストレージへの記録を、効率的に実行することができます。
+
+{% end %}
+
+<section id="section-usage">
+	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
+
+- 地球観測用センサ（SAR, LiDAR）の高速データ処理
+- 誘導航法制御（GNC）
+- 地球周回衛星、静止軌道衛星、月周回・着陸・探査ミッション
+
+</section>
+
+<section id="section-specs">
+	{% spec_sheet(
+		bg="",
+		title="SPECS",
+		subtitle="",
+		slogan=""
+	) %}
+
+	1. Main Processor
+
+	Device | AMD Versal AI Edge Series VE2302
+
+	Application Processor | Dual core Arm Cortex-A72 Up to 1.3 GHz (48 KByte/32 KByte L1 Cache w/ parity & ECC, 1 MByte L2 Cache w/ ECC)
+
+	Real-Time Processor | Dual core Arm Cortex-R5F Up to 600 MHz (32 KByte/32 KByte L1 Cache, 256 KByte TCM w/ ECC)
+
+	AI Engine | AI Engine-ML Tile: 34, AIE/AIE-ML Data Memory Mbit: 17, AIE-ML Shared Memory Mbit: 68
+
+	Programmable Logic | System Logic: 328,720, LUTs: 150,272, DSP Engines: 464, Total Block RAM: 5.4 Mbit, UltraRAM: 43,6 Mbit, Accelerator RAM: 32 Mbit
+
+	2. Safety Processor
+
+	Device | Microchip IGLOO2
+
+	3. Memory
+
+	DDR4 | Rad-tolerant DDR4 memory w/ ECC 4 GByte
+
+	Boot Memory | NOR Flash 64 MByte (Redundancy)
+
+	eMMC | 64 GByte
+
+	High Reliability Memory | FRAM 1 MByte × 2
+
+
+	4. Pre-Installed Operating System
+
+	APU | Linux
+
+	RPU | Zephyr RTOS
+
+	5. Board to Board Interface (User IO)
+
+	Versal MIO | Platform Management MIO: 27 signals, Low Power Domain MIO: 26 signals, Selectable Interface: Gigabit EtherMAC, USB2.0 (ULPI), UART, I2C, SPI, GPIO, CAN FD, SD/eMMC
+
+	Versal PL XPIO | 54 signals (VDDIO: 1.0/1.2/1.35/1.5 V)
+
+	Versal GTYP | 40 signals / Clock 4 pair / TX 8 pair / RX 8 pair
+
+	IGLOO2 MSIO | 48 signals (VDDIO 1.2/1.5/1.8/2.5/3.3 V)
+
+	6. Board Health Function
+
+	On-Board Sensor | Temperature Sensor, Current/Voltage Monitor
+
+	Power Management | Over-current detection, Brownout protection
+
+	7. Environmental Characteristics
+
+	Power Supply | DC 5.0 V (20 - 40 W typical)
+
+	Operating Temperature | -40 〜 80 ℃
+
+	Size | 100 mm × 150 mm
+	{% end %}
+
+</section>
+
+{{ section_title(title="PRICE", subtitle="", slogan="") }}
+
+{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="2026年春発売予定") %}
+SC-OBC Module V1は2026年春の発売を予定しています。詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
+{% end %}
+
+<section id="section-devkit">
+	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
+</section>
+
+{{ twocard(
+	title="",
+	subtitle="",
+	left_card_image="under_construction.jpeg",
+	right_card_image="under_construction.jpeg",
+	left_card_title="開発キット",
+	left_card_subtitle="coming soon",
+	right_card_title="オプション品",
+	right_card_subtitle="coming soon",
+	bg=""
+) }}
+
+<section id="section-docs">
+	{% docs_resources(
+		bg="",
+		title="DOCS",
+		subtitle="",
+		slogan=""
+	) %}
+	Coming soon
+	{% end %}
+</section>

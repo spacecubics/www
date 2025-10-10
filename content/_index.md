@@ -14,17 +14,30 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 	slogan="POSSIBLE"
 ) %}
 	{% hero_content(
-		img="sc-obc_module_a1.png",
+
+	{% hero_content(
+		img="sc-obc_module_v1.png",
 		alt="",
 		link="@/products/_index.md",
 		link_text="Details",
 		img_link="",
-		bottom_title="SC-OBC Module A1",
-		hero_footer="PRODUCT 01 <br> Space computer module <br> for CubeSats"
+		bottom_title="SC-OBC Module V1",
+		hero_footer="High-End computer module <br> for New Space"
 	) %}
-	衛星用超小型
-	<br>
-	宇宙用コンピュータモジュール
+	New Space向け ハイエンドコンピュータモジュール
+
+	{% end %}
+
+	{% hero_content(
+		img="sc-obc_module_a1.png",
+		alt="",
+		link="@/products/_index.md#SC-OBC Module A1",
+		link_text="Details",
+		img_link="",
+		bottom_title="SC-OBC Module A1",
+		hero_footer="Space computer module <br> for CubeSats"
+	) %}
+	衛星用超小型 宇宙用コンピュータモジュール
 
 	{% end %}
 {% end %}

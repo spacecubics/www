@@ -11,7 +11,26 @@ these computers function normally.
 +++
 
 {{ product_display(
-	product_id_label="Product 01",
+	product_id_label="",
+	bg="",
+	img="sc-obc_module_v1.png",
+	img_link="",
+	alt="",
+	pre_title="High-End Computer Module for New Space ",
+	title="SC-OBC Module V1",
+	subtitle="High performance, reliable, and versatile.",
+	text1_a="Main Processor",
+	text1_b="AMD Versal AI Edge Series VE2302",
+	text2_a="Safety Processor",
+	text2_b="Microchip IGLOO2",
+	text3_a="Operating System",
+	text3_b="APU: Linux / RPU: Zephyr RTOS",
+	external_resources = [],
+	details_link="@/products/scobc_v1.md"
+) }}
+
+{{ product_display(
+	product_id_label="",
 	bg="",
 	img="sc-obc_module_a1.png",
 	img_link="",
