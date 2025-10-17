@@ -41,16 +41,16 @@
 		</div>
 
 		<div class="product-external">
-			{% set external_labels = [external_1_label, external_2_label, external_3_label, external_4_label] %}
-			{% set external_links = [external_1_link, external_2_link, external_3_link, external_4_link] %}
-			{% for i in range(start=0, end=external_labels | length) %}
-				{% if external_labels[i] and external_links[i] %}
-					<a href="{{ external_links[i] }}" class="external-link" aria-label="{{ external_labels[i] }}">
-						<span class="external-link__pair">
-							<span class="external-link__label">{{ external_labels[i] }}</span>
-							<img src="/cil-external-link.svg" alt="External link" class="external-link__icon" width="16" height="16" />
-						</span>
-					</a>
+			{% for external_resource in external_resources %}
+				{% if external_resource | length == 2 %}
+					{% set  external_label = external_resource[0] %}
+					{% set  external_link = external_resource[1] %}
+						<a href="{{ external_link }}" class="external-link" aria-label="{{ external_label }}">
+							<span class="external-link__pair">
+								<span class="external-link__label">{{ external_label }}</span>
+								<img src="/cil-external-link.svg" alt="External link" class="external-link__icon" width="16" height="16" />
+							</span>
+						</a>
 				{% endif %}
 			{% endfor %}
 		</div>
