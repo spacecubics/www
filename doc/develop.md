@@ -85,7 +85,7 @@ matter.
 prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md"]
 ```
 
-#### HTML heade line
+#### HTML header line
 
 It seems H1 headline tag should be used for once in a page. All
 segment titles should be converted to H2.
