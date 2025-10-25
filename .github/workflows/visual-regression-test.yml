@@ -10,6 +10,7 @@ jobs:
       contents: read
     outputs:
       vrt_failed: ${{ steps.vrt-test.outcome == 'failure' }}
+      vrt_artifact_url: ${{ steps.upload-vrt.outputs.artifact-url }}
     env:
       ZOLA_VERSION: "0.21.0"
       ZOLA_BIN: ${{ github.workspace }}/zola
@@ -69,6 +70,7 @@ jobs:
         id: vrt-test
 
       - name: Upload VRT results
+        id: upload-vrt
         uses: actions/upload-artifact@v4
         with:
           path: |
@@ -90,9 +92,11 @@ jobs:
             const status = "${{ needs.test.outputs.vrt_failed }}" === "true"
               ? "⚠️ **VRT detected visual changes**"
               : "✅ **VRT passed with no visual differences**"
+            const artifactUrl = "${{ needs.test.outputs.vrt_artifact_url }}";
+            const comment = `${status}\n\n[Download the CI artifact to view details.](${artifactUrl})\n`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `${status}\n\nDownload the CI artifact to view details.`
+              body: comment
             })
