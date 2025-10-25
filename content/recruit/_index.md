@@ -3,6 +3,7 @@ title = "RECRUIT"
 description = "採用情報"
 template = "recruit_section.html"
 page_template = "job_post.html"
+sort_by = "date"
 
 [extra]
 background_image = "earth.jpg"
