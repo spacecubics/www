@@ -175,11 +175,42 @@ We do not keep reference screenshots in the repository. Therefore, you
 need to generate them first before running the actual tests.
 
 #### Use with CI
-We use GitHub workflows to automate tests.
-Test results are uploaded as `GitHub Artifacts` for download and analysis.
-- First, download and unzip the artifact.
-- Second, confirm both `playwright-report/` and `test-results/` are present.
-- Third, view test results by `npx playwright show-report /path/to/playwright-report/`.
+
+We run Playwright in GitHub Actions and upload results as
+Artifacts. When a “Visual Regression Test” job fails, download the
+artifact and inspect it locally.
+
+1. **Open the failed run -> Job summary**
+
+   ![Open the failed job’s Summary panel](job.png)
+
+
+2. **Download the artifact**
+
+   In the “vrt summary” card, click **Download VRT artifact**.
+
+   ![Click “Download VRT artifact” in the job summary](summary.png)
+
+3. **Unzip and confirm contents**
+
+   ```
+   unar -o /tmp ~Downloads/artifact.zip
+   ```
+
+   After extracting, you should have:
+   ```
+   ❯ tree -L1 /tmp/artifact/
+   /tmp/artifact
+   |-- playwright-report
+   `-- test-results
+   ```
+
+4. **Open the report locally**
+
+   ```
+   cd www
+   npx playwright show-report /tmp/artifact/playwright-report/
+   ```
 
 #### Writing Tests
 Tests are located in the `tests/` directory and use Playwright's testing framework:
