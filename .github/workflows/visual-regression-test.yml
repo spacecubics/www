@@ -67,9 +67,26 @@ jobs:
 
       - name: Upload VRT results
         if: ${{ always() }}
+        id: upload-vrt
         uses: actions/upload-artifact@v4
         with:
           path: |
             test/test-results/
             test/playwright-report/
           retention-days: 30
+
+      - name: Show artifact URL
+        if: ${{ always() }}
+        run: |
+          echo "Artifact URL: ${{ steps.upload-vrt.outputs.artifact-url }}"
+          tee -a "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## Visual Regression Test Artifacts
+
+          - [Download VRT artifact](${{ steps.upload-vrt.outputs.artifact-url }})
+
+          Once downloaded, unpack it, then run the following command to see the results
+          ```
+          npx playwright show-report ~/Downloads/artifact/playwright-report
+          ```
+          See [`doc/develop.md`](https://github.com/spacecubics/www/blob/main/doc/develop.md) for more details
+          EOF
