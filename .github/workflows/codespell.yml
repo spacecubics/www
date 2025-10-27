@@ -19,4 +19,4 @@ jobs:
 
       - name: Run codespell
         run: |
-          codespell --quiet-level=2
+          codespell --quiet-level=2 -I .codespell-ignore.txt
