@@ -1,7 +1,7 @@
 .segment {
   &__title {
     color: white;
-    font-size: 51px;
+    font-size: var(--font-size-xx-large); // same as h2. see _typography
     font-weight: 900;
     letter-spacing: 2px;
   }
