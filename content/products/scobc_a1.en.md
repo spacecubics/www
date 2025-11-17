@@ -1,22 +1,13 @@
 +++
 title = "SC-OBC MODULE A1"
 description = "On-board Computer for Cubesat"
+template = "product.html"
 
 [extra]
 prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "contact/_index.en.md"]
 +++
 
-{{ quick_jump(
-	title1="Product Overview", id1="section-summary",
-	title2="Use Cases", id2="section-usage",
-	title3="Specifications", id3="section-specs",
-	title4="Dev Kit", id4="section-devkit",
-	title5="Docs / Resources", id5="section-docs"
-) }}
-
-<section id="section-summary">
-
-{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+## OVERVIEW
 
 {% product_overview(img="sc-obc_module_a1.png", alt="", title="SC-OBC Module A1", subtitle="Space computer module for ultra-small satellites") %}
 
@@ -29,9 +20,8 @@ even terrestrial applications here on Earth.
 
 {% end %}
 
-<section id="section-usage">
-	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
-</section>
+
+## USE CASES
 
 {{ twocard(
 	title="",
@@ -49,13 +39,10 @@ even terrestrial applications here on Earth.
 	bg=""
 ) }}
 
-<section id="section-specs">
-	{% spec_sheet(
-		bg="",
-		title="SPECS",
-		subtitle="",
-		slogan=""
-	) %}
+
+## SPECS
+
+{% spec_sheet() %}
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
 	Main CPU | Cortex-M3 / MicroBlaze-V
@@ -74,10 +61,10 @@ even terrestrial applications here on Earth.
 	External Dimensions | 70 x 70 x 9.6 mm
 	FeRAM | 512 KBytes x 2
 	Mass | 130 g
-	{% end %}
-</section>
+{% end %}
 
-{{ section_title(title="PRICE", subtitle="", slogan="") }}
+
+## PRICE
 
 {% price(price_title="SC-OBC Module A1", price_number="300,000", price_unit="JPY (excluding tax)", price_note="*This price is a limited-time offer.") %}
 
@@ -109,9 +96,7 @@ information.
 {% end %}
 
 
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
+## DEV KIT
 
 {{ twocard(
 	title="",
@@ -125,17 +110,13 @@ information.
 	bg=""
 ) }}
 
-<section id="section-docs">
-	{% docs_resources(
-		bg="",
-		title="DOCS",
-		subtitle="",
-		slogan=""
-	) %}
+
+## DOCUMENTS
+
+{% docs_resources() %}
 	Product Manual | This is our specification document for SC-OBC Module A1. It describes communication systems, circuit configurations, and more. | https://spacecubics.github.io/sc-docs/scobc-a1-product-manual/latest/product_manual_en.html
   Software Manual | This document is a step-by-step guide for setting up the development environment, flashing, and running Zephyr-based applications on SC-OBC Module A1. | https://spacecubics.github.io/sc-docs/scobc-a1-software-manual/latest/index.html
 	FPGA Technical Reference Manual | This is the specification document for the FPGA used in SC-OBC Module A1. It describes the FPGA functions and register specifications required for FPGA and software development. | https://spacecubics.github.io/sc-docs/scobc-a1-fpga-technical-reference-manual/latest/index.html
 	Zephyr Info Page | This is the dedicated SC-OBC Module A1 page on the Zephyr Project site. | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
 	GitHub | For other technical information, please refer to our GitHub account. | https://github.com/spacecubics
-	{% end %}
-</section>
+{% end %}

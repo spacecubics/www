@@ -1,22 +1,13 @@
 +++
 title = "SC-OBC MODULE V1"
 description = "High-End Space Grade On-board Computer (2026年春発売予定) "
+template = "product.html"
 
 [extra]
 prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact/_index.md"]
 +++
 
-{{ quick_jump(
-	title1="Product Overview", id1="section-summary",
-	title2="Use Cases", id2="section-usage",
-	title3="Specifications", id3="section-specs",
-	title4="Dev Kit", id4="section-devkit",
-	title5="Docs / Resources", id5="section-docs"
-) }}
-
-<section id="section-summary">
-
-{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+## OVERVIEW
 
 {% product_overview(img="sc-obc_module_v1.png", alt="", title="SC-OBC Module V1", subtitle="New Space向けハイエンドコンピュータモジュール") %}
 
@@ -24,22 +15,17 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 {% end %}
 
-<section id="section-usage">
-	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
+
+## USE CASES
 
 - 地球観測用センサ（SAR, LiDAR）の高速データ処理
 - 誘導航法制御（GNC）
 - 地球周回衛星、静止軌道衛星、月周回・着陸・探査ミッション
 
-</section>
 
-<section id="section-specs">
-	{% spec_sheet(
-		bg="",
-		title="SPECS",
-		subtitle="",
-		slogan=""
-	) %}
+## SPECS
+
+{% spec_sheet() %}
 
 	1. Main Processor
 
@@ -97,19 +83,17 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 	Operating Temperature | -40 〜 80 ℃
 
 	Size | 100 mm × 150 mm
-	{% end %}
 
-</section>
+{% end %}
 
-{{ section_title(title="PRICE", subtitle="", slogan="") }}
+## PRICE
 
 {% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="2026年春発売予定") %}
 SC-OBC Module V1は2026年春の発売を予定しています。詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
 {% end %}
 
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
+
+## DEV KIT
 
 {{ twocard(
 	title="",
@@ -123,13 +107,9 @@ SC-OBC Module V1は2026年春の発売を予定しています。詳しくは [�
 	bg=""
 ) }}
 
-<section id="section-docs">
-	{% docs_resources(
-		bg="",
-		title="DOCS",
-		subtitle="",
-		slogan=""
-	) %}
+
+## DOCUMENTS
+
+{% docs_resources() %}
 	Coming soon
-	{% end %}
-</section>
+{% end %}

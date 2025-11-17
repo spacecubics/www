@@ -1,22 +1,13 @@
 +++
 title = "SC-OBC MODULE A1"
 description = "On-board Computer for Cubesat"
+template = "product.html"
 
 [extra]
 prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact/_index.md"]
 +++
 
-{{ quick_jump(
-	title1="Product Overview", id1="section-summary",
-	title2="Use Cases", id2="section-usage",
-	title3="Specifications", id3="section-specs",
-	title4="Dev Kit", id4="section-devkit",
-	title5="Docs / Resources", id5="section-docs"
-) }}
-
-<section id="section-summary">
-
-{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+## OVERVIEW
 
 {% product_overview(img="sc-obc_module_a1.png", alt="", title="SC-OBC Module A1", subtitle="超小型衛星向け宇宙用コンピュータモジュール") %}
 
@@ -26,9 +17,8 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 
 {% end %}
 
-<section id="section-usage">
-	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
-</section>
+
+## USE CASES
 
 {{ twocard(
 	title="",
@@ -46,13 +36,9 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 	bg=""
 ) }}
 
-<section id="section-specs">
-	{% spec_sheet(
-		bg="",
-		title="SPECS",
-		subtitle="",
-		slogan=""
-	) %}
+## SPECS
+
+{% spec_sheet() %}
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
 	Main CPU | Cortex-M3 / MicroBlaze-V
@@ -71,10 +57,9 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 	External Dimensions | 70 x 70 x 9.6 mm
 	FeRAM | 512 KBytes x 2
 	Mass | 130 g
-	{% end %}
-</section>
+{% end %}
 
-{{ section_title(title="PRICE", subtitle="", slogan="") }}
+## PRICE
 
 {% price(price_title="SC-OBC Module A1", price_number="30", price_unit="万円(税別)", price_note="※本価格は期間限定の特別価格となります。") %}
 SC-OBC Module A1（以下、「本製品」と表記します）は自社開発衛星による宇宙実証を予定しております。本価格は宇宙実証までの期間限定の特別価格となります。特別価格が適用される条件は以下のとおりです。
@@ -91,9 +76,7 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
 {% end %}
 
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
+## DEV KIT
 
 {{ twocard(
 	title="",
@@ -107,13 +90,9 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 	bg=""
 ) }}
 
-<section id="section-docs">
-	{% docs_resources(
-		bg="",
-		title="DOCS",
-		subtitle="",
-		slogan=""
-	) %}
+## DOCUMENTS
+
+{% docs_resources() %}
 	Product Manual | SC-OBC Module A1の仕様、通信系統、回路構成等について記載されています。 | https://spacecubics.github.io/sc-docs/scobc-a1-product-manual/latest/product_manual.html
   Software Manual | SC-OBC Module A1上でZephyrのアプリケーションを開発・フラッシュ・実行するための環境構築および手順をまとめた技術マニュアルです。 | https://spacecubics.github.io/sc-docs/scobc-a1-software-manual/latest/index.html
 	FPGA Technical Reference Manual | SC-OBC Module A1に搭載されているFPGAの仕様書です。FPGAの開発や、ソフトウェアの開発に必要な、FPGA機能に関する仕様やレジスタの仕様が記載されています。 | https://spacecubics.github.io/sc-docs/scobc-a1-fpga-technical-reference-manual/latest/index.html

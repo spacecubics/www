@@ -1,22 +1,13 @@
 +++
 title = "SC-OBC MODULE V1"
 description = "High-End Space Grade On-board Computer (Coming in Spring 2026) "
+template = "product.html"
 
 [extra]
 prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact/_index.md"]
 +++
 
-{{ quick_jump(
-	title1="Product Overview", id1="section-summary",
-	title2="Use Cases", id2="section-usage",
-	title3="Specifications", id3="section-specs",
-	title4="Dev Kit", id4="section-devkit",
-	title5="Docs / Resources", id5="section-docs"
-) }}
-
-<section id="section-summary">
-
-{{ section_title(title="PRODUCT", subtitle="", slogan="") }}
+## OVERVIEW
 
 {% product_overview(img="sc-obc_module_v1.png", alt="", title="SC-OBC Module V1", subtitle="High-End Space Grade On-board Computer for New Space") %}
 
@@ -24,22 +15,17 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 {% end %}
 
-<section id="section-usage">
-	{{ section_title(title="USES CASES", subtitle="", slogan="") }}
 
-- High-Speed Data Processing for Earth Observation Sensors (SAR, LiDAR) 
+## USE CASES
+
+- High-Speed Data Processing for Earth Observation Sensors (SAR, LiDAR)
 - Guidance, Navigation, and Control (GNC)
 - LEO, GEO, and Lunar Missions - Orbit, Lander, Probe
 
-</section>
 
-<section id="section-specs">
-	{% spec_sheet(
-		bg="",
-		title="SPECS",
-		subtitle="",
-		slogan=""
-	) %}
+## SPECS
+
+{% spec_sheet() %}
 
 	1. Main Processor
 
@@ -98,20 +84,17 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 	Size | 100 mm × 150 mm
 
-	{% end %}
+{% end %}
 
-</section>
 
-{{ section_title(title="PRICE", subtitle="", slogan="") }}
+## PRICE
 
 {% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="Coming in Spring 2026") %}
 SC-OBC Module V1 is scheduled for release in spring 2026. Please use our [contact form](/contact) to request more information.
-.
 {% end %}
 
-<section id="section-devkit">
-	{{ section_title(bg="", title="DEV KIT", subtitle="", slogan="") }}
-</section>
+
+## DEV KIT
 
 {{ twocard(
 	title="",
@@ -125,13 +108,9 @@ SC-OBC Module V1 is scheduled for release in spring 2026. Please use our [contac
 	bg=""
 ) }}
 
-<section id="section-docs">
-	{% docs_resources(
-		bg="",
-		title="DOCS",
-		subtitle="",
-		slogan=""
-	) %}
+
+## DOCUMENTS
+
+{% docs_resources() %}
 	Coming soon
-	{% end %}
-</section>
+{% end %}
