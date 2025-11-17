@@ -14,7 +14,10 @@
 	</div>
 </div>
 {% endif %}
-{{- page.content | safe -}}
+
+{% block page_body %}
+	{{ page.content | safe }}
+{% endblock page_body %}
 
 {%- if page.extra.prefooter_cards -%}
 <div class="page">
