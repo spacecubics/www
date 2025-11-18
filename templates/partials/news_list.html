@@ -1,20 +1,28 @@
-{% set title = "NEWS" %}
-{% set subtitle = "お知らせ" %}
-{% set slogan = "" %}
-{% include "partials/segment_title.html" %}
+{# this must match with hero_element #}
+<div class="hero-section">
+  <div id="main-content">
+    <div class="title-block section-title-block">
+      <div class="title-content section-title-content">
+        <h1>NEWS</h1>
+        <div class="title-divider section-title-divider"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-content-wrapper">
+    <div class="news-list-parent">
+      <div class="news-list">
+        <div class="news-list-content">
+          {% set news_section = get_section(path="news/_index.md", lang=lang) %}
+          {% set limit = limit | default(value=5) %}
+          {% set all_news = news_section.pages | slice(end=limit) %}
+          {% include "partials/news_list_block.html" %}
+        </div>
 
-<div class="news-list-parent">
-	<div class="news-list">
-		<div class="news-list-content">
-			{% set news_section = get_section(path="news/_index.md", lang=lang) %}
-			{% set limit = limit | default(value=5) %}
-			{% set all_news = news_section.pages | slice(end=limit) %}
-			{% include "partials/news_list_block.html" %}
-		</div>
-
-		<div class="news-btn-container">
-			<span class="news-btn-text">News</span>
-			<a href="{{ get_url(path="@/news/_index.md", lang=lang) }}" class="circle-btn" aria-label="News link"></a>
-		</div>
-	</div>
+        <div class="news-btn-container">
+          <span class="news-btn-text">News</span>
+          <a href="{{ get_url(path="@/news/_index.md", lang=lang) }}" class="circle-btn" aria-label="News link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
