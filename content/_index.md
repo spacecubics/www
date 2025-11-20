@@ -69,7 +69,7 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 	slogan="SUSTAINABLE GROWTH"
 ) %}
 	{% hero_content(
-		img="partners.png",
+		img="partners.svg",
 		alt="",
 		link="",
 		link_text="",
