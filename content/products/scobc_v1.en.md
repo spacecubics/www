@@ -27,60 +27,60 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 {% spec_sheet() %}
 
-	1. Main Processor
+	** Main Processor
 
-	Device | AMD Versal AI Edge Series VE2302
+	* Device | AMD Versal AI Edge Series VE2302
 
-	Application Processor | Dual core Arm Cortex-A72 Up to 1.3 GHz (48 KByte/32 KByte L1 Cache w/ parity & ECC, 1 MByte L2 Cache w/ ECC)
+	* Application Processor | Dual core Arm Cortex-A72 Up to 1.3 GHz (48 KByte/32 KByte L1 Cache w/ parity & ECC, 1 MByte L2 Cache w/ ECC)
 
-	Real-Time Processor | Dual core Arm Cortex-R5F Up to 600 MHz (32 KByte/32 KByte L1 Cache, 256 KByte TCM w/ ECC)
+	* Real-Time Processor | Dual core Arm Cortex-R5F Up to 600 MHz (32 KByte/32 KByte L1 Cache, 256 KByte TCM w/ ECC)
 
-	AI Engine | AI Engine-ML Tile: 34, AIE/AIE-ML Data Memory Mbit: 17, AIE-ML Shared Memory Mbit: 68
+	* AI Engine | AI Engine-ML Tile: 34, AIE/AIE-ML Data Memory Mbit: 17, AIE-ML Shared Memory Mbit: 68
 
-	Programmable Logic | System Logic: 328,720, LUTs: 150,272, DSP Engines: 464, Total Block RAM: 5.4 Mbit, UltraRAM: 43,6 Mbit, Accelerator RAM: 32 Mbit
+	* Programmable Logic | System Logic: 328,720, LUTs: 150,272, DSP Engines: 464, Total Block RAM: 5.4 Mbit, UltraRAM: 43,6 Mbit, Accelerator RAM: 32 Mbit
 
-	2. Safety Processor
+	** Safety Processor
 
-	Device | Microchip IGLOO2
+	* Device | Microchip IGLOO2
 
-	3. Memory
+	** Memory
 
-	DDR4 | Rad-tolerant DDR4 memory w/ ECC 4 GByte
+	* DDR4 | Rad-tolerant DDR4 memory w/ ECC 4 GByte
 
-	Boot Memory | NOR Flash 64 MByte (Redundancy)
+	* Boot Memory | NOR Flash 64 MByte (Redundancy)
 
-	eMMC | 64 GByte
+	* eMMC | 64 GByte
 
 	High Reliability Memory | FRAM 1 MByte × 2
 
 
-	4. Pre-Installed Operating System
+	** Pre-Installed Operating System
 
-	APU | Linux
+	* APU | Linux
 
-	RPU | Zephyr RTOS
+	* RPU | Zephyr RTOS
 
-	5. Board to Board Interface (User IO)
+	** Board to Board Interface (User IO)
 
-	Versal MIO | Platform Management MIO: 27 signals, Low Power Domain MIO: 26 signals, Selectable Interface: Gigabit EtherMAC, USB2.0 (ULPI), UART, I2C, SPI, GPIO, CAN FD, SD/eMMC
+	* Versal MIO | Platform Management MIO: 27 signals, Low Power Domain MIO: 26 signals, Selectable Interface: Gigabit EtherMAC, USB2.0 (ULPI), UART, I2C, SPI, GPIO, CAN FD, SD/eMMC
 
-	Versal PL XPIO | 54 signals (VDDIO: 1.0/1.2/1.35/1.5 V)
+	* Versal PL XPIO | 54 signals (VDDIO: 1.0/1.2/1.35/1.5 V)
 
-	Versal GTYP | 40 signals / Clock 4 pair / TX 8 pair / RX 8 pair
+	* Versal GTYP | 40 signals / Clock 4 pair / TX 8 pair / RX 8 pair
 
-	IGLOO2 MSIO | 48 signals (VDDIO 1.2/1.5/1.8/2.5/3.3 V)
+	* IGLOO2 MSIO | 48 signals (VDDIO 1.2/1.5/1.8/2.5/3.3 V)
 
-	6. Board Health Function
+	** Board Health Function
 
-	On-Board Sensor | Temperature Sensor, Current/Voltage Monitor
+	* On-Board Sensor | Temperature Sensor, Current/Voltage Monitor
 
-	Power Management | Over-current detection, Brownout protection
+	* Power Management | Over-current detection, Brownout protection
 
-	7. Environmental Characteristics
+	** Environmental Characteristics
 
-	Power Supply | DC 5.0 V (20 - 40 W typical)
+	* Power Supply | DC 5.0 V (20 - 40 W typical)
 
-	Operating Temperature | -40 〜 80 ℃
+	* Operating Temperature | -40 〜 80 ℃
 
 	Size | 100 mm × 150 mm
 
