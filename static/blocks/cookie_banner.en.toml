@@ -1,0 +1,29 @@
+cookie_text = """This website uses essential cookies to improve
+service quality and prevent unauthorized access.<br> These cookies are
+necessary for the secure operation of the site. You may block them
+through your browser settings, but doing so may cause certain features
+to become unavailable.  For more information, please refer to our <a
+href="#" id="open-privacy-modal" class="cookie-link">Cookie
+Notice</a>."""
+privacy_modal_title = "About Cookies"
+privacy_modal_text = """<p>This website uses cookies to improve the
+quality of our services and to protect the website from unauthorized
+access.  Cookies are small files stored on your device and do not
+include any information that can personally identify you.</p>
+
+<h3>Essential Cookies</h3>
+
+<p>They are required for the provision of certain services, such as
+form submissions. If these cookies are disabled, some features of the
+site may not function correctly.</p>
+
+<ul>
+<li>Name: _cfuvid (Cloudflare)</li>
+<li>Purpose: Security and protection against unauthorized access</li>
+<li>Retention period: Session</li>
+<li>Provider: Cloudflare, Inc. (third-party cookie)</li>
+</ul>
+
+<p>You may block cookies in your browser settings; however, doing so
+may prevent certain features, such as form submissions, from working
+properly.</p>"""

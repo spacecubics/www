@@ -32,6 +32,8 @@
 		{% include "partials/footer.html" %}
 	{% endblock body %}
 
+	{% include "partials/cookie_banner.html" %}
+
 	{% block scripts %}
 		<script src="{{ get_url(path='js/nav-toggle.js') }}"></script>
 		<script src="{{ get_url(path='js/nav-links.js') }}"></script>

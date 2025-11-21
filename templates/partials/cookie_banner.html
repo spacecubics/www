@@ -1,0 +1,24 @@
+{% if lang == "ja" %}
+    {% set cookie_block = load_data(path="blocks/cookie_banner.toml") %}
+{% else %}
+    {% set cookie_block = load_data(path="blocks/cookie_banner.en.toml") %}
+{% endif %}
+<div id="cookie-banner" class="cookie-banner">
+    <p>
+        {{cookie_block.cookie_text | safe }}
+    </p>
+    <button id="cookie-close" class="cookie-close" aria-label="Close cookie banner">&times;</button>
+</div>
+
+<div id="privacy-modal" class="privacy-modal">
+    <div class="privacy-modal-content">
+        <button class="privacy-close" aria-label="close">&times;</button>
+        <h2>{{ cookie_block.privacy_modal_title | safe}}</h2>
+        <div class="privacy-text">
+            {{ cookie_block.privacy_modal_text | safe }}
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/cookie_banner.js"></script>
