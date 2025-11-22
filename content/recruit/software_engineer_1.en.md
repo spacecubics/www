@@ -1,5 +1,5 @@
 +++
-title = "Software Engineer I (Early Career)"
+title = "Software Engineer I"
 date = 2025-11-24
 
 [extra]

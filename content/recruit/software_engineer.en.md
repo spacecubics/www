@@ -85,11 +85,13 @@ team to help build the next generation of space systems.
 ---
 
 ### Compensation
-- Annual salary system (expected annual income: 6 million to 10 million yen) *Remuneration will be determined based on the applicant's skills and experience.
-- Standard working hours: 8 hours
-- Flexible working hours(with core hours)
-- Two days off per week, summer vacation, year-end and New Year holidays, bereavement leave, paid leave
-- Various social insurance (health insurance, welfare pension, employment insurance, workers' compensation insurance)
-- Commuting allowance
+
+- Annual salary system (expected annual income: 6 million to 10 million JPY).
+  - Remuneration will be determined based on the applicant’s skills and experience.
+- Standard working hours: 8 hours per day.
+- Flextime system (with core hours).
+- Two days off per week, summer vacation, year-end and New Year holidays, bereavement leave, paid leave.
+- Various social insurance (health insurance, welfare pension, employment insurance, workers compensation insurance).
+- Commuting allowance.
 
 ---
