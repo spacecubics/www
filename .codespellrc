@@ -1,4 +1,4 @@
 [codespell]
 quiet-level = 2
 ignore-words = .codespell-ignore.txt
-skip = *.svg
+skip = *.svg, *.pdf
