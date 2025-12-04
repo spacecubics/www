@@ -20,12 +20,12 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 	right_card="blocks/to_space.en.toml"
 ) }}
 
-{{ kv_list(line1="COMPANY", line2="Space Cubics", line3="OVERVIEW", data="blocks/about_company.en.json") }}
+{{ kv_list(title="COMPANY", line1="Space Cubics", line2="OVERVIEW", data="blocks/about_company.en.json") }}
 
-{{ board_members(line1="BOARD MEMBER", line2="Executive", line3="PROFILES", members="blocks/board-members.en.json") }}
-{{ board_members(line1="FOUNDING ALUMNI", line2="", line3="", members="blocks/founding-alumni.en.json") }}
+{{ board_members(title="BOARD MEMBER", line1="Executive", line2="PROFILES", members="blocks/board-members.en.json") }}
+{{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.en.json") }}
 
-{% twocols(line1="PARTNERS", line2="Other teams who", line3="WORK WITH US") %}
+{% twocols(title="PARTNERS", line1="Other teams who", line2="WORK WITH US") %}
 {% partner(name="SPACE ONE CO., LTD.", logo="spaceone.png", link="https://www.space-one.co.jp/") %}
 Space Cubics and Space One were both selected for an industrial
 development grant by Japan's Ministry of Economy, Trade and Industry.

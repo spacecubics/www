@@ -6,10 +6,10 @@
 
   <div class="twocols segment">
     <div class="twocols-left">
-      <h2 class="segment__title">WANTED</h2>
-      <p class="segment__subtitle">Currently available</p>
-      <p class="segment__slogan">POSITIONS</p>
-      <div class="segment__divider"></div>
+      {% set title = "WANTED" %}
+      {% set line1 = "Currently available" %}
+      {% set line2 = "POSITIONS" %}
+      {% include "partials/segment_title.html" %}
     </div>
 
     <div class="twocols-right">
@@ -19,10 +19,10 @@
 
   <div class="twocols segment">
     <div class="twocols-left">
-      <h2 class="segment__title">APPLICATION FORM</h2>
-      <p class="segment__subtitle">Join us</p>
-      <p class="segment__slogan">SPACE CUBICS</p>
-      <div class="segment__divider"></div>
+      {% set title = "APPLICATION FORM" %}
+      {% set line1 = "Join us" %}
+      {% set line2 = "SPACE CUBICS" %}
+      {% include "partials/segment_title.html" %}
     </div>
 
     <div class="twocols-right">
