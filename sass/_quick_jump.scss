@@ -90,7 +90,7 @@
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 940px) {
 		gap: 1rem;
 		.quick-jump-item {
 			max-width: 180px;
@@ -104,11 +104,26 @@
 		}
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: 850px) {
 		flex-wrap: wrap;
 		overflow-x: unset;
 		.quick-jump-item {
-			max-width: 140px;
+			max-width: 170px;
+		}
+		.title {
+			font-size: 0.9rem;
+		}
+		.jump-button {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	@media (max-width: 650px) {
+		flex-wrap: wrap;
+		overflow-x: unset;
+		.quick-jump-item {
+			max-width: 150px;
 		}
 		.title {
 			font-size: 0.85rem;
