@@ -1,5 +1,11 @@
 import { test, expect } from '@playwright/test';
 
+test.beforeEach(async ({ context }) => {
+  await context.addInitScript(() => {
+    window.localStorage.setItem('cookieClosed', 'true');
+  });
+});
+
 test.describe('Visual Regression Tests', () => {
   test('homepage comparison', async ({ page }) => {
     await page.goto('/');
