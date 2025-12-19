@@ -20,6 +20,17 @@ test.describe('Visual Regression Tests', () => {
     await expect(page).toHaveScreenshot({ fullPage: false });
   });
 
+  test('homepage comparison (privacy modal)', async ({ page }) => {
+    await enableCookieBanner(page);
+    await page.goto('/en');
+    await page.waitForLoadState('load');
+    await expect(page.locator('#cookie-banner')).toBeVisible();
+    await page.locator('#open-privacy-modal').click();
+    await expect(page.locator('#privacy-modal')).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'About Cookies' })).toBeVisible();
+    await expect(page).toHaveScreenshot({ fullPage: false });
+  });
+
   test('homepage comparison', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
