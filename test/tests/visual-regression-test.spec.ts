@@ -6,7 +6,20 @@ test.beforeEach(async ({ context }) => {
   });
 });
 
+async function enableCookieBanner(page) {
+  await page.addInitScript(() => {
+    localStorage.removeItem('cookieClosed');
+  });
+}
+
 test.describe('Visual Regression Tests', () => {
+  test('homepage comparison (banner visible)', async ({ page }) => {
+    await enableCookieBanner(page);
+    await page.goto('/');
+    await page.waitForLoadState('load');
+    await expect(page).toHaveScreenshot({ fullPage: false });
+  });
+
   test('homepage comparison', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
