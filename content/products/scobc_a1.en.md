@@ -60,7 +60,7 @@ even terrestrial applications here on Earth.
 	NOR Flash Memory (configurable) | 32 MBytes x 2
 	External Dimensions | 70 x 70 x 9.6 mm
 	FeRAM | 512 KBytes x 2
-	Mass | 130 g
+	Mass | 30 g
 {% end %}
 
 
