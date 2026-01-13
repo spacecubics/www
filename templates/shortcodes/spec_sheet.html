@@ -1,6 +1,6 @@
 {% set all_lines = body | split(pat="\n") %}
 
-<div>
+<div class="spec-container">
   {% for line in all_lines %}
     {% set parts = line | split(pat="|") %}
     <div class="spec-row">
