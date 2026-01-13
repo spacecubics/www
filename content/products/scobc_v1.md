@@ -72,6 +72,7 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 	Power Supply | DC 5.0 V (20 - 40 W typical)
 	Operating Temperature | -40 〜 80 ℃
 	Size | 100 mm × 150 mm
+	Mass | 110 g
 {% end %}
 
 
