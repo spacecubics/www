@@ -3,6 +3,8 @@
 This is a corporate website built with [Zola](https://www.getzola.org/) --
 a static site generator written in Rust.
 
+You need Zola v0.22.0 or later.
+
 ## 🚀 Quick Start
 
 
@@ -32,14 +34,13 @@ zola serve
 ## 📰 Add a News Article
 1. Create a new file in `content/news/`
 2. Name it by date. ex) `2025-06-01.md` and `2025-06-01.en.md`
-3. Add title (string) and date (YYYY-MM-DD) variables to front matter.
+3. Add title (string) variable to front matter.
 4. Add link variable under [extra] if article has external link.
 5. Add your news.
 
    ```
    +++
    title = "「JAXAベンチャー」の認定"
-   date = 2018-05-29
 
    [extra]
    link = "https://aerospacebiz.jaxa.jp/venture/"
@@ -47,13 +48,6 @@ zola serve
 
    Content here...
    ```
-
-As shown above, there are two date values: one in the file name and
-one in the `date` variable. We haven’t been able to remove the
-redundant `date` field due to a limitation in Zola. A fix is already
-in Zola, but we need to wait for the next release, v0.22.0.  See
-[issue #114](https://github.com/spacecubics/www/issues/114) for
-details.
 
 If you need a line break, do not use two trailing spaces at the end of
 a line, because they are very hard to notice and, as programmers, we
