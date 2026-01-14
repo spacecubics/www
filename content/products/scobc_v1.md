@@ -61,13 +61,13 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 	IGLOO2 MSIO | 48 signals (VDDIO 1.2/1.5/1.8/2.5/3.3 V)
 {% end %}
 
-### Board Health Function
+### Health Monitoring and Protection
 {% spec_sheet() %}
 	On-Board Sensor | Temperature Sensor, Current/Voltage Monitor
 	Power Management | Over-current detection, Brownout protection
 {% end %}
 
-### Environmental Characteristics
+### Operating and Physical Characteristics
 {% spec_sheet() %}
 	Power Supply | DC 5.0 V (20 - 40 W typical)
 	Operating Temperature | -40 〜 80 ℃
