@@ -9,7 +9,7 @@ jobs:
     permissions:
       contents: read
     env:
-      ZOLA_VERSION: "0.21.0"
+      ZOLA_VERSION: "0.22.0"
       ZOLA_BIN: ${{ github.workspace }}/zola
     steps:
       - name: Checkout
