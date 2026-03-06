@@ -42,7 +42,6 @@ team to help build the next generation of space systems.
 ---
 
 ### Job Description
-- Development of software under development for Cubesats
 - Development of device drivers for Zephyr
 - Development of communication protocol stacks
 - Application development
