@@ -43,6 +43,7 @@ team to help build the next generation of space systems.
 
 ### Job Description
 - Development of device drivers for Zephyr
+- Development of device drivers for Linux
 - Development of communication protocol stacks
 - Application development
 - Development of test environments
