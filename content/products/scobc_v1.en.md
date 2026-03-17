@@ -100,7 +100,7 @@ SC-OBC Module V1 is scheduled for release in spring 2026. Please use our [contac
 ## RESOURCES
 
 {% docs_resources() %}
-  Product Manual | This document describes all about SC-OBC Module V1. | https://spacecubics.github.io/sc-docs/scobc-v1/latest/index.html
+  Product Manual | This document describes all about SC-OBC Module V1. | https://docs.spacecubics.com/scobc-v1/latest/index.html
   Yocto Layer for V1 | This is a yocto layer for SC-OBC Module V1. | https://github.com/spacecubics/meta-scobc
   GitHub | For other technical information, please refer to our GitHub repositories. | https://github.com/spacecubics
 {% end %}
