@@ -1,32 +1,13 @@
-{%- if current_path is not defined -%}
-{%- set current_path = "" -%}
-{%- endif -%}
-
 <li id="language-switcher" class="ls-container">
-	{%- set current_lang = lang -%}
-	{%- if current_lang == "ja" -%}
-		{%- set target_lang = "en" -%}
-		{%- if target_lang == config.default_language -%}
-			{%- set switch_url = current_url | replace(from='/' ~ current_lang ~ '/', to = '/') -%}
-		{%- elif current_lang == config.default_language -%}
-			{%- set switch_url = config.base_url ~ '/' ~ target_lang ~ current_path | default(value='/') | safe -%}
-		{%- else -%}
-			{%- set switch_url = current_url | replace(from='/' ~ current_lang ~ '/', to='/' ~ target_lang ~ '/') -%}
-		{%- endif -%}
-		<a class="ls-trigger current-lang" href="{{ switch_url }}" title="Switch to EN">
-			<span class="active-lang">JA</span>/<span class="inactive-lang">EN</span>
-		</a>
-	{%- else -%}
-		{%- set target_lang = "ja" -%}
-		{%- if target_lang == config.default_language -%}
-			{%- set switch_url = current_url | replace(from='/' ~ current_lang ~ '/', to = '/') -%}
-		{%- elif current_lang == config.default_language -%}
-			{%- set switch_url = config.base_url ~ '/' ~ target_lang ~ current_path | default(value='/') | safe -%}
-		{%- else -%}
-			{%- set switch_url = current_url | replace(from='/' ~ current_lang ~ '/', to='/' ~ target_lang ~ '/') -%}
-		{%- endif -%}
-		<a class="ls-trigger current-lang" href="{{ switch_url }}" title="Switch to JA">
-			<span class="inactive-lang">JA</span>/<span class="active-lang">EN</span>
-		</a>
-	{%- endif -%}
+    {%- set target_lang = "ja" if lang == "en" else "en" -%}
+    {%- set switch_url = get_url(path="@/" ~ page.relative_path, lang=target_lang) -%}
+
+    <a class="ls-trigger current-lang" href="{{ switch_url }}"
+       title="Switch to {{ target_lang | upper }}">
+        {%- if lang == "ja" -%}
+            <span class="active-lang">JA</span>/<span class="inactive-lang">EN</span>
+        {%- else -%}
+            <span class="inactive-lang">JA</span>/<span class="active-lang">EN</span>
+        {%- endif -%}
+    </a>
 </li>
