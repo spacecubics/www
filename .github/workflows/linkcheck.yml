@@ -1,0 +1,50 @@
+name: Link Check
+
+on:
+  pull_request
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      ZOLA_VERSION: "0.22.0"
+      ZOLA_BIN: ${{ github.workspace }}/zola
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install http-server
+        run: |
+          npm install -g http-server
+
+      - name: Install lychee
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: lychee
+          version: v0.23.0
+
+      - name: Install Zola ${{ env.ZOLA_VERSION }}
+        run: |
+          curl -sL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz
+          $ZOLA_BIN --version
+
+      - name: Build base site
+        run: |
+          "$ZOLA_BIN" build --base-url "http://127.0.0.1:1111"
+
+      - name: Run HTTP Server
+        run: |
+          http-server public -p 1111 &
+
+      - name: Run lychee
+        run: |
+          lychee --verbose --root-dir "$PWD/public" public/**/*.html
