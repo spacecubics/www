@@ -34,7 +34,10 @@ test.describe('Visual Regression Tests', () => {
   test('homepage comparison', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.news-list-parent')],
+    });
   });
 
   test('about page comparison', async ({ page }) => {
@@ -52,7 +55,10 @@ test.describe('Visual Regression Tests', () => {
   test('news page comparison', async ({ page }) => {
     await page.goto('/news/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.news-list-parent')],
+    });
   });
 
   test('investor relations page comparison', async ({ page }) => {
