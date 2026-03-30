@@ -5,5 +5,6 @@ zola
 # Playwright
 test/node_modules/
 test/package-lock.json
-test/test-results/
 test/playwright-report/
+test/test-results/
+test/tests/visual-regression-test.spec.ts-snapshots/
