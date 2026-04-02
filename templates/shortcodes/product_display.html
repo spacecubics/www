@@ -1,8 +1,8 @@
 <div class="product-display">
 	{% if img %}
 		<div class="product-image-container">
-			{% if img_link %}
-				<a href="{{ img_link }}">
+			{% if details_link %}
+				<a href="{{ get_url(path=details_link, lang=lang) }}">
 					<img src="/{{ img }}" alt="{{ alt | default(value="image") }}" />
 				</a>
 			{% else %}

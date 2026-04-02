@@ -13,7 +13,6 @@ these computers function normally.
 {{ product_display(
 	product_id_label="",
 	img="sc-obc_module_v1.png",
-	img_link="",
 	alt="",
 	pre_title="High-End Computer Module for New Space ",
 	title="SC-OBC Module V1",
@@ -31,7 +30,6 @@ these computers function normally.
 {{ product_display(
 	product_id_label="",
 	img="sc-obc_module_a1.png",
-	img_link="",
 	alt="",
 	pre_title="Ultra-small space computer module for satellites.",
 	title="SC-OBC Module A1",
