@@ -12,7 +12,6 @@ these computers function normally.
 
 {{ product_display(
 	product_id_label="",
-	bg="",
 	img="sc-obc_module_v1.png",
 	img_link="",
 	alt="",
@@ -31,7 +30,6 @@ these computers function normally.
 
 {{ product_display(
 	product_id_label="",
-	bg="",
 	img="sc-obc_module_a1.png",
 	img_link="",
 	alt="",
