@@ -17,8 +17,8 @@
 
 		{% if img and img | length > 0 %}
 			<div class="hero-image-container">
-				{% if img_link %}
-					<a href="{{ img_link }}">
+				{% if link %}
+					<a href="{{ get_url(path=link, lang=lang) }}">
 						<img src="/{{ img }}" alt="{{ alt | default(value='image') }}" />
 					</a>
 				{% else %}

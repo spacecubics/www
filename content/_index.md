@@ -18,7 +18,6 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 		alt="",
 		link="@/products/scobc_v1.md",
 		link_text="Details",
-		img_link="",
 		bottom_title="SC-OBC Module V1",
 		hero_footer="High-End computer module <br> for New Space"
 	) %}
@@ -31,7 +30,6 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 		alt="",
 		link="@/products/scobc_a1.md",
 		link_text="Details",
-		img_link="",
 		bottom_title="SC-OBC Module A1",
 		hero_footer="Space computer module <br> for CubeSats"
 	) %}
@@ -53,7 +51,6 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 		link="@/about-us.md",
 		link_text="About us",
 		bottom_title=""
-		img_link=""
 	) %}
 	私たち Space Cubics は
 	<br>「誰もが月に行ける時代」を目指し、
@@ -72,8 +69,7 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 		img="partners.svg",
 		alt="",
 		link="",
-		link_text="",
-		img_link=""
+		link_text=""
 	) %}
 	私たちは、限界に挑み続ける革新的企業の皆様と共に挑戦しています。
 	{% end %}
