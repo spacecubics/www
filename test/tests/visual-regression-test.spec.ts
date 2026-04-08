@@ -45,7 +45,11 @@ test.describe('Visual Regression Tests', () => {
     await page.waitForLoadState('load');
     await expect(page).toHaveScreenshot({
       fullPage: true,
-      mask: [page.locator('.about-company-gap')],
+      mask: [
+        page.locator('p').filter({
+          has: page.locator('.about-company-gap'),
+        }),
+      ],
     });
   });
 
