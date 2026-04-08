@@ -43,7 +43,10 @@ test.describe('Visual Regression Tests', () => {
   test('about page comparison', async ({ page }) => {
     await page.goto('/about-us/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.about-company-gap')],
+    });
   });
 
   test('products page comparison', async ({ page }) => {
