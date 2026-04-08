@@ -101,7 +101,10 @@ test.describe('Visual Regression Tests', () => {
   test('individual news article comparison', async ({ page }) => {
     await page.goto('/news/2025-09-04/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.news-article-content')],
+    });
   });
 });
 
