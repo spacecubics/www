@@ -9,6 +9,14 @@ h6 {
 	font-weight: normal;
 	line-height: normal;
 	font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+	&:lang(ja) {
+		text-wrap: initial;
+
+		@supports (word-break: auto-phrase) {
+			word-break: auto-phrase;
+			text-wrap: balance;
+		}
+	}
 }
 
 h1 {
