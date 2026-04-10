@@ -52,7 +52,7 @@ prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "c
 		img="empty_image.png",
 		alt="",
 		link="@/about-us.md",
-		link_text="About us",
+		link_text="About Us",
 		bottom_title=""
 	) %}
 	Space Cubics, Inc.

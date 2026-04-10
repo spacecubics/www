@@ -49,7 +49,7 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 		img="empty_image.png",
 		alt="",
 		link="@/about-us.md",
-		link_text="About us",
+		link_text="About Us",
 		bottom_title=""
 	) %}
 	私たち Space Cubics は
