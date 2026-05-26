@@ -42,9 +42,9 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 ### Memory
 {% spec_sheet() %}
 	DDR4 | Rad-tolerant DDR4 memory w/ ECC 4 GByte
-	Boot Memory | NOR Flash 64 MByte (Redundancy)
+	Boot Memory | MRAM 64 MByte (Redundancy)
 	eMMC | 64 GByte
-	High Reliability Memory | FRAM 1 MByte × 2
+	High Reliability Memory | MRAM 8 MByte × 2
 {% end %}
 
 ### Pre-Installed Operating System
