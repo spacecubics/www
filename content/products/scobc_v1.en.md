@@ -1,6 +1,6 @@
 +++
 title = "SC-OBC MODULE V1"
-description = "High-End Space Grade On-board Computer (Coming in Spring 2026) "
+description = "High-End Space Grade On-board Computer"
 template = "product.html"
 
 [extra]
@@ -78,8 +78,8 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 ## PRICE
 
-{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="Coming in Spring 2026") %}
-SC-OBC Module V1 is scheduled for release in spring 2026. Please use our [contact form](/contact) to request more information.
+{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="") %}
+Please use our [contact form](/contact) to request more information.
 {% end %}
 
 

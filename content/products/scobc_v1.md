@@ -1,6 +1,6 @@
 +++
 title = "SC-OBC MODULE V1"
-description = "High-End Space Grade On-board Computer (2026年春発売予定) "
+description = "High-End Space Grade On-board Computer"
 template = "product.html"
 
 [extra]
@@ -78,8 +78,8 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 ## PRICE
 
-{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="2026年春発売予定") %}
-SC-OBC Module V1は2026年春の発売を予定しています。詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
+{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="") %}
+詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
 {% end %}
 
 
