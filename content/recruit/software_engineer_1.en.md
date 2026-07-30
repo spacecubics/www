@@ -61,7 +61,18 @@ the development of next generation space systems.
   also fine.
   - Even if you do not have a portfolio, we can provide a coding
     assignment, so please feel free to contact us.
-- Japanese citizens, or foreign nationals with permanent residency in Japan
+- Applicants must hold a status of residence that permits employment
+  in Japan, or be able to obtain one before joining the company.
+- Applicants must be willing to undergo any checks and procedures
+  required for export control compliance, information security, and
+  customer contracts.
+
+Some of the technical information handled by our company may be
+subject to access restrictions under the Foreign Exchange and Foreign
+Trade Act and other applicable laws and regulations, as well as
+contracts with customers. During the selection process and when
+determining job assignments, we will assess individually whether we
+can lawfully provide the technical information required for the role.
 
 ---
 
