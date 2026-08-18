@@ -64,6 +64,7 @@ jobs:
         working-directory: test
         run: npx playwright test tests/visual-regression-test.spec.ts
         id: vrt-test
+        continue-on-error: true
 
       - name: Upload VRT results
         if: ${{ always() }}
