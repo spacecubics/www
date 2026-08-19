@@ -30,7 +30,7 @@ jobs:
         uses: baptiste0928/cargo-install@v3
         with:
           crate: lychee
-          version: v0.23.0
+          version: v0.24.2
 
       - name: Install Zola ${{ env.ZOLA_VERSION }}
         run: |
