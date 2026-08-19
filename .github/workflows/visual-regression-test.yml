@@ -1,7 +1,11 @@
 name: Visual Regression Test
 
 on:
-  pull_request
+  pull_request:
+    paths-ignore:
+      - AGENTS.md
+      - doc/**
+      - README.md
 
 jobs:
   vrt:
