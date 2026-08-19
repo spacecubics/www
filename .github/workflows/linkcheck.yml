@@ -47,4 +47,4 @@ jobs:
 
       - name: Run lychee
         run: |
-          lychee --verbose --root-dir "$PWD/public" public/**/*.html
+          lychee --config .lychee.toml --verbose --root-dir "$PWD/public" public/**/*.html
