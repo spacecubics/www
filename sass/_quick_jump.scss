@@ -3,7 +3,7 @@
 	justify-content: center;
 	gap: 2rem;
 	padding: 1rem;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	overflow-x: unset;
 	margin-top: 4rem;
 	margin-bottom: 4rem;
@@ -14,7 +14,8 @@
 		align-items: flex-start;
 		position: relative;
 		padding-bottom: 1rem;
-		width: 100%;
+		flex: 1 1 120px;
+		width: auto;
 		max-width: 320px;
 		transition: max-width 0.2s, font-size 0.2s;
 	}
@@ -105,8 +106,6 @@
 	}
 
 	@media (max-width: 700px) {
-		flex-wrap: wrap;
-		overflow-x: unset;
 		.quick-jump-item {
 			max-width: 140px;
 		}
