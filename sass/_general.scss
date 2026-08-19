@@ -22,13 +22,10 @@ body {
 // Main content width constraint
 #main-content,
 .main-content {
+	width: calc(100% - 2rem);
 	max-width: 1100px;
 	margin: 0 auto;
 	position: relative;
-
-	@media only screen and (max-width: 479px) {
-		max-width: 100%;
-	}
 }
 
 // Hero section exception - allow full width background
