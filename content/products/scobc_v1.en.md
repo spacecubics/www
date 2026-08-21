@@ -25,6 +25,12 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 ## SPECS
 
+### Part Number
+{% spec_sheet() %}
+	Space Grade | SC-OBC-V1002
+	Developer Grade | SC-OBC-V1D02
+{% end %}
+
 ### Main Processor
 {% spec_sheet() %}
 	Device | AMD Versal AI Edge Series VE2302

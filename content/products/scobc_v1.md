@@ -25,6 +25,12 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 ## SPECS
 
+### Part Number
+{% spec_sheet() %}
+	Space Grade | SC-OBC-V1002
+	Developer Grade | SC-OBC-V1D02
+{% end %}
+
 ### Main Processor
 {% spec_sheet() %}
 	Device | AMD Versal AI Edge Series VE2302
