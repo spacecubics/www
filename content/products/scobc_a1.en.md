@@ -41,6 +41,7 @@ even terrestrial applications here on Earth.
 ## SPECS
 
 {% spec_sheet() %}
+	Part Number | SC-OBC-A1001
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
 	Main CPU | Cortex-M3 / MicroBlaze-V

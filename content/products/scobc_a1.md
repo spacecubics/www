@@ -37,6 +37,7 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 ## SPECS
 
 {% spec_sheet() %}
+	Part Number | SC-OBC-A1001
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
 	Main CPU | Cortex-M3 / MicroBlaze-V
