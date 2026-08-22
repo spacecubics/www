@@ -151,8 +151,7 @@ This repository is organized into only a few main folders...
   |   |-- contact.js         # Contact form submission
   |   |-- cookie_banner.js   # Cookie notice behavior
   |   |-- scroll-hint.js     # Homepage scroll hint behavior
-  |   |-- nav-toggle.js      # Navigation menu functionality
-  |   `-- nav-links.js       # Navigation link handling
+  |   `-- nav-toggle.js      # Navigation menu functionality
   |-- logo_black.webp
   |-- logo_white.webp
   `-- sc-obc_module_a1.jpg
