@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-	var hint = document.querySelector('.scroll-hint');
-	if (hint) {
-		hint.classList.add('scroll-hint--bounce');
-	}
-});
-
 window.addEventListener('scroll', function() {
 	var hint = document.querySelector('.scroll-hint');
 	if (!hint) return;
