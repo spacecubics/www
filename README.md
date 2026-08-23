@@ -149,8 +149,7 @@ This repository is organized into only a few main folders...
   static/
   |-- js/                    # JavaScript that runs in the user's web browser
   |   |-- contact.js         # Contact form submission
-  |   |-- cookie_banner.js   # Cookie notice behavior
-  |   `-- scroll-hint.js     # Homepage scroll hint behavior
+  |   `-- cookie_banner.js   # Cookie notice behavior
   |-- logo_black.webp
   |-- logo_white.webp
   `-- sc-obc_module_a1.jpg

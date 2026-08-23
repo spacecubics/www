@@ -8,22 +8,33 @@
 	z-index: 1000;
 }
 
+@supports (animation-timeline: scroll()) {
+	.scroll-hint-stage {
+		animation: hide-scroll-hint linear both;
+		animation-timeline: scroll(root block);
+		animation-range: 0 100px;
+	}
+}
+
+@keyframes hide-scroll-hint {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
 .scroll-hint {
 	position: absolute;
 	bottom: 55px;
 	left: 50%;
+	transform: translateX(-50%);
 	pointer-events: none;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	transition: opacity 0.5s ease-in-out;
-	opacity: 1;
-}
-
-.scroll-hint--hidden {
-	opacity: 0;
-	pointer-events: none;
 }
 
 .scroll-hint--bounce {
@@ -65,5 +76,11 @@
 	.arrow svg {
 		width: 3.6rem;
 		height: 3.6rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll-hint-stage {
+		animation: none;
 	}
 }
