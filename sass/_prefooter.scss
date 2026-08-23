@@ -42,12 +42,6 @@
 		grid-template-columns: 1fr;
 		gap: 0;
 	}
-
-	// Fallback for browsers that don't support :has()
-	&.single-bottom-card {
-		grid-template-columns: 1fr;
-		gap: 0;
-	}
 }
 
 // Shared card styles

@@ -21,7 +21,7 @@
 
 {%- if page.extra.prefooter_cards -%}
 <div class="page">
-	<div class="card-grid{% if not left_card_image and not right_card_image and bottom_card_image %} single-bottom-card{% endif %}">
+	<div class="card-grid">
 		{% set cards = page.extra.prefooter_cards %}
 		{% set total = cards | length %}
 		{%- for card in page.extra.prefooter_cards -%}
