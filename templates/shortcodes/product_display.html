@@ -29,6 +29,9 @@
 				<p class="product-subtitle">{{ subtitle }}</p>
 			{% endif %}
 
+			{% if part_number %}
+				<div class="product-meta"><span class="meta-a">{{ "Part number" }}</span><span class="meta-b">{{ part_number }}</span></div>
+			{% endif %}
 			{% if text1_a and text1_b %}
 				<div class="product-meta"><span class="meta-a">{{ text1_a }}</span><span class="meta-b">{{ text1_b }}</span></div>
 			{% endif %}
