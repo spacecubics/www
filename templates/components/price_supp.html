@@ -1,3 +1,5 @@
+{% component price_supp(title: string) -%}
+{% set html -%}
 <div class="price-supp">
 	<div class="price-supp__container">
 		<div class="price-supp__left">
@@ -9,3 +11,6 @@
 	</div>
 	<div class="sc-list__divider"></div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent price_supp %}
