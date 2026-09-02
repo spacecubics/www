@@ -65,7 +65,7 @@ even terrestrial applications here on Earth.
 
 ## PRICE
 
-{% price(price_title="SC-OBC Module A1", price_number="300,000", price_unit="JPY (excluding tax)", price_note="*This price is a limited-time offer.") %}
+{% <price price_title="SC-OBC Module A1" price_number="300,000" price_unit="JPY (excluding tax)" price_note="*This price is a limited-time offer."> %}
 
 The SC-OBC Module A1 is scheduled to undergo space-readiness testing
 using a satellite we developed in-house. This price is only available
@@ -83,7 +83,7 @@ limited-time price are as follows.
   not be made public. The purpose is to help improve future product
   specifications, so please provide only data related to the
   functionality and performance of this product.
-{% end %}
+{% </price> %}
 
 {% price_supp(title="Commissioning an interface board") %}
 

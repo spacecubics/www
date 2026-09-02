@@ -84,9 +84,9 @@ SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AM
 
 ## PRICE
 
-{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="") %}
+{% <price price_title="SC-OBC Module V1" price_number="" price_unit="" price_note=""> %}
 Please use our [contact form](/contact) to request more information.
-{% end %}
+{% </price> %}
 
 
 ## DEV KIT

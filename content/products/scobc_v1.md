@@ -84,9 +84,9 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 ## PRICE
 
-{% price(price_title="SC-OBC Module V1", price_number="", price_unit="", price_note="") %}
+{% <price price_title="SC-OBC Module V1" price_number="" price_unit="" price_note=""> %}
 詳しくは [お問い合わせフォーム](/contact) よりお問い合わせください。
-{% end %}
+{% </price> %}
 
 
 ## DEV KIT
