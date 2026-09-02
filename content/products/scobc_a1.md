@@ -36,7 +36,7 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 
 ## SPECS
 
-{% spec_sheet() %}
+{% <spec_sheet> %}
 	Part Number | SC-OBC-A1001
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
@@ -56,7 +56,7 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 	External Dimensions | 70 x 70 x 9.6 mm
 	FeRAM | 512 KBytes x 2
 	Mass | 30 g
-{% end %}
+{% </spec_sheet> %}
 
 ## PRICE
 

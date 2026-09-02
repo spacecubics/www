@@ -40,7 +40,7 @@ even terrestrial applications here on Earth.
 
 ## SPECS
 
-{% spec_sheet() %}
+{% <spec_sheet> %}
 	Part Number | SC-OBC-A1001
 	Main Processor | Xilinx Artix-7
 	Communication Interface | CAN, I2C, UART
@@ -60,7 +60,7 @@ even terrestrial applications here on Earth.
 	External Dimensions | 70 x 70 x 9.6 mm
 	FeRAM | 512 KBytes x 2
 	Mass | 30 g
-{% end %}
+{% </spec_sheet> %}
 
 
 ## PRICE
