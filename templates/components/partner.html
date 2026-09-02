@@ -1,6 +1,8 @@
+{% component partner(name: string, logo: string, link: string = "", alt: string = "") -%}
+{% set html -%}
 <div class="partner">
   <div class="partner__logo">
-    <img src="{{ get_url(path=logo) }}" alt="{{ alt | default(value=name) }}">
+    <img src="{{ get_url(path=logo) }}" alt="{% if alt %}{{ alt }}{% else %}{{ name }}{% endif %}">
   </div>
 
   <div class="partner__content">
@@ -17,3 +19,6 @@
     {% endif %}
   </div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent partner %}

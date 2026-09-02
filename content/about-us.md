@@ -23,7 +23,7 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 {{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.json") }}
 
 {% <twocols title="PARTNERS" line1="Other teams who" line2="WORK WITH US"> %}
-{% partner(name="スペースワン株式会社", logo="spaceone.png", link="https://www.space-one.co.jp/") %}
+{% <partner name="スペースワン株式会社" logo="spaceone.png" link="https://www.space-one.co.jp/"> %}
 経済産業省が実施する「令和2年度 産業技術実用化開発事業費補助金」に共同で採択。超小型宇宙利用プラットフォーム確立へ向け、スペースワン社製小型ロケット「カイロス（KAIROS）」による超小型衛星の放出実証、ならびにSpace Cubics社製宇宙用コンピュータを搭載した衛星の宇宙実証を目指します。
+{% </partner> %}
 {% </twocols> %}
-{% end %}
