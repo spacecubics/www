@@ -9,11 +9,11 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 
 ## OVERVIEW
 
-{% product_overview(img="sc-obc_module_v1.png", alt="", title="SC-OBC Module V1", subtitle="High-End Space Grade On-board Computer for New Space") %}
+{% <product_overview img="sc-obc_module_v1.png" alt="" title="SC-OBC Module V1" subtitle="High-End Space Grade On-board Computer for New Space"> %}
 
 SC-OBC Module V1 is a cutting-edge OBC for space applications, powered by the AMD Versal Adaptive SoC, a powerful heterogeneous computing platform integrates Arm processing subsystems, programmable logic(PL), and AI Engine(AIE). Engineered for next-generation missions, it delivers comprehensive onboard capabilities — from capturing massive data streams from advanced sensors, such as SAR, and LiDAR, to real-time edge processing and reliable high-capacity data storage.
 
-{% end %}
+{% </product_overview> %}
 
 
 ## USE CASES

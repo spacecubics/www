@@ -9,7 +9,7 @@ prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "c
 
 ## OVERVIEW
 
-{% product_overview(img="sc-obc_module_a1.png", alt="", title="SC-OBC Module A1", subtitle="Space computer module for ultra-small satellites") %}
+{% <product_overview img="sc-obc_module_a1.png" alt="" title="SC-OBC Module A1" subtitle="Space computer module for ultra-small satellites"> %}
 
 The SC-OBC MODULE A1 board is optimized for use in CubeSats. We use
 technology cultivated by JAXA for reliable, safe use on the
@@ -18,7 +18,7 @@ allowing flexible configuration and multiple interface options. Not
 limited to CubeSats, our boards can also benefit other spacecraft and
 even terrestrial applications here on Earth.
 
-{% end %}
+{% </product_overview> %}
 
 
 ## USE CASES

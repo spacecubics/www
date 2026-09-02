@@ -1,3 +1,5 @@
+{% component product_overview(img: string, alt: string, title: string, subtitle: string) -%}
+{% set html -%}
 <div class="product-display" style="padding: 0 0; display: flex; align-items: center;">
 	<div class="product-info">
 		<div class="product-text-block">
@@ -12,3 +14,6 @@
 				<img src="/{{ img }}" alt="{{ alt | default(value=title) }}"/>
 		</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent product_overview %}

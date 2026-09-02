@@ -9,11 +9,11 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 
 ## OVERVIEW
 
-{% product_overview(img="sc-obc_module_v1.png", alt="", title="SC-OBC Module V1", subtitle="New Space向けハイエンドコンピュータモジュール") %}
+{% <product_overview img="sc-obc_module_v1.png" alt="" title="SC-OBC Module V1" subtitle="New Space向けハイエンドコンピュータモジュール"> %}
 
 CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォームコンピューティング (Adaptive SoC)を採用した AMD Versalを搭載する高性能オンボードコンピュータです。光学センサーや SAR・LiDARなどから入力される大容量のセンサーデータに対し、入力処理・ハードウェアアクセサレーションやベクトル演算を伴うエッジ処理、大容量ストレージへの記録を、効率的に実行することができます。
 
-{% end %}
+{% </product_overview> %}
 
 
 ## USE CASES
