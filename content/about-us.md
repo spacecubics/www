@@ -8,9 +8,10 @@ prefooter_cards = ["products/_index.md", "recruit/_index.md", "contact/_index.md
 card_body = "「誰もが月に行ける時代」を目指し、安価で信頼性の高い宇宙用コンピュータを開発するJAXAベンチャーです。"
 +++
 
-{{ tagline(title="To drink beer on the moon.",
-           statement="私たち Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。")
-}}
+{{ <tagline
+	title="To drink beer on the moon."
+	statement="私たち Space Cubicsは「誰もが月に行ける時代」を目指し,<br>安価で信頼性の高い宇宙用コンピュータを開発するJAXAのベンチャーです。"
+/> }}
 
 {{ threecard(left_card="blocks/affordable.toml",
 	           middle_card="blocks/easy.toml",
