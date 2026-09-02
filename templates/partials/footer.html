@@ -31,21 +31,21 @@
 							{%- if link.menu and link.menu | length > 0 %}
 								<li>
 									<details class="closable">
-										<summary>{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}</summary>
+										<summary>{{ <translate key={link.name} default={link.name} language_strings={language_strings} /> }}</summary>
 										<ul>
-											{%- for sublink in link.menu %}
-												<li>
-													{%- if sublink.url is matching('https?://') %}
-														<a href="{{ sublink.url }}" rel="{{ rel_attributes }}" class="external">
-															{{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
-														</a>
-													{%- else %}
-														<a href="{{ get_url(path=sublink.url, lang=lang) }}">
-															{{ macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) }}
-														</a>
-													{%- endif %}
-												</li>
-											{%- endfor %}
+										{%- for sublink in link.menu %}
+											<li>
+												{%- if sublink.url is matching('https?://') %}
+													<a href="{{ sublink.url }}" rel="{{ rel_attributes }}" class="external">
+														{{ <translate key={sublink.name} default={sublink.name} language_strings={language_strings} /> }}
+													</a>
+												{%- else %}
+													<a href="{{ get_url(path=sublink.url, lang=lang) }}">
+														{{ <translate key={sublink.name} default={sublink.name} language_strings={language_strings} /> }}
+													</a>
+												{%- endif %}
+											</li>
+										{%- endfor %}
 										</ul>
 									</details>
 								</li>
@@ -53,11 +53,11 @@
 								<li>
 									{%- if link.url is matching('https?://') %}
 										<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
-											{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
+											{{ <translate key={link.name} default={link.name} language_strings={language_strings} /> }}
 										</a>
 									{%- else %}
 										<a href="{{ get_url(path=link.url, lang=lang) }}">
-											{{ macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) }}
+											{{ <translate key={link.name} default={link.name} language_strings={language_strings} /> }}
 										</a>
 									{%- endif %}
 								</li>

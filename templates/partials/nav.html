@@ -30,7 +30,7 @@
 							<div class="main-navbar-item">
 								<details>
 									<div class="nav-summary" tabindex="0">
-										{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+										{{- <translate key={link.name} default={link.name} language_strings={language_strings} /> -}}
 									</div>
 									<div class="dropdown-menu">
 										{%- for sublink in link.menu -%}
@@ -40,7 +40,7 @@
 													{% if sublink.url is matching('https?://') %}rel="{{ rel_attributes }}"{% endif %}
 													tabindex="0"
 												>
-													{{- macros_translate::translate(key=sublink.name, default=sublink.name, language_strings=language_strings) -}}
+													{{- <translate key={sublink.name} default={sublink.name} language_strings={language_strings} /> -}}
 												</a>
 											</div>
 										{%- endfor -%}
@@ -50,7 +50,7 @@
 						{%- elif link.url is matching('https?://') %}
 							<div class="main-navbar-item">
 								<a class="main-navbar-link" href="{{ link.url }}" rel="{{ rel_attributes }}" tabindex="0">
-									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+									{{- <translate key={link.name} default={link.name} language_strings={language_strings} /> -}}
 								</a>
 							</div>
 						{%- elif link.name == "Recruit" and config.languages | length > 0 %}
@@ -59,13 +59,13 @@
 									{%- include "partials/language_switcher.html" %}
 								</div>
 								<a class="main-navbar-link" href="{{ get_url(path=link.url, lang=lang) }}" tabindex="0">
-									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+									{{- <translate key={link.name} default={link.name} language_strings={language_strings} /> -}}
 								</a>
 							</div>
 						{%- else %}
 							<div class="main-navbar-item">
 								<a class="main-navbar-link" href="{{ get_url(path=link.url, lang=lang) }}" tabindex="0">
-									{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+									{{- <translate key={link.name} default={link.name} language_strings={language_strings} /> -}}
 								</a>
 							</div>
 						{%- endif %}
@@ -74,7 +74,7 @@
 					{%- if config.extra.default_theme or config.extra.nav.show_theme_switcher %}
 						<div id="contact" class="main-navbar-item">
 							<a class="main-navbar-link" href="{{ get_url(path='contact', lang=lang) }}" tabindex="0">
-								{{ macros_translate::translate(key="contact", default="Contact", language_strings=language_strings) }}
+								{{ <translate key="contact" default="Contact" language_strings={language_strings} /> }}
 							</a>
 						</div>
 					{%- endif %}

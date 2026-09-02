@@ -1,7 +1,6 @@
 {% import "macros/rel_attributes.html" as macros_rel_attributes %}
-{% import "macros/translate.html" as macros_translate %}
 {%- set language_strings = load_data(path="i18n/" ~ lang ~ ".toml", required=false) -%}
-{%- set date_format = macros_translate::translate(key="date_format", language_strings=language_strings) -%}
+{%- set date_format = <translate key="date_format" language_strings={language_strings} /> -%}
 
 
 <!DOCTYPE html>
@@ -21,7 +20,7 @@
 				<div id="buttons-container">
 					<a id="go-to-top"
 						href="#top"
-						title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
+						title="{{ <translate key='go_to_top' default='Go to Top' language_strings={language_strings} /> }}">
 						<i class="icon"></i>
 					</a>
 				</div>

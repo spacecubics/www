@@ -1,4 +1,4 @@
-{% macro translate(key, number=-1, language_strings="", default="", replace=true) %}
+{% component translate(key: string, language_strings: map, number: integer = -1, default: string = "", replace: bool = true) -%}
 	{%- set key_prefix = "" -%}
 
 	{%- if number == 0 -%}
@@ -12,8 +12,8 @@
 	{%- set translated_key = key_prefix ~ key -%}
 	{%- set translated_text = language_strings[translated_key] | default(value=default) | safe -%}
 	{%- if replace -%}
-		{{- translated_text | replace(from="$NUMBER", to=number | as_str) -}}
+		{{- translated_text | replace(from="$NUMBER", to=number | str) -}}
 	{%- else -%}
 		{{- translated_text -}}
 	{%- endif -%}
-{% endmacro translate %}
+{%- endcomponent translate %}
