@@ -74,14 +74,15 @@ In your `.md` file, create a link like this:
 [here](@/products/scobc_a1.md)
 ```
 
-Or, if you are calling one of our shortcodes:
+Or, if you are calling one of our components:
 
 ```
-{% hero_element(
-    title = "PRODUCTS",
-    link = "@/products/_index.md",
-    link_text = "Details"
-) %}
+{{ <product_display
+    lang
+    img="sc-obc_module_v1.png"
+    title="SC-OBC Module V1"
+    details_link="@/products/scobc_v1.md"
+/> }}
 ```
 
 This ensures the correct link is generated for the page, based on its
@@ -135,14 +136,11 @@ This repository is organized into only a few main folders...
   ```
   templates/
   |-- base.html              # Main layout for site
-  |-- article.html           # News article template (not currently used)
-  |-- macros/                # Other globally available template functions
-  |-- partials/              # Reusable page sections
-  |   |-- footer.html        # Site footer
-  |   `-- nav.html           # Site navigation header
-  `-- shortcodes/            # Custom components
-    |-- spec_sheet.html      # Production specification component
-    `-- kv_list.html         # Displays key-value set of text
+  |-- news_article.html      # News article template
+  |-- components/            # Components callable from content and templates
+  `-- partials/              # Reusable page sections
+      |-- footer.html        # Site footer
+      `-- nav.html           # Site navigation header
   ```
 - static -- Contains site images and client-side JavaScript
   ```

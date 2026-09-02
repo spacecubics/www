@@ -13,16 +13,15 @@ Pages.
 
 ## Repository organization
 
-- `content/`: Markdown pages, sections, news, job postings, and shortcode calls.
+- `content/`: Markdown pages, sections, news, job postings, and component calls.
 - `templates/base.html`: Site-wide document shell, navigation, main content,
   footer, cookie UI, and scripts.
 - `templates/page.html` and `templates/section.html`: Default page and section
   layouts.
 - `templates/*.html`: Specialized layouts for products, news, recruitment, and
   other page types.
-- `templates/shortcodes/`: Components invoked from Markdown content.
-- `templates/partials/`: Components included by templates and shortcodes.
-- `templates/macros/`: Shared Tera macros.
+- `templates/components/`: Components invoked from Markdown content or templates.
+- `templates/partials/`: Reusable fragments included by templates and components.
 - `sass/`: Component styles. `sass/style.scss` controls import order.
 - `static/`: Images and browser-side JavaScript.
 - `i18n/`: Language-specific strings.
@@ -31,7 +30,7 @@ Pages.
 - `.github/workflows/`: Build-adjacent checks for links, spelling, formatting,
   commits, and visual regressions.
 
-Changes to a shared template, partial, or shortcode can affect many pages and
+Changes to a shared template, partial, or component can affect many pages and
 both languages. Find every call site and inspect the generated HTML before
 assuming a change is local.
 
@@ -57,7 +56,7 @@ requirement for all work:
 - Do not render empty headings.
 - Preserve visual styling with classes; do not choose heading levels for their
   browser-default appearance.
-- Check every call site before changing a shortcode's heading level.
+- Check every call site before changing a component's heading level.
 - Do not turn an unrelated issue into the complete #245 cleanup.
 
 News articles and job descriptions have intentional template-owned headings.
@@ -68,12 +67,11 @@ at `h3`.
 
 - Use two spaces for indentation, LF line endings, and a final newline, as
   configured in `.editorconfig`.
-- Tera does not support ternary expressions. Use explicit `{% if %}` and
-  `{% else %}` blocks.
+- Prefer explicit `{% if %}` and `{% else %}` blocks over ternary expressions.
 - Content links to local pages must use the `@/` prefix.
-- Templates and shortcodes must resolve local links with
+- Templates and components must resolve local links with
   `get_url(path=..., lang=lang)` so Japanese and English URLs remain correct.
-- Reuse existing partials and shortcodes instead of duplicating markup.
+- Reuse existing partials and components instead of duplicating markup.
 - Keep JavaScript limited to behavior that cannot reasonably be implemented
   with HTML and CSS.
 - Prefix SCSS partials with `_` and import them from `sass/style.scss`.
@@ -82,7 +80,7 @@ at `h3`.
 
 ## Build and validation
 
-Build the site before and after template, shortcode, content, or SCSS changes:
+Build the site before and after template, component, content, or SCSS changes:
 
 ```sh
 zola build
@@ -115,4 +113,4 @@ lychee --config .lychee.toml --verbose --root-dir "$PWD/public" public/**/*.html
 ```
 
 Use the smallest relevant validation for the change, but always inspect all
-generated pages affected by a shared template or shortcode.
+generated pages affected by a shared template or component.

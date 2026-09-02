@@ -28,9 +28,9 @@ Orange is used as an accent color (hover highlight, dividers, scroll bar, etc.)
 - **Japanese**: [Zen Kaku Gothic New](https://fonts.google.com/specimen/Zen+Kaku+Gothic+New)
 
 ### Components
-The site uses custom shortcodes for reusable components.
+The site uses custom Tera components for reusable content.
 
-Examples on how to use these shortcodes on a page are shown below:
+Examples on how to use these components on a page are shown below:
 
 ### Templates
 #### Linking to Local Pages
@@ -38,7 +38,7 @@ Examples on how to use these shortcodes on a page are shown below:
 Use `get_url()` with the `@/` prefix and the current page's `lang`
 variable to link to local pages within the site.
 
-**Example of calling `get_url()` in a template or shortcode
+**Example of calling `get_url()` in a template or component**
 
 ```html
 <a href="{{ get_url(path=link, lang=lang) }}">{{ link_text }}</a>
@@ -48,28 +48,23 @@ See [this PR](https://github.com/spacecubics/www/pull/158) for more details.
 We ask content writers to pass in a local link with "@/" prefix.
 
 ```
-{% hero_element(
-    title = "PRODUCTS",
-    link = "@/products/_index.md",
-    link_text = "Details"
-) %}
+{{ <product_display
+    lang
+    img="sc-obc_module_v1.png"
+    title="SC-OBC Module V1"
+    details_link="@/products/scobc_v1.md"
+/> }}
 ```
 
-Shortcode and template authors must handle local links with
+Component and template authors must handle local links with
 `get_url()` to generate the correct URL.
 
 
 #### Hero Elements
 ```html
-{% hero_element(
-	title="PRODUCTS",
-	subtitle="Make the impossible",
-	slogan="POSSIBLE",
-	img="image.png",
-	link="products"
-) %}
+{% <hero_element title="PRODUCTS" bg="" subtitle="Make the impossible" slogan="POSSIBLE"> %}
 Content here
-{% end %}
+{% </hero_element> %}
 ```
 
 #### Prefooter Cards
@@ -93,7 +88,7 @@ segment titles should be converted to H2.
 ### Adding New Section
 1. Create a new folder, such as: `content/your_new_section/`
 2. Add `_index.md` and `_index.en.md` files
-2. Add front matter and content (text and shortcode elements)
+2. Add front matter and content (text and component elements)
    ```markdown
    +++
    title = "Section Title"
@@ -105,7 +100,7 @@ segment titles should be converted to H2.
 
 ### Adding New Page
 1. Create a new file, such as: `content/your_new_page.md`
-2. Add front matter and content (text and shortcode elements)
+2. Add front matter and content (text and component elements)
    ```markdown
    +++
    title = "Page Title"
