@@ -1,4 +1,6 @@
-{% set all_lines = body | split(pat="\n") %}
+{% component docs_resources() -%}
+{% set all_lines = body | trim | split(pat="\n") %}
+{% set html -%}
 
 <div class="docs-resources-container">
 	{% for line in all_lines %}
@@ -21,3 +23,6 @@
 		{% endif %}
 	{% endfor %}
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent docs_resources %}

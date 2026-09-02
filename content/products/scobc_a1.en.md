@@ -111,8 +111,8 @@ information.
 
 ## DOCUMENTS
 
-{% docs_resources() %}
+{% <docs_resources> %}
 	Product Manual | This document describes all about SC-OBC Module A1. | https://docs.spacecubics.com/scobc-a1/latest/index.html
 	Zephyr Info Page | This is the dedicated SC-OBC Module A1 page on the Zephyr Project site. | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
 	GitHub | For other technical information, please refer to our GitHub repositories. | https://github.com/spacecubics
-{% end %}
+{% </docs_resources> %}

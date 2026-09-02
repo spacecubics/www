@@ -105,8 +105,8 @@ Please use our [contact form](/contact) to request more information.
 
 ## RESOURCES
 
-{% docs_resources() %}
+{% <docs_resources> %}
   Product Manual | This document describes all about SC-OBC Module V1. | https://docs.spacecubics.com/scobc-v1/latest/index.html
   Yocto Layer for V1 | This is a yocto layer for SC-OBC Module V1. | https://github.com/spacecubics/meta-scobc
   GitHub | For other technical information, please refer to our GitHub repositories. | https://github.com/spacecubics
-{% end %}
+{% </docs_resources> %}

@@ -90,9 +90,9 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 
 ## DOCUMENTS
 
-{% docs_resources() %}
+{% <docs_resources> %}
 	Product Manual | SC-OBC Module A1の仕様や、開発に必要な情報が記載されています。 | https://docs.spacecubics.com/scobc-a1-ja/latest/index.html
 	Zephyr Info Page | Zephyr Project 公式ドキュメントの、SC-OBC Module A1 ボード情報ページです。 | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
 	GitHub | その他、様々な技術情報はこちらを参照ください。 | https://github.com/spacecubics
-	{% end %}
+	{% </docs_resources> %}
 </section>

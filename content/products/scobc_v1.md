@@ -105,8 +105,8 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 ## RESOURCES
 
-{% docs_resources() %}
+{% <docs_resources> %}
   Product Manual | SC-OBC Module V1の仕様や、開発に必要な情報が記載されています。 | https://docs.spacecubics.com/scobc-v1/latest/index.html
   Yocto Layer for V1 | SC-OBC Module V1用Yoctoレイヤーのソースコードです。 | https://github.com/spacecubics/meta-scobc
   GitHub | その他、様々な技術情報はこちらを参照ください。 | https://github.com/spacecubics
-{% end %}
+{% </docs_resources> %}
