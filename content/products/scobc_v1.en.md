@@ -91,16 +91,16 @@ Please use our [contact form](/contact) to request more information.
 
 ## DEV KIT
 
-{{ twocard(
-	title="",
-	subtitle="",
-	left_card_image="under_construction.jpeg",
-	right_card_image="under_construction.jpeg",
-	left_card_title="Development Kit",
-	left_card_subtitle="coming soon",
-	right_card_title="Options",
+{{ <twocard
+	title=""
+	subtitle=""
+	left_card_image="under_construction.jpeg"
+	right_card_image="under_construction.jpeg"
+	left_card_title="Development Kit"
+	left_card_subtitle="coming soon"
+	right_card_title="Options"
 	right_card_subtitle="coming soon"
-) }}
+/> }}
 
 
 ## RESOURCES

@@ -1,3 +1,5 @@
+{% component twocard(title: string, subtitle: string, left_card_image: string, right_card_image: string, left_card_title: string, left_card_subtitle: string, right_card_title: string, right_card_subtitle: string) -%}
+{% set html -%}
 <div class="twocard">
 	<div>
 		<h1 class="twocard-title">{{ title }}</h1>
@@ -30,3 +32,6 @@
 
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent twocard %}

@@ -23,19 +23,16 @@ even terrestrial applications here on Earth.
 
 ## USE CASES
 
-{{ twocard(
-	title="",
-	subtitle="",
-
-	left_card_image="interface.jpg",
-	right_card_image="satellite.jpg",
-
-	left_card_title="",
-	left_card_subtitle="During installation in our own satellite, <br> <br> the SC-OBC Module A1 board was mounted to an interface board with a PC104 form factor.",
-
-	right_card_title="",
+{{ <twocard
+	title=""
+	subtitle=""
+	left_card_image="interface.jpg"
+	right_card_image="satellite.jpg"
+	left_card_title=""
+	left_card_subtitle="During installation in our own satellite, <br> <br> the SC-OBC Module A1 board was mounted to an interface board with a PC104 form factor."
+	right_card_title=""
 	right_card_subtitle="A satellite equipped with the SC-OBC Module A1 installed on an interface board. <br> <br> (Photo shows a prototype under development)"
-) }}
+/> }}
 
 
 ## SPECS
@@ -97,16 +94,16 @@ information.
 
 ## DEV KIT
 
-{{ twocard(
-	title="",
-	subtitle="",
-	left_card_image="a1-dev-board-rev-b.webp",
-	right_card_image="under_construction.jpeg",
-	left_card_title="Development Kit",
-	left_card_subtitle="coming soon",
-	right_card_title="optional items",
+{{ <twocard
+	title=""
+	subtitle=""
+	left_card_image="a1-dev-board-rev-b.webp"
+	right_card_image="under_construction.jpeg"
+	left_card_title="Development Kit"
+	left_card_subtitle="coming soon"
+	right_card_title="optional items"
 	right_card_subtitle="coming soon"
-) }}
+/> }}
 
 
 ## DOCUMENTS

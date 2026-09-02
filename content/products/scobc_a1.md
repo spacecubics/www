@@ -20,19 +20,16 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 
 ## USE CASES
 
-{{ twocard(
-	title="",
-	subtitle="",
-
-	left_card_image="interface.jpg",
-	right_card_image="satellite.jpg",
-
-	left_card_title="",
-	left_card_subtitle="弊社人工衛星に搭載するため、<br> <br> PC104形状に合わせたインタフェースボードの上にSC-OBC Module A1を搭載した形態",
-
-	right_card_title="",
+{{ <twocard
+	title=""
+	subtitle=""
+	left_card_image="interface.jpg"
+	right_card_image="satellite.jpg"
+	left_card_title=""
+	left_card_subtitle="弊社人工衛星に搭載するため、<br> <br> PC104形状に合わせたインタフェースボードの上にSC-OBC Module A1を搭載した形態"
+	right_card_title=""
 	right_card_subtitle="インタフェースボードに 搭載したSC-OBC Module A1が 組み込まれた人工衛星<br> <br> （写真は開発中のもの）"
-) }}
+/> }}
 
 ## SPECS
 
@@ -77,16 +74,16 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 
 ## DEV KIT
 
-{{ twocard(
-	title="",
-	subtitle="",
-	left_card_image="a1-dev-board-rev-b.webp",
-	right_card_image="under_construction.jpeg",
-	left_card_title="開発キット",
-	left_card_subtitle="coming soon",
-	right_card_title="オプション品",
+{{ <twocard
+	title=""
+	subtitle=""
+	left_card_image="a1-dev-board-rev-b.webp"
+	right_card_image="under_construction.jpeg"
+	left_card_title="開発キット"
+	left_card_subtitle="coming soon"
+	right_card_title="オプション品"
 	right_card_subtitle="coming soon"
-) }}
+/> }}
 
 ## DOCUMENTS
 
