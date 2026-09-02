@@ -34,8 +34,8 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 	]}
 /> }}
 
-{{ board_members(title="BOARD MEMBER", line1="Executive", line2="PROFILES", members="blocks/board-members.en.json") }}
-{{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.en.json") }}
+{{ <board_members title="BOARD MEMBER" line1="Executive" line2="PROFILES" members="blocks/board-members.en.json" /> }}
+{{ <board_members title="FOUNDING ALUMNI" line1="" line2="" members="blocks/founding-alumni.en.json" /> }}
 
 {% <twocols title="PARTNERS" line1="Other teams who" line2="WORK WITH US"> %}
 {% <partner name="SPACE ONE CO., LTD." logo="spaceone.png" link="https://www.space-one.co.jp/"> %}

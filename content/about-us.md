@@ -34,8 +34,8 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 	]}
 /> }}
 
-{{ board_members(title="BOARD MEMBERS", line1="Executive", line2="PROFILES", members="blocks/board-members.json") }}
-{{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.json") }}
+{{ <board_members title="BOARD MEMBERS" line1="Executive" line2="PROFILES" members="blocks/board-members.json" /> }}
+{{ <board_members title="FOUNDING ALUMNI" line1="" line2="" members="blocks/founding-alumni.json" /> }}
 
 {% <twocols title="PARTNERS" line1="Other teams who" line2="WORK WITH US"> %}
 {% <partner name="スペースワン株式会社" logo="spaceone.png" link="https://www.space-one.co.jp/"> %}

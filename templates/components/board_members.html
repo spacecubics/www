@@ -1,5 +1,6 @@
+{% component board_members(title: string, line1: string, line2: string, members: string) -%}
 {% set members = load_data(path=members, format="json") %}
-{% set count = members | length %}
+{% set html -%}
 
 <div class="board-members">
 	<div class="board-members-left">
@@ -21,3 +22,6 @@
 		</div>
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent board_members %}
