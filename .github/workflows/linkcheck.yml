@@ -30,12 +30,6 @@ jobs:
         run: |
           npm install -g http-server
 
-      - name: Install lychee
-        uses: baptiste0928/cargo-install@v3
-        with:
-          crate: lychee
-          version: v0.24.2
-
       - name: Install Zola ${{ env.ZOLA_VERSION }}
         run: |
           curl -sL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" | tar -xz
@@ -50,5 +44,10 @@ jobs:
           http-server public -p 1111 &
 
       - name: Run lychee
-        run: |
-          lychee --config .lychee.toml --verbose --root-dir "$PWD/public" public/**/*.html
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            --verbose
+            --root-dir "$PWD/public"
+            "public/**/*.html"
