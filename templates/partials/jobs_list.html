@@ -1,9 +1,9 @@
 <div class="jobs-list-right">
   <div class="jobs-list-right-content">
     <div class="jobs-list-grid">
-      {% set active_jobs = section.pages | filter(attribute="extra.active", value=true) %}
-      {% set inactive_jobs  = section.pages | filter(attribute="extra.active", value=false) %}
-      {% set all_jobs = active_jobs | concat(with=inactive_jobs) %}
+      {% set active_jobs = [job for job in section.pages if job.extra.active] %}
+      {% set inactive_jobs = [job for job in section.pages if not job.extra.active] %}
+      {% set all_jobs = [...active_jobs, ...inactive_jobs] %}
       {% for job in all_jobs %}
       {% set is_active = job.extra.active %}
       <div class="job-card{% if is_active %} job-card--active{% else %} job-card--inactive{% endif %}">
