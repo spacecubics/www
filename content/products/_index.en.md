@@ -10,38 +10,38 @@ these computers function normally.
 """
 +++
 
-{{ product_display(
-	product_id_label="",
-	img="sc-obc_module_v1.png",
-	alt="",
-	pre_title="High-End Computer Module for New Space ",
-	title="SC-OBC Module V1",
-	part_number="SC-OBC-V1002 / SC-OBC-V1D02",
-	subtitle="High performance, reliable, and versatile.",
-	text1_a="Main Processor",
-	text1_b="AMD Versal AI Edge Series VE2302",
-	text2_a="Safety Processor",
-	text2_b="Microchip IGLOO2",
-	text3_a="Operating System",
-	text3_b="APU: Linux / RPU: Zephyr RTOS",
-	external_resources = [],
+{{ <product_display
+	lang
+	product_id_label=""
+	img="sc-obc_module_v1.png"
+	alt=""
+	pre_title="High-End Computer Module for New Space "
+	title="SC-OBC Module V1"
+	part_number="SC-OBC-V1002 / SC-OBC-V1D02"
+	subtitle="High performance, reliable, and versatile."
+	text1_a="Main Processor"
+	text1_b="AMD Versal AI Edge Series VE2302"
+	text2_a="Safety Processor"
+	text2_b="Microchip IGLOO2"
+	text3_a="Operating System"
+	text3_b="APU: Linux / RPU: Zephyr RTOS"
 	details_link="@/products/scobc_v1.md"
-) }}
+/> }}
 
-{{ product_display(
-	product_id_label="",
-	img="sc-obc_module_a1.png",
-	alt="",
-	pre_title="Ultra-small space computer module for satellites.",
-	title="SC-OBC Module A1",
-	part_number="SC-OBC-A1001",
-	subtitle="Built for performance, engineered for durability.",
-	text1_a="Main Processor",
-	text1_b="Xilinx Artix-7",
-	text2_a="CPU",
-	text2_b="Cortex M3 / MicroBlaze-V",
-	text3_a="Operating System",
-	text3_b="Zephyr RTOS",
-	external_resources = [],
+{{ <product_display
+	lang
+	product_id_label=""
+	img="sc-obc_module_a1.png"
+	alt=""
+	pre_title="Ultra-small space computer module for satellites."
+	title="SC-OBC Module A1"
+	part_number="SC-OBC-A1001"
+	subtitle="Built for performance, engineered for durability."
+	text1_a="Main Processor"
+	text1_b="Xilinx Artix-7"
+	text2_a="CPU"
+	text2_b="Cortex M3 / MicroBlaze-V"
+	text3_a="Operating System"
+	text3_b="Zephyr RTOS"
 	details_link="@/products/scobc_a1.md"
-) }}
+/> }}

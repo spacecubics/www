@@ -1,3 +1,5 @@
+{% component product_display(lang: string, img: string, details_link: string, alt: string = "image", product_id_label: string = "Product 01", pre_title: string = "", title: string = "", subtitle: string = "", part_number: string = "", text1_a: string = "", text1_b: string = "", text2_a: string = "", text2_b: string = "", text3_a: string = "", text3_b: string = "") -%}
+{% set html -%}
 <div class="product-display">
 	{% if img %}
 		<div class="product-image-container">
@@ -55,3 +57,6 @@
 		{% endif %}
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent product_display %}
