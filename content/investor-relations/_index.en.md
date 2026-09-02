@@ -12,4 +12,10 @@ and timely disclosures for our stakeholders.
 """
 +++
 
-{{ kv_list(title="IR NEWS", line1="Space Cubics", line2="INVESTOR RELATIONS", data="blocks/ir_news.json") }}
+{{ <kv_list
+	title="IR NEWS"
+	line1="Space Cubics"
+	line2="INVESTOR RELATIONS"
+	data="blocks/ir_news.json"
+	ordered_keys={["2025.06.01"]}
+/> }}

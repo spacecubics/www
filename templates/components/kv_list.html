@@ -1,4 +1,6 @@
+{% component kv_list(title: string, line1: string, line2: string, data: string, ordered_keys: array) -%}
 {% set kv_list = load_data(path=data, format="json") %}
+{% set html -%}
 
 <div class="about-company-block">
 	<div class="about-company-left">
@@ -6,11 +8,11 @@
 	</div>
 
 	<div class="about-company-right">
-		{% for key, value in kv_list %}
+		{% for key in ordered_keys %}
 		<div class="about-company-right-line">
 			<p>
 				<span class="about-company-bold">{{ key }}</span>
-				<span class="about-company-gap">{{ value | safe}}</span>
+				<span class="about-company-gap">{{ kv_list[key] | safe}}</span>
 			</p>
 			<p></p>
 			<div class="about-company-divider-bar"></div>
@@ -18,3 +20,6 @@
 		{% endfor %}
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent kv_list %}

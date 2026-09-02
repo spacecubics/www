@@ -19,7 +19,20 @@ card_body = "「誰もが月に行ける時代」を目指し、安価で信頼�
 	right_card="blocks/to_space.toml"
 /> }}
 
-{{ kv_list(title="COMPANY", line1="Space Cubics", line2="OVERVIEW", data="blocks/about_company.json") }}
+{{ <kv_list
+	title="COMPANY"
+	line1="Space Cubics"
+	line2="OVERVIEW"
+	data="blocks/about_company.json"
+	ordered_keys={[
+		"会社名",
+		"設立",
+		"代表者",
+		"住所",
+		"Tel",
+		"Map",
+	]}
+/> }}
 
 {{ board_members(title="BOARD MEMBERS", line1="Executive", line2="PROFILES", members="blocks/board-members.json") }}
 {{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.json") }}

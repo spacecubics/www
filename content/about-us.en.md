@@ -19,7 +19,20 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 	right_card="blocks/to_space.en.toml"
 /> }}
 
-{{ kv_list(title="COMPANY", line1="Space Cubics", line2="OVERVIEW", data="blocks/about_company.en.json") }}
+{{ <kv_list
+	title="COMPANY"
+	line1="Space Cubics"
+	line2="OVERVIEW"
+	data="blocks/about_company.en.json"
+	ordered_keys={[
+		"Company Name",
+		"Established",
+		"Representative",
+		"Address",
+		"Phone",
+		"Map",
+	]}
+/> }}
 
 {{ board_members(title="BOARD MEMBER", line1="Executive", line2="PROFILES", members="blocks/board-members.en.json") }}
 {{ board_members(title="FOUNDING ALUMNI", line1="", line2="", members="blocks/founding-alumni.en.json") }}
