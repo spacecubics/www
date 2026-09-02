@@ -13,13 +13,11 @@ card_body = "Aiming for an era where anyone can go to the moon, we are a JAXA ve
 	statement="Space Cubics, a JAXA venture, develops affordable, reliable space computers to make lunar access possible for all."
 /> }}
 
-{{ threecard(
-	title="To drink beer on the moon.",
-	subtitle="Space Cubics is a JAXA venture developing affordable and reliable space computers so everyone can go to the moon.",
-	left_card="blocks/affordable.en.toml",
-	middle_card="blocks/easy.en.toml",
+{{ <threecard
+	left_card="blocks/affordable.en.toml"
+	middle_card="blocks/easy.en.toml"
 	right_card="blocks/to_space.en.toml"
-) }}
+/> }}
 
 {{ kv_list(title="COMPANY", line1="Space Cubics", line2="OVERVIEW", data="blocks/about_company.en.json") }}
 

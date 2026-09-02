@@ -1,6 +1,8 @@
+{% component threecard(left_card: string, middle_card: string, right_card: string) -%}
 {% set left_card = load_data(path=left_card) %}
 {% set middle_card = load_data(path=middle_card) %}
 {% set right_card = load_data(path=right_card) %}
+{% set html -%}
 
 <div class="threecard">
 
@@ -57,3 +59,6 @@
 
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent threecard %}
