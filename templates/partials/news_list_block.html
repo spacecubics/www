@@ -1,3 +1,5 @@
+{% set all_news = all_news | sort(attribute="permalink") | reverse %}
+{% set all_news = all_news | sort(attribute="date") | reverse %}
 {% for news in all_news %}
 <div class="sc-list__item">
 	<span class="sc-list__label">
