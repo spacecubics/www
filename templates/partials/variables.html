@@ -1,5 +1,11 @@
 <style type="text/css">
 	:root {
-		--accent-color: {{ section.extra.accent_color | default(value=config.extra.accent_color) | default(value="#6f8396") | safe }};
+		{%- if section is defined and section.extra.accent_color is defined %}
+		--accent-color: {{ section.extra.accent_color | safe }};
+		{%- elif page is defined and page.extra.accent_color is defined %}
+		--accent-color: {{ page.extra.accent_color | safe }};
+		{%- else %}
+		--accent-color: {{ config.extra.accent_color | default(value="#6f8396") | safe }};
+		{%- endif %}
 	}
 </style>
