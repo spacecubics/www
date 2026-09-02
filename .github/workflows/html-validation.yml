@@ -37,7 +37,8 @@ jobs:
           "$ZOLA_BIN" --version
 
       - name: Build site
-        run: "$ZOLA_BIN" build
+        run: |
+          "$ZOLA_BIN" build
 
       - name: Validate HTML
         run: |
