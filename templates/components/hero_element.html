@@ -1,3 +1,5 @@
+{% component hero_element(title: string, bg: string, subtitle: string, slogan: string) -%}
+{% set html -%}
 <div class="hero-section"
 	style="background-image:
 		{% if bg == 'about.jpg' %}
@@ -19,3 +21,6 @@
 	</div>
 
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent hero_element %}

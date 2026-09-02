@@ -1,3 +1,5 @@
+{% component hero_content(lang: string, img: string = "", alt: string = "image", link: string = "", link_text: string = "", bottom_title: string = "", hero_footer: string = "") -%}
+{% set html -%}
 <div class="hero-inner{% if not img or img | length == 0 %} no-image{% endif %}">
 	<div class="hero-content">
 		<div class="hero-text">
@@ -31,3 +33,6 @@
 		{% endif %}
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent hero_content %}
