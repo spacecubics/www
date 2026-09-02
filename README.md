@@ -3,7 +3,7 @@
 This is a corporate website built with [Zola](https://www.getzola.org/) --
 a static site generator written in Rust.
 
-You need Zola v0.22.0 or later.
+Use the exact Zola version recorded in [`ZOLA_VERSION`](ZOLA_VERSION).
 
 ## 🚀 Quick Start
 
