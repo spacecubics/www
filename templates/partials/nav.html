@@ -6,7 +6,7 @@
 
 		<div class="nav-content">
 			<div class="nav-header">
-				<a id="home" href="{{ get_url(path='/', lang=lang) }}">
+				<a id="home" href="{% if lang == config.default_language %}{{ config.base_url }}{% else %}{{ get_url(path='/', lang=lang, trailing_slash=true) }}{% endif %}">
 					<span class="company-logo-wrapper">
 						<img class="company-logo" src="{{ get_url(path='logo_white.webp') }}" alt="Space Cubics" />
 					</span>
