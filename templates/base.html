@@ -24,7 +24,7 @@
 		<main id="main-content">
 			{% block custom %}{% endblock custom %}
 
-			{%- if page.extra.go_to_top or section.extra.go_to_top %}
+			{%- if (page is defined and page.extra.go_to_top) or (section is defined and section.extra.go_to_top) %}
 				<div id="buttons-container">
 					<a id="go-to-top"
 						href="#top"
