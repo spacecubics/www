@@ -46,11 +46,29 @@
 }
 
 .banner-image {
-	display: flex;
-	align-items: center;
 	margin-top: 2rem;
-	margin-left: 1rem;
-	overflow: visible;
+	overflow: hidden;
+}
+
+.banner-image-track {
+	display: flex;
+	width: max-content;
+	animation: banner-scroll 30s linear infinite;
+	will-change: transform;
+}
+
+.banner-image img {
+	display: block;
+	width: 3091px;
+	max-width: none;
+	height: auto;
+	flex-shrink: 0;
+}
+
+@keyframes banner-scroll {
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 .small-elements {
@@ -189,13 +207,5 @@
 	}
 	.banner-image {
 		width: 100vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-	}
-	.banner-image img {
-		width: 100%;
-		height: auto;
 	}
 }
