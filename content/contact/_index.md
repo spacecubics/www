@@ -10,10 +10,10 @@ card_body = """事業やサービスについてご相談・ご質問承りま�
 """
 +++
 
-{{ contact_form(
-	title="お問い合わせ",
+{{ <contact_form
+	title="お問い合わせ"
 	name_field="お名前"
 	email_field="メールアドレス"
 	message_field="メッセージを入力してください"
 	button_label="送信"
-) }}
+/> }}

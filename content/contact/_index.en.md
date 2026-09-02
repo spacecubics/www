@@ -10,10 +10,10 @@ Please feel free to contact us.
 """
 +++
 
-{{ contact_form(
-	title="Reach out to us.",
+{{ <contact_form
+	title="Reach out to us."
 	name_field="Name"
 	email_field="Email address"
 	message_field="Please write your message here"
 	button_label="Send"
-) }}
+/> }}

@@ -1,3 +1,5 @@
+{% component contact_form(title: string = "", name_field: string = "Your Name", email_field: string = "Your Email", message_field: string = "Message", button_label: string = "Send") -%}
+{% set html -%}
 <section class="z-contact-form">
 	<div class="z-contact-form__header">
 		{% if title %}
@@ -55,3 +57,6 @@
 <!-- Load Turnstile and custom script -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="/js/contact.js" defer></script>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent contact_form %}
