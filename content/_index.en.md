@@ -5,7 +5,7 @@ title = "Space Cubics Inc."
 prefooter_cards = ["recruit/_index.en.md", "investor-relations/_index.en.md", "contact/_index.en.md"]
 +++
 
-{{ splash() }}
+{{ <splash config /> }}
 
 {% <hero_element bg="" title="PRODUCTS" subtitle="Make the impossible" slogan="POSSIBLE"> %}
 	{% <hero_content

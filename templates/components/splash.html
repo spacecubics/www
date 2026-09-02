@@ -1,3 +1,5 @@
+{% component splash(config: map) -%}
+{% set html -%}
 <div class="splash">
 	<div class="splash-image">
 		<div class="vertical-text">
@@ -12,7 +14,7 @@
 			{%- if config.extra.footer.socials %}
 				{%- for link in config.extra.footer.socials %}
 					<a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.name }}">
-						<i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+						<i class="icon" style="--icon: url(&quot;data:image/svg+xml,{{ link.icon }}&quot;)"></i>
 					</a>
 				{%- endfor %}
 			{%- endif %}
@@ -26,3 +28,6 @@
 		</div>
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent splash %}
