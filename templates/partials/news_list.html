@@ -14,7 +14,7 @@
         <div class="news-list-content">
           {% set news_section = get_section(path="news/_index.md", lang=lang) %}
           {% set limit = limit | default(value=5) %}
-          {% set all_news = news_section.pages | slice(end=limit) %}
+          {% set all_news = news_section.pages[:limit] %}
           {% include "partials/news_list_block.html" %}
         </div>
 
