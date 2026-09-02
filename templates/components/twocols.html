@@ -1,3 +1,5 @@
+{% component twocols(title: string, line1: string, line2: string) -%}
+{% set html -%}
 <div class="twocols segment">
 	<div class="twocols-left">
 		{% include "partials/segment_title.html" %}
@@ -7,3 +9,6 @@
 		{{ body | safe }}
 	</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent twocols %}
