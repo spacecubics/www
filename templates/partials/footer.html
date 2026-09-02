@@ -33,7 +33,7 @@
 										<ul>
 										{%- for sublink in link.menu %}
 											<li>
-												{%- if sublink.url is matching('https?://') %}
+												{%- if sublink.url is matching(pat='https?://') %}
 													<a href="{{ sublink.url }}" rel="{{ rel_attributes }}" class="external">
 														{{ <translate key={sublink.name} default={sublink.name} language_strings={language_strings} /> }}
 													</a>
@@ -49,7 +49,7 @@
 								</li>
 							{%- else %}
 								<li>
-									{%- if link.url is matching('https?://') %}
+									{%- if link.url is matching(pat='https?://') %}
 										<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
 											{{ <translate key={link.name} default={link.name} language_strings={language_strings} /> }}
 										</a>

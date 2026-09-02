@@ -34,8 +34,8 @@
 										{%- for sublink in link.menu -%}
 											<div class="dropdown-item">
 												<a class="main-navbar-link"
-													href="{% if sublink.url is matching('https?://') %}{{ sublink.url }}{% else %}{{ get_url(path=sublink.url, lang=lang) }}{% endif %}"
-													{% if sublink.url is matching('https?://') %}rel="{{ rel_attributes }}"{% endif %}
+													href="{% if sublink.url is matching(pat='https?://') %}{{ sublink.url }}{% else %}{{ get_url(path=sublink.url, lang=lang) }}{% endif %}"
+													{% if sublink.url is matching(pat='https?://') %}rel="{{ rel_attributes }}"{% endif %}
 													tabindex="0"
 												>
 													{{- <translate key={sublink.name} default={sublink.name} language_strings={language_strings} /> -}}
@@ -45,7 +45,7 @@
 									</div>
 								</details>
 							</div>
-						{%- elif link.url is matching('https?://') %}
+						{%- elif link.url is matching(pat='https?://') %}
 							<div class="main-navbar-item">
 								<a class="main-navbar-link" href="{{ link.url }}" rel="{{ rel_attributes }}" tabindex="0">
 									{{- <translate key={link.name} default={link.name} language_strings={language_strings} /> -}}

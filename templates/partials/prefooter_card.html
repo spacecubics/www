@@ -1,4 +1,4 @@
-{% if page_name is matching("_index(\.en)?\.md$")  %}
+{% if page_name is matching(pat="_index([.]en)?[.]md$")  %}
 {% set page = get_section(path=page_name, metadata_only=true) %}
 {% else %}
 {% set page = get_page(path=page_name, metadata_only=true) %}
