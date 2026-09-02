@@ -1,4 +1,9 @@
+{% component recruit_intro(title: string) -%}
+{% set html -%}
 <div class="recruit-intro-container">
 	<h2 class="recruit-intro-title">{{ title | safe }}</h2>
 	<div class="recruit-intro-body">{{ body | markdown | safe }}</div>
 </div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent recruit_intro %}

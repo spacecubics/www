@@ -14,7 +14,7 @@ If you are interested, please contact us.
 """
 +++
 
-{% recruit_intro(title = "We are always looking for new members to join our team. <br><br> If you are interested, please contact us using the application form.") %}
+{% <recruit_intro title="We are always looking for new members to join our team. <br><br> If you are interested, please contact us using the application form."> %}
 
 Space Cubics, Inc. was founded by engineers who met while working in
 various space tech fields. We genuinely enjoy engineering computers
@@ -32,4 +32,4 @@ astrocomputer industry, please reach out to us. But if you don't work
 well in a positive, collaborate environment, then this may not be the
 best place for you.
 
-{% end %}
+{% </recruit_intro> %}
