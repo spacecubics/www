@@ -6,6 +6,8 @@
 		<div class="news-list">
 			<div class="news-list-content">
 				{% set all_news = paginator.pages %}
+				{% set all_news = all_news | sort(attribute="permalink") | reverse %}
+				{% set all_news = all_news | sort(attribute="date") | reverse %}
 				{% include "partials/news_list_block.html" %}
 
 				{% if paginator.number_pagers > 1 %}
