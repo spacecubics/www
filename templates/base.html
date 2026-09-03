@@ -1,4 +1,4 @@
-{%- set language_strings = load_data(path="i18n/" ~ lang ~ ".toml", required=false) -%}
+{%- set language_strings = load_data(path="i18n/" ~ lang ~ ".toml", required=true) -%}
 {%- set date_format = <translate key="date_format" language_strings={language_strings} /> -%}
 
 {%- set rel_attributes = ["noopener"] -%}
