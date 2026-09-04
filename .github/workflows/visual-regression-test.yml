@@ -101,3 +101,7 @@ jobs:
           ```
           See [`doc/develop.md`](https://github.com/spacecubics/www/blob/main/doc/develop.md) for more details
           EOF
+
+      - name: Fail if VRT failed
+        if: ${{ steps.vrt-test.outcome == 'failure' }}
+        run: exit 1
