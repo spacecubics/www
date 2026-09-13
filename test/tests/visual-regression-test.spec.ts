@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ context }) => {
   await context.addInitScript(() => {
@@ -10,6 +10,23 @@ async function enableCookieBanner(page) {
   await page.addInitScript(() => {
     localStorage.removeItem('cookieClosed');
   });
+}
+
+async function alignHomepageBottom(page: Page) {
+  await page.evaluate(() => document.fonts.ready);
+  const bottom = page.locator('#main-content > .section').filter({
+    has: page.locator('.card-grid'),
+  });
+  await expect(bottom).toHaveCount(1);
+  // Headlines can shift this section by a fractional pixel. Align its origin
+  // without changing its size or its spacing relative to the footer, so the
+  // screenshots compare rendering rather than document-position rounding.
+  await bottom.evaluate((element: HTMLElement) => {
+    const top = element.getBoundingClientRect().top;
+    const margin = parseFloat(getComputedStyle(element).marginTop);
+    element.style.marginTop = `${margin + Math.ceil(top) - top}px`;
+  });
+  return bottom;
 }
 
 test.describe('Visual Regression Tests', () => {
@@ -31,12 +48,38 @@ test.describe('Visual Regression Tests', () => {
     await expect(page).toHaveScreenshot({ fullPage: false });
   });
 
-  test('homepage comparison', async ({ page }) => {
+  test('homepage comparison (above news)', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
+    await page.evaluate(() => document.fonts.ready);
+    const news = await page.locator('.news-list-parent').boundingBox();
+    expect(news).not.toBeNull();
     await expect(page).toHaveScreenshot({
       fullPage: true,
-      mask: [page.locator('.news-list-parent')],
+      clip: {
+        x: 0,
+        y: 0,
+        width: page.viewportSize()!.width,
+        height: Math.floor(news!.y),
+      },
+    });
+  });
+
+  test('homepage comparison (below news)', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('load');
+    const bottom = await alignHomepageBottom(page);
+    const bounds = await bottom.boundingBox();
+    expect(bounds).not.toBeNull();
+    const height = await page.evaluate(() => document.documentElement.scrollHeight);
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      clip: {
+        x: 0,
+        y: Math.floor(bounds!.y),
+        width: page.viewportSize()!.width,
+        height: height - Math.floor(bounds!.y),
+      },
     });
   });
 
@@ -141,6 +184,7 @@ test.describe('Component Visual Tests', () => {
   test('footer comparison', async ({ page }) => {
     await page.goto('/');
     await page.waitForLoadState('load');
+    await alignHomepageBottom(page);
     const footer = page.locator('footer, .footer').first();
     await expect(footer).toHaveScreenshot();
   });
