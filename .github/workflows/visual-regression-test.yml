@@ -72,7 +72,7 @@ jobs:
 
       - name: Run visual regression test
         working-directory: test
-        run: npx playwright test tests/visual-regression-test.spec.ts
+        run: npx playwright test tests/visual-regression-test.spec.ts --reporter=html
         id: vrt-test
         continue-on-error: true
 
