@@ -120,6 +120,13 @@ test.describe('Visual Regression Tests', () => {
   test('recruit page comparison', async ({ page }) => {
     await page.goto('/recruit/');
     await page.waitForLoadState('load');
+    const wanted = page.locator('.twocols.segment').filter({
+      has: page.getByRole('heading', { name: 'WANTED', exact: true }),
+    });
+    await expect(wanted).toHaveCount(1);
+    // Job updates change this section's height as well as its contents.
+    // Remove it so they do not shift the application form and footer.
+    await wanted.evaluate(element => element.remove());
     await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
