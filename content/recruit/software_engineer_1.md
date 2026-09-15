@@ -3,7 +3,7 @@ title = "ソフトウェアエンジニア I"
 date = 2025-11-24
 
 [extra]
-active = true
+active = false
 +++
 
 ### 募集概要
