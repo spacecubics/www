@@ -3,7 +3,7 @@ title = "ハードウェアエンジニア I"
 date = 2025-12-17
 
 [extra]
-active = true
+active = false
 +++
 
 ### 募集概要
