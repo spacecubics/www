@@ -71,7 +71,7 @@
 
 					{%- if config.extra.default_theme or config.extra.nav.show_theme_switcher %}
 						<div id="contact" class="main-navbar-item">
-							<a class="main-navbar-link" href="{{ get_url(path='contact', lang=lang) }}" tabindex="0">
+							<a class="main-navbar-link" href="{{ get_url(path='@/contact/_index.md', lang=lang) }}" tabindex="0">
 								{{ <translate key="contact" default="Contact" language_strings={language_strings} /> }}
 							</a>
 						</div>
