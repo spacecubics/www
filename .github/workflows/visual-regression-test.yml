@@ -72,7 +72,7 @@ jobs:
 
       - name: Run visual regression test
         working-directory: test
-        run: npx playwright test tests/visual-regression-test.spec.ts
+        run: npx playwright test tests/visual-regression-test.spec.ts --reporter=html
         id: vrt-test
         continue-on-error: true
 
@@ -101,6 +101,17 @@ jobs:
           ```
           See [`doc/develop.md`](https://github.com/spacecubics/www/blob/main/doc/develop.md) for more details
           EOF
+
+      - name: Publish report to Cloudflare Pages
+        working-directory: test
+        if: ${{ !cancelled() && github.event.pull_request.head.repo.full_name == github.repository && steps.vrt-test.outcome != 'cancelled' && steps.vrt-test.outcome != 'skipped' }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          npx --yes wrangler@4 pages deploy --branch "pr-$PR_NUMBER"
+          echo "[View failed tests](https://pr-$PR_NUMBER.spacecubics-vrt.pages.dev/#?q=s%3Afailed)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail if VRT failed
         if: ${{ steps.vrt-test.outcome == 'failure' }}

@@ -1,0 +1,2 @@
+name = "spacecubics-vrt"
+pages_build_output_dir = "./playwright-report"
