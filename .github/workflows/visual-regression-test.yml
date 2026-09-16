@@ -7,6 +7,10 @@ on:
       - doc/**
       - README.md
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   vrt:
     runs-on: ubuntu-latest
