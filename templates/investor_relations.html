@@ -1,0 +1,35 @@
+{% extends "section.html" %}
+
+{% block section_body %}
+  {{ section.content | safe }}
+  <div class="about-company-block">
+    <div class="about-company-left">
+      {% set title = "IR NEWS" %}
+      {% set line1 = "Space Cubics" %}
+      {% set line2 = "INVESTOR RELATIONS" %}
+      {% include "partials/segment_title.html" %}
+    </div>
+    <div class="about-company-right">
+      <div class="news-list-content">
+        {% set news_section = get_section(path="news/_index.md", lang=lang) %}
+        {% set sorted_news = news_section.pages | sort(attribute="permalink") | reverse %}
+        {% set sorted_news = sorted_news | sort(attribute="date") | reverse %}
+        {% set_global has_ir_news = false %}
+        {% for news in sorted_news %}
+          {% if news.extra.ir | default(value=false) %}
+            {% set_global has_ir_news = true %}
+            {% set all_news = [news] %}
+            {% include "partials/news_list_block.html" %}
+          {% endif %}
+        {% endfor %}
+        {% if not has_ir_news %}
+          {% if lang == "en" %}
+            <p>No IR news yet.</p>
+          {% else %}
+            <p>現在、IRのお知らせはありません。</p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock section_body %}

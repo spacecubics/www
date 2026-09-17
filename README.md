@@ -64,6 +64,20 @@ title itself is an `<h2>`. This means you should only use level-3 or
 lower headers within the article. In other words, start from `###` or
 deeper for your section headings.
 
+### Include News in Investor Relations
+
+To include a news article in the IR listing, add `ir = true` under
+`[extra]` in both the Japanese article and its `.en.md` sibling:
+
+```toml
+[extra]
+ir = true
+```
+
+The IR pages automatically list marked articles in their own language,
+newest first, using each article's date, title, and link. Keep PDF links
+in the news article body; no separate IR listing data needs to be updated.
+
 ### Linking to Local Pages
 
 A link to a local page must include the `@/` prefix.
