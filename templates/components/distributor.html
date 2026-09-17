@@ -1,0 +1,16 @@
+{% component distributor(name: string, logo: string, url: string, lang: string) -%}
+{% set strings = load_data(path="i18n/" ~ lang ~ ".toml", required=true) -%}
+{% set html -%}
+<div class="distributor">
+  <img class="distributor__logo" src="{{ get_url(path=logo) }}" alt="" loading="lazy">
+  <span class="distributor__name">{{ name }}</span>
+  <a href="{{ url }}" class="distributor__link external-link" aria-label="{{ name }}: {{ strings.distributor_website }}">
+    <span class="external-link__pair">
+      <span class="external-link__label">{{ strings.distributor_website }}</span>
+      <img src="{{ get_url(path='cil-external-link.svg') }}" class="external-link__icon" alt="" width="28" height="28">
+    </span>
+  </a>
+</div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent distributor %}

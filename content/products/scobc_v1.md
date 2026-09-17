@@ -110,3 +110,8 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
   Yocto Layer for V1 | SC-OBC Module V1用Yoctoレイヤーのソースコードです。 | https://github.com/spacecubics/meta-scobc
   GitHub | その他、様々な技術情報はこちらを参照ください。 | https://github.com/spacecubics
 {% </docs_resources> %}
+
+
+## AUTHORIZED DISTRIBUTORS
+
+{{ <distributor name="NASAM株式会社" logo="nasam-logo.svg" url="https://www.nasam.com/" lang="ja" /> }}

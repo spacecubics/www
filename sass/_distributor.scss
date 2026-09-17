@@ -1,0 +1,60 @@
+.quick-jump .quick-jump-item:has(a[href="#authorized-distributors"]) {
+  flex-basis: 100%;
+  max-width: 320px;
+
+  .title {
+    white-space: normal;
+  }
+}
+
+.distributor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: relative;
+  margin: 0 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #666;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 12%;
+    height: 2px;
+    background: var(--accent-color);
+  }
+
+  &__logo {
+    display: block;
+    width: 10rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__name {
+    overflow-wrap: anywhere;
+  }
+
+  &__link {
+    margin-left: auto;
+    min-height: 44px;
+    font-size: 0.875rem;
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    gap: 1rem;
+
+    &__link {
+      flex-basis: 100%;
+      margin-left: 0;
+    }
+  }
+}

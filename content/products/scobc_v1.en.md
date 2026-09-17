@@ -110,3 +110,8 @@ Please use our [contact form](/contact) to request more information.
   Yocto Layer for V1 | This is a yocto layer for SC-OBC Module V1. | https://github.com/spacecubics/meta-scobc
   GitHub | For other technical information, please refer to our GitHub repositories. | https://github.com/spacecubics
 {% </docs_resources> %}
+
+
+## AUTHORIZED DISTRIBUTORS
+
+{{ <distributor name="NASAM" logo="nasam-logo.svg" url="https://www.nasam.com/" lang="en" /> }}
