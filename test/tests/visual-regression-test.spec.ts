@@ -158,6 +158,35 @@ test.describe('Visual Regression Tests', () => {
   });
 });
 
+test.describe('SC-OBC Module V1 visual comparisons', () => {
+  for (const language of ['ja', 'en']) {
+    for (const viewport of [
+      { name: 'desktop', width: 1280, height: 720 },
+      { name: 'mobile', width: 375, height: 667 },
+    ]) {
+      test(`${language} ${viewport.name}`, async ({ page }) => {
+        await page.setViewportSize(viewport);
+        const prefix = language === 'en' ? '/en' : '';
+        await page.goto(`${prefix}/products/scobc_v1/`);
+        await page.evaluate(() => document.fonts.ready);
+        const images = page.locator('.product-content img');
+        await images.evaluateAll(elements => {
+          for (const element of elements) {
+            (element as HTMLImageElement).loading = 'eager';
+          }
+        });
+        await expect.poll(() => images.evaluateAll(elements =>
+          elements.every(element => {
+            const image = element as HTMLImageElement;
+            return image.complete && image.naturalWidth > 0;
+          }),
+        )).toBe(true);
+        await expect(page).toHaveScreenshot({ fullPage: true });
+      });
+    }
+  }
+});
+
 test.describe('Mobile Visual Comparison Tests', () => {
   test.use({ viewport: { width: 375, height: 667 } });
 
