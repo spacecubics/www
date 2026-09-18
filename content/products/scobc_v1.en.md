@@ -114,4 +114,4 @@ Please use our [contact form](/contact) to request more information.
 
 ## AUTHORIZED DISTRIBUTORS
 
-{{ <distributor name="NASAM" logo="nasam-logo.svg" url="https://www.nasam.com/" lang="en" /> }}
+{{ <distributor name="NASAM INC." logo="nasam-logo.svg" url="https://www.nasam.com/" lang="en" /> }}
