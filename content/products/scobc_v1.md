@@ -114,4 +114,4 @@ CPU・FPGA・AI Engineを統合したヘテロジニアスプラットフォー�
 
 ## AUTHORIZED DISTRIBUTORS
 
-{{ <distributor name="NASAM株式会社" logo="nasam-logo.svg" url="https://www.nasam.com/" lang="ja" /> }}
+{{ <distributor name="NASAM INC." logo="nasam-logo.svg" url="https://www.nasam.com/" lang="ja" /> }}
