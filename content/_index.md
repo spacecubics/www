@@ -37,7 +37,7 @@ prefooter_cards = ["recruit/_index.md", "investor-relations/_index.md", "contact
 
 
 {% <hero_element bg="about.jpg" title="ABOUT US" subtitle="To drink beer" slogan="ON THE MOON"> %}
-	{% <hero_content lang img="empty_image.png" alt="" link="@/about-us.md" link_text="About Us" bottom_title=""> %}
+  {% <hero_content lang link="@/about-us.md" link_text="About Us"> %}
 	私たち Space Cubics は
 	<br>「誰もが月に行ける時代」を目指し、
 	<br>安価で信頼性の高い宇宙用コンピュータを開発する
