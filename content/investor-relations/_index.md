@@ -1,5 +1,8 @@
 +++
 title = "IR INFO"
+template = "investor_relations.html"
+page_template = "ir_article.html"
+sort_by = "date"
 description = "投資家情報"
 
 [extra]
@@ -11,11 +14,3 @@ card_body = """
 決算や適時開示情報などをご紹介しています。
 """
 +++
-
-{{ <kv_list
-	title="IR NEWS"
-	line1="Space Cubics"
-	line2="INVESTOR RELATIONS"
-	data="blocks/ir_news.json"
-	ordered_keys={["2025.06.01"]}
-/> }}
