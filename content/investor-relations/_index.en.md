@@ -1,5 +1,8 @@
 +++
 title = "INVESTOR RELATIONS"
+template = "ir.html"
+page_template = "ir_info.html"
+sort_by = "date"
 description = "Investor Relations"
 
 [extra]
@@ -11,11 +14,3 @@ We provide information on financial results
 and timely disclosures for our stakeholders.
 """
 +++
-
-{{ <kv_list
-	title="IR INFO"
-	line1="Space Cubics"
-	line2="INVESTOR RELATIONS"
-	data="blocks/ir_news.json"
-	ordered_keys={["2025.06.01"]}
-/> }}

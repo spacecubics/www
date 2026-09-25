@@ -1,0 +1,29 @@
+{% extends "section.html" %}
+
+{% block section_body %}
+  {{ section.content | safe }}
+  <div class="ir-info">
+    <div class="ir-info-heading">
+      {% set title = "IR INFO" %}
+      {% set line1 = "Space Cubics" %}
+      {% set line2 = "INVESTOR RELATIONS" %}
+      {% include "partials/segment_title.html" %}
+    </div>
+    <div class="ir-info-content">
+      <div class="ir-info-list">
+        {% set all_info = section.pages | sort(attribute="permalink") | reverse %}
+        {% set all_info = all_info | sort(attribute="date") | reverse %}
+        {% if all_info %}
+          {% set all_news = all_info %}
+          {% include "partials/news_list_block.html" %}
+        {% else %}
+          {% if lang == "en" %}
+            <p>No IR information available.</p>
+          {% else %}
+            <p>現在、IR情報はありません。</p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock section_body %}
