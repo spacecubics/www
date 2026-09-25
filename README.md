@@ -64,6 +64,31 @@ title itself is an `<h2>`. This means you should only use level-3 or
 lower headers within the article. In other words, start from `###` or
 deeper for your section headings.
 
+### Add an Investor Relations Article
+
+Create dated articles in `content/investor-relations/`, with a Japanese
+`.md` file and an English `.en.md` sibling, just as for News. Only a title
+is required in the front matter; the filename supplies the publication date:
+
+```markdown
++++
+title = "貸借対照表を公開しました"
++++
+
+[貸借対照表（PDF）](/files/spacecubics-balance-sheet-2026-05-31.pdf)
+```
+
+IR pages automatically list all articles in their own section and language,
+newest first. There is no per-article IR flag or separate listing data to edit.
+Keep PDF files in `static/files/` and link to them from the article body.
+
+IR articles are independent of regular News: they appear in the IR listing,
+not in the News listing or the homepage's latest News. Their URLs are
+`/investor-relations/<date>/` and `/en/investor-relations/<date>/`.
+IR articles use the dedicated `ir_article.html` template, with an IR heading
+and a back link to the IR listing. Body headings start at `###`, as they do
+for News.
+
 ### Linking to Local Pages
 
 A link to a local page must include the `@/` prefix.

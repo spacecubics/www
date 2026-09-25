@@ -1,0 +1,50 @@
+{% extends "page.html" %}
+
+{% block content %}
+	{% set article_section_path = page.ancestors | last | replace(from="." ~ lang ~ ".md", to=".md") %}
+	{% set article_section = get_section(path=article_section_path, lang=lang) %}
+	<div class="title-block section-title-block">
+		<div class="title-content section-title-content">
+			<h1 class="segment__title">{{ article_section.title }}</h1>
+			<p class="segment__line1">{{ article_section.description }}</p>
+			<p class="segment__line2"></p>
+			<div class="segment__divider"></div>
+		</div>
+	</div>
+
+	<article class="news-article">
+		<div class="news-article-date">
+			<time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format=date_format) }}</time>
+		</div>
+		<h2 class="news-article-title">{{ page.title }}</h2>
+		<div class="news-article-content">
+			{{ page.content | safe }}
+		</div>
+		{% if page.extra.link %}
+			<a href="{{ page.extra.link }}" target="_blank" rel="noopener noreferrer" class="external-link">
+				<span class="external-link__pair">
+					<span class="external-link__label">Link</span>
+					<img src="/cil-external-link.svg" alt="External link" class="external-link__icon" width="16" height="16" />
+				</span>
+			</a>
+		{% endif %}
+		<div class="news-article-back">
+			<span class="back-text">Back to List</span>
+			<a href="{{ get_url(path="@/" ~ article_section_path, lang=lang) }}" class="circle-btn back-btn" aria-label="{{ article_section.title }}">
+			</a>
+		</div>
+	</article>
+
+	<div class="section">
+		<div class="card-grid">
+			{% if lang == "en" %}
+				{% set page_name = "contact/_index.en.md" %}
+			{% else %}
+				{% set page_name = "contact/_index.md" %}
+			{% endif %}
+			{% set bottom_card = True %}
+			{% include "partials/prefooter_card.html" %}
+		</div>
+	</div>
+
+{% endblock content %}
