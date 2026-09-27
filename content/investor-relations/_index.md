@@ -1,5 +1,5 @@
 +++
-title = "IR INFO"
+title = "INVESTOR RELATIONS"
 description = "投資家情報"
 
 [extra]
@@ -13,7 +13,7 @@ card_body = """
 +++
 
 {{ <kv_list
-	title="IR NEWS"
+	title="IR INFO"
 	line1="Space Cubics"
 	line2="INVESTOR RELATIONS"
 	data="blocks/ir_news.json"
