@@ -113,3 +113,8 @@ information.
 	Zephyr Info Page | This is the dedicated SC-OBC Module A1 page on the Zephyr Project site. | https://docs.zephyrproject.org/latest/boards/sc/scobc_a1/doc/index.html
 	GitHub | For other technical information, please refer to our GitHub repositories. | https://github.com/spacecubics
 {% </docs_resources> %}
+
+
+## AUTHORIZED DISTRIBUTORS
+
+{{ <distributor name="NASAM INC." logo="nasam-logo.svg" url="https://www.nasam.com/" lang="en" /> }}
