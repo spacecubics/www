@@ -4,26 +4,22 @@
 
 <div class="product">
 
-	{% if page.toc and page.toc | length > 0 %}
-	<div class="quick-jump">
+  {% if page.toc and page.toc | length > 0 %}
+  <nav class="quick-jump" aria-label="{{ language_strings.on_this_page }}">
     {% for h in page.toc %}
-	  <div class="quick-jump-item">
-		  <div class="content-group">
-      	<div class="title">{{ h.title }}</div>
-        <a href="#{{ h.id }}"
-				  class="jump-button"
-				  aria-label="Jump to {{ h.title }}">
-          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </div>
-		{% endfor %}
-  </div>
-	{% endif %}
+    <a class="quick-jump-item" href="#{{ h.id }}">
+      <span class="title">{{ h.title }}</span>
+      <span class="jump-button" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+    </a>
+    {% endfor %}
+  </nav>
+  {% endif %}
 
-	<div class="product-content">
-		{{ page.content | safe }}
-	</div>
+  <div class="product-content">
+    {{ page.content | safe }}
+  </div>
 
 </div>
 
