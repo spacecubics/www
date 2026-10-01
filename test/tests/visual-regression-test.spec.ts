@@ -105,10 +105,12 @@ test.describe('Visual Regression Tests', () => {
   test('news page comparison', async ({ page }) => {
     await page.goto('/news/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({
-      fullPage: true,
-      mask: [page.locator('.news-list-parent')],
-    });
+    const news = page.locator('.news-list-parent');
+    await expect(news).toHaveCount(1);
+    // News updates change the list height and pagination. Remove the list
+    // so those changes do not shift the footer in this comparison.
+    await news.evaluate(element => element.remove());
+    await expect(page).toHaveScreenshot({ fullPage: true });
   });
 
   test('investor relations page comparison', async ({ page }) => {
