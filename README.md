@@ -88,6 +88,31 @@ Or, if you are calling one of our components:
 This ensures the correct link is generated for the page, based on its
 language.
 
+## 📊 Add Investor Relations Information
+
+1. If required, prepare a PDF locally, using a unique, descriptive filename
+   that identifies the document. Include a relevant date, fiscal year, or
+   version where appropriate. For example, a balance sheet could be named
+   `spacecubics-balance-sheet-fy8-2026-05-31.pdf`.
+2. For the PDF prepared in step 1, ask the infrastructure contact
+   to upload it to the file server and provide its public URL.
+3. Create files in `content/investor-relations/`, named by publication date.
+   For example: `2026-08-19.md` and `2026-08-19.en.md`.
+4. Add a `title` in the front matter.
+5. Add the information to the body and, if required, a PDF link. Use a Markdown
+   reference link to keep the URL separate from the link text. Use the public
+   file server URL provided by the infrastructure contact in both languages.
+
+   ```markdown
+   +++
+   title = "第8期 貸借対照表(2026年5月31日現在)"
+   +++
+
+   [第8期 貸借対照表(2026年5月31日現在)(PDF)][1]
+
+   [1]: https://downloads.spacecubics.com/investor-relations/balance-sheet/spacecubics-balance-sheet-fy8-2026-05-31.pdf
+   ```
+
 ## 💻 Add a New Job Position
 1. Create a new file in `content/recruit/`.
    - If you are posting in Japanese, end the file name with `.md`.
@@ -124,7 +149,7 @@ This repository is organized into only a few main folders...
   |-- about-us.md            # About us page
   |-- about-us.en.md         # About us English page
   |-- contact/               # Contact forms
-  |-- investor-relations/    # Investor relations
+  |-- investor-relations/    # IR listing and dated information pages
   |-- news/                  # News articles
   |-- products/              # Products section
   `-- recruit/               # Recruitment section
@@ -136,6 +161,8 @@ This repository is organized into only a few main folders...
   ```
   templates/
   |-- base.html              # Main layout for site
+  |-- investor_relations.html # IR listing template
+  |-- ir_info.html           # IR information page template
   |-- news_article.html      # News article template
   |-- components/            # Components callable from content and templates
   `-- partials/              # Reusable page sections

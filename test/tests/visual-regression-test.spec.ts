@@ -116,7 +116,10 @@ test.describe('Visual Regression Tests', () => {
   test('investor relations page comparison', async ({ page }) => {
     await page.goto('/investor-relations/');
     await page.waitForLoadState('load');
-    await expect(page).toHaveScreenshot({ fullPage: true });
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.ir-info-list')],
+    });
   });
 
   test('recruit page comparison', async ({ page }) => {
@@ -152,6 +155,15 @@ test.describe('Visual Regression Tests', () => {
 
   test('individual news article comparison', async ({ page }) => {
     await page.goto('/news/2025-09-04/');
+    await page.waitForLoadState('load');
+    await expect(page).toHaveScreenshot({
+      fullPage: true,
+      mask: [page.locator('.news-article-content')],
+    });
+  });
+
+  test('individual IR information comparison', async ({ page }) => {
+    await page.goto('/investor-relations/2026-08-19/');
     await page.waitForLoadState('load');
     await expect(page).toHaveScreenshot({
       fullPage: true,
