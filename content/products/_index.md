@@ -45,3 +45,8 @@ card_body = """極限の環境でも
 	text3_b="Zephyr RTOS"
 	details_link="@/products/scobc_a1.md"
 /> }}
+
+
+## AUTHORIZED DISTRIBUTORS
+
+{{ <distributor name="NASAM INC." logo="nasam-logo.svg" url="https://www.nasam.com/" lang="ja" /> }}
