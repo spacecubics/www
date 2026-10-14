@@ -41,6 +41,7 @@ links = [
 	{ url = "@/products/_index.md", name = "Products" },
 	{ url = "@/news/_index.md", name = "News" },
 	{ url = "@/investor-relations/_index.md", name = "IR" },
+	{ url = "https://forum.spacecubics.com", name = "Forum" },
 	{ url = "@/recruit/_index.md", name = "Recruit" }
 ]
 
