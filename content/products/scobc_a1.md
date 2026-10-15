@@ -93,3 +93,8 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 	GitHub | その他、様々な技術情報はこちらを参照ください。 | https://github.com/spacecubics
 	{% </docs_resources> %}
 </section>
+
+
+## AUTHORIZED DISTRIBUTORS
+
+{{ <distributor name="NASAM INC." logo="nasam-logo.svg" url="https://www.nasam.com/" lang="ja" /> }}
