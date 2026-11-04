@@ -74,16 +74,42 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 
 ## DEV KIT
 
-{{ <twocard
-	title=""
-	subtitle=""
-	left_card_image="a1-dev-board-rev-b.webp"
-	right_card_image="under_construction.jpeg"
-	left_card_title="開発キット"
-	left_card_subtitle="coming soon"
-	right_card_title="オプション品"
-	right_card_subtitle="coming soon"
-/> }}
+{% <dev_kit
+  title="SC-OBC Module A1 Development Kit"
+  image="a1-dev-board-rev-b.png"
+  alt="SC-OBC Module A1を搭載したDevelopment Board"
+  price_number="55"
+  price_unit="万円(税別)"
+> %}
+SC-OBC Module A1のFPGA・ソフトウェア開発や機能評価を行うことを目的とした開発キットです。
+
+本キットには、SC-OBC Module A1本体とDevelopment Boardに加え、ACアダプタ、USBケーブルなど、開発を開始するために必要な機材一式が同梱されております。お届けしたその日からミッションに向けたFPGAおよびソフトウェアの開発・デバッグに着手することができます。
+
+Development Boardには、機能評価に必要となる標準的なインターフェースのほか、2.54 mmピッチのユニバーサルエリアが設けられております。User IOに接続するメモリやセンサーなどの周辺回路を自由に実装でき、宇宙機に搭載する各種コンポーネントとの接続評価にもご活用いただけます。
+
+### 開発環境
+
+- ソフトウェア
+
+  OSには、オープンソースソフトウェアである Zephyr RTOS が利用可能です。また、開発や動作検証に役立つサンプルアプリケーションを GitHub 上で公開しています。
+
+- FPGA
+
+  ユーザーのIPコアを実装するためのモジュールがFPGA上に準備されており、AXIバス規格に適合したIPコアを設計して組み込むことができます。無償の AMD Vivado Design Suite をご用意いただく必要があります。
+
+- TRCH
+
+  SC-OBC Module A1にはTRCH (Timing, Reset, Config & Health Controller)として、 PIC16LF877 が搭載されております。ソフトウェアを変更する際は、対応するインサーキットデバッガを別途ご用意いただく必要があります。
+
+### 同梱物
+
+- SC-OBC Module A1 [SC-OBC-A1001]
+- Development Board [SC-EVB-A1001]
+- ACアダプタ
+- USBケーブル
+- ピンソケット、ピンヘッダ、ジャンパソケット(部品は別添)
+- 締結用スペーサ、ネジ
+{% </dev_kit> %}
 
 ## DOCUMENTS
 

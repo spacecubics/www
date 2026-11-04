@@ -1,0 +1,19 @@
+{% component dev_kit(title: string, image: string, alt: string, price_number: string, price_unit: string) -%}
+{% set html -%}
+<div class="dev-kit">
+  <div class="dev-kit__product">
+    <h3 class="dev-kit__title">{{ title }}</h3>
+    <div class="dev-kit__amount">
+      <span class="price__amount-number">{{ price_number }}</span>
+      <span class="price__amount-unit">{{ price_unit }}</span>
+    </div>
+    <div class="sc-list__divider"></div>
+    <img class="dev-kit__image" src="{{ get_url(path=image) }}" alt="{{ alt }}" loading="lazy" />
+  </div>
+  <div class="dev-kit__description">
+    {{ body | markdown | safe }}
+  </div>
+</div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent dev_kit %}
