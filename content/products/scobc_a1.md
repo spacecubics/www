@@ -57,7 +57,14 @@ Xilinx製 Artix-7 FPGAを採用し、インターフェースの種類や数を�
 
 ## PRICE
 
-{% <price price_title="SC-OBC Module A1" price_number="30" price_unit="万円(税別)" price_note="※本価格は期間限定の特別価格となります。"> %}
+{% <price
+  price_title="SC-OBC Module A1"
+  price_number="30"
+  price_unit="万円(税別)"
+  price_note="※本価格は期間限定の特別価格となります。"
+  image="sc-obc_module_a1_top.jpg"
+  alt="SC-OBC Module A1本体の上面"
+> %}
 SC-OBC Module A1（以下、「本製品」と表記します）は自社開発衛星による宇宙実証を予定しております。本価格は宇宙実証までの期間限定の特別価格となります。特別価格が適用される条件は以下のとおりです。
 
 - 本製品を購入いただいたことを弊社ホームページやSNS等で公開することを許諾いただきます。

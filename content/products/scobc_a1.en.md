@@ -62,7 +62,14 @@ even terrestrial applications here on Earth.
 
 ## PRICE
 
-{% <price price_title="SC-OBC Module A1" price_number="300,000" price_unit="JPY (excluding tax)" price_note="*This price is a limited-time offer."> %}
+{% <price
+  price_title="SC-OBC Module A1"
+  price_number="300,000"
+  price_unit="JPY (excluding tax)"
+  price_note="*This price is a limited-time offer."
+  image="sc-obc_module_a1_top.jpg"
+  alt="Top view of the SC-OBC Module A1"
+> %}
 
 The SC-OBC Module A1 is scheduled to undergo space-readiness testing
 using a satellite we developed in-house. This price is only available

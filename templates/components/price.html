@@ -1,24 +1,27 @@
-{% component price(price_title: string, price_number: string, price_unit: string, price_note: string) -%}
+{% component price(price_title: string, price_number: string, price_unit: string, price_note: string, image: string = "", alt: string = "") -%}
 {% set html -%}
 <div class="price">
-	<div class="price__container">
-		<div class="price__left">
-			<div class="price__title-row">
-				<div class="price__title">{{ price_title }}</div>
-				<div class="price__amount">
-					<span class="price__amount-number">{{ price_number }}</span>
-					<span class="price__amount-unit">{{ price_unit }}</span>
-				</div>
-			</div>
-			<div class="price__note-section">
-				<div class="price__note">{{ price_note }}</div>
-			</div>
-			<div class="sc-list__divider"></div>
-		</div>
-		<div class="price__right">
-			{{ body | markdown | safe }}
-		</div>
-	</div>
+  <div class="price__container">
+    <div class="price__left">
+      <div class="price__title-row">
+        <h3 class="price__title">{{ price_title }}</h3>
+        <div class="price__amount">
+          <span class="price__amount-number">{{ price_number }}</span>
+          <span class="price__amount-unit">{{ price_unit }}</span>
+        </div>
+      </div>
+      <div class="price__note-section">
+        <div class="price__note">{{ price_note }}</div>
+      </div>
+      <div class="sc-list__divider"></div>
+      {% if image %}
+      <img class="price__image" src="{{ get_url(path=image) }}" alt="{{ alt }}" loading="lazy" />
+      {% endif %}
+    </div>
+    <div class="price__right">
+      {{ body | markdown | safe }}
+    </div>
+  </div>
 </div>
 {%- endset %}
 {{- html | replace(from="\n", to=" ") | safe -}}
