@@ -96,7 +96,7 @@ information.
 
 {% <dev_kit
   title="SC-OBC Module A1 Development Kit"
-  image="a1-dev-board-rev-b.png"
+  image="a1-dev-board-rev-b.webp"
   alt="Development Board with an SC-OBC Module A1 installed"
   price_number="550,000"
   price_unit="JPY (excluding tax)"
