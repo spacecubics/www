@@ -76,7 +76,7 @@ SC-OBC Module A1と衛星を接続するための基板開発を受託します�
 
 {% <dev_kit
   title="SC-OBC Module A1 Development Kit"
-  image="a1-dev-board-rev-b.png"
+  image="a1-dev-board-rev-b.webp"
   alt="SC-OBC Module A1を搭載したDevelopment Board"
   price_number="55"
   price_unit="万円(税別)"
