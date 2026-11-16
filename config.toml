@@ -39,6 +39,7 @@ auto_hide = false
 links = [
 	{ url = "@/about-us.md", name = "About Us" },
 	{ url = "@/products/_index.md", name = "Products" },
+	{ url = "@/engineering.md", name = "Engineering" },
 	{ url = "@/news/_index.md", name = "News" },
 	{ url = "@/investor-relations/_index.md", name = "IR" },
 	{ url = "https://forum.spacecubics.com", name = "Forum" },
