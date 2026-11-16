@@ -1,0 +1,13 @@
+{% component engineering_card(title: string, line1: string, line2: string, img: string, alt: string) -%}
+{% set metadata = get_image_metadata(path=img) %}
+{% set html -%}
+<article class="engineering-card">
+  <img src="{{ get_url(path=img) }}" alt="{{ alt }}" width="{{ metadata.width }}" height="{{ metadata.height }}" loading="lazy" decoding="async">
+  <header>
+    {% include "partials/segment_title.html" %}
+  </header>
+  {{ body | markdown | safe }}
+</article>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent engineering_card %}

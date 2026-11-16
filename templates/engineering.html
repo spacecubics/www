@@ -1,0 +1,13 @@
+{% extends "page.html" %}
+
+{% block content %}
+<div class="engineering-page">
+  {{ super() }}
+</div>
+{% endblock content %}
+
+{% block page_body %}
+<div class="engineering-content">
+  {{ page.content | safe }}
+</div>
+{% endblock page_body %}

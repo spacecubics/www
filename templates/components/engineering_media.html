@@ -1,0 +1,10 @@
+{% component engineering_media(img: string, alt: string) -%}
+{% set metadata = get_image_metadata(path=img) %}
+{% set html -%}
+<div class="engineering-media">
+  <img src="{{ get_url(path=img) }}" alt="{{ alt }}" width="{{ metadata.width }}" height="{{ metadata.height }}" loading="lazy" decoding="async">
+  <div>{{ body | markdown | safe }}</div>
+</div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent engineering_media %}
