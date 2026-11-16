@@ -1,0 +1,239 @@
+.engineering-page {
+  .banner {
+    background-position: center;
+  }
+
+  @media (min-width: 769px) {
+    .banner {
+      background-position: center calc(50% - 50vh + min(37.5rem, calc(19rem + 23.5vw), 75vh));
+    }
+  }
+
+  .banner-image-container {
+    height: min(47vw, 36rem);
+  }
+
+  @media (max-width: 479px) {
+    .page-title-content {
+      margin-left: 1rem;
+
+      h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem) !important;
+      }
+    }
+  }
+}
+
+.engineering-content {
+  line-height: 1.8;
+
+  .segment__line1 {
+    color: var(--fg-muted-5);
+  }
+
+  .engineering-container {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  .engineering-heading {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: var(--fg-muted-5);
+    }
+  }
+
+  .engineering-intro {
+    margin-block: 4rem;
+
+    .engineering-container {
+      max-width: 42rem;
+    }
+
+    .engineering-heading {
+      margin-bottom: 1.5rem;
+      text-align: left;
+
+      h2 {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+      }
+    }
+  }
+
+  .engineering-domains {
+    margin-block: 4rem 5rem;
+
+    .engineering-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+    }
+  }
+
+  .engineering-card {
+    min-width: 0;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 41 / 33;
+      object-fit: cover;
+      border-radius: var(--rounded-corner-small);
+
+      &[src$="engineering-software.webp"] {
+        object-position: left top;
+      }
+    }
+
+    .segment__title {
+      margin: 1.25rem 0 0.5rem;
+      color: #f77d06;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .segment__line1,
+    .segment__line2 {
+      font-size: 0.875rem;
+    }
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .engineering-open-source {
+    margin-inline: calc(50% - 50vw);
+    padding: 4rem 1rem;
+    background: #2c2c2c;
+
+    .engineering-heading h2::after {
+      display: block;
+      width: 2.5rem;
+      height: 3px;
+      margin: 1rem auto;
+      background: #f77d06;
+      content: "";
+    }
+
+    .twocols {
+      gap: 2rem;
+      margin-top: 4rem;
+      padding: 0;
+    }
+
+    .twocols-left,
+    .twocols-right {
+      min-width: 0;
+    }
+
+    .segment__title {
+      margin-top: 0;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 0.875rem 0;
+      border-bottom: 1px solid var(--fg-muted-3);
+      vertical-align: top;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 30%;
+      padding-right: 1rem;
+    }
+  }
+
+  .engineering-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--rounded-corner-small);
+    }
+
+    > div > :first-child {
+      margin-top: 0;
+    }
+
+    > div > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .engineering-contact {
+    margin-block: 4rem;
+    text-align: center;
+
+    .engineering-heading {
+      margin-bottom: 1.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      min-width: 15rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      background: #f77d06;
+      color: #20232b;
+      text-decoration: none;
+
+      &:hover {
+        background: #ffc011;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .engineering-intro,
+    .engineering-contact {
+      margin-block: 3rem;
+    }
+
+    .engineering-domains .engineering-container {
+      grid-template-columns: 1fr;
+      max-width: 28rem;
+      gap: 3rem;
+    }
+
+    .engineering-media {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .engineering-open-source .twocols {
+      flex-wrap: nowrap;
+      gap: 1.5rem;
+    }
+  }
+}

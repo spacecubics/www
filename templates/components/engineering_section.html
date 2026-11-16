@@ -1,0 +1,16 @@
+{% component engineering_section(kind: string, title: string = "", subtitle: string = "") -%}
+{% set html -%}
+<div class="engineering-{{ kind }}">
+  <div class="engineering-container">
+    {% if title %}
+    <header class="engineering-heading">
+      <h2 class="segment__title">{{ title }}</h2>
+      {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    </header>
+    {% endif %}
+    {{ body | markdown | safe }}
+  </div>
+</div>
+{%- endset %}
+{{- html | replace(from="\n", to=" ") | safe -}}
+{%- endcomponent engineering_section %}
