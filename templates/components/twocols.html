@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="twocols-right">
-		{{ body | safe }}
+		{{ body | markdown | safe }}
 	</div>
 </div>
 {%- endset %}
