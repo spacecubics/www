@@ -1,4 +1,5 @@
 exclude = [
     '^https?://(www\.)?instagram\.com/',
     '^https?://(www\.)?x\.com/',
+    '^https?://ossjapan2026\.sched\.com/',
 ]
